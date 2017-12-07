@@ -1,4 +1,3 @@
 ---
 title: Home
-type: home
 ---

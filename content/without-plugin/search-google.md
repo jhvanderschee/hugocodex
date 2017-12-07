@@ -1,6 +1,5 @@
 ---
 title: Search (Google)
-type: page
 ---
 
 ### Introduction

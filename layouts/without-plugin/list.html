@@ -3,7 +3,7 @@
   <head>
         {{ partial "head.html" . }}
   </head>
-  <body class="">
+  <body class="{{.Type}}">
     <div class="main">
       {{ partial "header.html" . }}
       <div class="container">
@@ -12,7 +12,16 @@
                       <article class="post">
                           <h1>{{ .Title }}</h1>
                           
-                          {{ .Content }}
+                          {{ .Content }} 
+                          
+                          <br>
+                          <ul class="columns">
+
+                          {{ range (where .Data.Pages "Section" "without-plugin").ByTitle }}
+                            <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+                          {{ end }}
+
+                          </ul>
                       </article>
                   </div>
                   <div class="col-md-1"></div>
