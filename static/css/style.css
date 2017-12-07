@@ -24,7 +24,8 @@ h3 + h4 {padding-top: 18px;}
 }
 article.page {padding-top: 0px;}
 img {display: block; max-width: 100%;}
-img.poweredby {cursor: pointer; display: inline-block; height: 100px; margin-right: 10px; margin-left: -8px; opacity: 0.35;}
+img.poweredby {cursor: pointer; display: inline-block; height: 100px; margin-right: 10px; margin-left: 0px; opacity: 0.35;}
+img.poweredby:nth-child(1) {height: 83px; margin-left: -1px; margin-top: -3px;}
 .site-footer a {color: #777777!important;}
 .site-footer h3 {color: silver;}
 #breadcrumbs, #breadcrumbs a {color: silver;}
