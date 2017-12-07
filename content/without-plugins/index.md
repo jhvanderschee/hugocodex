@@ -1,4 +1,3 @@
 ---
 title: Without plugins
-
 ---
