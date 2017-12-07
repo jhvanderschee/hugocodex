@@ -1,7 +1,8 @@
 ---
 title: About Hugo Codex
----
+type: page
 
+---
 <br />
 
 > "Hugo Codex wants to make it easier for you to choose for Hugo in your next project."
