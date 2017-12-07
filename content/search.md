@@ -1,6 +1,7 @@
 ---
 title: Search
 layout: search
+type: page
 ---
 
 ## Simple site search
