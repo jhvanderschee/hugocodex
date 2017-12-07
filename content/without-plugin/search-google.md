@@ -1,7 +1,8 @@
 ---
 title: Search (Google)
-
+type: page
 ---
+
 ### Introduction
 
 Modern websites have a search bar, searching within the site for specific content. These search boxes often search the database in real-time. That is not possible within a static website. Therefore another solution must be found.

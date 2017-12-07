@@ -1,5 +1,4 @@
 ---
 title: Home
-type: page
-
+type: home
 ---
