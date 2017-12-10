@@ -13,6 +13,11 @@
                       <h1>{{ .Title }}</h1>
                       
                       {{ .Content }}
+
+                      {{ if eq .URL "/search/" }}<div class="row">
+                        <div class="col-xs-8">{{ partial "search-google.html" . }}</div>
+                      </div>{{ end }}
+                    
                     </article>
                 </div>
                 <div class="col-md-1"></div>
