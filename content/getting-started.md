@@ -1,6 +1,7 @@
 ---
 title: Getting started
 type: page
+
 ---
 
 ## Step 1. Create a basic website
