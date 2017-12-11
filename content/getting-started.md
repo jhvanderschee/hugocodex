@@ -36,7 +36,7 @@ Now you create an 'index.html' file and you replace your PHP tags with Go templa
 </html>
 ```
 
-This 'index.html' file is your new homepage template. You need to store it in a root folder named: 'layouts/_defaults'. You might want to make a copy of this file and call it 'single.html'. You need to place the html files you want to include in a root folder named: 'layouts/partials'. Finally you have to create a root folder 'content' and create a very simple 'index.md' file that looks like this:
+This 'index.html' file is your new homepage template. You need to store it in your project folder under 'layouts/_defaults'. You might want to make a copy of this file and call it 'single.html'. You need to place the html files you want to include in your project folder under 'layouts/partials'. Finally you have to create a root folder 'content' in your project and fill it with an 'index.md' file that looks like this:
 
 
 ```
@@ -48,11 +48,21 @@ Hello everybody!
 
 ## Step 2. Preview your website
 
-Opening the 'index.md' file in your browser does not work, so you need to have an enivronment that runs Hugo. You can install Jekyll through command-line on your own machine. Just follow these simple instructions:
+Opening the folder of your project in a browser does not work, so you need to have an enivronment that runs Hugo. You can install Jekyll through command-line on your own machine. Just follow these simple instructions:
 
-
-* install instructions coming soon...
+* install Hugo with [these simple instructions](https://gohugo.io/getting-started/installing/)
+* open a terminal in your project folder and type: `hugo server --disableFastRender`
+* go to `localhost:1313` and preview your website
 
 ## Step 3. Host your website
 
-Oh, how I hate shared hosting accounts... untill Hugo. Shared hosting accounts are cheap but unreliable. However, a Git based static site provides us with a back-up (actually the source code), which makes me feel a whole lot safer. Forestry.io exports the static version of your site to an FTP account on every update, enabling you to use an hosting environment of your choice. Just connect your FTP account through the Forestry.io deploy options. So if your cheap hosting account goes down, the source code will still live on in Git and in your Forestry.io environment, enabling you to push the site to another cheap hosting account. Isn't that reassuring?
+Oh, how I hate shared hosting accounts... untill Hugo. Shared hosting accounts are cheap but unreliable. However, a Git based static site provides us with a back-up (actually the source code), which makes me feel a whole lot safer. Forestry.io is a website that can export the static version of your site to an FTP account on every update, enabling you to use an hosting environment of your choice. Just connect your FTP account through the Forestry.io hosting options. So if your cheap hosting account goes down, the source code will still live on in Git and in your Forestry.io environment, enabling you to push the site to another cheap hosting account. Isn't that reassuring? 
+
+Here is your walk-through:
+
+* create a (public) Git repository at [Github](https://github.com/)
+* upload the contents of your project folder (drag and drop works)
+* create an account at [Forestry.io](https://forestry.io/)
+* add a site and select 'Hugo'
+* synchronize with your Git repository
+* configure your hosting in 'Settings > Hosting'
