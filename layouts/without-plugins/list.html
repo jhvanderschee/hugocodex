@@ -16,11 +16,9 @@
                           
                           <br>
                           <ul class="columns">
-
-                          {{ range (where .Data.Pages "Section" "without-plugins").ByTitle }}
+                          {{ range (where .Data.Pages "Section" .Section ).ByTitle }}
                             <li><a href="{{ .URL }}">{{ .Title }}</a></li>
                           {{ end }}
-
                           </ul>
                       </article>
                   </div>

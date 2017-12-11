@@ -16,7 +16,7 @@
                           
                           <br>
 
-                          {{ range (where .Data.Pages "Section" "posts").ByDate }}
+                          {{ range (where .Data.Pages "Section" .Section).ByDate }}
                             {{ .Date.Format "2006/01/02" }} - <a href="{{ .URL }}">{{ .Title }}</a><br>
                           {{ end }}
 
