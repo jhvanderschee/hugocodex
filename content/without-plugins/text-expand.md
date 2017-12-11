@@ -36,7 +36,7 @@ $( document ).ready(function() {
 
 ### Installation
 
-Step 1. Download the file [text-expand.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/gh-pages/layouts/partials/text-expand.html)
+Step 1. Download the file [text-expand.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/master/layouts/partials/text-expand.html)
 <br />Step 2. Save the file in the 'layouts/partials' directory of your project
 <br />Step 3. Make sure the bottom of your layout document looks like this:
 

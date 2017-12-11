@@ -29,7 +29,7 @@ Note that I have added an example on how to manually replace/change certain titl
 
 ### Installation
 
-Step 1. Download the file [breadcrumbs.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/gh-pages/layouts/partials/breadcrumbs.html)
+Step 1. Download the file [breadcrumbs.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/master/layouts/partials/breadcrumbs.html)
 <br />Step 2. Save the file in the ‘layouts/partials’ directory of your project
 <br />Step 3. Add the following line to your layout on the place where you want the breadcrumbs to appear:
 
