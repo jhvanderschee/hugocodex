@@ -1,5 +1,5 @@
 ---
-title: "Live chat"
+title: Live chat
 
 ---
 ### Introduction
