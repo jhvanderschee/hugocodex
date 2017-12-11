@@ -1,5 +1,5 @@
 ---
-title: "Text expand"
+title: Text expand
 
 ---
 ### Introduction
