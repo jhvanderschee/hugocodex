@@ -10,7 +10,10 @@
         <div class="row">
                   <div class="col-md-8">
                       <article class="post">
-                          <h1>{{ .Title }}</h1>
+                          <header class="post-header">
+                              {{ partial "breadcrumbs.html" . }}
+                              <h1>{{ .Title }}</h1>
+                          </header>
                           
                           {{ .Content }} 
                           

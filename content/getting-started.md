@@ -42,8 +42,34 @@ This 'index.html' file is your new homepage template. You need to store it in yo
 ---
 title: Hello world
 ---
-Hello everybody!
+Your content here...
 ```
+
+To create an overview page, look at this example.
+
+[expand]
+
+```
+<html>
+<head></head>
+<body>
+{{ partial "header.html" . }}
+{{ .Content }}
+<ul>
+  {{ range (where .Data.Pages "Section" .Section ).ByTitle }}
+    <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>
+{{ partial "sidebar.html" . }}
+{{ partial "footer.html" . }}
+</body>
+</html>
+
+```
+
+Put this code in a file called 'list.html' and store it in your 'layouts/_defaults' folder, next to your 'single.html'.
+
+[/expand]
 
 ## Step 2. Preview your website
 
