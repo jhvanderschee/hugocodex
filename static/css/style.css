@@ -92,7 +92,7 @@ form {max-width: 550px;}
 .product-gallery a:nth-child(5) {margin-left: 1%;}
 .product-grid a {display: block; color: #777777!important; text-decoration: none!important; text-align: center;}
 .product-grid a img {margin-bottom: 3px;}
-.product-grid a:hover, .product-grid a:focus {color: #FF4088!important;}
+.product-grid a:hover, .product-grid a:focus {color: #e93176!important;}
 .product h1 {padding-top: 0;}
 h2.price {padding: 0 0 20px; margin-bottom: 0;}
 .radio, .checkbox {position: relative; bottom: 8px;}
@@ -103,7 +103,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appe
 select.form-control {-webkit-appearance: none; -moz-appearance: none; appearance: none; background: url("/img/chevron_down.svg") calc(100% - 17px) 60% no-repeat; background-size: auto 11px;}
 select.form-control::-ms-expand {display: none;}
 
-#cartnumber {display: none; background: #FF4088; color: white; margin: 5px 0 0 20px; font-weight: bold; position: absolute; line-height: 18px; width: 19px; height: 19px; border-radius: 20px; text-align: center; z-index: 3;}
+#cartnumber {display: none; background: #e93176; color: white; margin: 5px 0 0 20px; font-weight: bold; position: absolute; line-height: 18px; width: 19px; height: 19px; border-radius: 20px; text-align: center; z-index: 3;}
 
 .form-control {
     border: 1px solid #dddddd!important;
