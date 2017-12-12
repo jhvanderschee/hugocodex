@@ -23,7 +23,7 @@ This code looks at the path of the current page to destill the breadcrumb path. 
 </div>
 ```
 
-Note that I have added an example on how to manually replace/change certain titles.
+Note that I have added an example on how to manually replace/change certain titles (here: posts > blog).
 
 [/expand]
 
