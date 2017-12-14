@@ -1,7 +1,7 @@
 ---
-title: "Share buttons"
----
+title: Share buttons
 
+---
 ### Introduction
 
 It can be very useful to allow people to easily share the content they have just read. Share buttons are often found on the footer of a blog post. This script automatically adds them to the content you want.
