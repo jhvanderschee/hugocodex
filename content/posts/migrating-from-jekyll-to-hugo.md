@@ -11,4 +11,6 @@ The second problem was the Go templating language. It is not very straight forwa
 
 The third problem was Forestry.io. I had been using CloudCannon with Jekyll and I turned out to be spoiled. Forestry has some very specific ideas about how my markdown should be formatted. For example, they require an empy line in the end of the YML/front matter block. Also, the content should start immediately after the end of the front matter. A new-line there is not allowed. Not following their code-style lead to unwanted code updates enforcing this nonetheless, resulting in an extra pull and merge for every push I did. Additionally, their updates broke my code more than once, because they had problems with parsing big inline SVG files. Using Forestry.io feels like working with an stubborn co-worker. Not very pleasant to say the least. But I should not complain too much... as it is pretty awesome that their service is free (and most people actually HAVE stubborn co-workers, and they manage too).
 
-But hey... it is all worth something. Currently my Jekyll Codex website takes 1425 milliseconds to build, while this website builds in around 100 milliseconds. That is more than 10 times faster. Impressive!
+But hey... it is all worth something. Currently my Jekyll Codex website takes 1425 milliseconds to build, while this website builds in around 100 milliseconds. That is more than 10 times faster. 
+
+Impressive!

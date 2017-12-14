@@ -18,9 +18,7 @@
                       <br /><br />
                       {{ .Content }}
 
-                      {{ if eq .URL "/search/" }}<div class="row">
-                        <div class="col-xs-8">{{ partial "search-google.html" . }}</div>
-                      </div>{{ end }}
+                      {{ partial "share-buttons.html" . }}
                     
                     </article>
                 </div>
