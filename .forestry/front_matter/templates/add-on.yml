@@ -9,6 +9,11 @@ fields:
   name: resources
   label: resources
   fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: title
   - name: name
     type: select
     default: header
