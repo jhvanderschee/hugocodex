@@ -1,7 +1,5 @@
 ---
 title: About Hugo Codex
-type: page
-
 ---
 <br />
 

@@ -1,9 +1,9 @@
 <ul class="nav navbar-nav">
-    <li {{ if in .URL "/getting-started" }}class="active"{{ end }}><a href="/getting-started/">Getting started</a></li>
-    <li {{ if in .URL "/add-on" }}class="active"{{ end }}><a href="/add-ons/">Add-ons</a></li>
-    <li {{ if in .URL "/blog" }}class="active"{{ end }}><a href="/posts/">Blog</a></li>
-    <li {{ if in .URL "/about" }}class="active"{{ end }}><a href="/about/">About</a></li>
-    <!--<li {{ if in .URL "/donate" }}class="active"{{ end }}><a href="/donate/">Donate</a></li>-->
+    <li {{ if in .Permalink "/getting-started" }}class="active"{{ end }}><a href="/getting-started/">Getting started</a></li>
+    <li {{ if in .Permalink "/add-on" }}class="active"{{ end }}><a href="/add-ons/">Add-ons</a></li>
+    <li {{ if in .Permalink "/blog" }}class="active"{{ end }}><a href="/posts/">Blog</a></li>
+    <li {{ if in .Permalink "/about" }}class="active"{{ end }}><a href="/about/">About</a></li>
+    <!--<li {{ if in .Permalink "/donate" }}class="active"{{ end }}><a href="/donate/">Donate</a></li>-->
     <li><a href="/search/" style="padding: 0;"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg></a></li>
     <!--<li><a href="/cart/" style="padding: 0;"><span id="cartnumber"></span><svg version="1.1" id="Shopping_cart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" style="position: relative; top: 1px;">

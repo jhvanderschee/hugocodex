@@ -1,7 +1,5 @@
 ---
 title: Search
-type: page
-
 ---
 ## Simple site search
 

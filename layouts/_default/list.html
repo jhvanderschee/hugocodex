@@ -20,7 +20,7 @@
                         <br>
                         <ul class="columns">
                         {{ range (where .Data.Pages "Section" .Section ).ByTitle }}
-                            <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+                            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                         {{ end }}
                         </ul>
 

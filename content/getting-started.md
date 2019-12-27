@@ -1,7 +1,5 @@
 ---
 title: Getting started
-type: page
-
 ---
 ## Step 1. Create a basic website
 
@@ -57,7 +55,7 @@ To create an overview page, look at this example.
 {{ .Content }}
 <ul>
   {{ range (where .Data.Pages "Section" .Section ).ByTitle }}
-    <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+    <li><a href="{{ .Parmalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>
 {{ partial "sidebar.html" . }}

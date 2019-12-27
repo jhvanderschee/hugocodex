@@ -15,7 +15,7 @@ This code looks at the path of the current page to destill the breadcrumb path. 
 ```
 <div id="breadcrumbs">
     <a href="/">Home</a>
-    {{ range (split .URL "/") }}
+    {{ range (split .RelPermalink "/") }}
         {{ if gt (len . ) 0 }}
             / <a href="/{{ . }}">{{ humanize (replace . "posts" "blog") }}</a>
         {{ end }}
