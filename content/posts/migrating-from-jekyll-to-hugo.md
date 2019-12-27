@@ -2,12 +2,7 @@
 title: Migrating from Jekyll to Hugo
 date: 2017-12-10 00:00:00 +0000
 ---
-<<<<<<< HEAD
-
-Let me be honest. Migrating from Jekyll to Hugo was not as easy as I thought. 
-=======
 Let me be honest. Migrating from Jekyll to Hugo was not as easy as I thought.
->>>>>>> c8282c544d9f6f621188f693a74d17621989677a
 
 The first problem was understanding the folder structure. The Hugo manual was not very clear about the best practise. I have figured out that you need at least three files. You need an 'index.html' for the front page which you should place in your 'layouts' folder. Additionally you need a '_default' folder with a 'single.html' and a 'list.html' file in it. Their name tells you what they do: listing the content of a specific content type (section) and displaying a single content file. If you want an alternative list template for 'posts' (or any other content type, called 'section'), just create a folder next to your '_default' folder with the name of your content type, in this case 'posts'.
 
