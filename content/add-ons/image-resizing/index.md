@@ -5,7 +5,7 @@ resources:
   src: "images/wintry-2915190.png"
   title: H logo
 - name: footer
-  src: "/Afbeelding van Aneta Esz via Pixabay.jpg"
+  src: "images/Afbeelding van Aneta Esz via Pixabay.jpg"
   title: Github Logo
 
 ---
