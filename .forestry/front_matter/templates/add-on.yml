@@ -26,3 +26,5 @@ fields:
   - type: file
     name: src
     label: src
+pages:
+- content/add-ons/image-resizing/index.md
