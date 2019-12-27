@@ -11,7 +11,7 @@ fields:
   fields:
   - name: name
     type: select
-    default: []
+    default: header
     config:
       required: false
       options:
