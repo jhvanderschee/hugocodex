@@ -3,7 +3,7 @@ title: Image resizing
 resources:
 - name: header
   src: images/icon-196x196.png
-- name: other
+- name: footer
   src: images/github.png
 
 ---
