@@ -9,8 +9,17 @@ fields:
   name: resources
   label: resources
   fields:
-  - type: text
-    name: name
+  - name: name
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
     label: name
   - type: file
     name: src
