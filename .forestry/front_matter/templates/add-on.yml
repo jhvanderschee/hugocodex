@@ -14,7 +14,9 @@ fields:
     default: []
     config:
       required: false
-      options: []
+      options:
+      - header
+      - footer
       source:
         type: simple
         section: 
