@@ -6,7 +6,7 @@ resources:
   title: H logo
 - name: footer
   src: images/github.png
-  title: ''
+  title: Github Logo
 
 ---
 ### Introduction
