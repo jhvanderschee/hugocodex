@@ -24,11 +24,11 @@ sections:
   label: Data
   create: none
   match: "**/*.{json,yaml,yml,toml}"
-upload_dir: static/uploads
-public_path: "/uploads"
+upload_dir: ''
+public_path: ''
 front_matter_path: "/uploads"
 use_front_matter_path: false
-file_template: ":year:/:month:/:day:/:filename:"
+file_template: ":filename/:filename:"
 build:
   preview_env:
   - HUGO_ENV=staging
