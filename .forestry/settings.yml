@@ -29,4 +29,13 @@ public_path: "/uploads"
 front_matter_path: "/uploads"
 use_front_matter_path: false
 file_template: ":year:/:month:/:day:/:filename:"
+build:
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.59.1
+  preview_output_directory: public
+  preview_docker_image: forestryio/hugo:latest
+  mount_path: "/srv"
+  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
+    -d public
 version: 0.31.1
