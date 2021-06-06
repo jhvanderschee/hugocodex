@@ -8,3 +8,8 @@ disableKinds:
   - taxonomyTerm
   - term
   - RSS
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
