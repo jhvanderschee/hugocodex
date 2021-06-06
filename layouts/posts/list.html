@@ -1,36 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-        {{ partial "head.html" . }}
-  </head>
-  <body class="{{.Type}}">
-    <div class="main">
-      {{ partial "header.html" . }}
-      <div class="container">
-        <div class="row">
-                  <div class="col-md-8">
-                      <article class="post">
-                          <header class="post-header">
-                              {{ partial "breadcrumbs.html" . }}
-                              <h1>{{ .Title }}</h1>
-                          </header>
-                          
-                          {{ .Content }} 
-                          
-                          <br>
+{{ partial "header.html" . }}
 
-                          {{ range (where .Data.Pages "Section" .Section).ByDate }}
-                            {{ .Date.Format "2006/01/02" }} - <a href="{{ .Permalink }}">{{ .Title }}</a><br>
-                          {{ end }}
+<div class="content">
+  <div class="container">
 
-                      </article>
-                  </div>
-                  <div class="col-md-1"></div>
-            <div class="col-md-3"></div>
-          </div>
-      </div>
-    </div>
-    {{ partial "footer.html" . }}
-  </body>
+        <article class="post">
+            <header class="post-header">
+                {{ partial "breadcrumbs.html" . }}
+                <h1>{{ .Title }}</h1>
+            </header>
+            
+            {{ .Content }} 
+            
+            <br>
 
-</html>
+            {{ range (where .Site.RegularPages "Section" .Section).ByDate }}
+              {{ .Date.Format "2006/01/02" }} - <a href="{{ .Permalink }}">{{ .Title }}</a><br>
+            {{ end }}
+
+        </article>
+
+  </div>
+</div>
+    
+{{ partial "footer.html" . }}

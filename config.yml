@@ -1,5 +1,10 @@
 baseURL: "http://hugocodex.org"
 languageCode: "en-us"
 title: "Hugo Codex"
-permalinks:
-  posts: /blog/:title/
+description: "Hugo, the website framework that is super fast and super simple."
+
+disableKinds: 
+  - taxonomy
+  - taxonomyTerm
+  - term
+  - RSS

@@ -1,25 +1,29 @@
-<footer class="site-footer">
-    
+<div id="footer">
+
     <div class="container">
         
-        <div class="row">
-            <div class="col-md-4"><h3>Audience</h3><p>If you are a front-end developer and you want to switch to Hugo: you have come to the right place. You will find some valuable resources here, like a getting started guide and code snippets. If you want to know more about Hugo, please visit the <a href="http://gohugo.io/" target="_blank">official Hugo documentation</a>.</p></div>
-            <div class="col-md-4"><h3>Credits</h3><p>This site is created by J.H. van der Schee.<br />It is a showcase of its own scripts. It is powered by Hugo and hosted on GitHub. If you like it, please drop me a line through twitter <a href="https://twitter.com/jhvanderschee" target="_blank">@jhvanderschee</a> or <a href="mailto:jhvanderschee@gmail.com">jhvanderschee@gmail.com</a>.</p></div>
-            <div class="col-md-1"></div>
-            <div class="col-md-3"><h3>Powered by</h3><p><img src="/img/forestry-logo.svg" class="poweredby" onclick="window.open('http://forestry.io');" /><img src="/img/github.png" class="poweredby" onclick="window.open('http://github.com');" /></p></div>
+        <div class="threecols">
+            <div class="col">
+                <h3>Audience</h3><p>If you are a front-end developer and you want to switch to Hugo: you have come to the right place. You will find some valuable resources here, like a getting started guide and code snippets. If you want to know more about Hugo, please visit the <a href="http://gohugo.io/" target="_blank">official Hugo documentation</a>.</p>
+            </div>
+            <div class="col">
+                <h3>Credits</h3><p>This site is created by J.H. van der Schee.<br />It is a showcase of its own scripts. It is powered by Hugo and hosted on GitHub. If you like it, please drop me a line through twitter <a href="https://twitter.com/jhvanderschee" target="_blank">@jhvanderschee</a> or <a href="mailto:jhvanderschee@gmail.com">joost@vdschee.nl</a>.</p>
+            </div>
+            <div class="col">
+                <h3>Powered by</h3>
+                <p><img src="/img/cloud_cannon.png" alt="CloudCannon logo" onclick="window.open('http://cloudcannon.com');" /><img src="/img/github.png" class="poweredby" onclick="window.open('http://github.com');" /></p>
+            </div>
         </div>    
         
     </div>
-</footer>
+</div>
     
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
 
 <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="99711920-d956-401d-8672-00e7160dc360";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
 
 {{ partial "new-window-fix.html" . }}
 {{ partial "text-expand.html" . }}
 {{ partial "ga.html" . }}
+
+</body>
+</html>

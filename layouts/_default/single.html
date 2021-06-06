@@ -1,37 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      {{ partial "head.html" . }}
-  </head>
-  <body class="{{.Type }}">
-    <div class="main">
-        {{ partial "header.html" . }}
-		<div class="container">
-			<div class="row">
-                <div class="col-md-8">
-                    <article class="post">
-                      <header class="post-header">
-                      {{ partial "breadcrumbs.html" . }}
-                      <h1>{{ .Title }}</h1>
-                      </header>
-                      
-                      {{ .Content }}
+{{ partial "header.html" . }}
 
-                      {{ with .Resources.GetMatch "header" }}
-                        <img src="{{ (.Resize "100x").RelPermalink }}" />
-                      {{ end }}
+<div class="content">
+  <div class="container">
 
-                      {{ if eq .RelPermalink "/search/" }}<div class="row">
-                        <div class="col-xs-8">{{ partial "search-google.html" . }}</div>
-                      </div>{{ end }}
-                    
-                    </article>
-                </div>
-                <div class="col-md-1"></div>
-		    	<div class="col-md-3"></div>
-		    </div>
-		</div>
-	</div>
-    {{ partial "footer.html" . }}
-  </body>
-</html>
+          <article class="post">
+            <header class="post-header">
+            {{ partial "breadcrumbs.html" . }}
+            <h1>{{ .Title }}</h1>
+            </header>
+            
+            {{ .Content }}
+
+            {{ with .Resources.GetMatch "header" }}
+              <img src="{{ (.Resize "100x").RelPermalink }}" />
+            {{ end }}
+
+            {{ if eq .RelPermalink "/search/" }}<div class="row">
+              <div class="col-xs-8">{{ partial "search-google.html" . }}</div>
+            </div>{{ end }}
+          
+          </article>
+
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
