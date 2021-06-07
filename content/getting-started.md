@@ -62,7 +62,6 @@ To create an overview page, look at this example.
 {{ partial "footer.html" . }}
 </body>
 </html>
-
 ```
 
 Put this code in a file called 'list.html' and store it in your 'layouts/_defaults' folder, next to your 'single.html'. Your file tree will now look like this:
@@ -83,7 +82,6 @@ Put this code in a file called 'list.html' and store it in your 'layouts/_defaul
         └── sidebar.html
 
 4 directories, 8 files
-
 ```
 
 [/expand]
