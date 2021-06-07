@@ -79,7 +79,7 @@ Opening the folder of your project in a browser does not work, so you need to ha
 
 ## Step 3. Host your website
 
-Oh, how I hate shared hosting accounts... untill Hugo. Shared hosting accounts are cheap but unreliable. However, a Git based static site provides us with a back-up (actually the source code), which makes me feel a whole lot safer. Forestry.io is a website that can export the static version of your site to an FTP account on every update, enabling you to use an hosting environment of your choice. Just connect your FTP account through the Forestry.io hosting options. So if your cheap hosting account goes down, the source code will still live on in Git and in your Forestry.io environment, enabling you to push the site to another cheap hosting account. Isn't that reassuring? 
+Oh, how I hate shared hosting accounts… untill Hugo. Shared hosting accounts are cheap but unreliable. However, a Git based static site provides us with a back-up (actually the source code), which makes me feel a whole lot safer. CloudCannon exports the static version of your site to an FTP account on every update, enabling you to use an hosting environment of your choice. Just connect your FTP account through the CloudCannon options. So if your cheap hosting account goes down, the source code will still live on in Git and in your CloudCannon environment, enabling you to push the site to another cheap hosting account. Isn’t that reassuring?
 
 Here is your walk-through:
 
