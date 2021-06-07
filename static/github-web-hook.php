@@ -7,7 +7,6 @@ function deploy($type)
     if (!isValid()) {
        return false;
     }
-    $dir = __DIR__;
     system("git -C ../app pull -f 2>../log/last_git_pull_stderr.log >../log/last_git_pull_stdout.log", $pullError);
     if ($pullError) {
         return false;
