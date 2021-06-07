@@ -1,6 +1,8 @@
 <?php
 
-deploy('hugo');
+if (!deploy('hugo')) {
+    http_response_code(500);
+}
 
 function deploy($type)
 {
