@@ -86,7 +86,7 @@ Here is your walk-through:
 - Create a free account at cloudcannon.com
 - Create a website and name it
 - Select Hugo as the site buider
-- Create an empty ‘_config.yml’ file in the root
+- Create an empty ‘config.yaml’ file in the root
 - Upload your ‘index.html’ file to the ‘layouts’ directory
 - Upload your ‘index.md’ file to the ‘contents’ directory
 - Visit your website on the URL CloudCannon created for you
