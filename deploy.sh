@@ -8,4 +8,4 @@
 # -v Verbose output of all transfered files
 # -h Human readable file sizes
 #
-rm -Rf public && hugo && rsync -zrcvh --delete-delay public/ hugocodexorg@ams01.usecue.nl:public_html/
+rm -Rf public && hugo && /usr/bin/time -f "\nTransfer in %e s" rsync -zrcvh --delete-delay public/ hugocodexorg@ams01.usecue.nl:public_html/
