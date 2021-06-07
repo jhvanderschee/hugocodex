@@ -8,7 +8,7 @@ title: About Hugo Codex
 
 ### For front-end developers
 
-Hugo Codex is created by Joost van der Schee (<!-- raw HTML omitted -->@jhvanderschee<!-- raw HTML omitted --> or <!-- raw HTML omitted -->[jhvanderschee@gmail.com](mailto:jhvanderschee@gmail.com)<!-- raw HTML omitted -->) to make it easier for fellow front-end developers to choose for static web technology in their next project. The [getting started guide](/getting-started) even shows how to do that without touching the command-line. If you want to know more about Hugo, please visit the official Hugo documentation. The link can be found in the menu at the top...
+Hugo Codex is created by Joost van der Schee (<!-- raw HTML omitted -->@jhvanderschee<!-- raw HTML omitted --> or <!-- raw HTML omitted -->[jhvanderschee@gmail.com](mailto:jhvanderschee@gmail.com)<!-- raw HTML omitted -->) to make it easier for fellow front-end developers to choose for static web technology in their next project. The [getting started guide](/getting-started) even shows how to do that without touching the command-line. If you want to know more about Hugo, please visit the official Hugo documentation. The link can be found in the menu at the top.
 
 ### Why Hugo?
 
