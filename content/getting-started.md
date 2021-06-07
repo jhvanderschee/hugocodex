@@ -19,7 +19,7 @@ content
 </html>
 ```
 
-Now you create an 'index.html' file and you replace your PHP tags with Go templating tags, like so:
+Now you create an 'home.html' file and you replace your PHP tags with Go templating tags, like so:
 
 ```
 <html>
@@ -33,7 +33,7 @@ Now you create an 'index.html' file and you replace your PHP tags with Go templa
 </html>
 ```
 
-This 'index.html' file is your new homepage template. You need to store it in your project folder under 'layouts/_defaults'. You might want to make a copy of this file and call it 'single.html'. You need to place the html files you want to include in your project folder under 'layouts/partials'. Finally you have to create a root folder 'content' in your project and fill it with an 'index.md' file that looks like this:
+This 'home.html' file is your new homepage template. You need to store it in your project folder under 'layouts'. You might want to make a copy of this file in 'layouts/_defaults' and call it 'single.html'. You need to place the html files you want to include in your project folder under 'layouts/partials'. Finally you have to create a root folder 'content' in your project and fill it with an '_index.md' file that looks like this:
 
 
 ```
@@ -65,7 +65,26 @@ To create an overview page, look at this example.
 
 ```
 
-Put this code in a file called 'list.html' and store it in your 'layouts/_defaults' folder, next to your 'single.html'.
+Put this code in a file called 'list.html' and store it in your 'layouts/_defaults' folder, next to your 'single.html'. Your file tree wuill now look like this:
+
+```
+../hugo_starter/
+├── config.yaml
+├── content
+│   └── _index.md
+└── layouts
+    ├── _defaults
+    │   ├── list.html
+    │   └── single.html
+    ├── home.html
+    └── partials
+        ├── footer.html
+        ├── header.html
+        └── sidebar.html
+
+4 directories, 8 files
+
+```
 
 [/expand]
 
