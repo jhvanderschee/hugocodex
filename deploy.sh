@@ -4,7 +4,7 @@
 #
 # -z Zip compress the transfer to reduce bandwidth
 # -r Recursive processing includes subdirectories
-# -c Checksum based comparison as regeneration touches file dates
+# -c Checksum based comparison as regeneration changes mtime
 # -v Verbose output of all transfered files
 # -h Human readable file sizes
 #
