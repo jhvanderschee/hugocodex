@@ -83,9 +83,10 @@ Oh, how I hate shared hosting accounts... untill Hugo. Shared hosting accounts a
 
 Here is your walk-through:
 
-* create a (public) Git repository at [Github](https://github.com/)
-* upload the contents of your project folder (drag and drop works)
-* create an account at [Forestry.io](https://forestry.io/)
-* add a site and select 'Hugo'
-* synchronize with your Git repository
-* configure your hosting in 'Settings > Hosting'
+- Create a free account at cloudcannon.com
+- Create a website and name it
+- Select Hugo as the site buider
+- Create an empty ‘_config.yml’ file in the root
+- Upload your ‘index.html’ file to the ‘layouts’ directory
+- Upload your ‘index.md’ file to the ‘contents’ directory
+- Visit your website on the URL CloudCannon created for you
