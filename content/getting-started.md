@@ -91,7 +91,7 @@ Opening the folder of your project in a browser does not work, so you need to ha
 
 * install Hugo with [these simple instructions](https://gohugo.io/getting-started/installing/)
 * open a terminal in your project folder and type: `hugo server`
-* go to `http://127.0.0.1:1313/` and preview your website
+* go to [http://127.0.0.1:1313/](http://127.0.0.1:1313/) and preview your website
 
 ## Step 3. Host your website
 
