@@ -19,7 +19,7 @@ content
 </html>
 ```
 
-Now you create an 'index.html' file and you replace your PHP tags with Go templating tags, like so:
+Now you create an 'home.html' file and you replace your PHP tags with Go templating tags, like so:
 
 ```
 <html>
@@ -33,7 +33,7 @@ Now you create an 'index.html' file and you replace your PHP tags with Go templa
 </html>
 ```
 
-This 'index.html' file is your new homepage template. You need to store it in your project folder under 'layouts'. You might want to make a copy of this file in 'layouts/_defaults' and call it 'single.html'. You need to place the html files you want to include in your project folder under 'layouts/partials'. Finally you have to create a root folder 'content' in your project and fill it with an '_index.md' file that looks like this:
+This 'home.html' file is your new homepage template. You need to store it in your project folder under 'layouts'. You might want to make a copy of this file in 'layouts/_defaults' and call it 'single.html'. You need to place the html files you want to include in your project folder under 'layouts/partials'. Finally you have to create a root folder 'content' in your project and fill it with an '_index.md' file that looks like this:
 
 
 ```
@@ -71,7 +71,7 @@ Put this code in a file called 'list.html' and store it in your 'layouts/_defaul
 ├── content
 │   └── _index.md
 └── layouts
-    ├── index.html
+    ├── home.html
     ├── _defaults
     │   ├── list.html
     │   └── single.html
@@ -103,6 +103,6 @@ Here is your walk-through:
 - Create a website and name it
 - Select Hugo as the site buider
 - Create an empty ‘config.yaml’ file in the root
-- Upload your ‘index.html’ file to the ‘layouts’ directory
-- Upload your ‘index.md’ file to the ‘contents’ directory
+- Upload your ‘home.html’ file to the ‘layouts’ directory
+- Upload your ‘_index.md’ file to the ‘contents’ directory
 - Visit your website on the URL CloudCannon created for you
