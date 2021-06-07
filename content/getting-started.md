@@ -71,10 +71,10 @@ Put this code in a file called 'list.html' and store it in your 'layouts/_defaul
 ├── content
 │   └── _index.md
 └── layouts
+    ├── home.html
     ├── _defaults
     │   ├── list.html
     │   └── single.html
-    ├── home.html
     └── partials
         ├── footer.html
         ├── header.html
