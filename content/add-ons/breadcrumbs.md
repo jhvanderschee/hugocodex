@@ -8,7 +8,7 @@ Breadcrumb paths are a single line of links (often placed above the title) that 
 
 ### How it works
 
-This code looks at the path of the current page to destill the breadcrumb path. This approach has a small footprint, as only the current page has to be consulted during the build of the breadcrumbs. Additionally, this code does not require the breadcrumbs to be explicitly defined in the front matter / YML. This means the path can be defined by your file and folder structure or by your (native Hugo) path variables. The following code looks at the permalink and translates it into a breadcrumb/path.
+This code looks at the path of the current page to destill the breadcrumb path. This approach has a small footprint, as only the current page has to be consulted during the build of the breadcrumbs. Additionally, this code does not require the breadcrumbs to be explicitly defined in the front matter / YAML. This means the path can be defined by your file and folder structure or by your (native Hugo) path variables. The following code looks at the permalink and translates it into a breadcrumb/path.
 
 [expand]
 
