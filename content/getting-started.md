@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: 'Getting started'
 ---
 ## Step 1. Create a basic website
 
