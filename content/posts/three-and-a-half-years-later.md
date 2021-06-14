@@ -1,6 +1,6 @@
 ---
 title: 'Three and a half years later'
-date: '2021-06-07'
+date: '2021-07-07'
 ---
 I already told you that [migrating from Jekyll to Hugo](/posts/migrating-from-jekyll-to-hugo) was a lot harder than I thought. But I had not expected that I would not look at Hugo for another 3.5 years.
 
