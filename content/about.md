@@ -1,7 +1,6 @@
 ---
-title: About Hugo Codex
+title: 'About Hugo Codex'
 ---
-
 > "Hugo Codex wants to make it easier for you to choose for Hugo in your next project."
 
 ### For front-end developers
@@ -14,4 +13,4 @@ Hugo is the fastest popular static site generator. Static sites are better for p
 
 ### Copyright
 
-Feel free to use all code on this website. The code of the website itsself may also be used, as this website is a demo of the code it presents. However, respect the copyright of the used trademarks and the licenses of the open-source software used, as their rights belong to their respective owners. All images are CC0 images from Unsplash\!\!\!
+Feel free to use all code on this website. The code of the website itsself may also be used, as this website is a demo of the code it presents. However, respect the copyright of the used trademarks and the licenses of the open-source software used, as their rights belong to their respective owners. All images are CC0 images from Unsplash.
