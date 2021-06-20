@@ -11,10 +11,6 @@
             
             {{ .Content }}
 
-            {{ with .Resources.GetMatch "header" }}
-              <img src="{{ (.Resize "100x").RelPermalink }}" />
-            {{ end }}
-
             {{ if eq .RelPermalink "/search/" }}<div class="row">
               <div class="col-xs-8">{{ partial "search-google.html" . }}</div>
             </div>{{ end }}
@@ -25,3 +21,4 @@
 </div>
 
 {{ partial "footer.html" . }}
+ 
