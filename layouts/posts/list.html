@@ -13,7 +13,7 @@
             
             <br>
 
-            {{ range (where .Site.RegularPages "Section" .Section).ByDate }}
+            {{ range (where .Site.RegularPages "Section" .Section).ByDate.Reverse }}
               {{ .Date.Format "2006/01/02" }} - <a href="{{ .Permalink }}">{{ .Title }}</a><br>
             {{ end }}
 
