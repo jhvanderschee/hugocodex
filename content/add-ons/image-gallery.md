@@ -9,7 +9,7 @@ This script creates an image gallery. The script reads all images from a specifi
 
 ### How it works
 
-The script searches for any file in the folder ‘album’ in the assets directory of Hugo. It creates an image tag with a thumbnail for these images with a link to a large version. The thumbnail is a 300 pixel wide square cropped version of the image. The script wraps the thumbnail in a link, which will trigger the lightbox if present.
+The script searches for any file in the folder ‘album’ in the assets directory of Hugo. It creates an image tag with a thumbnail for these images. The thumbnail is a 300 pixel wide square cropped version of the image. The script wraps the thumbnail in a link, which links to a larger version and will trigger a lightbox if present.
 
 ### Shortcode installation
 
