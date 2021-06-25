@@ -2,7 +2,7 @@ baseURL: "http://hugocodex.org"
 languageCode: "en-us"
 title: "Hugo Codex"
 description: "Hugo, the website framework that is super fast and super simple."
-assetDir: "static"
+
 
 disableKinds: 
   - taxonomy
