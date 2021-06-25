@@ -1,8 +1,11 @@
-baseURL: "http://hugocodex.org"
+baseURL: "https://hugocodex.org"
 languageCode: "en-us"
 title: "Hugo Codex"
 description: "Hugo, the website framework that is super fast and super simple."
+<<<<<<< HEAD
 
+=======
+>>>>>>> ba5c15703a0f4d80ccea8807fd46b3a97724b71c
 
 disableKinds: 
   - taxonomy

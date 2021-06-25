@@ -1,16 +1,15 @@
 ---
-title: Image gallery
+title: 'Image gallery'
 ---
-
 ### Introduction
 
-This script creates an image gallery. The script reads all images from a specific (user-defined) static folder in Hugo, automagically crops them to 300px squares and shows them in rows of five.
+This script creates an image gallery. The script reads all images from a specific (user-defined) folder in the assets directory of Hugo, automagically crops them to 300px squares and shows them in rows of five.
 
 {{< image-gallery gallery_dir="album" >}}
 
 ### How it works
 
-The script searches for any file with a path that contains the string given in ‘folder’ and checks whether it is a ‘jpg’ file. If so, it creates an image tag for the image. The source is a 300 pixel wide square cropped version of the image. Then the script wraps the image in a link, containing the full path to the image. This will trigger the lightbox if present.
+The script searches for any file in the folder ‘album’ in the assets directory of Hugo. It creates an image tag with a thumbnail for these images. The thumbnail is a 300 pixel wide square cropped version of the image. The script wraps the thumbnail in a link, which links to a larger version and will trigger a lightbox if present. The caption is the file name without extension.
 
 ### Shortcode installation
 
