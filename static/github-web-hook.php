@@ -9,7 +9,13 @@ function deploy($type)
     if (!isValid()) {
        return false;
     }
-    system('git -C ../app pull -f 2>&1 1>../log/last_git.log', $gitError);
+    //fetch app.git
+    system('git -C ../app.git fetch origin main:main 2>&1 1>../log/last_git_fetch.log', $gitError);
+    if ($gitError) {
+        return false;
+    }
+    //pull app
+    system('git -C ../app pull -f 2>&1 1>../log/last_git_pull.log', $gitError);
     if ($gitError) {
         return false;
     }
