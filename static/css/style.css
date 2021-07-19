@@ -107,14 +107,14 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appe
 .btn, input[type="submit"] {
     background: rgb(247, 44, 114); 
     font-weight: bold; 
-    color: rgba(255,255,255,0.75); 
+    color: rgba(255,255,255,0.9); 
     text-decoration: none;
     padding: 0.35rem 0.7rem;
     border: 0;
     cursor: pointer;
     border-radius: 0.25rem;
 }
-.btn:hover {color: rgba(255,255,255,0.9);}
+.btn:hover {color: rgba(255,255,255,1);}
 input[type="number"] {-moz-appearance: textfield;}
 input[type="number"].quantity {width: 1.5rem; min-width: 1.5rem; text-align: center;}
 input::-webkit-outer-spin-button, 
