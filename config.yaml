@@ -1,7 +1,9 @@
 baseURL: "https://hugocodex.org"
 languageCode: "en-us"
 title: "Hugo Codex"
-description: "Hugo, the website framework that is super fast, because fast is simply better."
+
+params:
+  description: "Hugo, the website framework that is super fast, because fast is simply better."
 
 disableKinds: 
   - taxonomy
