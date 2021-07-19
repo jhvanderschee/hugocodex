@@ -19,9 +19,9 @@
   
 * {padding: 0; margin: 0;}
 html {overflow-y: scroll; font-size: 16px;}
-body {background: #333; font-family: 'Open Sans'; color: #777777; font-size: 0.8rem; line-height: 1.45;}
+body {background: #333; font-family: 'Open Sans'; color: #666666; font-size: 0.8rem; line-height: 1.45;}
 a {color: rgb(247, 44, 114); text-decoration: none;}
-a.gray {color: #777777; text-decoration: underline;}
+a.gray {color: #666666; text-decoration: underline;}
 
 .container {max-width: 73rem; margin: 0 auto; padding: 0 1rem;}
 .content {background: #fcfcfc url(/img/bg_content.svg) center top no-repeat; background-attachment: fixed; padding: 4rem 0 5.5rem;}
@@ -32,12 +32,12 @@ a.gray {color: #777777; text-decoration: underline;}
 #navigation ul {display: flex; align-items: center;}
 #navigation ul li {list-style: none;}
 #navigation .brand img {display: inline-block; height: 2rem; vertical-align: middle;}
-#navigation .brand {font-size: 1.05rem; color: #777777; padding: 0.25rem 0.9rem 0.25rem 0;}
-#navigation ul li a {display: block; color: #777777; text-decoration: none; padding: 0.25rem 0.9rem;}
+#navigation .brand {font-size: 1.05rem; color: #666666; padding: 0.25rem 0.9rem 0.25rem 0;}
+#navigation ul li a {display: block; color: #666666; text-decoration: none; padding: 0.25rem 0.9rem;}
 #navigation .brand:hover, #navigation ul li a:hover, #navigation ul li.active a {color: rgb(247, 44, 114);}
 #navigation ul li svg {height: 1rem; fill: #777; position: relative; top: 0.0625rem;}
 
-#togglemenu {display: none; color: #777777; cursor: pointer;}
+#togglemenu {display: none; color: #666666; cursor: pointer;}
 .menuopen #togglemenu {color: white;}
 
 #breadcrumbs, #breadcrumbs a {color: silver; text-decoration: none;}
@@ -67,7 +67,7 @@ h1, h2, h3, h4 {color: #444444; font-weight: normal; line-height: 1.1;}
 h1 {padding: 2.8rem 0 0.75rem; font-size: 2.05rem;}
 h2 {padding: 2.8rem 0 0.75rem; font-size: 1.6rem;}
 h3 {font-size: 1.1rem; padding: 1.25rem 0 0.3rem;}
-h1 + h3 {padding-top: 0;}
+h1 + h2 {padding-top: 0;}
 h4 {font-size: 0.9rem; padding: 1rem 0 0.25rem;}
 
 .threecols {display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;}
@@ -94,7 +94,7 @@ textarea, input, select {
     width: calc(100% - 1.24rem);
     padding: 0.1875rem 0.625rem;
     background: white;
-    color: #777777;
+    color: #666666;
 }
 select {padding: 0.6rem; height: auto; line-height: 1.4; width: 100%;}
 textarea {height: auto; line-height: 1.4; min-width: calc(100% - 1.24rem); max-width: calc(100% - 1.24rem); padding: 0.6rem;}
@@ -142,9 +142,9 @@ select {
 .home h1 {font-size: 2rem; font-weight: normal;}
 
 
-#footer {padding: 1.25rem 0 2.5rem; color: #888;}
-#footer h3 {font-weight: 400; line-height: 1.1; color: #ccc;}
-#footer a {color: #888; text-decoration: none;}
+#footer {padding: 1.25rem 0 2.5rem; color: #999;}
+#footer h3 {font-weight: 400; line-height: 1.1; color: #ddd;}
+#footer a {color: #999; text-decoration: none;}
 #footer a:hover {text-decoration: underline;}
 #footer img {cursor: pointer; height: 6.5rem; opacity: 0.35; display: inline-block; vertical-align: middle;}
 #footer img:first-child {margin-right: 0.8rem; margin-left: -0.5rem;}
