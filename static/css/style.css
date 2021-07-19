@@ -67,7 +67,7 @@ h1, h2, h3, h4 {color: #444444; font-weight: normal; line-height: 1.1;}
 h1 {padding: 2.8rem 0 0.75rem; font-size: 2.05rem;}
 h2 {padding: 2.8rem 0 0.75rem; font-size: 1.6rem;}
 h3 {font-size: 1.1rem; padding: 1.25rem 0 0.3rem;}
-h1 + h2 {padding-top: 0;}
+h1 + h2 {padding-top: 0; font-size: 1.1rem;}
 h4 {font-size: 0.9rem; padding: 1rem 0 0.25rem;}
 
 .threecols {display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;}
