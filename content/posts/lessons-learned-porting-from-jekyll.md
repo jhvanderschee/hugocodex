@@ -3,13 +3,15 @@ title: Lessons learned porting from Jekyll
 date: 2021-08-10T00:00:00-00:00
 ---
 
-I have been porting multiple websites from Jekyll to Hugo and learned a few things along the way. I want to share them with you, so you can benifit from them. This is going to be a living document, so make sure to check this document later.
+I have been buiding around 30 Jekyll websites per year in the last 6 years. I recently switched completely to Jekyll and I have been porting multiple websites from Jekyll to Hugo. I learned a few things along the way that you will need to know too, when you make the step from Jekyll to Hugo. I have been having a hard time with learning Hugo, but in the end it is worth it, especially because of the low build times and the build-in image conversion. 
+
+Know that this is going to be a living document, so make sure to come back later to check this document again.
 
 ## Directory structure
 
 ### Collections
 
-In Hugo 'collections' are called 'sections'. I personally do not like that name at all, but we have to live with it. A section is a first level directory in the content directory OR a directory with a '\_index.md' file in it. A directory with an 'index.md' file in it is NO section (but a 'page bundle').
+In Hugo 'collections' are called 'sections'. I personally do not like that name at all, but we have to live with it. A section is a first level directory in the content directory OR a directory with a '\_index.md' file in it. A directory with an 'index.md' file in it is NO section (but a 'page bundle'). When you create a multilingual website you use the first level directories for the languages and the second level directories for sections/collections.
 
 ### Layouts
 
@@ -17,7 +19,7 @@ You can have layouts that you name in your front matter, but those layouts shoul
 
 ### Content files
 
-Where Jekyll assumes all .md files are content, Hugo requires you to use a content directory ('content' by default).
+Where Jekyll assumes all .md files are content, Hugo requires you to use a content directory ('content' by default). 
 
 ### Static files
 
