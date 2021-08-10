@@ -25,7 +25,7 @@ Jekyll assumes all files are static. This is not the case in Hugo. When you have
 
 ### Data
 
-Data is the only directory that is the same in Jekyll and Hugo.
+Data is the only directory that is the same in Jekyll and Hugo. You can rename your '.yml' to '.yaml' to make them backwards compatible with older Hugo versions.
 
 ### Builds
 
@@ -47,7 +47,7 @@ When you want to prevent output on a section/collection, you can wirte 'output: 
 
 ### Setting permalinks
 
-In Jekyll I love to use 'permalinks: pretty' and then some specific defaults for each collection. This works a little different in Hugo.
+In Jekyll I love to use 'permalinks: pretty' and then some specific defaults for each collection. This works a little different in Hugo. Hugo allows you to simply list all sections under the 'permalinks' key in the config file. A logical key-value-pair (under this key) would be 'sectionname: /desiredpath/:filename'. The last portion (:filename) stands for the filename without extension. Another example is 'posts: /:year/:month/:title/'. This slugifies the title and adds the year and month to prevent URL collisions.
 
 ### Custom site variables
 
