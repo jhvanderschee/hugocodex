@@ -51,4 +51,4 @@ In Jekyll I love to use 'permalinks: pretty' and then some specific defaults for
 
 ### Custom site variables
 
-Custom site variables are not written as children of the root, but as children of the 'params' key in the config file. They can be called by using the '.Site.Params.customvariable'.
+Custom site variables are not written as children of the root, but as children of the 'params' key in the config file. They can be called by using the '.Site.Params.customvariable', where 'customvariable' is actually the name of your custom variable.
