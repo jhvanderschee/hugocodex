@@ -1,5 +1,5 @@
 ---
-title: Lessons learned while porting websites from Jekyll to Hugo
+title: Lessons learned porting from Jekyll
 ---
 
 I have been porting multiple websites from Jekyll to Hugo and learned a few things along the way. I want to share them with you, so you can benifit from them. This is going to be a living document, so make sure to check this document later.
