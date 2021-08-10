@@ -41,7 +41,7 @@ Hugo is able to resize images. These resized images end up in the 'resources' di
 
 ### About the config file
 
-In Jekyll the config file is called '\_config.yml'. In Hugo this is 'config.yaml'. Note that in modern versions of Hugo you can also use the 'yml' extension. Another remarkable thing is that Jekyll requires you have to list your collections in the config file. Hugo does not have this requirement. 
+In Jekyll the config file is called '\_config.yml'. In Hugo this is 'config.yaml'. Note that in modern versions of Hugo you can also use the 'yml' extension. Another remarkable thing is that Jekyll requires you to list your collections in the config file. Hugo does not have this requirement. 
 
 ### Preventing output
 
