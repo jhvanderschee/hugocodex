@@ -1,5 +1,6 @@
 ---
 title: Lessons learned porting from Jekyll
+date: 2021-08-10T00:00:00-00:00
 ---
 
 I have been porting multiple websites from Jekyll to Hugo and learned a few things along the way. I want to share them with you, so you can benifit from them. This is going to be a living document, so make sure to check this document later.
@@ -50,3 +51,4 @@ In Jekyll I love to use 'permalinks: pretty' and then some specific defaults for
 
 ### Custom site variables
 
+Custom site variables are not written as children of the root, but as children of the 'params' key in the config file. They can be called by using the '.Site.Params.customvariable'.
