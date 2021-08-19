@@ -1,6 +1,7 @@
 ---
 title: 'Image gallery'
 ---
+
 ### Introduction
 
 This script creates an image gallery. The script reads all images from a specific (user-defined) folder in the assets directory of Hugo, automagically crops them to 300px squares and shows them in rows of five.
