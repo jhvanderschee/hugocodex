@@ -1,0 +1,67 @@
+{{ $pageform := (index .Page.Params.forms (int (.Scratch.Get "form"))) }}
+
+{{ if (eq $pageform.form_engine "netlify") }}
+    <form name="{{ .Title }} {{ if (gt (.Scratch.Get "form") 0) }}{{ .Scratch.Get "form" }}{{ end }}" class="form autofill" method="POST" action="{{ $pageform.redirect }}" data-netlify="true" netlify-honeypot="_gotcha">
+        <input type="hidden" name="_to" value="{{ $pageform.to }}">
+{{ else if (eq $pageform.form_engine "cloudcannon") }}
+    <form id="form{{ if (gt (.Scratch.Get "form") 0) }}_{{ .Scratch.Get "form" }}{{ end }}" class="form autofill" method="POST" action="{{ $pageform.redirect }}">
+        <input type="hidden" name="_to" value="{{ $pageform.to }}">
+{{ end }}
+{{ range $pageform.fields }}
+
+    {{ if .required }}{{ .Scratch.Set "requiredstar" "" }}{{ else }}{{ .Scratch.Set "requiredstar" " (optioneel)" }}{{ end }}
+    {{ if .required }}{{ .Scratch.Set "requiredtext" "required" }}{{ else }}{{ .Scratch.Set "requiredtext" "" }}{{ end }}
+
+    {{ if eq .input_type "title" }}
+        <h3>{{ .placeholder }}</h3>
+    {{ else if eq .input_type "textarea" }}
+        <div>
+            <label {{ if $pageform.placeholders }}sr-only{{ end }} for="{{ .name }}">{{ .placeholder }}{{ .Scratch.Get "requiredstar" }}</label>
+            <textarea name="{{ .name }}" id="{{ .name }}" cols="30" rows="10" {{ if $pageform.placeholders }}placeholder="{{ .placeholder }}{{ .Scratch.Get "requiredstar" }}"{{ end }} {{ .Scratch.Get "requiredtext" }}></textarea>
+        </div>
+    {{ else if eq .input_type "radio" }}
+        <div class="radio">
+            <label><input type="radio" name="{{ .name }}" value="{{ .placeholder }}" {{ .Scratch.Get "requiredtext" }}>{{ .placeholder }}</label>
+        </div>
+    {{ else if eq .input_type "checkbox" }}
+        <div class="checkbox">
+            <label><input type="checkbox" name="{{ .name }}" value="{{ .placeholder }}" {{ .Scratch.Get "requiredtext" }}>{{ .placeholder }}</label>
+        </div>
+    {{ else if eq .input_type "submit" }}
+        <div>
+            <input type="{{ .input_type }}" value="{{ .placeholder }}" class="button" />
+        </div>
+    {{ else }}
+        {{ if eq .name "name" }}
+            <div class="half">
+                <label class="{{ if $pageform.placeholders }}sr-only{{ end }}" for="firstname">First name{{ .Scratch.Get "requiredstar" }}</label>
+                <input type="text" name="firstname" id="firstname" {{ if $pageform.placeholders }}placeholder="First name{{ .Scratch.Get "requiredstar" }}"{{ end }} {{ .Scratch.Get "requiredtext" }}>
+            </div>
+            <div class="half">
+                <label class="{{ if $pageform.placeholders }}sr-only{{ end }}" for="lastname">Last name{{ .Scratch.Get "requiredstar" }}</label>
+                <input type="text" name="lastname" id="lastname" {{ if $pageform.placeholders }}placeholder="Last name{{ .Scratch.Get "requiredstar" }}"{{ end }} {{ .Scratch.Get "requiredtext" }}>
+            </div>
+        {{ else if eq .name "address" }}
+            <div>
+                <label class="{{ if $pageform.placeholders }}sr-only{{ end }}" for="address">Address{{ .Scratch.Get "requiredstar" }}</label>
+                <input type="text" name="address" id="address" {{ if $pageform.placeholders }}placeholder="Address{{ .Scratch.Get "requiredstar" }}"{{ end }} {{ .Scratch.Get "requiredtext" }}>
+            </div>
+            <div class="half">
+                <label class="{{ if $pageform.placeholders }}sr-only{{ end }}" for="city">City{{ .Scratch.Get "requiredstar" }}</label>
+                <input type="text" name="city" id="city" {{ if $pageform.placeholders }}placeholder="City{{ .Scratch.Get "requiredstar" }}"{{ end }} {{ .Scratch.Get "requiredtext" }}>
+            </div>
+            <div class="half">
+                <label class="{{ if $pageform.placeholders }}sr-only{{ end }}" for="postalcode">Postal code{{ .Scratch.Get "requiredstar" }}</label>
+                <input type="text" name="postalcode" id="postalcode" {{ if $pageform.placeholders }}placeholder="Postal code{{ .Scratch.Get "requiredstar" }}"{{ end }} {{ .Scratch.Get "requiredtext" }}>
+            </div>
+        {{ else }}
+            <div>
+                <label class="{{ if $pageform.placeholders }}sr-only{{ end }}" for="{{ .name }}">{{ .placeholder }}{{ .Scratch.Get "requiredstar" }}</label>
+                <input type="{{ .input_type }}" name="{{ .name }}" id="{{ .name }}" {{ if $pageform.placeholders }}placeholder="{{ .placeholder }}{{ .Scratch.Get "requiredstar" }}"{{ end }} {{ .Scratch.Get "requiredtext" }}>
+            </div>
+        {{ end }}
+    {{ end }}
+
+{{ end }}
+
+</form>
