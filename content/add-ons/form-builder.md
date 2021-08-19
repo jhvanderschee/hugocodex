@@ -85,7 +85,7 @@ Disclaimer: Note that there is no select (dropdown) support (yet). Also note tha
 
 Step 1. Make sure your front matter of your page looks like the example above  
 Step 2. Download the file [form.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/partials/form.html)  
-Step 3. Save the file in the ‘_includes’ directory of your project  
+Step 3. Save the file in the ‘layouts/partials’ directory of your project  
 Step 4. Add the following line to your layout on the place where you want the form to appear:  
 ```
 {{ .Scratch.Set "form" "0" }}
