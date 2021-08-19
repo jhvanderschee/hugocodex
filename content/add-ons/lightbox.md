@@ -19,9 +19,8 @@ Step 1. Download the file [lightbox.js](https://raw.githubusercontent.com/jhvand
 <br />Step 3. Make sure the footer of your layout document looks like this:
 
 ```
-{% raw %}...
 <script type="text/javascript" src="/js/lightbox.js"></script>
 <link rel="stylesheet" href="/css/lightbox.css">
 </body>
-</html>{% endraw %}
+</html>
 ```
