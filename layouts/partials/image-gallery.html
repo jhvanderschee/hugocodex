@@ -6,7 +6,7 @@
     .image-gallery li a img {width: 100%; display: block;}
 </style>
 
-{{ $dir := (.Scratch.Get "gallery_dir") }}
+{{ $dir := .gallery_dir }}
 <ul class="image-gallery">
 {{ range (readDir (printf "assets/%s" $dir)) }}
   {{- $image := resources.Get (printf "%s/%s" $dir .Name) -}}

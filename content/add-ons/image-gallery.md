@@ -29,6 +29,5 @@ Step 2. Save the file in the ‘layouts/partials directory of your project
 Step 3. Add the following line to your layout on the place where you want the image gallery to appear:  
 
 ```
-{{ .Scratch.Set "gallery_dir" "album" }}  
-{{ partial "image-gallery" . }}
+{{ partial "image-gallery" (dict "context" . "gallery_dir" "album") }}
 ```

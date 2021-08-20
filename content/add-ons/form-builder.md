@@ -87,8 +87,7 @@ Step 2. Download the file [form.html](https://github.com/jhvanderschee/hugocodex
 Step 3. Save the file in the ‘layouts/partials’ directory of your project  
 Step 4. Add the following line to your layout on the place where you want the form to appear:  
 ```
-{{ .Scratch.Set "form" "0" }}
-{{ if (index .Page.Params.forms (.Scratch.Get "form")) }}
-  {{ .Scratch.Set "form" (.Scratch.Get "form") }}{{ partial "form.html" . }}
+{{ if (index .Page.Params.forms 0) }}
+  {{ partial "form.html" (dict "context" . "form" 0) }}
 {{ end }}
 ```
