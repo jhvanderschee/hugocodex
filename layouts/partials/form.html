@@ -1,4 +1,4 @@
-{{ $pageform := (index .Page.Params.forms (int (.Scratch.Get "form"))) }}
+{{ $pageform := (index .context.Page.Params.forms .form) }}
 
 {{ if (eq $pageform.form_engine "netlify") }}
     <form name="{{ .Title }} {{ if (gt (.Scratch.Get "form") 0) }}{{ .Scratch.Get "form" }}{{ end }}" class="form autofill" method="POST" action="{{ $pageform.redirect }}" data-netlify="true" netlify-honeypot="_gotcha">

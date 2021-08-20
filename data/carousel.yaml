@@ -1,0 +1,9 @@
+images:
+  - image: "/uploads/slider/image1.jpg"
+    content_html: ""
+  - image: "/uploads/slider/image2.jpg"
+    content_html: ""
+  - image: "/uploads/slider/image3.jpg"
+    content_html: ""
+  - image: "/uploads/slider/image4.jpg"
+    content_html: ""

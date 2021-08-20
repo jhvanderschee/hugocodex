@@ -55,9 +55,8 @@ forms:
 And add this to your layout:
 
 ```
-{{ .Scratch.Set "form" "0" }}
-{{ if (index .Page.Params.forms (.Scratch.Get "form")) }}
-  {{ .Scratch.Set "form" (.Scratch.Get "form") }}{{ partial "form.html" . }}
+{{ if (index .Page.Params.forms 0) }}
+  {{ partial "form.html" (dict "context" . "form" 0) }}
 {{ end }}
 ```
 

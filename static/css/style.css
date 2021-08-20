@@ -18,7 +18,7 @@
 }
   
 * {padding: 0; margin: 0;}
-html {overflow-y: scroll; font-size: 16px;}
+html {overflow-y: scroll; font-size: 16px; scroll-behavior: smooth;}
 body {background: #333; font-family: 'Open Sans'; color: #666666; font-size: 0.8rem; line-height: 1.45;}
 a {color: rgb(247, 44, 114); text-decoration: none;}
 a.gray {color: #666666; text-decoration: underline;}
