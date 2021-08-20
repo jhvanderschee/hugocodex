@@ -8,7 +8,7 @@ Forms are the most important parts of a websites. They range from simple contact
 
 ### How it works
 
-The form uses HTML5. The form can be submitted by CloudCannon, Formspree and FormBucket. The first only works on CloudCannon hosting. You can choose between showing placeholders in the inputs or labels above it. Two special fields are available: a field named ‘name’ (type ‘text’) will show ‘first name’ and ‘last name’ input boxes on one line. A field named ‘address’ (type ‘text’) will show ‘address’, ‘city’ and ‘postal code’ input boxes.
+The form uses HTML5. The form can be submitted by CloudCannon or Netlify. The first only works on CloudCannon hosting. You can choose between showing placeholders in the inputs or labels above it. Two special fields are available: a field named ‘name’ (type ‘text’) will show ‘first name’ and ‘last name’ input boxes on one line. A field named ‘address’ (type ‘text’) will show ‘address’, ‘city’ and ‘postal code’ input boxes.
 
 To create a form, add the following code to the front matter of your page:
 
