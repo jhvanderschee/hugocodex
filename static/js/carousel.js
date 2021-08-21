@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const bullets = carousel.querySelectorAll('ol li');
         const nextarrow = carousel.querySelector('.next');
         const prevarrow = carousel.querySelector('.prev');
+
+        // Initialize the carousel
         nextarrow.style.display = 'block';
         prevarrow.style.display = 'block';
         bullets[0].classList.add('selected');
