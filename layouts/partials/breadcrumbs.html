@@ -2,10 +2,17 @@
     <a href="/">Home</a>
     {{ .Scratch.Set "permalinkparts" (split .RelPermalink "/") }}
     {{ range $index, $part := (.Scratch.Get "permalinkparts") }}
-            {{ if ge $index 1 }}{{ $.Scratch.Set "url" (print (index ($.Scratch.Get "permalinkparts") 1) "/") }}{{ end }}
-            {{ if ge $index 2 }}{{ $.Scratch.Set "url" (print ($.Scratch.Get "url") (index ($.Scratch.Get "permalinkparts") 2) "/") }}{{ end }}
-            {{ if gt (len $part ) 0 }}
-                / <a href="/{{ $.Scratch.Get "url" }}">{{ humanize (replace $part "posts" "blog") }}</a>
+        {{ range $i, $num := (seq 10) }}
+            {{ if ge $index $i }}
+                {{ if eq $i 0 }}
+                    {{ $.Scratch.Set "url" (index ($.Scratch.Get "permalinkparts") $i) }}
+                {{ else }}
+                    {{ $.Scratch.Add "url" (print (index ($.Scratch.Get "permalinkparts") $i) "/") }}
+                {{ end }}
             {{ end }}
+        {{ end }}
+        {{ if gt (len $part ) 0 }}
+            / <a href="/{{ $.Scratch.Get "url" }}">{{ humanize (replace $part "posts" "blog") }}</a>
+        {{ end }}
     {{ end }}
 </div>

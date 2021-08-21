@@ -15,15 +15,18 @@ This code looks at the path of the current page to destill the breadcrumb path. 
 ```
 <div id="breadcrumbs">
     <a href="/">Home</a>
-    {{ $permalinkparts = (split .RelPermalink "/") }}
-    {{ range $index, $part := $permalinkparts }}
-        {{ if gt (len $part ) 0 }}
-            {{ if ge $index 0 }}{{ $url := (index $permalinkparts 0) }}{{ end }}
-            {{ if ge $index 1 }}{{ $url := (print $url (index $permalinkparts 1) }}{{ end }}
-            {{ if ge $index 2 }}{{ $url := (print $url (index $permalinkparts 2) }}{{ end }}
-
-            / <a href="/{{ $url }}">{{ humanize (replace $part "posts" "blog") }}</a>
+    {{ .Scratch.Set "permalinkparts" (split .RelPermalink "/") }}
+    {{ range $index, $part := (len (split .RelPermalink "/")) }}
+        {{ range $i, $num := (seq 10) }}
+            {{ if ge $index $i }}
+                {{ if eq $i 0 }}
+                    {{ $.Scratch.Set "url" (index ($.Scratch.Get "permalinkparts") $i) }}
+                {{ else }}
+                    {{ $.Scratch.Add "url" (print (index ($.Scratch.Get "permalinkparts") $i) "/") }}
+                {{ end }}
+            {{ end }}
         {{ end }}
+        / <a href="/{{ $.Scratch.Get "url" }}">{{ humanize (replace $part "posts" "blog") }}</a>
     {{ end }}
 </div>
 ```
