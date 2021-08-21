@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollTo = function(event) {
         event.preventDefault();
         let href = this.getAttribute('href');
-        //console.log(ele.scrollLeft, ele.querySelector(href).getBoundingClientRect().left);
-        ele.scrollLeft = ele.scrollLeft + (parseInt(carousel.getAttribute("items"))*ele.querySelector(href).getBoundingClientRect().left);
+        //console.log(href, ele.scrollLeft, ele.querySelector(href).offsetLeft);
+        ele.scrollLeft = ele.querySelector(href).offsetLeft;
     }
 
     const setSelected = function() {
