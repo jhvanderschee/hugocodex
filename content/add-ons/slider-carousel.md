@@ -14,7 +14,7 @@ You can define how long each slide should stay on the screen (in miliseconds) an
 
 {{< carousel items="1" height="500" unit="px" duration="7000" >}}
 
-{{< carousel items="2" height="35" unit="%" duration="7000" >}}
+{{< carousel items="2" height="35" unit="%" duration="5000" >}}
 
 ### Installation
 
