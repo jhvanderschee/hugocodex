@@ -19,7 +19,7 @@ You can define how long each slide should stay on the screen (in miliseconds) an
 
 ### Installation
 
-Step 1. Download the file [lightbox.js](https://github.com/jhvanderschee/hugocodex/blob/main/static/js/carousel.js) and [lightbox.css](https://github.com/jhvanderschee/hugocodex/blob/main/static/css/carousel.css)
+Step 1. Download the file [carousel.js](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/static/js/carousel.js) and [carousel.css](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/static/css/carousel.css)
 <br />Step 2. Save the file in the '/js' and '/css' directory of your project
 <br />Step 3. Make sure the footer of your layout document looks like this:
 
@@ -44,7 +44,7 @@ images:
 
 ### Template installation
 
-Step 5. Download the file [carousel.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/partials/carousel.html)  
+Step 5. Download the file [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/carousel.html)  
 Step 6. Save the file in the ‘layouts/partials’ directory of your project  
 Step 7. Add this to your layout:  
 ```
@@ -53,7 +53,7 @@ Step 7. Add this to your layout:
 
 ### Shortcode installation
 
-Step 5. Download the file [carousel.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/partials/shortcodes/carousel.html)  
+Step 5. Download the file [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/shortcodes/carousel.html)  
 Step 6. Save the file in the ‘layouts/partials/shortcodes’ directory of your project  
 Step 7. Add this to your layout:  
 ```
