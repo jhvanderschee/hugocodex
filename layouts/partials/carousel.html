@@ -1,105 +1,17 @@
-<style>
-/* CAROUSEL CSS */
-.carousel {position: relative;}
-.carousel ul {
-    overflow: auto; 
-    display: flex; 
-    scroll-snap-type: x mandatory;
-    scroll-snap-points-y: repeat(100%);
-    scroll-behavior: smooth;
-    background: gray;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-    margin: 0; padding: 0;
-}
-.carousel ul::-webkit-scrollbar {display: none; /* Hide scrollbar for Chrome, Safari and Opera */} 
-.carousel ul li {position: relative; min-width: 100%; list-style: none; background: url() center center / cover no-repeat; scroll-snap-align: start; padding-bottom: {{ .Get "height" }}{{ .Get "unit" }};}
-.carousel ul li > * {position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
-.carousel ul li > img {object-fit: cover;}
-.carousel ol {position: absolute; bottom: 15px; display: flex; justify-content: center; left: 50%; transform: translateX(-50%); z-index: 9;}
-.carousel ol li {list-style: none; padding: 0 5px;}
-.carousel ol li a {display: block; height: 10px; width: 10px; border: 2px solid white; background: transparent; border-radius: 100%;}
-.carousel ol li.selected a {background: white;}
-.carousel .prev, .carousel .next {display: none; user-select:none; cursor: pointer; font-size: 50px; color: white; position: absolute; left: 0; padding: 15px; top: 50%; transform: translateY(-50%); z-index: 9;}
-.carousel .next {left: auto; right: 0;}
-
-</style>
-<div class="carousel" duration="{{ .Get "duration" }}">
+{{ .context.Scratch.Set "height" .height }}
+{{ .context.Scratch.Set "unit" .unit }}
+{{ .context.Scratch.Set "items" .items }}
+<div id="carousel10" class="carousel" duration="{{ .duration }}" items="{{ .items }}">
     <ul>
-        {{ range $index, $slide := .Site.Data.carousel.images }}
-        <li id="c1_slide{{ add $index 1 }}"><img src="{{ $slide.image }}" alt="" /><div>{{ $slide.content_html }}</div></li>  
+        {{ range $index, $slide := .context.Site.Data.carousel.images }}
+          <li id="c10_slide{{ add $index 1}}" style="min-width: calc(100%/{{ $.context.Scratch.Get "items" }}); padding-bottom: {{ $.context.Scratch.Get "height" }}{{ $.context.Scratch.Get "unit" }};"><img src="{{ $slide.image }}" alt="" /><div>{{ $slide.content_html }}</div></li>
         {{ end }}
     </ul>
     <ol>
-        {{ range $index, $page := .Site.Data.carousel.images }}
-        <li><a href="#c1_slide{{ add $index 1 }}"></a></li>
-        {{ end }}
+      {{ range $index, $page := .context.Site.Data.carousel.images }}
+        {{ if (modBool $index 1) }}<li><a href="#c10_slide{{ add $index 1 }}"></a></li>{{ end }}
+      {{ end }}
     </ol>
     <div class="prev">&lsaquo;</div>
     <div class="next">&rsaquo;</div>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    
-    const carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(function( carousel ) {
-
-    const ele = carousel.querySelector('ul');
-    const bullets = carousel.querySelectorAll('ol li');
-    const nextarrow = carousel.querySelector('.next');
-    const prevarrow = carousel.querySelector('.prev');
-    nextarrow.style.display = 'block';
-    prevarrow.style.display = 'block';
-    bullets[0].classList.add('selected');
-
-    const scrollTo = function(event) {
-        event.preventDefault();
-        const href = this.getAttribute('href');
-        ele.scrollLeft = ele.scrollLeft + ele.querySelector(href).getBoundingClientRect().left;
-    }
-
-    const setSelected = function() {
-        bullets.forEach(function(bullet) {
-        bullet.classList.remove('selected');
-        });
-        let nthchild = (Math.round(ele.scrollLeft/carousel.scrollWidth)+1);
-        carousel.querySelector('ol li:nth-child('+nthchild+')').classList.add('selected'); 
-    }
-    
-    const nextSlide = function() {
-        if(!carousel.querySelector('ol li:last-child').classList.contains('selected')) {
-        carousel.querySelector('ol li.selected').nextElementSibling.querySelector('a').click();
-        } else {
-        carousel.querySelector('ol li:first-child a').click();
-        }
-    }
-
-    const prevSlide = function() {
-        if(!carousel.querySelector('ol li:first-child').classList.contains('selected')) {
-        carousel.querySelector('ol li.selected').previousElementSibling.querySelector('a').click();
-        } else {
-        carousel.querySelector('ol li:last-child a').click();
-        }
-    }
-        
-    // Attach the handlers
-    ele.addEventListener("scroll", setSelected);
-    nextarrow.addEventListener("click", nextSlide);
-    prevarrow.addEventListener("click", prevSlide);
-    bullets.forEach(function(bullet) {
-        bullet.querySelector('a').addEventListener('click', scrollTo);
-    });
-
-    //setInterval for autoplay
-    if(carousel.getAttribute('duration')) {
-        setInterval(function(){ 
-        if (ele != document.querySelector(".carousel:hover ul")) {
-        nextarrow.click();
-        }
-        }, carousel.getAttribute('duration'));
-    }
-    
-    }); //end foreach
-    
-}); //end onload
-</script>
