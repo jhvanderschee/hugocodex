@@ -4,7 +4,7 @@ date: '2021-08-21'
 image: /uploads/slider/image1.jpg
 ---
 
-A lot of websites have a slider (or carousel). Most of them in the header. The big question is: [Should I add a carousel](https://shouldiuseacarousel.com/) to my Hugo website? This is something I cannot decide for you. If you decide you need one, you can use the one under [Add ons > Slider/carousel](/add-ons/slider-carousel/) in the main menu. A demo is shown below:
+A lot of websites have a slider (or carousel). Most of them in the header. The big question is: [Should I add a carousel](https://shouldiuseacarousel.com/) to my Hugo website? This is something I cannot decide for you. If you decide you need one, I added a decent one under [Add ons > Slider/carousel](/add-ons/slider-carousel/) in the main menu. A demo is shown below:
 
 {{< carousel items="1" height="500" unit="px" duration="7000" >}}
 
