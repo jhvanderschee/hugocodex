@@ -20,7 +20,7 @@ This script detects external links and links to PDF files, using plain javascrip
 
 ### Installation
 
-Step 1. Download the file [new-window-fix.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/new-window-fix.html)
+Step 1. Download the file [new-window-fix.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/new-window-fix.html)
 <br />Step 2. Save the file in the '_includes' directory of your project
 <br />Step 3. Make sure the bottom of your layout document looks like this:
 
