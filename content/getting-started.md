@@ -99,7 +99,7 @@ Oh, how I hate shared hosting accounts… untill Hugo. Shared hosting accounts a
 
 Here is your walk-through:
 
-- Create a free account at cloudcannon.com
+- Create a free account at [cloudcannon.com](https://cloudcannon.com/)
 - Create a website and name it
 - Select Hugo as the site buider
 - Create an empty ‘config.yaml’ file in the root

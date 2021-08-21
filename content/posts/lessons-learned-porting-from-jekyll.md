@@ -19,7 +19,7 @@ You can have layouts that you name in your front matter, but those layouts shoul
 
 ### Content files
 
-Where Jekyll assumes all .md files are content, Hugo requires you to use a content directory ('content' by default). 
+Where Jekyll assumes all .md files are content, Hugo requires you to use a content directory ('content' by default) and put your .md files in that directory.
 
 ### Static files
 
