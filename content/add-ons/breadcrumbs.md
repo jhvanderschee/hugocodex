@@ -15,9 +15,14 @@ This code looks at the path of the current page to destill the breadcrumb path. 
 ```
 <div id="breadcrumbs">
     <a href="/">Home</a>
-    {{ range (split .RelPermalink "/") }}
-        {{ if gt (len . ) 0 }}
-            / <a href="/{{ . }}">{{ humanize (replace . "posts" "blog") }}</a>
+    {{ $permalinkparts = (split .RelPermalink "/") }}
+    {{ range $index, $part := $permalinkparts }}
+        {{ if gt (len $part ) 0 }}
+            {{ if ge $index 0 }}{{ $url := (index $permalinkparts 0) }}{{ end }}
+            {{ if ge $index 1 }}{{ $url := (print $url (index $permalinkparts 1) }}{{ end }}
+            {{ if ge $index 2 }}{{ $url := (print $url (index $permalinkparts 2) }}{{ end }}
+
+            / <a href="/{{ $url }}">{{ humanize (replace $part "posts" "blog") }}</a>
         {{ end }}
     {{ end }}
 </div>
