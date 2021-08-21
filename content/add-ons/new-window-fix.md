@@ -13,20 +13,46 @@ This script detects external links and links to PDF files, using plain javascrip
 [expand]
 
 ```
-{% include new-window-fix.html %}
+//open external links in a new window
+function external_new_window() {
+    for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
+        var b = c[a];
+        if(b.getAttribute("href") && b.hostname !== location.hostname) {
+            b.target = "_blank";
+            b.rel = "noopener";
+        }
+    }
+}
+//open PDF links in a new window
+function pdf_new_window ()
+{
+    if (!document.getElementsByTagName) return false;
+    var links = document.getElementsByTagName("a");
+    for (var eleLink=0; eleLink < links.length; eleLink ++) {
+    if ((links[eleLink].href.indexOf('.pdf') !== -1)||(links[eleLink].href.indexOf('.doc') !== -1)||(links[eleLink].href.indexOf('.docx') !== -1)) {
+        links[eleLink].onclick =
+        function() {
+            window.open(this.href);
+            return false;
+        }
+    }
+    }
+} 
+pdf_new_window();
+external_new_window();
 ```
 
 [/expand]
 
 ### Installation
 
-Step 1. Download the file [new-window-fix.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/new-window-fix.html)
-<br />Step 2. Save the file in the '_includes' directory of your project
+Step 1. Download the file [new-window-fix.js](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/static/js/new-window-fix.js)
+<br />Step 2. Save the file in the 'static/js' directory of your project
 <br />Step 3. Make sure the bottom of your layout document looks like this:
 
 ```
-{% raw %}...
-{% include new-window-fix.html %}
+...
+<script type="text/javascript" src="/js/new-window-fix.js"></script>
 </body>
-</html>{% endraw %}
+</html>
 ```
