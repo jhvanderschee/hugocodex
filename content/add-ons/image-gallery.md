@@ -14,7 +14,7 @@ The script searches for any file in the folder ‘album’ in the assets directo
 
 ### Template installation
 
-Step 1. Download the file [image-gallery.html](https://github.com/jhvanderschee/hugocodex/blob/master/layouts/partials/image-gallery.html)  
+Step 1. Download the file [image-gallery.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/image-gallery.html)  
 Step 2. Save the file in the ‘layouts/partials directory of your project  
 Step 3. Add the following line to your layout on the place where you want the image gallery to appear:  
 
@@ -24,7 +24,7 @@ Step 3. Add the following line to your layout on the place where you want the im
 
 ### Shortcode installation
 
-Step 1. Download the file [image-gallery.html](https://github.com/jhvanderschee/hugocodex/blob/master/layouts/shortcodes/image-gallery.html)  
+Step 1. Download the file [image-gallery.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/shortcodes/image-gallery.html)  
 Step 2. Save the file in the ‘layouts/shortcodes directory of your project  
 Step 3. Add the following line to your content on the place where you want the image gallery to appear:  
 
