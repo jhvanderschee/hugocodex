@@ -10,12 +10,15 @@ The carousel is based on a [carousel with CSS scroll snap](https://codepen.io/jo
 
 ### How it works
 
-You can define how long each slide should stay on the screen (in miliseconds) and how many slides (items) are shown at once. You can also define the height of the slider as a number, and the unit as ‘%’ or ‘px’. This makes the slider responsive. If you set the height to ‘50’ and the unit to ‘%’, the dimensions will always be 2:1, but the height will vary. If you set the height to ‘500’ and the unit to ‘px’ the height will always be the same, but the dimensions will vary.
+You can define how long each slide should stay on the screen (in miliseconds) and how many slides (items) are shown at once. You can also define the height of the slider as a number, and the unit as ‘%’ or ‘px’. This makes the slider responsive. If you set the height to ‘50’ and the unit to ‘%’, the dimensions will always be 2:1, but the height will vary. If you set the height to ‘500’ and the unit to ‘px’ the height will always be the same, but the dimensions will vary. Click the 'read more' link for a demo.
+
+[expand]
 
 {{< carousel items="1" height="500" unit="px" duration="7000" >}}
 
 {{< carousel items="2" height="35" unit="%" duration="7000" >}}
 
+[/expand]
 
 ### Installation
 

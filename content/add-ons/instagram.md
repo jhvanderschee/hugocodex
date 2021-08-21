@@ -12,7 +12,7 @@ You have to register at [PPI Loader](https://profilepageimages.usecue.com) and g
 
 For information on how this works, visit [PPI Loader](https://profilepageimages.usecue.com). When your images are showing up (which might take a few seconds and a refresh) they are no longer fetched from Instagram. Do you like it? [Buy me something!](/donate/)
 
-### Installation
+### Shortcode installation
 
 Step 1. Download the file [instagram.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/instagram.html)
 <br />Step 2. Save the file in the 'shortcodes' directory of your project
