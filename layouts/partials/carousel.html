@@ -4,7 +4,7 @@
 <div id="carousel10" class="carousel" duration="{{ .duration }}" items="{{ .items }}">
     <ul>
         {{ range $index, $slide := .context.Site.Data.carousel.images }}
-          <li id="c10_slide{{ add $index 1}}" style="min-width: calc(100%/{{ $.context.Scratch.Get "items" }}); padding-bottom: {{ $.context.Scratch.Get "height" }}{{ $.context.Scratch.Get "unit" }};"><img src="{{ $slide.image }}" alt="" /><div>{{ $slide.content_html }}</div></li>
+          <li id="c10_slide{{ add $index 1}}" style="min-width: calc(100%/{{ $.context.Scratch.Get "items" }}); padding-bottom: {{ $.context.Scratch.Get "height" }}{{ $.context.Scratch.Get "unit" }};"><img src="{{ $slide.image }}" alt="" /><div><div>{{ $slide.content_html }}</div></div></li>
         {{ end }}
     </ul>
     <ol>

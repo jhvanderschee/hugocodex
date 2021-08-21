@@ -32,13 +32,13 @@ Step 4. Create a carousel.yaml file in your data directory with this content:
 ```
 images: 
   - image: /uploads/slider/image1.jpg
-    content_html: ""
+    content_html: "1"
   - image: /uploads/slider/image2.jpg
-    content_html: ""
+    content_html: "2"
   - image: /uploads/slider/image3.jpg
-    content_html: ""
+    content_html: "3"
   - image: /uploads/slider/image4.jpg
-    content_html: ""
+    content_html: "4"
 ```
 
 ### Template installation
