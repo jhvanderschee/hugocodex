@@ -1,0 +1,108 @@
+<script>
+/*-----------------------------------------------------------*/
+/*                       INSTRUCTIONS                        */
+/*-----------------------------------------------------------*/
+/*                                                           */
+/*   First you have to create an account at:                 */
+/*   https://profilepageimages.usecue.com                    */
+/*   Then you need to change the instagram username below.   */
+/*                                                           */
+/**/     var instagram_username = '{{ .username }}';       /**/
+/**/     var instagram_amount = 8;                        /**/
+/*                                                           */
+/*   Note that this script does not use jQuery. Nor does     */
+/*   it retreive images directly from Facebook/Instagram.    */
+/*   You can also try some other demo accounts, like:        */
+/*   'jhvanderschee' or 'laselvahotyoga'.                    */
+/*                                                           */
+/*   Happy coding!                                           */
+/*                                                           */
+/*-----------------------------------------------------------*/
+
+var jsonurl = 'https://profilepageimages.usecue.com/images/'+instagram_username+'/images.json';
+var request = new XMLHttpRequest();
+request.open('GET', jsonurl, true);
+
+request.onload = function() {
+  if (this.status >= 200 && this.status < 400) {
+    // Success!
+    var data = JSON.parse(this.response);
+    data.forEach( function callback(object,index) {
+      if(index<instagram_amount) {
+        var image_small = object.image_small;
+        var caption = object.caption;
+        if(!caption) caption = '';
+        var permalink = object.permalink.replace(/\/$/, '');
+        var media_type = object.media_type.toLowerCase();
+        document.getElementById('instafeed').innerHTML = document.getElementById('instafeed').innerHTML + "<li style='background-image: url("+image_small+")' class='"+media_type+"'><a href='"+permalink+"' target='_blank' title='"+caption+"'><img src='"+image_small+"' alt='"+caption+"' /></a></li>";
+      }
+    });
+  } else {
+    // We reached our target server, but it returned an error
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+</script>
+<style>
+    #instafeed {
+      margin: 0; 
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-auto-rows: auto;
+      grid-gap: 1rem;
+    }
+    #instafeed li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: url() center center / cover no-repeat;
+      position: relative;
+    }
+    #instafeed li a {
+      display: block;
+      padding-bottom: 100%;
+    }
+    #instafeed li.video a:before {
+      content: "";
+      background: url(https://profilepageimages.usecue.com/img/play.svg) center center / 45% auto no-repeat;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+    #instafeed li.carousel_album a:before {
+      content: "";
+      background: url(https://profilepageimages.usecue.com/img/carousel.svg) center center / 50% auto no-repeat;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+    #instafeed li:hover a::after {
+      content: "";
+      position: absolute;
+      left: 0; 
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url(https://profilepageimages.usecue.com/img/interact.svg) center center / auto 19px no-repeat;
+      z-index: 1;
+    }
+    #instafeed li a img {display: none;}
+    
+    /* show only 18 images on mobile */
+    @media only screen and (max-width: 600px) {
+      #instafeed li:nth-child(n+18) {display: none;}
+    }
+</style>
+<ul id="instafeed"></ul>
