@@ -11,22 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Initialize the carousel
         nextarrow.style.display = 'block';
         prevarrow.style.display = 'block';
+        ele.scrollLeft = 0;
         bullets[0].classList.add('selected');
 
         const scrollTo = function(event) {
             event.preventDefault();
-            let href = this.getAttribute('href');
-            ele.scrollLeft = ele.querySelector(href).offsetLeft;
-        }
+            ele.scrollLeft = ele.querySelector(this.getAttribute('href')).offsetLeft;
 
-        const setSelected = function() {
+            // Set selected bullet
             bullets.forEach(function(bullet) {
                 bullet.classList.remove('selected');
             });
-            let nthchild = (Math.round(ele.scrollLeft/(carousel.scrollWidth))+1);
-            if(carousel.querySelector('ol li:nth-child('+nthchild+')')) {
-            carousel.querySelector('ol li:nth-child('+nthchild+')').classList.add('selected'); 
-            }
+            this.parentElement.classList.add('selected');
         }
         
         const nextSlide = function() {
@@ -46,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
             
         // Attach the handlers
-        ele.addEventListener("scroll", setSelected);
         nextarrow.addEventListener("click", nextSlide);
         prevarrow.addEventListener("click", prevSlide);
         bullets.forEach(function(bullet) {
