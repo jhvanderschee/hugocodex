@@ -10,7 +10,7 @@ You have to register at [PPI Loader](https://profilepageimages.usecue.com) and g
 
 ### How it works
 
-For information on how this works, visit [PPI Loader](https://profilepageimages.usecue.com). When your images are showing up (which might take a few seconds and a refresh) they are no longer fetched from Instagram. Do you like it? [Buy me something!](/donate/)
+For information on how this works, visit [PPI Loader](https://profilepageimages.usecue.com). Do you like it? [Buy me something!](/donate/)
 
 ### Template installation
 
