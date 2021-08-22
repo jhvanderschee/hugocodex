@@ -131,8 +131,8 @@ select {
 
 
 /* IMAGES */
-#instafeed img:hover, .productimage:hover, #productlist li a:hover div {filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%);}
-#instafeed img, .productimage, #productlist li a div {filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%); transition: filter .3s ease;}
+#instafeed li:hover, #instafeed img:hover, .productimage:hover, #productlist li a:hover div {filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%);}
+#instafeed li, #instafeed img, .productimage, #productlist li a div {filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%); transition: filter .3s ease;}
 
 
 .cart form, #shoppingcart, #checkout_progress {max-width: 45rem;}

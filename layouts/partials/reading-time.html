@@ -1,1 +1,1 @@
-Reading time: {{ math.Round (div (countwords .Content) 220.0) }} minutes
+Reading time: {{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}
