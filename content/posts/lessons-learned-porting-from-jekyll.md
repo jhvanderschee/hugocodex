@@ -45,7 +45,7 @@ In Jekyll the config file is called '\_config.yml'. In Hugo this is 'config.yaml
 
 ### Preventing output
 
-When you want to prevent output on a section/collection, you can wirte 'output: false' in Jekyll's config file. This is not possible in Hugo. The workaround is to create an empty 'single.html' in the layouts directory in the folder corresponding with the section/collection you want this to apply to.
+When you want to prevent output on a section/collection, you can wirte 'output: false' in Jekyll's config file. This is not possible in Hugo. The workaround is to create an empty 'single.html' in the layouts directory in the folder corresponding with the section/collection you want this to apply to. There is another trick that works, which is [this one](https://gohugo.io/content-management/build-options/#listing-pages-without-publishing-them).
 
 ### Setting permalinks
 
