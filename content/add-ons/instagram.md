@@ -10,7 +10,7 @@ You have to register at [PPI Loader](https://profilepageimages.usecue.com) and g
 
 ### How it works
 
-For information on how this works, visit [PPI Loader](https://profilepageimages.usecue.com). Do you like it? [Buy me something!](/donate/)
+For information on how this works, visit [PPI Loader](https://profilepageimages.usecue.com). 'PPI Loader' stands for Profile Page Images Loader. They offer a safe and simple way to put (the first few) images from your Instagram account on your website. Their focus is on privacy, performance and simplicity. 'PPI Loader' is a GDPR compliant, fast loading solution with low complexity. The solution is suitable for any platform, but works exceptionally well for performance-optimized websites.
 
 ### Template installation
 
