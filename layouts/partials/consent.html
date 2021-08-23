@@ -95,7 +95,7 @@
     function setConsentInputs(consentValue) {
         var elements = document.querySelectorAll('#consent-overlay input:not([disabled])');
         elements.forEach(function(el,index) {
-            if(consentValue[index]==1) el.checked = true;
+            if(consentValue[index]=="1") el.checked = true;
             else el.checked = false;
         });
     }
@@ -110,7 +110,8 @@
     }
 
     if(readCookie('consent-settings')) {
-        var consentValue = readCookie('consent-settings');
+        var consentValue = readCookie('consent-settings').toString();
+        console.log(consentValue);
         setConsentInputs(consentValue);
         loadConsentScripts(consentValue);
     } else {

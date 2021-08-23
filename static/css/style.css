@@ -20,7 +20,7 @@
 * {padding: 0; margin: 0;}
 html {overflow-y: scroll; font-size: 16px; scroll-behavior: smooth;}
 body {background: #333; font-family: 'Open Sans'; color: #666666; font-size: 0.8rem; line-height: 1.45;}
-a {color: rgb(247, 44, 114); text-decoration: none;}
+a {color: rgb(247, 44, 114); text-decoration: none; cursor: pointer;}
 a.gray {color: #666666; text-decoration: underline;}
 
 .container {max-width: 73rem; margin: 0 auto; padding: 0 1rem;}
