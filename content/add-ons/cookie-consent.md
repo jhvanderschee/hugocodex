@@ -12,7 +12,7 @@ The code inserts a consent banner at the bottom of the screen. When you click 'A
 
 ### Installation
 
-Step 1. Download the file [consent.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/cookie-consent.html)
+Step 1. Download the file [consent.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/consent.html)
 <br />Step 2. Save the file in the 'layouts/partials' directory of your project
 <br />Step 3. Make sure the bottom of your layout document looks like this:
 

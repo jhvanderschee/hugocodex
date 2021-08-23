@@ -1,5 +1,6 @@
 items:
-  - title: Google Anaytics
+  - title: Google Anaytics (functional)
+    description: This code gives us insight into the number of people that visit our website, where they are from and what they are clicking on.
     is_functional: true
     html: |-
       <script>
@@ -12,7 +13,8 @@ items:
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; 
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
       </script>
-  - title: Crisp (chat)
+  - title: Crisp chat
+    description: This code gives users the option to chat directly with us through a chat box in the bottom right corner.
     is_functional: false
     html: |-
       <script>
