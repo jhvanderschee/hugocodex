@@ -1,5 +1,5 @@
 ---
-title: Cookie consent banner
+title: Cookie consent
 ---
 
 ### Introduction

@@ -83,7 +83,7 @@
     }
     function loadConsentScripts(consentValue) {
         scripts.forEach(function(value,key){
-            //console.log(key+' staat op ' +consentValue[key]+' en is script '+value);
+            //console.log('script'+key+' is set to ' +consentValue[key]+' and is file '+value);
             if(consentValue[key]==1) {
                 var s = document.createElement('script');
                 s.type = 'text/javascript';
