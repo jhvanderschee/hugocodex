@@ -23,7 +23,7 @@
         #consent-notice a.btn {position: relative; bottom: 4px;}
     }
 </style>
-<div id="consent-notice"><span>We would like to use <a class="manage-consent">third party code</a> to improve the functionality of this website.</span><a class="btn manage-consent">Manage preferences</a><a class="btn approve-consent">Approve</a></div>
+<div id="consent-notice"><span>We would like to use <a class="manage-consent">third party code</a> to improve the functionality of this website.</span><a class="btn manage-consent">Manage preferences</a><a class="btn deny-consent">Deny</a><a class="btn approve-consent">Allow</a></div>
 <div id="consent-overlay">
     <div>
         {{ range $index, $item := .Site.Data.consent.items }}
@@ -68,6 +68,13 @@
     function eraseCookie(name) {
         createCookie(name,"",-1);
     }
+    function denyAllConsentScripts() {
+        var consentValue = "";
+        scripts.forEach(function(){
+            consentValue = consentValue + "0";
+        });
+        acceptSomeConsentScripts(consentValue);
+    }
     function acceptAllConsentScripts() {
         var consentValue = "";
         scripts.forEach(function(){
@@ -76,6 +83,7 @@
         acceptSomeConsentScripts(consentValue);
     }
     function acceptSomeConsentScripts(consentValue) {
+        setConsentInputs(consentValue);
         createCookie('consent-settings',consentValue,31);
         document.getElementById('consent-notice').style.display = 'none';
         document.getElementById('consent-overlay').classList.remove('active');
@@ -84,7 +92,7 @@
     function loadConsentScripts(consentValue) {
         scripts.forEach(function(value,key){
             //console.log('script'+key+' is set to ' +consentValue[key]+' and is file '+value);
-            if(consentValue[key]==1) {
+            if(consentValue[key]=="1") {
                 var s = document.createElement('script');
                 s.type = 'text/javascript';
                 s.src = value;
@@ -109,6 +117,11 @@
         document.getElementById("save-consent").dataset.consentvalue = consentValue;
     }
 
+    var elements = document.querySelectorAll('#consent-overlay input:not([disabled])');
+    elements.forEach(function(el) {
+        el.checked = false;
+    });
+
     if(readCookie('consent-settings')) {
         var consentValue = readCookie('consent-settings').toString();
         console.log(consentValue);
@@ -121,6 +134,12 @@
     elements.forEach(function(el) {
         el.addEventListener("click",function() {
             document.getElementById('consent-overlay').classList.toggle('active');
+        });
+    });
+    var elements = document.querySelectorAll('.deny-consent');
+    elements.forEach(function(el) {
+        el.addEventListener("click",function() {
+            denyAllConsentScripts();
         });
     });
     var elements = document.querySelectorAll('.approve-consent');
