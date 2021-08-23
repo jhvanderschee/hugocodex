@@ -8,9 +8,9 @@ To be compliant with the GDPR, you have to have user consent for all non-functio
 
 ### How it works
 
-The code inserts a consent banner at the bottom of the screen. When you click 'Allow all' or 'Save preferences' it creates a cookie that is valid for 31 days. Each page load the code checks for the existence of this cookie. If it exists, it will check which scripts are allowed. If it does not exist, the page will only load the functional scripts. Scripts are managed in a .yaml file in the data directory. Visitors can set or review their consent by clicking on a link with a 'manage-consent' class, like this one: <a class="manage-consent">manage consent</a>. Hint: place at least one of these links in the footer of your website.
+The code inserts a consent banner at the bottom of the screen. When you click 'Allow all' or 'Save preferences' it creates a cookie that is valid for 31 days. Each page load the code checks for the existence of this cookie. If it exists, it will check which scripts are allowed. If it does not exist, the page will only load the functional scripts. Scripts are managed in a 'consent.yaml' file in the data directory. Visitors can set or review their consent by clicking on a link with a 'manage-consent' class, like this one: <a class="manage-consent">manage consent</a>. Hint: place at least one of these links in the footer of your website. Do you want to reset the behaviour of this banner? Remove the 'consent-settings' cookie in your browser, or press this <a href="#" onclick="eraseCookie('consent-settings'); location.reload();">reset link</a>.
 
-Here you can see what the consent.yaml looks like: 
+Here you can see what the 'consent.yaml' looks like: 
 
 ```
 items:

@@ -6,9 +6,9 @@
     #consent-notice a.btn {margin-left: 0.5rem;}
     #consent-notice a.btn.manage-consent {background: rgba(255,255,255,0.1); font-weight: normal;}
     
-    #consent-overlay {position: fixed; left: 0; top: 0; width: 100%; height: 100vh; display: none; background: rgba(0,0,0,0.75); z-index: 999999; overflow: auto;}
+    #consent-overlay {position: fixed; left: 0; top: 0; width: 100%; height: 100vh; display: none; background: rgba(0,0,0,0.75); z-index: 999999; overflow: auto; cursor: pointer;}
     #consent-overlay.active {display: flex;}
-    #consent-overlay > div {background: white; width: 100%; max-width: 30rem; padding: 1.75rem; margin: auto;}
+    #consent-overlay > div {background: white; width: 100%; max-width: 30rem; padding: 1.75rem; margin: auto; cursor: initial;}
     #consent-overlay > div > div {display: flex; align-items: flex-start; margin-bottom: 1rem;}
     #consent-overlay > div > div:last-child {margin: 0;}
     #consent-overlay h3 {padding-top: 0;}
@@ -132,7 +132,11 @@
         setConsentValue();
         acceptSomeConsentScripts(this.dataset.consentvalue);
     });
-
+    document.getElementById("consent-overlay").addEventListener("click",function(e) {
+        if (!document.querySelector("#consent-overlay > div").contains(e.target)){
+            this.classList.toggle('active');
+        }
+    });
 </script>
 
 {{ range $index, $item := .Site.Data.consent.items }}
