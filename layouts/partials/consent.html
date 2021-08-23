@@ -78,7 +78,7 @@
     function acceptSomeConsentScripts(consentValue) {
         createCookie('consent-settings',consentValue,31);
         document.getElementById('consent-notice').style.display = 'none';
-        document.getElementById('consent-overlay').classList.toggle('active');
+        document.getElementById('consent-overlay').classList.remove('active');
         loadConsentScripts(consentValue);
     }
     function loadConsentScripts(consentValue) {
