@@ -4,7 +4,7 @@ title: Cookie consent
 
 ### Introduction
 
-To be compliant with the GDPR, you have to have user consent for all non-functional and third pary cookies and scripts. This can be done by adding this 'cookie consent banner' to the footer of the website. This banner allows fine grained control over the scripts that are loaded.
+To be compliant with the GDPR, you have to have user consent for all non-functional and third pary cookies and scripts. This can be done by adding this 'cookie consent banner' to the footer of the website. This banner gives you a detailed overview and fine grained control over the scripts that are loaded.
 
 ### How it works
 
