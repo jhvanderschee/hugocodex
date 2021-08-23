@@ -139,16 +139,17 @@ select {
 .image-gallery-index a {color: #777;}
 
 
-
+.manage-consent {cursor: pointer;}
 .home h1 {font-size: 2rem; font-weight: normal;}
 
 
 #footer {padding: 1.25rem 0 2.5rem; color: #aaa;}
 #footer h3 {font-weight: 400; line-height: 1.1; color: #eee;}
-#footer a {color: #aaa; text-decoration: none;}
+#footer a {color: #aaa; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.2);}
 #footer a:hover {text-decoration: underline;}
 #footer img {cursor: pointer; height: 6.5rem; opacity: 0.45; display: inline-block; vertical-align: middle;}
 #footer img:first-child {margin-right: 0.8rem; margin-left: -0.5rem;}
+
 
 @media (max-width: 55rem) {
     .threecols .col {width: 47.5%;}

@@ -4,10 +4,10 @@
     #consent-notice a {cursor: pointer;}
     #consent-notice span a {color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.5);}
     #consent-notice a.btn {margin-left: 0.5rem;}
-    #consent-notice a.btn.consent-manage {background: rgba(255,255,255,0.1); font-weight: normal;}
+    #consent-notice a.btn.manage-consent {background: rgba(255,255,255,0.1); font-weight: normal;}
     
-    #consent-overlay {position: fixed; left: 0; top: 0; width: 100%; height: 100vh; pointer-events: none; opacity: 0; display: flex; background: rgba(0,0,0,0.75); z-index: 999999; overflow: auto;}
-    #consent-overlay.active {opacity: 1; pointer-events: all;}
+    #consent-overlay {position: fixed; left: 0; top: 0; width: 100%; height: 100vh; display: none; background: rgba(0,0,0,0.75); z-index: 999999; overflow: auto;}
+    #consent-overlay.active {display: flex;}
     #consent-overlay > div {background: white; width: 100%; max-width: 30rem; padding: 1.75rem; margin: auto;}
     #consent-overlay > div > div {display: flex; align-items: flex-start; margin-bottom: 1rem;}
     #consent-overlay > div > div:last-child {margin: 0;}
@@ -15,7 +15,7 @@
     #consent-overlay input {margin-top: 0.3rem;}
     #consent-overlay label {display: block;}
     #consent-overlay .btn {margin-right: 0.5rem;}
-    #consent-overlay a.btn.consent-save {background: rgba(0,0,0,0.6); font-weight: normal;}
+    #consent-overlay a.btn.save-consent {background: rgba(0,0,0,0.6); font-weight: normal;}
 
     @media (max-width: 767px) {
         #consent-overlay > div {padding: 1.75rem 1rem;}
@@ -23,7 +23,7 @@
         #consent-notice a.btn {position: relative; bottom: 4px;}
     }
 </style>
-<div id="consent-notice"><span>We would like to use <a class="consent-manage">third party code</a> to improve the functionality of this website.</span><a class="btn consent-manage">Manage preferences</a><a class="btn consent-approve">Approve</a></div>
+<div id="consent-notice"><span>We would like to use <a class="manage-consent">third party code</a> to improve the functionality of this website.</span><a class="btn manage-consent">Manage preferences</a><a class="btn approve-consent">Approve</a></div>
 <div id="consent-overlay">
     <div>
         {{ range $index, $item := .Site.Data.consent.items }}
@@ -36,12 +36,16 @@
             </div>
         {{ end }}
         <div>
-            <a class="btn consent-save">Save preferences</a>
-            <a class="btn consent-approve">Allow all</a>
+            <a id="save-consent" class="btn save-consent" data-consentvalue="{{ range $index, $item := .Site.Data.consent.items }}{{ if $item.is_functional}}{{ else }}0{{ end }}{{ end }}">Save preferences</a>
+            <a class="btn approve-consent">Allow all</a>
         </div>
     </div>
 </div>
 <script>
+
+    const scripts = [];{{ range $index, $item := (where .Site.Data.consent.items "is_functional" false) }}
+    scripts[{{ $index }}] = "/js/{{ $item.script_file }}";{{ end }}
+
     function createCookie(name,value,days) {
         var expires = "";
         if (days) {
@@ -64,35 +68,75 @@
     function eraseCookie(name) {
         createCookie(name,"",-1);
     }
-    function acceptAll() {
-        createCookie('consent-notice-dismissed','true',31);
+    function acceptAllConsentScripts() {
+        var consentValue = "";
+        scripts.forEach(function(){
+            consentValue = consentValue + "1";
+        });
+        acceptSomeConsentScripts(consentValue);
+    }
+    function acceptSomeConsentScripts(consentValue) {
+        createCookie('consent-settings',consentValue,31);
         document.getElementById('consent-notice').style.display = 'none';
-        location.reload();
+        document.getElementById('consent-overlay').classList.toggle('active');
+        loadConsentScripts(consentValue);
+    }
+    function loadConsentScripts(consentValue) {
+        scripts.forEach(function(value,key){
+            //console.log(key+' staat op ' +consentValue[key]+' en is script '+value);
+            if(consentValue[key]==1) {
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.src = value;
+                document.body.appendChild(s);
+            }
+        });
+    }
+    function setConsentInputs(consentValue) {
+        var elements = document.querySelectorAll('#consent-overlay input:not([disabled])');
+        elements.forEach(function(el,index) {
+            if(consentValue[index]==1) el.checked = true;
+            else el.checked = false;
+        });
+    }
+    function setConsentValue() {
+        var elements = document.querySelectorAll('#consent-overlay input:not([disabled])');
+        var consentValue = "";
+        elements.forEach(function(el) {
+            if(el.checked) consentValue = consentValue + "1";
+            else consentValue = consentValue + "0";
+        });
+        document.getElementById("save-consent").dataset.consentvalue = consentValue;
     }
 
-
-    if(readCookie('consent-notice-dismissed')=='true') {
-        console.log('approved');
+    if(readCookie('consent-settings')) {
+        var consentValue = readCookie('consent-settings');
+        setConsentInputs(consentValue);
+        loadConsentScripts(consentValue);
     } else {
         document.getElementById('consent-notice').style.display = 'block';
     }
-    var elements = document.querySelectorAll('.consent-manage');
+    var elements = document.querySelectorAll('.manage-consent');
     elements.forEach(function(el) {
         el.addEventListener("click",function() {
             document.getElementById('consent-overlay').classList.toggle('active');
         });
     });
-    
-    var elements = document.getElementById('consent-approve');
+    var elements = document.querySelectorAll('.approve-consent');
     elements.forEach(function(el) {
         el.addEventListener("click",function() {
-            acceptAll();
+            acceptAllConsentScripts();
         });
+    });
+    document.getElementById("save-consent").addEventListener("click",function() {
+        setConsentValue();
+        acceptSomeConsentScripts(this.dataset.consentvalue);
     });
 
 </script>
+
 {{ range $index, $item := .Site.Data.consent.items }}
-{{ if $item.is_functional }}
-    {{ $item.html }}
-{{ end }}
+    {{ if $item.is_functional }}
+        <script type="text/javascript" src="/js/{{ $item.script_file }}"></script>
+    {{ end }}
 {{ end }}
