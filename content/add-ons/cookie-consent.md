@@ -26,9 +26,11 @@ items:
 
 ### Installation
 
-Step 1. Download the file [consent.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/consent.html)
-<br />Step 2. Save the file in the 'layouts/partials' directory of your project
-<br />Step 3. Make sure the bottom of your layout document looks like this:
+Step 1. Download the [consent.yaml](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/data/consent.yaml) file and adjust it to your needs
+<br />Step 2. Store it in the 'data' directory of your project
+<br />Step 3. Download the file [consent.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/consent.html)
+<br />Step 4. Save the file in the 'layouts/partials' directory of your project
+<br />Step 5. Make sure the bottom of your layout document looks like this:
 
 ```
 ...
