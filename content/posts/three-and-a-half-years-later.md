@@ -12,4 +12,4 @@ While exploring everything that was new (and old) to Hugo, I found that creating
 
 ### What now?
 
-I will port more of the solutions I have built on [Jekyll Codex](https://www.jekyllcodex.org) to this website. I have already updated the codebase in a way that it no longer uses Bootstrap or jQuery. Soon you will see a lot of 'Add-ons' appear on this site, containing partials or shortcodes. I will start where I left off, by exploring the possibility to let Hugo resize images.
+I will port more of the solutions I have built on [Jekyll Codex](https://jekyllcodex.org) to this website. I have already updated the codebase in a way that it no longer uses Bootstrap or jQuery. Soon you will see a lot of 'Add-ons' appear on this site, containing partials or shortcodes. I will start where I left off, by exploring the possibility to let Hugo resize images.
