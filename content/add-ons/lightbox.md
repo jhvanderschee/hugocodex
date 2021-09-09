@@ -1,7 +1,6 @@
 ---
 title: Lightbox
 ---
-
 ### Introduction
 
 Lightbox is a solution that loads your [image](/uploads/grumpycat2.jpg) [links](/uploads/grumpycat.jpg), your [Youtube links](https://www.youtube.com/watch?v=dQw4w9WgXcQ&showinfo=0&rel=0) and your [Vimeo links](https://vimeo.com/132888648) automatically in a minimalistic and responsive pseudo window/overlay. No adjustment to your links is required, just follow the installation instructions below.
