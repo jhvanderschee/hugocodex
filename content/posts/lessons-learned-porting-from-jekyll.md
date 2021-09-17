@@ -77,3 +77,16 @@ When you want to show all items from a section that contain a certain key in an 
 
 The filename of your homepage MUST be '_index.md'. Otherwise your sections will not work properly. Note the underscore.
 
+### Split main content
+
+When you want to split your main content in multiple parts you can split them easily on for example the 'h2' tag. In the code below you see the 'print' command that joins strings and the '| safeHTML' command that allows HTML output.
+
+```
+{{ $content := split .Content "<h2" }}
+<div class="part1">
+    {{ print "<h2" (index $content 0) | safeHTML }}
+</div>
+<div class="part1">
+    {{ print "<h2" (index $content 1) | safeHTML }}
+</div>
+```
