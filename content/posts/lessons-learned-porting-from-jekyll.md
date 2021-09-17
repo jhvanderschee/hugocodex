@@ -63,4 +63,12 @@ There is no such thing as 'page.slug'. You have to use '.File.BaseFileName' inst
 
 ### Filter a section on a parameter in an array
 
-When you want to show all items from a section that contain a certain key in an array (i.e. all cars with leather seats as one of their features), you should do a 'range' (loop) over '.Site.RegularPages' where 'Section' equals 'cars'. Then you should create an 'if' statement where you check with the 'in' command of the '$.Page.Params.features' contains the slug of the feature, using '.File.BaseFileName'.
+When you want to show all items from a section that contain a certain key in an array (i.e. all cars with leather seats as one of their features), you should do a 'range' (loop) over '.Site.RegularPages' where 'Section' equals 'cars'. Then you should create an 'if' statement where you check with the 'in' command of the '$.Page.Params.features' contains the slug of the feature, using '.File.BaseFileName'. This looks like this:
+
+```
+{{- range where .Site.RegularPages "Section" "cars" -}}
+    {{- if in $.Page.Params.features .File.BaseFileName -}}
+        ...
+    {{- end -}}
+{{- end -}}
+```
