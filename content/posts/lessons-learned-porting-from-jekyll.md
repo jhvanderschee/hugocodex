@@ -61,12 +61,12 @@ Custom site variables are not written as children of the root, but as children o
 
 There is no such thing as 'page.slug'. You have to use '.File.BaseFileName' instead.
 
-### Walking over an array of slugs
+### A many to many relationship
 
-If you for example want a 'car' to have an array of 'features', you normally create a page for your car with a front matter array with features. Each feature is a slug pointing to an item/page in the features section.
+If you for example want a 'car' to have an array of 'features' that are shared among cars, you are tipically looking at a many to many relationship. One car has many features and one feature belongs to many cars. To model this you create a page for your car with a front matter array with features. Instead of writing out the complete feature in your front matter, you only put the features slug in the front matter. This key allows you to find the matching item/page in the features section. The code for this looks like this:
 
 ```
-{{- range .Params.beers -}}
+{{- range .Params.features -}}
     {{ with $.Site.GetPage (print . ".md") }}
          {{ .Title }}          
     {{ end }}
