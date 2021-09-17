@@ -15,7 +15,7 @@ In Hugo 'collections' are called 'sections'. I personally do not like that name 
 
 ### Layouts
 
-You can have layouts that you name in your front matter, but those layouts should live in their section directory within the 'layouts' directory. For pages this should be the 'page' direcotory.
+You can have layouts that you name in your front matter, but those layouts should live in their section directory within the 'layouts' directory. For pages this should be the 'page' directory.
 
 ### Content files
 
@@ -54,3 +54,13 @@ In Jekyll I love to use 'permalinks: pretty' and then some specific defaults for
 ### Custom site variables
 
 Custom site variables are not written as children of the root, but as children of the 'params' key in the config file. They can be called by using the '.Site.Params.customvariable', where 'customvariable' is actually the name of your custom variable.
+
+## Tips and tricks
+
+### Getting the slug of the page
+
+There is no such thing as 'page.slug'. You have to use '.File.BaseFileName' instead.
+
+### Filter a section on a parameter in an array
+
+When you want to show all items from a section that contain a certain key in an array (i.e. all cars with leather seats as one of their features), you should do a 'range' (loop) over '.Site.RegularPages' where 'Section' equals 'cars'. Then you should create an 'if' statement where you check with the 'in' command of the '$.Page.Params.features' contains the slug of the feature, using '.File.BaseFileName'.
