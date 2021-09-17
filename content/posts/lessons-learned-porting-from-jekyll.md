@@ -61,16 +61,16 @@ Custom site variables are not written as children of the root, but as children o
 
 There is no such thing as 'page.slug'. You have to use '.File.BaseFileName' instead.
 
-### Filter a section on a parameter in an array
+### Walking over an array of slugs
 
-When you want to show all items from a section that contain a certain key in an array (i.e. all cars with leather seats as one of their features), you should do a 'range' (loop) over '.Site.RegularPages' where 'Section' equals 'cars'. Then you should create an 'if' statement where you check with the 'in' command of the '$.Page.Params.features' contains the slug of the feature, using '.File.BaseFileName'. Note that this assumes that you use (page) slugs in your array. The code looks like this:
+If you for example want a 'car' to have an array of 'features', you normally create a page for your car with a front matter array with features. Each feature is a slug pointing to an item/page in the features section.
 
 ```
-{{- range where .Site.RegularPages "Section" "cars" -}}
-    {{- if in $.Page.Params.features .File.BaseFileName -}}
-        ...
-    {{- end -}}
-{{- end -}}
+{{- range .Params.beers -}}
+    {{ with $.Site.GetPage (print . ".md") }}
+         {{ .Title }}          
+    {{ end }}
+{{ end }}
 ```
 
 ### Homepage filename
