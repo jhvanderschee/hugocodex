@@ -63,11 +63,11 @@ There is no such thing as 'page.slug'. You have to use '.File.BaseFileName' inst
 
 ### A many to many relationship
 
-If you for example want a 'car' to have an array of 'features' that are shared among cars, you are tipically looking at a many to many relationship. One car has many features and one feature belongs to many cars. To model this you create a page for your car with a front matter array with features. Instead of writing out the complete feature in your front matter, you only put the features slug in the front matter. This key allows you to find the matching item/page in the features section. The code for this looks like this:
+If you for example want a 'car' to have an array of 'features' that are shared among cars, you are tipically looking at a many to many relationship. One car has many features and one feature belongs to many cars. You can model this by creating a page for your car with a front matter array with features. Instead of writing out the complete feature in your front matter, you only put the features slug in the front matter. Next you create a seperate section of features that match these keys. These keys allow you to find the matching item/page in the features section. The code for this is quite compact and looks like this:
 
 ```
 {{- range .Params.features -}}
-    {{ with $.Site.GetPage (print . ".md") }}
+    {{ with $.Site.GetPage (print "/features/" . ".md") }}
          {{ .Title }}          
     {{ end }}
 {{ end }}

@@ -27,17 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const nextSlide = function() {
             if(!carousel.querySelector('ol li:last-child').classList.contains('selected')) {
-            carousel.querySelector('ol li.selected').nextElementSibling.querySelector('a').click();
+                carousel.querySelector('ol li.selected').nextElementSibling.querySelector('a').click();
             } else {
-            carousel.querySelector('ol li:first-child a').click();
+                carousel.querySelector('ol li:first-child a').click();
             }
         }
 
         const prevSlide = function() {
             if(!carousel.querySelector('ol li:first-child').classList.contains('selected')) {
-            carousel.querySelector('ol li.selected').previousElementSibling.querySelector('a').click();
+                carousel.querySelector('ol li.selected').previousElementSibling.querySelector('a').click();
             } else {
-            carousel.querySelector('ol li:last-child a').click();
+                carousel.querySelector('ol li:last-child a').click();
             }
         }
             
@@ -58,5 +58,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     
     }); //end foreach
+
     
+    document.addEventListener('keydown', function (e){
+        var elements = document.querySelectorAll('.carousel');
+
+        if(e.key == 'ArrowLeft') {
+            elements.forEach( function(element) {
+                element.querySelector('.prev').click();
+            });
+        }
+        if(e.key == 'ArrowRight') {
+            elements.forEach( function(element) {
+                element.querySelector('.next').click();
+            });
+        }
+    });
+
 }); //end onload
