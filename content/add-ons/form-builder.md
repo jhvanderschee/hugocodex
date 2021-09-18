@@ -18,7 +18,7 @@ forms:
   - to: jhvanderschee@gmail.com
     subject: New submission!
     redirect: /
-    form_engine: formspree
+    form_engine: netlify
     placeholders: false
     fields: 
       - name: name
