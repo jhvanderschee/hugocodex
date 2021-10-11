@@ -23,8 +23,8 @@ Step 1. Download the file [carousel.js](https://raw.githubusercontent.com/jhvand
 <br />Step 3. Make sure the footer of your layout document looks like this:
 
 ```
-<script type="text/javascript" src="/js/lightbox.js"></script>
-<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/carousel.js"></script>
+<link rel="stylesheet" href="/css/carousel.css">
 </body>
 </html>
 ```
