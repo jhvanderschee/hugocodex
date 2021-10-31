@@ -83,9 +83,9 @@ When you want to split your main content in multiple parts you can split them ea
 ```
 {{ $content := split .Content "<h2" }}
 <div class="part1">
-    {{ print "<h2" (index $content 0) | safeHTML }}
+    {{ print "<h2" (index $content 1) | safeHTML }}
 </div>
 <div class="part2">
-    {{ print "<h2" (index $content 1) | safeHTML }}
+    {{ print "<h2" (index $content 2) | safeHTML }}
 </div>
 ```
