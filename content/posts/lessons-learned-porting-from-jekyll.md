@@ -60,6 +60,7 @@ Custom site variables are not written as children of the root, but as children o
 
 To be able to use all user images as resources, you simply add 'assetDir: static' to your config file. Then you can resize images by calling: ((resources.GetMatch .Params.image).Fit "600x600 jpg Center q50").Permalink.
 
+
 ### Getting the slug of the page
 
 There is no such thing as 'page.slug'. You have to use '.File.BaseFileName' instead.
