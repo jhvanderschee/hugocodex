@@ -1,5 +1,6 @@
 ---
 title: A new CMS for Hugo websites
+date: 2021-11-19
 ---
 
 Netlify did some research on the priorities of Jamstack developers. The most important thing is 'performance', which explains Hugo's popularity. Hugo is the absolute king of performance. There is no SSG that is as fast as Hugo. Other priorities of Jamstack developers are uptime, security and speed of development, which are generally good for any Jamstack project. However, we know (and see in the data) that people increasingly struggle to get their Jamstack website compliant. This is probably caused by the distributed nature of Jamstack projects. A Jamstack project combines multiple services from multiple providers. This means you will have to check each vendor for compliancy. We also see that people increasingly worry about vendor lock-in. Each vendor requires you to learn how their software works. This is the reason those Jamstack channels are filled with commercial blog posts and ads. Once you have invested time into learning to use a certain vendors solution, you have created yourself a lock-in. Changing to another provider would mean learning to use another solution, thus investing extra time you probably don't have.
