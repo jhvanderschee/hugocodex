@@ -9,4 +9,4 @@ This does also apply to hosting and CMS systems for the Jamstack. Hosting soluti
 
 Equally important and equally flawed are CMS systems. They tend to have mediocre performance and are hard to learn. Additionally, they require a ton of CMS specific configuration. This creates a huge vendor lock-in. Switching from one CMS provider to another can take weeks or months. Nevertheless, I am moving all my websites (250+) to my own CMS at https://cms.usecue.com. Why? Because it is a zero-config solution, it has top performance and combined with my own hosting and failover it gives me the perfect uptime, security and compliancy. It is a painful operation, but the end results are sweet. It will give me all the things I know you want too (based on Netlify's research)! 
 
-Feeling envy? You can always contact me to see if I have some space left on my server for your website... ;-)
+Feeling envious? You can always contact me to see if I have some space left on my server for your website... ;-)
