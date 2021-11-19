@@ -62,7 +62,7 @@ To be able to use all user images as resources, you simply add 'assetDir: static
 
 ### Getting the slug of the page
 
-There is no such thing as 'page.slug'. You have to use '.File.BaseFileName' instead.
+There is no such thing as `page.slug`. You have to use `.File.BaseFileName` instead.
 
 ### Cache busting your style.css
 
