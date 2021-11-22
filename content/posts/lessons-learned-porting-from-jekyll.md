@@ -66,7 +66,7 @@ There is no such thing as `page.slug`. You have to use `.File.BaseFileName` inst
 
 ### Cache busting your style.css
 
-Use `<link href='/css/style.css?version={{ .Hugo.BuildDate }}' rel='stylesheet' type='text/css'>` to cache bust your CSS file.
+Use `<link href='/css/style.css?version={{ hugo.BuildDate }}' rel='stylesheet' type='text/css'>` to cache bust your CSS file.
 
 ### A many to many relationship
 
