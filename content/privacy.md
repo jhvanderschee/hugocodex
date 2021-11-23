@@ -3,7 +3,7 @@ title: Privacy policy
 ---
 ### Leaseweb hosting
 
-This website is hosted on Leaseweb servers. CloudCannon is used as external CMS. No traffic or visitor data ends up at CloudCannon or their partners. Leaseweb, however, (like any hosting company) can have full insight in visitor data, like connecting IP addresses, visited pages, etc. Note that Leaseweb is not known to actively profile visitors. By using a VPN you can (try to) prevent this!
+This website is hosted on Leaseweb servers. Usecue CMS is used as external CMS. Leaseweb (like any hosting company) can have full insight in visitor data, like connecting IP addresses, visited pages, etc. Note that Leaseweb is not known to actively profile visitors. By using a VPN you can (try to) prevent this!
 
 ### Google Analytics
 
