@@ -148,7 +148,7 @@ select {
 #footer a {color: #aaa; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.2);}
 #footer a:hover {text-decoration: underline;}
 #footer img {cursor: pointer; height: 6.5rem; opacity: 0.45; display: inline-block; vertical-align: middle;}
-#footer img:first-child {margin-right: 0.8rem; margin-top: 0.15rem; height: 4.8rem;}
+#footer img:first-child {margin-right: 0.8rem; margin-top: 0.15rem; height: 4.9rem;}
 
 
 @media (max-width: 55rem) {
