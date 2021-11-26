@@ -55,7 +55,7 @@ To create an overview page, look at this example.
 {{ .Content }}
 <ul>
   {{ range (where .Data.Pages "Section" .Section ).ByTitle }}
-    <li><a href="{{ .Parmalink }}">{{ .Title }}</a></li>
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
   {{ end }}
 </ul>
 {{ partial "sidebar.html" . }}
