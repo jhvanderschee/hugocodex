@@ -87,7 +87,7 @@ Put this code in a file called 'list.html' and store it in your 'layouts/_defaul
 
 ## Step 2. Preview your website
 
-Opening the folder of your project in a browser does not work, so you need to have an enivronment that runs Hugo. You can install Jekyll through command-line on your own machine. Just follow these simple instructions:
+Opening the folder of your project in a browser does not work, so you need to have an enivronment that runs Hugo. You can install Hugo through command-line on your own machine. Just follow these simple instructions:
 
 * install Hugo with [these simple instructions](https://gohugo.io/getting-started/installing/)
 * open a terminal in your project folder and type: `hugo server`
