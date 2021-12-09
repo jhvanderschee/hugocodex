@@ -12,22 +12,30 @@ This code looks at the path of the current page to destill the breadcrumb path. 
 [expand]
 
 ```
-<div id="breadcrumbs">
-    <a href="/">Home</a>
-    {{ .Scratch.Set "permalinkparts" (split .RelPermalink "/") }}
-    {{ range $index, $part := (len (split .RelPermalink "/")) }}
-        {{ range $i, $num := (seq 10) }}
-            {{ if ge $index $i }}
-                {{ if eq $i 0 }}
-                    {{ $.Scratch.Set "url" (index ($.Scratch.Get "permalinkparts") $i) }}
-                {{ else }}
-                    {{ $.Scratch.Add "url" (print (index ($.Scratch.Get "permalinkparts") $i) "/") }}
-                {{ end }}
-            {{ end }}
-        {{ end }}
-        / <a href="/{{ $.Scratch.Get "url" }}">{{ humanize (replace $part "posts" "blog") }}</a>
-    {{ end }}
-</div>
+<ul id="breadcrumbs">
+    <li><a href="/">Home</a></li>
+    {{- $.Scratch.Set "url" "" -}}
+    {{- range (split .RelPermalink "/") -}}
+        {{- if (gt (len .) 0) -}}    
+            {{- $.Scratch.Set "isPage" "false" -}}
+            {{- $.Scratch.Add "url" (print "/" . ) -}}
+            {{- if $.Site.GetPage (print . ".md") -}}
+                {{- with $.Site.GetPage (print . ".md") -}}
+                    {{- if .IsPage -}}
+                        {{- $.Scratch.Set "isPage" "true" -}}
+                    {{- end -}}
+                {{- end -}}
+            {{- end -}}
+            {{- if eq ($.Scratch.Get "isPage") "true" -}}
+                {{- with $.Site.GetPage (print . ".md") -}}
+                    <li><a href="{{ $.Scratch.Get `url` }}">{{ .Title }}</a></li>
+                {{- end -}}
+            {{- else -}}
+                <li><a href="{{ $.Scratch.Get `url` }}">{{ humanize . }}</a></li>
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+</ul>
 ```
 
 Note that I have added an example on how to manually replace/change certain titles (here: posts > blog).
