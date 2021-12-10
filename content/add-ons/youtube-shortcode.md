@@ -1,5 +1,5 @@
 ---
-title: GDPR compliant Youtube
+title: Youtube shortcode
 ---
 
 ### Introduction
@@ -8,7 +8,7 @@ Paul Irish did a nice thing. He created [a lighter Youtube embed](https://github
 
 ### How it works
 
-The shortcode creates an image and a link to Youtube. The classes on this link tell the CSS to add the Youtube logo and add a play button. This makes it look like an embed. Note that when you load the [lightbox](/add-ons/lightbox/) from this website, your video will automatically open in a lightbox instead of in a new page.
+The shortcode creates an image and a link to Youtube. The classes on this link tell the CSS to add the Youtube logo and add a play button. This makes it look like an embed. Note that when you load the [lightbox](/add-ons/lightbox/) from this website, your video will automatically open in a lightbox instead of in a new page. Below you find a demo (with the lightbox enabled).
 
 {{< youtube id="qtIqKaDlqXo" image="/uploads/youtubeposter.jpg" >}}
 
