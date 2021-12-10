@@ -3,7 +3,7 @@ title: Breadcrumbs updated
 date: 2021-12-09
 ---
 
-I have been building Hugo websites for half a year now some, and I am a BIG fan. Sure the documentation is a bit weird or incomplete at times. Where do you find the variable 'resources', for example? I don't know. On the other hand, the [Discourse channel](https://discourse.gohugo.io/) is absolutely amazing. The time people are devoting to help everybody out is just mind blowing. 
+I have been building Hugo websites for half a year now some, and I am a BIG fan. Sure the documentation is a bit weird or incomplete at times. Where do you find the variable 'resources' (all lowercase), for example? I don't know. On the other hand, the [Discourse channel](https://discourse.gohugo.io/) is absolutely amazing. The time people are devoting to help everybody out is just mind blowing. 
 
 In the past six months I have stuggled a lot and learned a lot. So, when I looked back at the code I used for my [breadcrumbs](/add-ons/breadcrumbs/) (which I created more than half a year ago), I saw that I could improve it... and I did. 
 
