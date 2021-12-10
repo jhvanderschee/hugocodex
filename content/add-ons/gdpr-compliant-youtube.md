@@ -19,5 +19,5 @@ Step 1. Download the file [youtube.html](https://raw.githubusercontent.com/jhvan
 <br />Step 3. Add the following line to your content on the place where you want your instagram pictures to appear:
 
 ```
-{{< youtube id="qtIqKaDlqXo" image="/uploads/youtubeposter.jpg" >}}
+{{</* youtube id="qtIqKaDlqXo" image="/uploads/youtubeposter.jpg" */>}}
 ```
