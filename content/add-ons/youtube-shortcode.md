@@ -12,7 +12,7 @@ The shortcode creates an image and a link to Youtube. The classes on this link t
 
 {{< youtube id="qtIqKaDlqXo" image="/uploads/youtubeposter.jpg" >}}
 
-### Shortcode installation
+### Installation
 
 Step 1. Download the file [youtube.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/shortcodes/youtube.html)
 <br />Step 2. Save the file in the 'layouts/partials/shortcodes' directory of your project
