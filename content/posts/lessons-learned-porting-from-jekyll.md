@@ -58,7 +58,11 @@ Custom site variables are not written as children of the root, but as children o
 
 ### Resizing all user images
 
-To be able to use all user images as resources, you simply add 'assetDir: static' to your config file. Then you can resize images by calling: ((resources.GetMatch .Params.image).Fit "600x600 jpg Center q50").RelPermalink.
+To be able to use all user images as resources, you simply add 'assetDir: static' to your config file. Then you can resize images by calling: 
+
+```
+((resources.GetMatch .Params.image).Fit "600x600 jpg Center q50").RelPermalink.
+```
 
 ### Getting the slug of the page
 
