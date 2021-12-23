@@ -1,0 +1,55 @@
+{{ partial "header.html" . }}
+
+<div class="content">
+  <div class="container">
+
+          <article class="post">
+            <header class="post-header">
+            {{ partial "breadcrumbs.html" . }}
+            <h1>{{ .Title }}</h1>
+            </header>
+            
+            {{ .Content }}
+
+           
+            {{ $.Scratch.Set "activeitems" .File.BaseFileName }}
+            {{ if .Params.parent_branch }}
+                {{ $.Scratch.Add "activeitems" (print " " .Params.parent_branch) }}
+                {{ with .Site.GetPage (print "/branches/" .Params.parent_branch) }}
+                    {{ if .Params.parent_branch }}
+                        {{ $.Scratch.Add "activeitems" (print " " .Params.parent_branch) }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+            {{ $activeitems := split ($.Scratch.Get "activeitems") " " }}
+            <style>li.active > a {color: black!important;}</style>
+            <br />
+            <br>
+            <ul>
+            {{ with .Site.GetPage "/branches" }}
+                {{ $regularpages := .RegularPages.ByTitle }}
+                {{ range where $regularpages "Params.parent_branch" nil }}
+                    <li {{ if in $activeitems .File.BaseFileName }}class="active"{{ end }}><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        <ul>
+                        {{ range where $regularpages "Params.parent_branch" .File.BaseFileName }}
+                            <li {{ if in $activeitems .File.BaseFileName }}class="active"{{ end }}><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                <ul>
+                                    {{ range where $regularpages "Params.parent_branch" .File.BaseFileName }}
+                                        <li {{ if in $activeitems .File.BaseFileName }}class="active"{{ end }}><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                                    {{ end }}
+                                </ul>
+                            </li>
+                        {{ end }}
+                        </ul>
+                    </li>
+                {{ end }}
+                </ul>
+            {{ end }}
+          
+          </article>
+
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
+ 

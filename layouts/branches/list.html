@@ -1,0 +1,40 @@
+{{ partial "header.html" . }}
+
+<div class="content">
+    <div class="container">
+
+            <article class="post">
+                <header class="post-header">
+                    {{ partial "breadcrumbs.html" . }}
+                    <h1>{{ .Title }}</h1>
+                </header>
+                
+                {{ .Content }}
+
+                <br>
+                {{ with .Site.GetPage "/branches" }}
+                    {{ $regularpages := .RegularPages.ByTitle }}
+                    {{ range where $regularpages "Params.parent_branch" nil }}
+                        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            <ul>
+                            {{ range where $regularpages "Params.parent_branch" .File.BaseFileName }}
+                                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                    <ul>
+                                        {{ range where $regularpages "Params.parent_branch" .File.BaseFileName }}
+                                            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                                        {{ end }}
+                                    </ul>
+                                </li>
+                            {{ end }}
+                            </ul>
+                        </li>
+                    {{ end }}
+                    </ul>
+                {{ end }}
+
+            </article>
+
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
