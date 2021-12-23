@@ -23,7 +23,7 @@
             {{ end }}
             {{ $activeitems := split ($.Scratch.Get "activeitems") " " }}
             <style>li.active > a {color: black!important;}</style>
-            <br />
+            <br>
             <br>
             <ul>
             {{ with .Site.GetPage "/branches" }}

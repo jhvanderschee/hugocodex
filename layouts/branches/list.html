@@ -12,6 +12,8 @@
                 {{ .Content }}
 
                 <br>
+                <br>
+                <ul>
                 {{ with .Site.GetPage "/branches" }}
                     {{ $regularpages := .RegularPages.ByTitle }}
                     {{ range where $regularpages "Params.parent_branch" nil }}
@@ -31,6 +33,7 @@
                     {{ end }}
                     </ul>
                 {{ end }}
+                </ul>
 
             </article>
 
