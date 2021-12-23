@@ -3,7 +3,7 @@ title: Creating a menu with nested pages
 date: 2021-12-23
 ---
 
-What if you want to create an auto-collapsing nested menu? That is a great way to show a lot of content in a structured way, but it requires you to display a hierarchical view of all your pages. This post explains how to do that.
+A lot of websites use auto-collapsing nested menu's. They are a great way to show a lot of content in a structured way, but it requires you to display a hierarchical view of all your pages. This post explains how to do that.
 
 ## The parent reference
 
@@ -135,7 +135,7 @@ Finally we can check for 'haschildren' in a similar way:
 {{ end }}
 ```
 
-I have added some CSS to make it look good (and for the auto collapsing to work):
+I have added some CSS to make it look good (and for the auto-collapsing to work):
 
 ```
 ul.nestedmenu {margin-left: 0;}
