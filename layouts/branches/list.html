@@ -11,21 +11,39 @@
                 
                 {{ .Content }}
 
+                
                 <style>
-                    li > ul {display: none;}
+                    ul.nestedmenu {margin-left: 0;}
+                    ul.nestedmenu li {list-style: none;}
+                    ul.nestedmenu li > ul {display: none;}
+                    ul.nestedmenu li > a::before {content: "•"; display: inline-block; margin-right: 0.25rem; width: 0.5rem; text-align: center;}
+                    ul.nestedmenu li.haschildren > a::before {content: "›";}
+                    ul.nestedmenu li.haschildren.active > a::before {transform: rotate(90deg);}
+                    ul.nestedmenu li.active > ul {display: block;}
+                    ul.nestedmenu li > a {color: #444444!important;}
+                    ul.nestedmenu li.active > a {color: rgb(247, 44, 114)!important;}
                 </style>
                 <br>
                 <br>
-                <ul>
+                <ul class="nestedmenu">
                     {{ $regularpages := .RegularPages.ByTitle }}
+                    
+                    {{ $.Scratch.Set "haschildren" "" }}
+                    {{ range where $regularpages "Params.parent_branch" "!=" nil }}
+                        {{ if in ($.Scratch.Get "haschildren") .Params.parent_branch }}{{ else }}
+                            {{ $.Scratch.Add "haschildren" (print " " .Params.parent_branch) }}
+                        {{ end }}
+                    {{ end }}
+                    {{ $haschildren := split ($.Scratch.Get "haschildren") " " }}
+
                     {{ range where $regularpages "Params.parent_branch" nil }}
-                        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        <li {{ if in $haschildren .File.BaseFileName }}class="haschildren"{{ end }}><a href="{{ .RelPermalink }}">{{ .Title }}</a>
                             <ul>
                             {{ range where $regularpages "Params.parent_branch" .File.BaseFileName }}
-                                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                <li {{ if in $haschildren .File.BaseFileName }}class="haschildren"{{ end }}><a href="{{ .RelPermalink }}">{{ .Title }}</a>
                                     <ul>
                                         {{ range where $regularpages "Params.parent_branch" .File.BaseFileName }}
-                                            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                                            <li {{ if in $haschildren .File.BaseFileName }}class="haschildren"{{ end }}><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                                         {{ end }}
                                     </ul>
                                 </li>
