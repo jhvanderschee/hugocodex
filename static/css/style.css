@@ -155,6 +155,16 @@ select {
 #footer img:first-child {margin-right: 0.8rem; margin-top: 0.15rem; height: 4.9rem;}
 
 
+ul.nestedmenu {margin-left: 0;}
+ul.nestedmenu li {list-style: none;}
+ul.nestedmenu li > ul {display: none;}
+ul.nestedmenu li > a::before {content: "•"; display: inline-block; margin-right: 0.25rem; width: 0.5rem; text-align: center;}
+ul.nestedmenu li.haschildren > a::before {content: "›";}
+ul.nestedmenu li.haschildren.active > a::before {transform: rotate(90deg);}
+ul.nestedmenu li.active > ul {display: block;}
+ul.nestedmenu li > a {color: #444444!important;}
+ul.nestedmenu li.active > a {color: rgb(247, 44, 114)!important;}
+
 @media (max-width: 55rem) {
     .threecols .col {width: 47.5%;}
     .threecols .col:nth-child(3) {margin-top: 1.5rem;}
