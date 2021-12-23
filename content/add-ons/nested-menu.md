@@ -6,7 +6,7 @@ title: Nested menu
 
 A lot of websites use auto-collapsing nested menu's. They are a great way to show a lot of content in a structured way, but it requires a hierarchical view of all your pages. This is a simple three level nested menu that can be added through a simple include. If you want to see this in action, you can [view a demo](/branches).
 
-## How it works
+### How it works
 
 I am pretty specific in my approach to Hugo, so I like to see Sections as database tables. I do not use (or like) the concept of nested sections (neither does Forestry.io). Therefore I always use a parent key in my Frontmatter. This looks like `parent_branch` in this case. To learn more about how this works, [read the blog post](/blog/creating-a-menu-with-nested-pages/).
 
