@@ -66,4 +66,4 @@ This allows us to check each `li` with:
 
     {{ if in $activeitems .File.BaseFileName }}class="active"{{ end }}
 
-I hope this helps you. If you have any questions, just contact me.
+I hope this helps you. If you have any questions, feel free to contact me.
