@@ -7,7 +7,7 @@ A lot of websites use an auto-collapsing [nested menu](/add-ons/nested-menu/). I
 
 ## The parent reference
 
-I am pretty specific in my approach to Hugo, so I like to see Sections as database tables. I do not use (or like) the concept of nested sections (neither does Forestry.io). Therefore I always use a parent key in my Frontmatter. This looks like `parent_branch` in this case. The full front matter looks like this:
+I am pretty specific in my approach to Hugo, so I like to see Sections as database tables. I do not use (or like) the concept of nested sections (neither does Forestry.io). Therefore I always use a parent key in my front matter. This looks like `parent_branch` in this case. The full front matter looks like this:
 
 ```
 ---
@@ -88,52 +88,7 @@ Finally we can check for 'haschildren' in a similar way:
 
     {{ if in $haschildren .File.BaseFileName }}class="haschildren"{{ end }}
 
-## Putting it together
-
-```
-{{ $.Scratch.Set "activeitems" .File.BaseFileName }}
-{{ if .Params.parent_branch }}
-    {{ $.Scratch.Add "activeitems" (print " " .Params.parent_branch) }}
-    {{ with .Site.GetPage (print "/branches/" .Params.parent_branch) }}
-        {{ if .Params.parent_branch }}
-            {{ $.Scratch.Add "activeitems" (print " " .Params.parent_branch) }}
-        {{ end }}
-    {{ end }}
-{{ end }}
-{{ $activeitems := split ($.Scratch.Get "activeitems") " " }}
-
-{{ with .Site.GetPage "/branches" }}
-    
-    {{ $regularpages := .RegularPages.ByTitle }}
-
-    {{ $.Scratch.Set "haschildren" "" }}
-    {{ range where $regularpages "Params.parent_branch" "!=" nil }}
-        {{ if in ($.Scratch.Get "haschildren") .Params.parent_branch }}{{ else }}
-            {{ $.Scratch.Add "haschildren" (print " " .Params.parent_branch) }}
-        {{ end }}
-    {{ end }}
-    {{ $haschildren := split ($.Scratch.Get "haschildren") " " }}
-
-    <ul class="nestedmenu">
-    {{ range where $regularpages "Params.parent_branch" nil }}
-        <li class="{{ if in $activeitems .File.BaseFileName }}active{{ end }} {{ if in $haschildren .File.BaseFileName }}haschildren{{ end }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <ul>
-            {{ range where $regularpages "Params.parent_branch" .File.BaseFileName }}
-                <li class="{{ if in $activeitems .File.BaseFileName }}active{{ end }} {{ if in $haschildren .File.BaseFileName }}haschildren{{ end }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    <ul>
-                        {{ range where $regularpages "Params.parent_branch" .File.BaseFileName }}
-                            <li class="{{ if in $activeitems .File.BaseFileName }}active{{ end }} {{ if in $haschildren .File.BaseFileName }}haschildren{{ end }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                        {{ end }}
-                    </ul>
-                </li>
-            {{ end }}
-            </ul>
-        </li>
-    {{ end }}
-    </ul>
-    
-{{ end }}
-```
+## Adding some CSS
 
 I have added some CSS to make it look good (and for the auto-collapsing to work):
 
@@ -155,6 +110,8 @@ ul.nestedmenu li > a {color: #444444!important;}
 ul.nestedmenu li.active > a {color: rgb(247, 44, 114)!important;}
 ```
 
-If you want to see this in action, you can [view a demo](/branches). You can add this menu to your website through a simple include. If you want to improve it you can adjust the breadcrumbs so that they respect the hierarchy. This can be done by iterating over the activeitems. 
+## Improvements and a demo
 
-I hope this helps you. If you have any questions, feel free to contact me.
+I have changed some things to make it reusable. First of all I created [an include](/add-ons/nested-menu/) for it. Second of all I made it 'section name independent'. This means you can use it in any section without changing the code. Finally, I made it also permalink independent. This means you are allowed to change the permalink of the list and the single pages. I tested it with a custom url in the front matter of the list page and with a adjusted permalink in the config file.
+
+If you want to see this in action, you can [view a demo](/branches). If you want to improve it further you can adjust the breadcrumbs so that they respect the hierarchy. This can be done by iterating over the activeitems.
