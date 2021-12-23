@@ -35,7 +35,9 @@ Note that we are using the 'slug' for the reference to the item in the section. 
 {{ end }}
 ```
 
-What we are missing are the active classes (what is the current path you are on). The slug of the current page can be retreived using:
+What we are missing are the active classes (what is the current path you are on). We are going to collect them up front and put them in an array, so we can check if the page is an 'active' page or not.
+
+The slug of the current page can be retreived using:
 
     {{ $.Scratch.Set "activeitems" .File.BaseFileName }}
 
