@@ -22,7 +22,11 @@
                 {{ end }}
             {{ end }}
             {{ $activeitems := split ($.Scratch.Get "activeitems") " " }}
-            <style>li.active > a {color: black!important;}</style>
+            <style>
+                li > ul {display: none;}
+                li.active > ul {display: block;}
+                li.active > a {color: black!important;}
+            </style>
             <br>
             <br>
             <ul>
