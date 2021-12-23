@@ -7,7 +7,7 @@ What if you want to create an auto-collapsing nested menu? That is a great way t
 
 ## The parent reference
 
-I am pretty specific in my approach to Hugo, so I like to see Sections as database tables. I do not use (or like) the concept of nested Sections (neither does Forestry.io). Therefore I always use a parent key in my Frontmatter. This looks like `parent_branch` in this case. The full front matter looks like this:
+I am pretty specific in my approach to Hugo, so I like to see Sections as database tables. I do not use (or like) the concept of nested sections (neither does Forestry.io). Therefore I always use a parent key in my Frontmatter. This looks like `parent_branch` in this case. The full front matter looks like this:
 
 ```
 ---
