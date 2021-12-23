@@ -22,13 +22,7 @@ Note that we are using the 'slug' for the reference to the item in the section. 
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
         <ul>
         {{ range where $regularpages "Params.parent_branch" .File.BaseFileName }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                <ul>
-                    {{ range where $regularpages "Params.parent_branch" .File.BaseFileName }}
-                        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                    {{ end }}
-                </ul>
-            </li>
+            ...
         {{ end }}
         </ul>
     </li>
