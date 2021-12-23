@@ -135,4 +135,24 @@ Finally we can check for 'haschildren' in a similar way:
 {{ end }}
 ```
 
-You can [view a demo here](/branches). I hope this helps you. If you have any questions, feel free to contact me.
+I have added some CSS to make it look good (and for the auto collapsing to work):
+
+```
+ul.nestedmenu {margin-left: 0;}
+ul.nestedmenu li {list-style: none;}
+ul.nestedmenu li > ul {display: none;}
+ul.nestedmenu li > a::before {
+    content: "•"; 
+    display: inline-block; 
+    margin-right: 0.25rem; 
+    width: 0.5rem; 
+    text-align: center;
+}
+ul.nestedmenu li.haschildren > a::before {content: "›";}
+ul.nestedmenu li.haschildren.active > a::before {transform: rotate(90deg);}
+ul.nestedmenu li.active > ul {display: block;}
+ul.nestedmenu li > a {color: #444444!important;}
+ul.nestedmenu li.active > a {color: rgb(247, 44, 114)!important;}
+```
+
+You can [view a demo](/branches). I hope this helps you. If you have any questions, feel free to contact me.
