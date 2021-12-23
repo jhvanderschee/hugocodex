@@ -62,7 +62,7 @@ Again, notice the print and the space. Finally we can put this in an array (vari
 
     {{ $activeitems := split ($.Scratch.Get "activeitems") " " }}
 
-This allows us to check each `li` with:
+This allows us to check each list item with:
 
     {{ if in $activeitems .File.BaseFileName }}class="active"{{ end }}
 
