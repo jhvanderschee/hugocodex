@@ -14,7 +14,7 @@ I am pretty specific in my approach to Hugo, so I like to see Sections as databa
 
 Step 1. Download the file [nested-menu.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/nested-menu.html)
 <br />Step 2. Save the file in the ‘layouts/partials’ directory of your project
-<br />Step 3. Change the word 'branche' to the name of your section.
+<br />Step 3. Change the word 'branch' to the name of your section through search and replace (do not forget to check the plural).
 <br />Step 4. Add the following line to your layout on the place where you want the nested menu to appear:
 
 ```
