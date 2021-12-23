@@ -1,5 +1,5 @@
 ---
-title: Creating branches of nested pages
+title: Creating a menu with nested pages
 date: 2021-12-23
 ---
 
@@ -16,7 +16,11 @@ parent_branch: branche1
 ---
 ```
 
-Note that we are using the 'slug' for the reference to the item in the section. A slug is not a thing in Hugo, so we have to use `.File.BaseFileName`. When we walk over all items on our main level it looks like this:
+Note that we are using the 'slug' for the reference to the item in the section. A slug is not a thing in Hugo, so we have to use `.File.BaseFileName`. 
+
+## List all pages
+
+When we walk over all items on our main level it looks like this:
 
 ```
 {{ $regularpages := .RegularPages.ByTitle }}
@@ -31,9 +35,11 @@ Note that we are using the 'slug' for the reference to the item in the section. 
 {{ end }}
 ```
 
+Note that we can (and will) iterate over '$regularpages' multiple times.
+
 ## Highlighting active pages
 
-What we are missing are the active classes (what is the current path you are on). We are going to collect them up front and put them in an array, so we can check if the page is an 'active' page or not.
+What we are missing are the active classes (what is the current path you are on). These classes can provide the auto-collapsing behaviour. We are going to collect them up front and put them in an array, so we can check if the page is an 'active' page or not.
 
 The slug of the current page can be retreived using:
 
