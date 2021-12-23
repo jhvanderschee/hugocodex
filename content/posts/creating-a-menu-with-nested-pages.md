@@ -155,4 +155,8 @@ ul.nestedmenu li > a {color: #444444!important;}
 ul.nestedmenu li.active > a {color: rgb(247, 44, 114)!important;}
 ```
 
-You can [view a demo](/branches). I hope this helps you. If you have any questions, feel free to contact me.
+You can [view a demo](/branches). 
+
+You might want to adjust the breadcrumbs so that they respect the hierarchy. This can be done by iterating over the activeitems. 
+
+I hope this helps you. If you have any questions, feel free to contact me.
