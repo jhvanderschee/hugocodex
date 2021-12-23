@@ -49,7 +49,7 @@ The slug of the parent can be retreived using:
 {{ end }}
 ```
 
-The page of the parent of the parent can be retreived using:
+Note that we seperate the slugs with a space (using the 'print' command). The page of the parent of the parent can be retreived using:
 
 ```
 {{ with .Site.GetPage (print "/branches/" .Params.parent_branch) }}
@@ -58,8 +58,7 @@ The page of the parent of the parent can be retreived using:
     {{ end }}
 {{ end }}
 ```
-
-Finally we can put this in an array (variable), like this:
+Again, notice the print and the space. Finally we can put this in an array (variable), like this:
 
     {{ $activeitems := split ($.Scratch.Get "activeitems") " " }}
 
