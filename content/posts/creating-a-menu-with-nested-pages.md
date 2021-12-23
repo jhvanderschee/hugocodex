@@ -3,7 +3,7 @@ title: Creating a menu with nested pages
 date: 2021-12-23
 ---
 
-A lot of websites use an auto-collapsing [nested menu](/add-ons/nested-menu/). It is a great way to show a lot of content in a structured way, but it requires a hierarchical view of all your pages. This post explains how to do that.
+A lot of websites use an auto-collapsing [nested menu](/add-ons/nested-menu/). It is a great and compact way to show a lot of content in a structured way, but it requires a hierarchical view of all your pages. This post explains how to do that.
 
 ## The parent reference
 
