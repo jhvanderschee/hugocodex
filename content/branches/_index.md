@@ -1,3 +1,4 @@
 ---
 title: Branches
+url: /thebranches/
 ---
