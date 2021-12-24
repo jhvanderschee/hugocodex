@@ -1,0 +1,11 @@
+{{ range .regularpages }}
+    {{ if eq (len (split .RelPermalink "/")) (add (len (split $.context.RelPermalink "/")) 1) }}
+        {{ if and (in .RelPermalink $.context.RelPermalink ) (ne $.context.RelPermalink .RelPermalink) }}
+            <li class="{{ if in $.pagecontext.RelPermalink .RelPermalink }}active{{ end }} {{ if in ($.pagecontext.Scratch.Get `haschildren`) .RelPermalink }}haschildren{{ end }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <ul>
+                    {{ partial "nested-menu-partial.html" (dict "context" . "pagecontext" $.pagecontext "regularpages" $.regularpages) }}
+                </ul>
+            </li>
+        {{ end }}
+    {{ end }}
+{{ end }}
