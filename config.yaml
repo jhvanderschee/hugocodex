@@ -18,4 +18,3 @@ markup:
 
 permalinks: 
   posts: blog/:filename
-  branches: thebranches/:dir/:filename
