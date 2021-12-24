@@ -10,12 +10,12 @@ ul.nestedmenu li > a {color: #444444!important;}
 ul.nestedmenu li.active > a {color: rgb(247, 44, 114)!important;}
 </style>
 
-{{ with .Site.GetPage (print "/" .Section ) }}
+{{ with .Site.GetPage (print "/" .Section "/_index.md") }}
 
     {{ $.Scratch.Set "haschildren" "" }}
     {{ range .RegularPages }}
-        {{ $urlparts := split .RelPermalink "/" }}
-        {{ range $index, $value := (first (sub (len $urlparts) 1) $urlparts) }}
+        {{ $urlparts := split (print .File.Dir .File.BaseFileName) "/" }}
+        {{ range $index, $value := (first (len $urlparts) $urlparts) }}
             {{ $.Scratch.Add "haschildren" (print " " (delimit (first $index $urlparts) "/") "/") }}
         {{ end }}
     {{ end }}
