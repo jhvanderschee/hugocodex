@@ -5,6 +5,9 @@ date: 2021-12-23
 
 A lot of websites use an auto-collapsing [nested menu](/add-ons/nested-menu/). It is a great and compact way to show a lot of content in a structured way, but it requires a hierarchical view of all your pages. This post explains how to do that.
 
+## Different approaches
+
+I tried some different approaches. I started out with the assumption that I was not allowed to use folders in sections. I was under the impression that a folder in a section would create a subsection. Therefore I started with a parent reference in the front matter. Once I found out that I actually WAS allowed to use subfolders, as long as I refrained from using an 'index.md' or an '_index.md' file, I rewrote the script. I assumed that the folder structure would be reflected in my permalinks. This, however, turned out to be a false assumption as well. Therefore I rewrote the script a second time. This time it looks at the filepath. It is fully independent of the permalinks used and therefore works in a multilingual setup with custom permalinks defined in the config file and the front matter.
 ## The code
 
 First we start with a list of the pages that have children. This allows us to set the correct classname. We do this by looping over all pages and 'collecting' their path in a scratch variable. Then we create our unordered list that uses a recursive partial to loop over the items.

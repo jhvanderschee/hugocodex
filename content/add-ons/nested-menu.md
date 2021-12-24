@@ -8,7 +8,7 @@ A lot of websites use auto-collapsing nested menu's. They are a great way to sho
 
 ### How it works
 
-The scripts requires you to make subfolders in your section. Note that you are NOT allowed to use an 'index.md' file in your folders. You DO, however, need an _index.md in your sections root folder. Please look at the [directory structure](https://github.com/jhvanderschee/hugocodex/tree/main/content/branches) of the demo for a clarification. If you want to know how the script works, please read about [creating a menu with nested pages](/blog/creating-a-menu-with-nested-pages/).
+This script reads the folders in your section and automatically creates an auto-collapsing nested menu. Note that you are NOT allowed to use an 'index.md' file in your folders. You DO, however, need an _index.md in your sections root folder. Please look at the [directory structure](https://github.com/jhvanderschee/hugocodex/tree/main/content/branches) of the demo for a clarification. If you want to know how the script works, please read about [creating a menu with nested pages](/blog/creating-a-menu-with-nested-pages/).
 
 ### Installation
 
