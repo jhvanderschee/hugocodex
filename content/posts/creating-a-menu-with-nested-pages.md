@@ -7,21 +7,24 @@ A lot of websites use an auto-collapsing [nested menu](/add-ons/nested-menu/). I
 
 ## The code
 
-First we start with a list of the pages that have children. This allows us to set the correct classname. We do this by looping over all pages and 'collecting' their parent path in a scratch variable. Then we create our unordered list that uses a recursive partial to loop over the items.
+First we start with a list of the pages that have children. This allows us to set the correct classname. We do this by looping over all pages and 'collecting' their path in a scratch variable. Then we create our unordered list that uses a recursive partial to loop over the items.
 
 ```
-{{ with .Site.GetPage (print "/" .Section ) }}
+{{ with .Site.GetPage (print "/" .Section "/_index.md") }}
+
     {{ $.Scratch.Set "haschildren" "" }}
     {{ range .RegularPages }}
-        {{ $urlparts := split .RelPermalink "/" }}
-        {{ range $index, $value := (first (sub (len $urlparts) 1) $urlparts) }}
+        {{ $urlparts := split (print .File.Dir .File.BaseFileName) "/" }}
+        {{ range $index, $value := (first (len $urlparts) $urlparts) }}
             {{ $.Scratch.Add "haschildren" (print " " (delimit (first $index $urlparts) "/") "/") }}
         {{ end }}
     {{ end }}
     {{ $.Scratch.Set "haschildren" (uniq (split ($.Scratch.Get "haschildren") " ")) }}
+
     <ul class="nestedmenu">
         {{ partial "nested-menu-partial.html" (dict "context" . "pagecontext" $.Page "regularpages" .RegularPages) }}
     </ul>
+
 {{ end }}
 ```
 
@@ -32,9 +35,16 @@ The recursive partial loops over the items in the list (all items in the section
 
 ```
 {{ range .regularpages }}
-    {{ if eq (len (split .RelPermalink "/")) (add (len (split $.context.RelPermalink "/")) 1) }}
-        {{ if and (in .RelPermalink $.context.RelPermalink ) (ne $.context.RelPermalink .RelPermalink) }}
-            <li class="{{ if in $.pagecontext.RelPermalink .RelPermalink }}active{{ end }} {{ if in ($.pagecontext.Scratch.Get `haschildren`) .RelPermalink }}haschildren{{ end }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+    {{ $filepath := replace (print .File.Dir (replace .File.BaseFileName "_index" "") "/") "//" "/" }}
+    {{ $contextfilepath := replace (print $.context.File.Dir (replace $.context.File.BaseFileName "_index" "") "/") "//" "/" }}
+    {{ $pagecontextfilepath := replace (print $.pagecontext.File.Dir (replace $.pagecontext.File.BaseFileName "_index" "") "/") "//" "/" }}
+
+    {{ if eq (len (split $filepath "/")) (add (len (split $contextfilepath "/")) 1) }}
+      
+        {{ if and (in $filepath $contextfilepath) (ne $contextfilepath $filepath) }}
+            <li class="{{ if in $pagecontextfilepath $filepath }}active{{ end }} {{ if in ($.pagecontext.Scratch.Get `haschildren`) $filepath }}haschildren{{ end }}">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 <ul>
                     {{ partial "nested-menu-partial.html" (dict "context" . "pagecontext" $.pagecontext "regularpages" $.regularpages) }}
                 </ul>
