@@ -1,5 +1,5 @@
 ---
-title: Nested menu
+title: Auto-collapsing menu
 ---
 
 ### Introduction
