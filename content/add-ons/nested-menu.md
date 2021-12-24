@@ -4,7 +4,7 @@ title: Auto-collapsing menu
 
 ### Introduction
 
-A lot of websites use auto-collapsing nested menu's. They are a great way to show a lot of content in a structured way, but it requires a hierarchical view of all your pages. This is a nested menu that can be added through a simple include. If you want to see this in action, you can [view a demo](/branches).
+A lot of websites use auto-collapsing menu's with nested pages. They are a great way to show a lot of content in a structured way, but it requires a hierarchical view of all your pages. This is a nested menu that can be added through a simple include. If you want to see this in action, you can [view a demo](/branches).
 
 ### How it works
 
