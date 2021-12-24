@@ -25,6 +25,7 @@ First we start with a list of the pages that have children. This allows us to se
 {{ end }}
 ```
 
+
 ## The recursive partial
 
 The recursive partial loops over the items in the list (all items in the section, also called 'regular pages').
