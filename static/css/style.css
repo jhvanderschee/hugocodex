@@ -112,7 +112,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appe
 .btn, input[type="submit"], button {
     background: rgb(247, 44, 114); 
     font-weight: bold; 
-    color: rgba(255,255,255,0.85); 
+    color: rgba(255,255,255,0.9); 
     text-decoration: none;
     padding: 0.35rem 0.7rem;
     border: 0;
