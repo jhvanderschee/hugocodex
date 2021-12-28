@@ -54,7 +54,7 @@ Step 7. Add this to your layout:
 
 Step 5. Download the file [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/shortcodes/carousel.html)  
 Step 6. Save the file in the ‘layouts/partials/shortcodes’ directory of your project  
-Step 7. Add this to your layout:  
+Step 7. Add this to your content:  
 ```
 {{</* carousel items="1" height="500" unit="px" duration="7000" */>}}
 ```
