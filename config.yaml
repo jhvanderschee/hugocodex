@@ -9,7 +9,6 @@ disableKinds:
   - taxonomy
   - taxonomyTerm
   - term
-  - RSS
 
 markup:
   goldmark:
