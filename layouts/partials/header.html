@@ -12,6 +12,14 @@
       <meta name="description" content="{{ $.Site.Params.description }}">
     {{ end }}
     
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="{{ .Title }}"/>
+    <meta property="og:url" content="{{ .Permalink }}"/>
+    <meta property="og:type" content="article">
+    {{ if .Params.image }}<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.image }}" />{{ end }}
+    <meta property="og:site_name" content="{{ .Site.Title }}"/>
+    <meta property="og:description" content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ $.Site.Params.description }}{{ end }}"/>
+
     <link rel="shortcut icon" type="image/png" href="/img/icon-192x192.png">
     <link rel="shortcut icon" sizes="196x196" href="/img/icon-192x192.png">
     <link rel="apple-touch-icon" href="/img/icon-192x192.png">
