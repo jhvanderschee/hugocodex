@@ -107,16 +107,16 @@ When you want a multilingual setup, you have to use `defaultContentLanguage: nl`
 languages:
   en:
     languageName: English
-    title: GP Kastelenbuurt
-    description: 'website description in English'
+    title: Website title
+    description: Website description in English
     contentDir: content/english
     permalinks: 
       posts: /news/:filename/ 
     weight: 2
   nl:
     languageName: Nederlands
-    title: Huisartsenpraktijk Kastelenbuurt
-    description: 'website beschrijving in het Nederlands'
+    title: Website titel
+    description: Website beschrijving in het Nederlands
     contentDir: content/nederlands
     permalinks: 
       posts: /nieuws/:filename/
