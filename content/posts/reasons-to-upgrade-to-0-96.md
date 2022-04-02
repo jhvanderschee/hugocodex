@@ -10,4 +10,4 @@ defaultContentLanguage: nl
 languageCode: nl_NL
 ```
 
-This allows me to output a language specific date like this: `{{ .Date | time.Format ":date_long" }}`. Which results in a Dutch date like this: '2 april 2022'. Great, right?
+This allows me to output a language specific date using: `{{ .Date | time.Format ":date_long" }}`. Which results in a Dutch date like this: '2 april 2022'. Great, right?
