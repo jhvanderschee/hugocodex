@@ -1,5 +1,5 @@
 ---
-title: Reasons to upgrade to upgrade to 0.96
+title: Reasons to upgrade Hugo to version 0.96
 date: '2022-04-02'
 ---
 
