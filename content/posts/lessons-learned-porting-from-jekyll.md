@@ -40,7 +40,7 @@ Hugo is able to resize images. These resized images end up in the 'resources' di
 
 ### About the config file
 
-In Jekyll the config file is called '\_config.yml'. In Hugo this is 'config.yaml'. Note that in modern versions of Hugo you can also use the 'yml' extension. Another remarkable thing is that Jekyll requires you to list your collections in the config file. Hugo does not have this requirement. 
+In Jekyll the config file is called '\_config.yml'. In Hugo this is 'config.yaml'. Note that in modern versions of Hugo you can also use the 'yml' extension. Another remarkable thing is that Jekyll requires you to list your collections in the config file. Hugo does not have this requirement.
 
 ### Preventing output
 
@@ -87,6 +87,54 @@ If you for example want a 'car' to have an array of 'features' that are shared a
 ### Homepage filename
 
 The filename of your homepage MUST be '_index.md'. Otherwise your sections will not work properly. Note the underscore.
+
+### Formatting dates
+
+To automatically format dates, you should add the following to your config file:
+
+```
+defaultContentLanguage: nl
+languageCode: nl_NL
+```
+
+Then you can use the this command to output a language specific date: `{{ .Date | time.Format ":date_long" }}`.
+
+### Multilingual setup
+
+When you want a multilingual setup, you have to use `defaultContentLanguage: nl` on the root level of your config.yaml file. Additionally you need a languages variable, that looks something like this:
+
+```
+languages:
+  en:
+    languageName: English
+    title: GP Kastelenbuurt
+    description: 'website description in English'
+    contentDir: content/english
+    permalinks: 
+      posts: /news/:filename/ 
+    weight: 2
+  nl:
+    languageName: Nederlands
+    title: Huisartsenpraktijk Kastelenbuurt
+    description: 'website beschrijving in het Nederlands'
+    contentDir: content/nederlands
+    permalinks: 
+      posts: /nieuws/:filename/
+    weight: 1
+```
+
+Note that the above sets a new content folder for each language. This means you have to create a 'english' and 'nederlands' folder in your content folder that holds your sections.
+
+Additionally you need string translations. This can be easily handled by creating a 'i18n' folder in the root of your project. This folder holds a 'en.yaml' and a 'nl.yaml' file that each looks similar to this (where 'other' holds the translation):
+
+```
+other_news:
+  other: Overige nieuwsberichten
+recent_news:
+  other: Recent nieuws
+```
+
+Calling such a string is as easy as writing: `{{ i18n "other_news" }}`. In the layout you will also have the `.Language` variable available, which outputs the language key ('en' or 'nl' in this case).
 
 ### Split main content
 
