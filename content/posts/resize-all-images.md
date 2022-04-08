@@ -3,7 +3,9 @@ title: 'Resize all images'
 date: '2022-04-08'
 ---
 
-Before 2015 I was building WordPress websites. Some things in WordPress I really liked. One of them was the image resizing. When I switched to Jekyll in 2015 I found out that I could no longer resize images automatically. Fortunately, I found [images.weserv.nl](https://images.weserv.nl), a Dutch image resizing service. This service was smarter than WordPress. It resized your images on the fly and kept it in their cache for 30 days. An excellent strategy. However, images in my markdown were still not resized, often resulting in huge page loads.
+Before 2015 I was building WordPress websites. Some things in WordPress I really liked. One of them was the image resizing. 
+
+When I switched to Jekyll in 2015 I found out that I could no longer resize images automatically. Fortunately, I found [images.weserv.nl](https://images.weserv.nl), a Dutch image resizing service. This service was smarter than WordPress. It resized your images on the fly and kept it in their cache for 30 days. An excellent strategy. However, images in my markdown were still not resized, often resulting in huge page loads.
 
 When I switched to Hugo in June 2021 I was happy to find that Hugo could resize images 'on build time'. The command to do so had to be written in a shortcode or a layout. Although shortcodes were a step in the right direction, 'regular' markdown editors (like my CMS [cms.usecue.com](https://cms.usecue.com) is using) still created unresized images.
 
