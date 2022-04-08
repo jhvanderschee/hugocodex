@@ -1,5 +1,5 @@
 ---
-title: 'Resize all images'
+title: 'Resize markdown images'
 date: '2022-04-08'
 ---
 
