@@ -16,7 +16,12 @@ The file is called '/layouts/_default/_markup/render-image.html' and contains th
   <img src="{{ ((resources.GetMatch .Destination).Resize `1400x jpg q50`).RelPermalink | safeURL }}" alt="{{ .Text }}" />
 {{ end }}
 ```
+This means that a standard image in markdown, like this:
 
-This processes all images and makes JPG files with 50% compression and a width of maximum 1400 pixels, typically resulting in <100kb images. 
+```
+![alt tekst](/uploads/image.png)
+```
+
+... is now procesed by Hugo. It turns it into a JPG file with 50% compression and a width of maximum 1400 pixels, typically resulting in a <100kb image. Isn't that amazing!?
 
 Thank you Bjørn!
