@@ -24,6 +24,4 @@ This means that a standard image in markdown, like this:
 ![alt tekst](/uploads/image.png)
 ```
 
-... is now procesed by Hugo. It turns it into a JPG file with 50% compression and a width of maximum 1400 pixels, typically resulting in a <100kb image. Isn't that amazing!?
-
-Thank you Bjørn!
+... is now procesed by Hugo. It turns it into a JPG file with 50% compression and a width of maximum 1400 pixels, typically resulting in a <100kb image. Isn't that amazing!? I absolutely think so, as I like to call myself a [website performance expert](https://www.usecue.com).
