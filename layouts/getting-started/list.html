@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+<div class="content">
+    <div class="container">
+
+            <article class="post">
+                <header class="post-header">
+                    {{ partial "breadcrumbs.html" . }}
+                    <h1>{{ .Title }}</h1>
+                </header>
+                
+                {{ .Content }}
+
+                <h3>Lessons</h3>
+                <ul style="margin-left: 0">
+                {{ range (where .Site.RegularPages "Section" .Section ) }}
+                    <li style="list-style: none;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+                </ul>
+            
+                <br />
+                <p><a href="{{ (index .RegularPages 0).RelPermalink }}" class="btn">Start witt: {{ (index .RegularPages 0).Title }}</a></p>
+
+            </article>
+
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
