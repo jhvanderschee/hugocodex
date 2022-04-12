@@ -2,7 +2,7 @@
 title: 3. Add your first content
 ---
 
-Now we have an 'index.html' file, we are going to separate the code from the content. Hugo uses Markdown for this. All content is saved in Markdown files in a 'content' directory in the root of your project. Create a Markdown file, called '_index.md', that looks like this:
+Now we have an 'index.html' file, we are going to separate the code from the content. Hugo uses [Markdown](https://www.markdownguide.org/cheat-sheet/) for this. All content is saved in '.md' (Markdown) files in a 'content' directory in the root of your project. Create a Markdown file, called '_index.md', that looks like this:
 
 ```
 ---
