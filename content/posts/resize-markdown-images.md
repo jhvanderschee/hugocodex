@@ -20,4 +20,4 @@ This means that a standard image in markdown, like this:
 ![alt tekst](/uploads/image.png)
 ```
 
-... is now procesed by Hugo. It turns it into a JPG file with 50% compression and a width of maximum 1400 pixels, typically resulting in a <100kb image, which is often ten times smaller than the original. I call myself a [website performance expert](https://www.usecue.com) and I think this is a really big deal.
+... is now procesed by Hugo. It turns it into a JPG file with 50% compression and a width of maximum 1400 pixels, typically resulting in a <100kb image, which is often ten times smaller than the original. I call myself a [website performance expert](https://www.usecue.com) and I think this is a really big deal, especially when you want to get a [perfect Google Lighthouse Score](https://www.usecue.com/blog/how-to-get-a-100-google-lighthouse-score/).
