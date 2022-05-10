@@ -4,8 +4,7 @@
   <div class="container">
     <article class="post">
       <br /><br /><img src="/img/hugo-logo.svg" alt="Hugo logo" width="752" height="205.55" />
-      <h1>Hugo, the website framework that is super fast</h1>
-      <h2>Because fast is simply better</h2>
+      {{ print (index (split .Content "</h2>") 0) "</h2>" | safeHTML }}
     </article>
   </div>
 </div>
