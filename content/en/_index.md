@@ -10,7 +10,7 @@ layout: home
 
 If you are a front-end developer and you want to switch to Hugo: you have come to the right place. You will find some valuable resources here, like a getting started guide and code snippets.
 
-[Privacy](/privacy/) - <a class="manage-consent" href="#manage-consent">Manage consent</a>
+[Privacy](/privacy/) - <a class="manage-consent" href="#manage-consent">Manage consent</a> - [Espanol](/es/)
 
 ### Credits
 
