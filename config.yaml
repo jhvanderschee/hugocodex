@@ -30,4 +30,4 @@ languages:
     contentDir: content/es
     weight: 2
     permalinks:
-      posts: /blog/:filename
+      posts: es/blog/:filename
