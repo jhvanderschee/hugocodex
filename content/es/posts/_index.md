@@ -1,6 +1,6 @@
 ---
 title: Blog
-url: /blog/
+url: /es/blog/
 ---
 ## About this blog
 
