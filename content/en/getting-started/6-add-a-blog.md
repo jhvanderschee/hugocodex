@@ -2,7 +2,7 @@
 title: 6. Add a blog
 ---
 
-What is a website without a news section or a blog? Nothing. That is why we are going to add 'posts' to our website. To do so we start with adding a 'posts' directory in our content dir. In this new directory we create a markdown file named 'hello-world.md', that looks like this:
+Every website has a news section or a blog. That is why are going to add a 'posts' directory to our content dir. In this new directory we create a markdown file named 'hello-world.md', which is our first post. This file should look like this:
 
 ```
 ---
