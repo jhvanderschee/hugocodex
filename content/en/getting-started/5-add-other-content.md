@@ -22,7 +22,7 @@ Your project should now looks like this:
 /layouts/_default/single.html
 /layouts/partials/header.html
 /layouts/partials/footer.html
-/config.yaml`
+/config.yaml
 ```
 
 I noticed that I had to restart Hugo for these changes. You can do this by pressing Ctrl-C and re-enter the 'hugo server' command on the command line.

@@ -40,5 +40,5 @@ Your project should now looks like this:
 /layouts/_default/list.html
 /layouts/partials/header.html
 /layouts/partials/footer.html
-/config.yaml`
+/config.yaml
 ```
