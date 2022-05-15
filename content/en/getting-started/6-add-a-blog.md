@@ -2,7 +2,7 @@
 title: 6. Add a blog
 ---
 
-Every website has a news section or a blog. That is why are going to add a 'posts' directory to our content dir. In this new directory we create a markdown file named 'hello-world.md', which is our first post. This file should look like this:
+Every website has a news section or a blog. That is why are going to add a 'posts' directory to our content folder. In this new directory we create a markdown file named 'hello-world.md', which is our first post. This file should look like this:
 
 ```
 ---
