@@ -1,0 +1,9 @@
+menu:
+  - title: Empezar
+    url: /es/getting-started/
+  - title: Complementos
+    url: /es/add-ons/
+  - title: Blog
+    url: /es/blog/
+  - title: Sobre
+    url: /es/about/

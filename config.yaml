@@ -1,9 +1,6 @@
 baseURL: "https://hugocodex.org"
+defaultContentLanguage: en
 languageCode: "en-us"
-title: "Hugo Codex"
-
-params:
-  description: "Hugo, the website framework that is super fast, because fast is simply better."
 
 disableKinds: 
   - taxonomy
@@ -15,5 +12,22 @@ markup:
     renderer:
       unsafe: true
 
-permalinks: 
-  posts: blog/:filename
+languages:
+  en:
+    languageName: English
+    title: Hugo Codex
+    params:
+      description: "Hugo, the website framework that is super fast, because fast is simply better."
+    contentDir: content/en
+    weight: 1
+    permalinks: 
+      posts: blog/:filename
+  es:
+    languageName: Spaans
+    title: Hugo Codex
+    params:
+      description: "Hugo, the website framework that is super fast, because fast is simply better."
+    contentDir: content/es
+    weight: 2
+    permalinks:
+      posts: blog/:filename
