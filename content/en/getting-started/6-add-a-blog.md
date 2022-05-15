@@ -12,9 +12,7 @@ date: 2016-02-01 10:00:00
 This is my first blog post
 ```
 
-The date should be the current date. The time is optional. 
-
-Additionally we are going to add a (new) layout file for our blog overview (list view of posts). Hugo requires you to name this file 'list.html' and store it in the '_default' directory. This file looks like this:
+The date should be the current date. The time is optional. Additionally we are going to add a (new) layout file for our blog overview (list view of posts). Hugo requires you to name this file 'list.html' and store it in the '_default' directory. This file looks like this:
 
 ```
 {{ partial "header.html" . }}
