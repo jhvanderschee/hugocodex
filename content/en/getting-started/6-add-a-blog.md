@@ -12,7 +12,7 @@ date: 2016-02-01 10:00:00
 This is my first blog post
 ```
 
-The date should be the current date. The time is optional. Additionally we are going to add a (new) layout file for our blog overview (list view of posts). Hugo requires you to name this file 'list.html' and store it in the '_default' directory. This file looks like this:
+The date should be the current date. The time is optional. Additionally we are going to add a (new) layout file for our blog overview (a list view of our posts). Hugo requires you to name this file 'list.html' and store it in the '_default' directory. This file looks like this:
 
 ```
 {{ partial "header.html" . }}
@@ -20,7 +20,7 @@ The date should be the current date. The time is optional. Additionally we are g
     <ul>
     {{ range .RegularPages }}
         <li>
-            {{ .Date | time.Format ":date_long" }}
+            {{ if .Date }}{{ .Date | time.Format ":date_long" }}{{ end }}
             <h2>{{ .Title }}</h2>
             <p>{{ .Summary }}... <a href="{{ .RelPermalink }}">Read more</a></p>
         </li>
@@ -29,7 +29,17 @@ The date should be the current date. The time is optional. Additionally we are g
 {{ partial "footer.html" . }}
 ```
 
-Your project should now looks like this:
+You can additionally update your 'single.html' in the '_defaults' directory and add the '.Date' parameter. It should then look something like this:
+
+```
+{{ partial "header.html" . }}
+    {{ if .Date }}{{ .Date | time.Format ":date_long" }}{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+{{ partial "footer.html" . }}
+```
+
+This will make sure your posts (single pages) also show the date of the post. Your project should now looks like this:
 
 ```
 /content/_index.md
