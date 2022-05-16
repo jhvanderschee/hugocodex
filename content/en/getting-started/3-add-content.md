@@ -28,5 +28,5 @@ This effectively separates the code from the content. Content now lives in the '
 ```
 /content/_index.md
 /layouts/index.html
-/config.yaml`
+/config.yaml
 ```
