@@ -1,7 +1,7 @@
 ---
 title: 'Sobre Hugo Codex'
 ---
-> "Hugo Codex wants to make it easier for you to choose for Hugo in your next project."
+> "Hugo Codex quiere  to make it easier for you to choose for Hugo in your next project."
 
 ### For front-end developers
 
