@@ -1,6 +1,6 @@
 ---
 title: Empezando
-url: empazondo
+url: empazando
 ---
 
 Esta es una serie de lecciones que le muestra cómo funciona Hugo desde cero (juego de palabras). Esto significa que comenzará con absolutamente nada y construirá su camino hacia un sitio web completo. Las lecciones son cortas y fáciles de seguir. Las lecciones enseñan una base teórica limitada. La serie tiene un fuerte enfoque en "aprender haciendo".
