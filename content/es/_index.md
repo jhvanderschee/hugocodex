@@ -5,18 +5,18 @@ layout: home
 
 # Hugo, el framework web que es súper rápido
 
-## Porque rápido es simplemente mejor
+## Porque rápido es simplemente mejor.
 
 ### Audiencia
 
-If you are a front-end developer and you want to switch to Hugo: you have come to the right place. You will find some valuable resources here, like a getting started guide and code snippets.
+Si eres un desarrollador front-end y estas queriendo dar el salto a Hugo: has venido al lugar adecuado. Encontrarás acá alguno valiosos recursos, como una guía para empezar y retazos de código fuente.
 
-[Privacy](/privacy/) - <a class="manage-consent" href="#manage-consent">Manage consent</a> - [English](/)
+[Privacidad](/privacy/) - <a class="manage-consent" href="#manage-consent">Manage consent</a> - [English](/)
 
-### Creditos
+### Créditos
 
-This site is created by Señor Hugo (Fenix).  
-It is a [showcase](https://github.com/jhvanderschee/hugocodex) of its own scripts. It is powered by Hugo and hosted by Usecue. If you like it, please drop me a line through twitter [@jhvanderschee](https://twitter.com/jhvanderschee) or [joost@vdschee.nl](mailto:joost@vdschee.nl)</a>.
+Este sitio Web ha sido creado por DonHugo (Fenix).  
+Es un [escaparate](https://github.com/jhvanderschee/hugocodex) de sus propios scripts. Energizado por Hugo y alojado por Usecue. Si te gusta, por favor deja caer algunas palabras via twitter [@jhvanderschee](https://twitter.com/jhvanderschee) o en [joost@vdschee.nl](mailto:joost@vdschee.nl)</a>.
 
 ### Energizado por
 
