@@ -31,3 +31,4 @@ languages:
     weight: 2
     permalinks:
       posts: blog/:filename
+      getting-started: empezando/:filename
