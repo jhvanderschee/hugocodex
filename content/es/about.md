@@ -1,5 +1,5 @@
 ---
-title: 'Sobre Hugo Codex'
+title: 'Acerca de Hugo Codex'
 ---
 > "Hugo Codex quiere  to make it easier for you to choose for Hugo in your next project."
 
