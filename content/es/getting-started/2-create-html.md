@@ -1,7 +1,8 @@
 ---
-title: 2. Create some HTML
+title: 2. Crear algo de HTML
 ---
 
+Una vez instalado Hugo, empezemos con una página web bien simple. Primero debes crear dos ficheros. Primero creas un fichero vacío llamado  'config.yaml'. Luego creas un fichero llamado 'index.html' con algún simple HTML:
 Now we have Hugo installed, let's start with a very simple webpage. First you have to create two files. First you create an empty file called 'config.yaml'. Then you create a file called 'index.html' with some simple HTML:
 
 ```
