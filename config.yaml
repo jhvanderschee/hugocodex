@@ -35,12 +35,14 @@ languages:
     weight: 1
     permalinks: 
       posts: blog/:filename
+      getting-started: getting-started/:filename
   es:
     languageName: Spaans
     title: Hugo Codex
     params:
-      description: "Hugo, the website framework that is super fast, because fast is simply better."
+      description: "Hugo, que es súper rápido, porque rápido es simplemente mejor."
     contentDir: content/es
     weight: 2
     permalinks:
       posts: blog/:filename
+      getting-started: empezando/:filename
