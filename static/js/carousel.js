@@ -14,15 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
         ele.scrollLeft = 0;
         bullets[0].classList.add('selected');
 
+        const setSelected = function() {
+            bullets.forEach(function(bullet) {
+               bullet.classList.remove('selected');
+            });
+            let nthchild = (Math.round(ele.scrollLeft/carousel.scrollWidth)+1);
+            carousel.querySelector('ol li:nth-child('+nthchild+')').classList.add('selected'); 
+        }
+
         const scrollTo = function(event) {
             event.preventDefault();
             ele.scrollLeft = ele.querySelector(this.getAttribute('href')).offsetLeft;
-
-            // Set selected bullet
-            bullets.forEach(function(bullet) {
-                bullet.classList.remove('selected');
-            });
-            this.parentElement.classList.add('selected');
         }
         
         const nextSlide = function() {
@@ -42,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
             
         // Attach the handlers
+        ele.addEventListener("scroll", setSelected);
         nextarrow.addEventListener("click", nextSlide);
         prevarrow.addEventListener("click", prevSlide);
         bullets.forEach(function(bullet) {
