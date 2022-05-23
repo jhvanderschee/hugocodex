@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     }); //end foreach
 
-    
     document.addEventListener('keydown', function (e){
         var elements = document.querySelectorAll('.carousel');
 
