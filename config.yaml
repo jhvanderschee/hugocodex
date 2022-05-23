@@ -12,6 +12,19 @@ markup:
     renderer:
       unsafe: true
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - Lunr
+
+outputFormats:
+  Lunr:
+    baseName: "index"
+    isPlainText: true
+    mediaType: "application/json"
+    notAlternative: true
+
 languages:
   en:
     languageName: English
