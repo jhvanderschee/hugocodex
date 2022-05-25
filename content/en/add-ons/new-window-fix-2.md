@@ -4,17 +4,17 @@ title: New window fix (non JS)
 
 ### Introduction
 
-According to many site owners, external links should open in a new window. Markdown makes it relatively hard to specify this. This script automates this for you, so you do not have to worry about this.
+According to many site owners, external links and PDF's should open in a new window. Markdown makes it relatively hard to specify this. This script automates this for you, so you do not have to worry about this.
 
 ### How it works
 
-This script detects external links. It automagically adds 'target="_blank"' to these links. This is done by the following code.
+This script detects external links and PDF's. It automagically adds 'target="_blank"' to these links. This is done by the following code.
 
 [expand]
 
 ```
 {{ $link := .Destination }}
-{{ $isRemote := strings.HasPrefix $link "http" }}
+{{ $isRemote := (or (strings.HasPrefix $link "http") (in (lower $link) ".pdf")) }}
 {{- if not $isRemote -}}
   {{ $url := urls.Parse .Destination }}
   {{- if $url.Path -}}
