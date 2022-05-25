@@ -8,7 +8,7 @@ According to many site owners, PDF documents and external links should open in a
 
 ### How it works
 
-This script detects external links and links to PDF files, using plain javascript. It automagically adds 'target="_blank"' to these links. This is done by the following code.
+This script detects external links and links to PDF files, using plain javascript. It automagically adds 'target="_blank"' to these links, like [this one](/uploads/commerce.pdf). This is done by the following code.
 
 [expand]
 
