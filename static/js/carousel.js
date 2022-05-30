@@ -5,22 +5,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const ele = carousel.querySelector('ul');
     const scrolllength = carousel.querySelector('ul li:nth-child(2)').offsetLeft - carousel.querySelector('ul li:nth-child(1)').offsetLeft;
-    const amountvisible = Math.round(ele.offsetWidth/scrolllength)-1;
+    const amountvisible = Math.round(ele.offsetWidth/scrolllength);
+    console.log(amountvisible,scrolllength)
     const bullets = carousel.querySelectorAll('ol li');
     const nextarrow = carousel.querySelector('.next');
     const prevarrow = carousel.querySelector('.prev');
     bullets[0].classList.add('selected');
-    var removeels = carousel.querySelectorAll('ol li:nth-last-child(-n + '+(amountvisible)+')');
+    var removeels = carousel.querySelectorAll('ol li:nth-last-child(-n + '+(amountvisible-1)+')');
     removeels.forEach(function(removeel) {
       removeel.remove();
     });
-    
+
     const setSelected = function() {
         bullets.forEach(function(bullet) {
            bullet.classList.remove('selected');
         });
         let nthchild = (Math.round((ele.scrollLeft/scrolllength)+1));
         carousel.querySelector('ol li:nth-child('+nthchild+')').classList.add('selected'); 
+    }
+
+    const scrollTo = function(event) {
+      event.preventDefault();
+      ele.scrollLeft = ele.querySelector(this.getAttribute('href')).offsetLeft;
     }
     
     const nextSlide = function() {
@@ -47,6 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
     ele.addEventListener("scroll", debounce (setSelected));
     nextarrow.addEventListener("click", nextSlide);
     prevarrow.addEventListener("click", prevSlide);
+    bullets.forEach(function(bullet) {
+        bullet.querySelector('a').addEventListener('click', scrollTo);
+    });
 
     //setInterval for autoplay
     if(carousel.getAttribute('duration')) {
