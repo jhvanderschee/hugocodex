@@ -9,7 +9,7 @@
     </ul>
     <ol>
       {{ range $index, $page := .context.Site.Data.carousel.images }}
-        {{ if (modBool $index 1) }}<li><a href="#c10_slide{{ add $index 1 }}"></a></li>{{ end }}
+        <li><a href="#c10_slide{{ add $index 1 }}"></a></li>
       {{ end }}
     </ol>
     <div class="prev">&lsaquo;</div>
