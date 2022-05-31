@@ -59,11 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
     //setInterval for autoplay
     if(carousel.getAttribute('duration')) {
       setInterval(function(){ 
-        if (ele != document.querySelector(".carousel:hover ul")) {
-          if(ele.scrollWidth > ele.scrollLeft + carousel.scrollWidth) {
-            ele.scrollLeft = ele.scrollLeft + carousel.scrollWidth;
-          } else ele.scrollLeft = 0;
-        }
+      if (ele != document.querySelector(".carousel:hover ul")) {
+          nextarrow.click();
+      }
       }, carousel.getAttribute('duration'));
     }
     
