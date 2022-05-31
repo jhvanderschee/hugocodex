@@ -31,20 +31,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextSlide = function() {
       if(!carousel.querySelector('ol li:last-child').classList.contains('selected')) {
         carousel.querySelector('ol li.selected').nextElementSibling.querySelector('a').click();
-        ele.scrollLeft = ele.scrollLeft + carousel.scrollWidth;
       } else {
         carousel.querySelector('ol li:first-child a').click();
-        ele.scrollLeft = 0;
       }
     }
 
     const prevSlide = function() {
       if(!carousel.querySelector('ol li:first-child').classList.contains('selected')) {
         carousel.querySelector('ol li.selected').previousElementSibling.querySelector('a').click();
-        ele.scrollLeft = ele.scrollLeft - carousel.scrollWidth;
       } else {
         carousel.querySelector('ol li:last-child a').click();
-        ele.scrollLeft = ele.scrollWidth - carousel.scrollWidth;
       }
     }
       
