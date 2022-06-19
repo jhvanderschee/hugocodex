@@ -3,7 +3,7 @@ title: Image compression for the lazy
 date: 2022-06-19
 ---
 
-No, this is not about lazy loading. We are talking about image compression only, as images are an important part of your page load (20% on average) and in the end every byte counts.
+No, this is not about lazy loading. We are talking about image compression only, as images are an important part of your page load (20% on average) and in the end every byte counts. I was happy to find that [Boris Smus](https://github.com/borismus/image-zoom) did some great ground work on this topic. I used one of his examples to illustrate this article.
 
 ## Our image
 
@@ -11,7 +11,8 @@ Consider the following 'retina-ready' image of 881.7kb (0.9Mb) of this orange La
 
 <p><img src="/uploads/car/2x-100.jpg" width="568"/></p>
 
-We could save a lot of bandwidth by adding a 'source set'. This would instruct the browser to get a low resolution version on non-retina displays. This means we use a 1x image and a 2x image. Both these images could be compressed to save even more bandwith. But what is the right amount of compression for images on retina and non-retina displays?
+We could save a lot of bandwidth by adding a 'source set'. This would instruct the browser to get a low resolution version on non-retina displays. This means we use a 1x image and a 2x image. Both these images could be compressed to save even more bandwith. But what is the right amount of compression for images on retina and non-retina displays?  
+<br>
 
 |Compression|Size|
 |----|----|
@@ -51,7 +52,7 @@ If you want a perfect non-retina image you can (heavily) compress a retina-ready
 
 But there is another much more visible difference on retina displays. The larger image (2x 50% jpg) looks a lot better on screens with high pixel density (retina). Note that I doubled the resolution for a better comparison, making the retina image approximately 4x larger than it appears in real life.
 
-Below you will find an overview of all relevant options. Note that I left out the obvious 881.7kb weighing '2x 100% jpg' option. If you care about 'perfect' images, you should always compress the retina version. If I had to choose from the list below, I would choose the '2x 50% jpg' version.  
+Below you will find an overview of all relevant options. The conclusion is that if you care about 'perfect' images, you should always compress the retina version. If I had to choose from the list below, I would choose the '2x 50% jpg' version, because of its perfect non-retina appearance, its good retina appearance and its acceptable size.  
 <br>
 
 |Compression|Size|@1x|@2x|
