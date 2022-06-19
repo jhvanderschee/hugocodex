@@ -52,7 +52,13 @@ If you want a perfect non-retina image you can (heavily) compress a retina-ready
 
 But there is another much more visible difference on retina displays. The larger image (2x 50% jpg) looks a lot better on screens with high pixel density (retina). Note that I doubled the resolution for a better comparison, making the retina image approximately 4x larger than it appears in real life.
 
-Below you will find an overview of all relevant options. The conclusion is that if you care about 'perfect' images, you should always compress the retina version. If I had to choose from the list below, I would choose the '2x 50% jpg' version, because of its perfect non-retina appearance, its good retina appearance and its acceptable size.  
+## Low complexity
+
+If we want perfect images on non-retina displays, there is no need for source sets. We can simply use a heavily compressed retina image for this. We could win some quality on retina displays or save some bytes by using a source set, but that would also add complexity. The same goes for using the 'webp' format. We could save some extra bytes, but it would also add complexity, as [webp is not yet fully supported](https://caniuse.com/?search=%20webp) at the time of writing.
+
+## The best option
+
+Below you will find an overview of all relevant options. The conclusion is that if you care about 'perfect' images, you should always compress the retina version. If I had to choose one option from the list below, because I wanted to define that globally in Hugo, I would choose the '2x 50% jpg' version. It has perfect non-retina appearance, good retina appearance and an acceptable size.  
 <br>
 
 |Compression|Size|@1x|@2x|
@@ -72,7 +78,3 @@ Below you will find an overview of all relevant options. The conclusion is that 
 <br>
 
 I said that 50% was only acceptable in some cases (on certain images) on a non-retina display. Why would 50% be 'good' on retina displays, you might ask. This has to do with the size of these (distorted) pixels. These pixels are in many cases so small that your eye is unable to see them seperately, making the distortion almost invisible. This is why I rated 50% 'good' on retina, while I rated it 'decent' on non-retina.
-
-## One size to rule them all
-
-If we want perfect images on non-retina displays, there is no need for source sets. We can simply use a heavily compressed retina image for this. We could win some quality or bytes by using a source set, but that would also add complexity. The same goes for using the 'webp' format. We could win some extra bytes, but it would also add complexity, as [webp is not yet fully supported](https://caniuse.com/?search=%20webp) at the time of writing. Therefore, perfectly looking images with reasonable sizes and the lowest amount of complexity use '2x 50% jpg' compression.
