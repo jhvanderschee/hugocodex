@@ -79,4 +79,4 @@ Below you will find an overview of the options ordered by file size. The conclus
 <span class="emoticon">😡</span> = terrible   
 <br>
 
-I said that 50% was only acceptable in some cases (on certain images) on a non-retina display. Why would 50% be 'good' on retina displays, you might ask. This has to do with the size of these (distorted) pixels. These pixels are in many cases so small that your eye is unable to see them seperately, making the distortion almost invisible. This is why 50% rated 'good' on retina, while it was rated 'decent' on non-retina.
+N.B. I said that 50% was only acceptable in some cases (on certain images) on a non-retina display. Why would 50% be 'good' on retina displays, you might ask. This has to do with the size of these (distorted) pixels. These pixels are in many cases so small that your eye is unable to see them seperately, making the distortion almost invisible. This is why 50% rated 'good' on retina, while it was rated 'decent' on non-retina.
