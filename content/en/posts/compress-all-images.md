@@ -66,7 +66,7 @@ Below you will find an overview of all relevant options. The conclusion is that 
 |[1x 100% jpg](/uploads/car/1x-100.jpg)|🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨 246.6kb|<span class="emoticon">😀</span>|<span class="emoticon">😡</span>|
 |[2x 90% jpg](/uploads/car/2x-90.jpg)|🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨 250.8kb|<span class="emoticon">😀</span>|<span class="emoticon">😀</span>|
 |[2x 80% jpg](/uploads/car/2x-80.jpg)|🟨🟨🟨🟨🟨🟨 164.3kb|<span class="emoticon">😀</span>|<span class="emoticon">😀</span>|
-|[2x 50% jpg](/uploads/car/2x-50.jpg)|🟨🟨🟨🟨 92.8kb|<span class="emoticon">😀</span>|<span class="emoticon">🙂</span>|
+|[2x 50% jpg](/uploads/car/2x-50.jpg)|🟨🟨🟨🟨 92.8kb|<span class="emoticon">😀</span>|<span class="emoticon">🙂</span>&nbsp;&nbsp;&nbsp;<span class="emoticon">&larr;</span>|
 |[1x 90% jpg](/uploads/car/1x-90.jpg)|🟨🟨🟨 75.3kb|<span class="emoticon">🙂</span>|<span class="emoticon">😡</span>|
 |[1x 80% jpg](/uploads/car/1x-80.jpg)|🟨🟨 50.3kb|<span class="emoticon">🙂</span>|<span class="emoticon">😡</span>|
 |[1x 50% jpg](/uploads/car/1x-50.jpg)|🟨 30.2kb|<span class="emoticon">😐</span>|<span class="emoticon">😡</span>|
