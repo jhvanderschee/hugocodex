@@ -132,6 +132,9 @@ select {
     background: white url("/img/chevron_down.svg") calc(100% - 0.8rem) 55% no-repeat;
     background-size: auto 0.7rem;
 }
+table {margin-bottom: 1.4rem;}
+table th, table td {padding-right: 1rem; text-align: left;}
+.emoticon {font-size: 200%; line-height: 1;}
 
 
 /* IMAGES */
