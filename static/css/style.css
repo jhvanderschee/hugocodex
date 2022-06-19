@@ -24,7 +24,7 @@ a {color: rgb(247, 44, 114); text-decoration: none; cursor: pointer;}
 a.gray {color: #666666; text-decoration: underline;}
 
 .container {max-width: 73rem; margin: 0 auto; padding: 0 1rem;}
-.content {background: #fcfcfc url(/img/bg_content.svg) center top no-repeat; background-attachment: fixed; padding: 4rem 0 5.5rem;}
+.content {background: #fcfcfc url(/img/bg_content.svg) center top no-repeat; background-attachment: fixed; padding: 4rem 0 5.5rem; background-blend-mode: multiply;}
 
 #navigation {background: white; border-bottom: 0.0625rem solid #e5e5e5; position: fixed; width: 100%; z-index: 99;}
 #navigation .container {display: flex; align-items: center;}
