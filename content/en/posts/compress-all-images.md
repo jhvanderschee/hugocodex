@@ -50,7 +50,7 @@ But what if I told you that you could get a perfect (100%) image quality on a no
 
 If you want a perfect non-retina image you can (heavily) compress a retina-ready image (an image with 4 times as many pixels) and get a result that is very close to 100% image quality. Compression should be around 50% in order to save around 60% of all bytes. When you [look very closely](/uploads/car/quality.png), you can see some distortion (pixelated effect) in the orange side skirt of the lower left image, while there is none visible in the bottom right image. In other words: the 2x 50% jpg image looks perfect on a non-retina display, while the 1x 90% jpg image does not. 
 
-But there is another much more visible difference on retina displays. The larger image (2x 50% jpg) looks a lot better on screens with high pixel density (retina). Note that I doubled the resolution for a better comparison, making the retina image approximately 4x larger than it appears in real life.
+But there is another much more visible difference on retina displays. The larger image (2x 50% jpg) looks a lot better on screens with high pixel density (retina). Note that I doubled the resolution for a better comparison, making the non-retina image 2x larger and the retina image (approximately) 4x larger than it appears in real life.
 
 ## Zero complexity
 
