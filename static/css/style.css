@@ -134,6 +134,7 @@ select {
 }
 table {margin-bottom: 1.4rem;}
 table th, table td {padding-right: 1rem; text-align: left;}
+table a {color: #666666; text-decoration: underline; text-decoration-color: rgba(102, 102, 102, 0.5);}
 .emoticon {font-size: 200%; line-height: 1;}
 
 
