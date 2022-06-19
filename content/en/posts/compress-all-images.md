@@ -51,7 +51,8 @@ If you want a perfect non-retina image you can (heavily) compress a retina-ready
 
 But there is another much more visible difference on retina displays. The larger image (2x 50% jpg) looks a lot better on screens with high pixel density (retina). Note that I doubled the resolution for a better comparison, making the retina image approximately 4x larger than it appears in real life.
 
-Below you will find an overview of all relevant options. Note that I left out the obvious 881.7kb weighing '2x 100% jpg' option. If you care about 'perfect' images, you should always compress the retina version. If I had to choose from the list below, I would choose the '2x 50% jpg' version.
+Below you will find an overview of all relevant options. Note that I left out the obvious 881.7kb weighing '2x 100% jpg' option. If you care about 'perfect' images, you should always compress the retina version. If I had to choose from the list below, I would choose the '2x 50% jpg' version.  
+<br>
 
 |Compression|Size|@1x|@2x|
 |----|----|--|--|
