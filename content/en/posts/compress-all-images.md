@@ -71,7 +71,7 @@ Below you will find an overview of all relevant options. The conclusion is that 
 |[1x 80% jpg](/uploads/car/1x-80.jpg)|🟨🟨 50.3kb|<span class="emoticon">🙂</span>|<span class="emoticon">😡</span>|
 |[2x 20% jpg](/uploads/car/2x-20.jpg)|🟨🟨 50.1kb|<span class="emoticon">🙂</span>|<span class="emoticon">😐</span>|
 |[1x 50% jpg](/uploads/car/1x-50.jpg)|🟨 30.2kb|<span class="emoticon">😐</span>|<span class="emoticon">😡</span>|
-|[1x 20% jpg](/uploads/car/1x-20.jpg)|18.0kb|<span class="emoticon">😡</span>|<span class="emoticon">😡</span>|
+|[1x 20% jpg](/uploads/car/1x-20.jpg)|🟨 18.0kb|<span class="emoticon">😡</span>|<span class="emoticon">😡</span>|
 
 <span class="emoticon">😀</span> = perfect   
 <span class="emoticon">🙂</span> = good   
