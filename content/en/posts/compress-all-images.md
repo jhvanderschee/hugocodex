@@ -52,7 +52,7 @@ If you want a perfect non-retina image you can (heavily) compress a retina-ready
 
 But there is another much more visible difference on retina displays. The larger image (2x 50% jpg) looks a lot better on screens with high pixel density (retina). Note that I doubled the resolution for a better comparison, making the retina image approximately 4x larger than it appears in real life.
 
-## No complexity
+## Zero complexity
 
 If we want perfect images on non-retina displays we can best use a heavily compressed retina image. With a source set we could win some quality or save some bytes, but that would also add complexity. The same goes for using the 'webp' format. We could save some extra bytes, but it would also add complexity, as [webp is not yet fully supported](https://caniuse.com/?search=%20webp).
 
