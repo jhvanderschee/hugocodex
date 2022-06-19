@@ -54,9 +54,9 @@ But there is another much more visible difference on retina displays. The larger
 
 ## No complexity
 
-If we want perfect images on non-retina displays, there is no need for source sets/variants. We can simply use a heavily compressed retina image. We could win some quality on retina displays or save some bytes by using a source set, but that would also add complexity. The same goes for using the 'webp' format. We could save some extra bytes, but it would also add complexity, as [webp is not yet fully supported](https://caniuse.com/?search=%20webp) at the time of writing.
+If we want perfect images on non-retina displays we can best use a heavily compressed retina image. With a source set we could win some quality or save some bytes, but that would also add complexity. The same goes for using the 'webp' format. We could save some extra bytes, but it would also add complexity, as [webp is not yet fully supported](https://caniuse.com/?search=%20webp).
 
-## The best option
+## One size to rule them all
 
 Below you will find an overview of all relevant options. The conclusion is that if you care about 'perfect' images, you should always compress the retina version. If I had to choose one option from the list below, because I wanted to define that globally in Hugo, I would choose the '2x 50% jpg' version. It has perfect non-retina appearance, good retina appearance and an acceptable size.  
 <br>
