@@ -54,7 +54,7 @@ But there is another much more visible difference on retina displays. The larger
 
 ## No complexity
 
-If we want perfect images on non-retina displays, there is no need for source sets/variants. We can simply use a heavily compressed retina image for this. We could win some quality on retina displays or save some bytes by using a source set, but that would also add complexity. The same goes for using the 'webp' format. We could save some extra bytes, but it would also add complexity, as [webp is not yet fully supported](https://caniuse.com/?search=%20webp) at the time of writing.
+If we want perfect images on non-retina displays, there is no need for source sets/variants. We can simply use a heavily compressed retina image for everything. We could win some quality on retina displays or save some bytes by using a source set, but that would also add complexity. The same goes for using the 'webp' format. We could save some extra bytes, but it would also add complexity, as [webp is not yet fully supported](https://caniuse.com/?search=%20webp) at the time of writing.
 
 ## The best option
 
