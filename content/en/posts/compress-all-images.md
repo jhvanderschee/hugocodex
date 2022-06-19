@@ -73,8 +73,6 @@ Below you will find an overview of the options ordered by file size. The conclus
 |[1x 50% jpg](/uploads/car/1x-50.jpg)|▮ 30.2kb|<span class="emoticon">😐</span>|<span class="emoticon">😡</span>|
 |[1x 20% jpg](/uploads/car/1x-20.jpg)|▮ 18.0kb|<span class="emoticon">😡</span>|<span class="emoticon">😡</span>|
 
-▮ = ~25kb download
-
 <span class="emoticon">😀</span> = perfect   
 <span class="emoticon">🙂</span> = good   
 <span class="emoticon">😐</span> = decent   
