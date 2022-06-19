@@ -63,15 +63,15 @@ Below you will find an overview of the options ordered by file size. The conclus
 
 |Compression|Size|@1x|@2x|
 |----|----|--|--|
-|[1x 100% jpg](/uploads/car/1x-100.jpg)|◼◼◼◼◼◼◼◼◼◼ 246.6kb|<span class="emoticon">😀</span>|<span class="emoticon">😡</span>|
-|[2x 90% jpg](/uploads/car/2x-90.jpg)|◼◼◼◼◼◼◼◼◼◼ 250.8kb|<span class="emoticon">😀</span>|<span class="emoticon">😀</span>|
-|[2x 80% jpg](/uploads/car/2x-80.jpg)|◼◼◼◼◼◼ 164.3kb|<span class="emoticon">😀</span>|<span class="emoticon">😀</span>|
-|[2x 50% jpg](/uploads/car/2x-50.jpg)|◼◼◼◼ 92.8kb|<span class="emoticon">😀</span>|<span class="emoticon">🙂</span>|
-|[1x 90% jpg](/uploads/car/1x-90.jpg)|◼◼◼ 75.3kb|<span class="emoticon">🙂</span>|<span class="emoticon">😡</span>|
-|[1x 80% jpg](/uploads/car/1x-80.jpg)|◼◼ 50.3kb|<span class="emoticon">🙂</span>|<span class="emoticon">😡</span>|
-|[2x 20% jpg](/uploads/car/2x-20.jpg)|◼◼ 50.1kb|<span class="emoticon">🙂</span>|<span class="emoticon">😐</span>|
-|[1x 50% jpg](/uploads/car/1x-50.jpg)|◼ 30.2kb|<span class="emoticon">😐</span>|<span class="emoticon">😡</span>|
-|[1x 20% jpg](/uploads/car/1x-20.jpg)|◼ 18.0kb|<span class="emoticon">😡</span>|<span class="emoticon">😡</span>|
+|[1x 100% jpg](/uploads/car/1x-100.jpg)|▮▮▮▮▮▮▮▮▮▮ 246.6kb|<span class="emoticon">😀</span>|<span class="emoticon">😡</span>|
+|[2x 90% jpg](/uploads/car/2x-90.jpg)|▮▮▮▮▮▮▮▮▮▮ 250.8kb|<span class="emoticon">😀</span>|<span class="emoticon">😀</span>|
+|[2x 80% jpg](/uploads/car/2x-80.jpg)|▮▮▮▮▮▮ 164.3kb|<span class="emoticon">😀</span>|<span class="emoticon">😀</span>|
+|[2x 50% jpg](/uploads/car/2x-50.jpg)|▮▮▮▮ 92.8kb|<span class="emoticon">😀</span>|<span class="emoticon">🙂</span>|
+|[1x 90% jpg](/uploads/car/1x-90.jpg)|▮▮▮ 75.3kb|<span class="emoticon">🙂</span>|<span class="emoticon">😡</span>|
+|[1x 80% jpg](/uploads/car/1x-80.jpg)|▮▮ 50.3kb|<span class="emoticon">🙂</span>|<span class="emoticon">😡</span>|
+|[2x 20% jpg](/uploads/car/2x-20.jpg)|▮▮ 50.1kb|<span class="emoticon">🙂</span>|<span class="emoticon">😐</span>|
+|[1x 50% jpg](/uploads/car/1x-50.jpg)|▮ 30.2kb|<span class="emoticon">😐</span>|<span class="emoticon">😡</span>|
+|[1x 20% jpg](/uploads/car/1x-20.jpg)|▮ 18.0kb|<span class="emoticon">😡</span>|<span class="emoticon">😡</span>|
 
 <span class="emoticon">😀</span> = perfect   
 <span class="emoticon">🙂</span> = good   
