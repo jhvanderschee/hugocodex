@@ -84,7 +84,9 @@ Below you will find an overview of the options ordered by file size. The conclus
 
 ## Perfect yet 50%
 
-I said that 1x 50% jgp quality was only acceptable in some cases (on certain images) on a non-retina display. Why would 2x 50% be 'good' on retina displays? A 50% jpg quality on retina has [clear compression artifacts](/uploads/car/quality.png) (see top right image), while we said we wanted to 'avoid any visible compression artifacts'... However, the pixels on most retina screen are so small that your eye is unable to see them seperately, making the distortion (almost) invisible. Your eye is blurring the image for you, resulting in what looks like a perfect image. This is why 50% rated 'good' on retina, while it was rated 'decent' on non-retina. Want proof? I challenge you to detect the difference between a perfect retina image and a 50% distorted one below (view on a retina display)...
+I said that 1x 50% jgp quality was only acceptable in some cases (on certain images) on a non-retina display. Why would 2x 50% be 'good' on retina displays? A 50% jpg quality on retina has [clear compression artifacts](/uploads/car/quality.png) (see top right image) and we said we wanted to 'avoid any visible compression artifacts'... The answer is simple. The pixels on most retina screen are so small that your eye is unable to see them seperately, making the distortion (almost) invisible. Your eye is blurring the image for you, resulting in what looks like a perfect image. This is why 50% rated 'good' on retina, while it was rated 'decent' on non-retina. 
+
+Want proof? I challenge you to detect the difference between a perfect retina image and a 50% distorted one below (obviously you have to view them on a retina display, otherwise they will always be perfect)...
 
 <p><img src="/uploads/car/2x-100.jpg" width="568"/>2x 100% jpg quality (881.7kb)</p>
 
