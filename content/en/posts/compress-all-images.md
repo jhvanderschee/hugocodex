@@ -1,6 +1,6 @@
 ---
 title: Compress all images
-date: 2022-06-19
+date: 2022-06-20
 draft: true
 ---
 
