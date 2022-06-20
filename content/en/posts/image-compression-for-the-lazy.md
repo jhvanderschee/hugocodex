@@ -3,7 +3,7 @@ title: Image compression for the lazy
 date: 2022-06-19
 ---
 
-No, this is not about lazy loading. We are talking about image compression only, as images are an important part of your page load (20% on average). Every byte counts when you want to [get a 100% Google Lighthouse Score](https://www.usecue.com/blog/how-to-get-a-100-google-lighthouse-score/). I was happy to find that [Boris Smus](https://github.com/borismus/image-zoom) did some great ground work on this topic. I used one of his examples to illustrate this article.
+No, this is not about lazy loading. We are talking about image compression only, as images are an important part of your page load (20% on average). Every byte counts when you want to [get a 100% Google Lighthouse Score](https://www.usecue.com/blog/how-to-get-a-100-google-lighthouse-score/). I was happy to find that [Boris Smus](https://github.com/borismus/image-zoom) did some great ground work on this topic. I used one of his examples to illustrate this article, in which we will try to avoid any visible compression artifacts.
 
 ## Our image
 
@@ -58,10 +58,10 @@ If we want perfect images on non-retina displays we can best use a heavily compr
 
 ## One size to rule them all
 
-> 2x 50% jpg has a perfect non-retina appearance,  
-a good retina appearance and an acceptable size.
-
 Below you will find an overview of the options ordered by file size. The conclusion is that if you care about 'perfect' images, you should always compress the retina version. If I had to choose one option from the list below, because I wanted to define that globally in Hugo, I would choose the '2x 50% jpg' version, as 2x 50% jpg has a perfect non-retina appearance, a good retina appearance and an acceptable size.  
+
+> I would choose the '2x 50% jpg' version...
+
 <br>
 
 |Compression|Size|@1x|@2x|
