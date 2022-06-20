@@ -64,7 +64,7 @@ Below you will find an overview of the options ordered by file size. The conclus
 
 <br>
 
-|Compression|Size|@1x|@2x|
+|Compression|Size|1x|2x|
 |----|----|--|--|
 |[1x 100% jpg](/uploads/car/1x-100.jpg)|//////////////////// 246.6kb|<span class="emoticon">😀</span>|<span class="emoticon">😡</span>|
 |[2x 90% jpg](/uploads/car/2x-90.jpg)|//////////////////// 250.8kb|<span class="emoticon">😀</span>|<span class="emoticon">😀</span>|
