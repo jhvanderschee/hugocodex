@@ -14,7 +14,7 @@ In Hugo you can only resize images that live in your asset dir. I store all my i
 
 ## 3. Create a compression rule
 
-Now we have to find the right resource, with `resources.GetMatch`. It is smart to check of the existance of the resource (wrap it in an if statement). Then you define the image resize strategy. This can be either 'Fit'
+Now we have to find the right resource, with `resources.GetMatch`. It is smart to check of the existance of the resource (wrap it in an if statement). When you do not, Hugo might abort its building process when it finds a missing image. Then you define the image resize strategy. This can be either 'Fit'
 
 set its height and width
 
