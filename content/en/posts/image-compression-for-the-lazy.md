@@ -7,7 +7,7 @@ No, this is not about lazy loading. We are talking about image compression only,
 
 ## Our image
 
-Consider the following 'retina-ready' image of 881.7kb (0.9Mb) of this orange Lambo. This images has four time the amount of pixels you are seeing, when you are on a device with a non-retina display. It looks perfect on any screen... but the fact that you just downloaded almost 1Mb is terrible.
+Consider the following 'retina-ready' image of 881.7kb (0.9Mb) of this orange Lamborgini sports car. This images has four time the amount of pixels you are seeing, when you are on a device with a non-retina display. It looks perfect on any screen... but the fact that you just downloaded almost 1Mb is terrible.
 
 <p><img src="/uploads/car/2x-100.jpg" width="568"/></p>
 
