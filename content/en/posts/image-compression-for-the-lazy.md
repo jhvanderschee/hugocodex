@@ -82,14 +82,14 @@ Below you will find an overview of the options ordered by file size. The conclus
 <span class="emoticon">😡</span> = terrible   
 <br>
 
-## 50% but still perfect
+## Perfect yet 50%
 
-I said that 1x 50% was only acceptable in some cases (on certain images) on a non-retina display. Why would 2x 50% be 'good' on retina displays? I thought we were not allowed to see the compression (artifacts)? This has to do with the size of these (distorted) pixels. The pixels on a retina screen are in many cases so small that your eye is unable to see them seperately, making the distortion almost invisible. This is why 50% rated 'good' on retina, while it was rated 'decent' on non-retina. Want proof? I challenge you to detect the difference between a perfect retina image and a 50% distorted one below...
+I said that 1x 50% was only acceptable in some cases (on certain images) on a non-retina display. Why would 2x 50% be 'good' on retina displays? A 50% jpg quality on retina has [clear compression artifacts](/uploads/car/quality.png) (see top right image). This has to do with the size of these (distorted) pixels. The pixels on a retina screen are (in many cases) so small that your eye is unable to see them seperately, making the distortion invisible. This is why 50% rated 'good' on retina, while it was rated 'decent' on non-retina. Want proof? I challenge you to detect the difference between a perfect retina image and a 50% distorted one below (view on a retina display)...
 
-<p><img src="/uploads/car/2x-100.jpg" width="568"/>2x 100% jpg quality</p>
+<p><img src="/uploads/car/2x-100.jpg" width="568"/>2x 100% jpg quality (881.7kb)</p>
 
-<p><img src="/uploads/car/2x-50.jpg" width="568"/>2x 50% jpg quality</p>
+<p><img src="/uploads/car/2x-50.jpg" width="568"/>2x 50% jpg quality (92.8kb)</p>
 
-If you are able to see the compression in the lower image depends largely on the size of the pixels on your device. When you are on a typical mobile phone (with a retina display), you will see two perfect images, while the upper one is almost 10 times larger than the lower one. When you are on a device with larger pixels (and a retina display), like an iPad, you might be able to spot the pixelated effect. 
+Whether or not you are able to see the compression in the lower image depends largely on the pixel size of your device. When you are on a typical mobile phone (with a retina display), you will see two perfect images, while the upper one is almost 10 times larger than the lower one. When you are on a device with larger pixels (and a retina display), you might be able to spot the pixelated effect when you look very closely. Note that we are looking for the distortion effect that is visible in the top right image of this [4x close-up](/uploads/car/quality.png).
 
-Note that we are looking for the distortion effect that is visible in the top right image of this [4x close-up](/uploads/car/quality.png).
+So... with 2x 50% jpg compression you get perfect images, zero added complexity and you save bytes by a factor 10. Would you like to have that in your Hugo wesbite? Listen to my 'Resize all images' lighting talk on HugoConf.
