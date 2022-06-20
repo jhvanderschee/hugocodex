@@ -3,7 +3,7 @@ title: Image compression for the lazy
 date: 2022-06-19
 ---
 
-No, this is not about lazy loading. We are talking about image compression only, as images are an important part of your page load (20% on average). Every byte counts when you want to [get a 100% Google Lighthouse Score](https://www.usecue.com/blog/how-to-get-a-100-google-lighthouse-score/). I was happy to find that [Boris Smus](https://github.com/borismus/image-zoom) did some great ground work on this topic. I used one of his examples to illustrate this article, in which we will try to avoid any visible compression artifacts.
+No, this is not about lazy loading. We are talking about image compression only, as images are an important part of your page load (20% on average). Every byte counts when you want to [get a 100% Google Lighthouse Score](https://www.usecue.com/blog/how-to-get-a-100-google-lighthouse-score/). I was happy to find that [Boris Smus](https://github.com/borismus/image-zoom) did some great ground work on this topic. I used one of his examples to illustrate this article, in which we will try to avoid any visible compression artifacts, while still compressing our image(s) significantly.
 
 ## Our image
 
