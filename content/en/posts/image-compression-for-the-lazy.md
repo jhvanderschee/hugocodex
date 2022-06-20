@@ -94,4 +94,4 @@ Whether or not you are able to see the compression in the lower image depends la
 
 ## Premiere at HugoConf
 
-So... with 2x 50% jpg compression you get perfect images, zero added complexity and you save bytes by a factor 10. Would you like to have that in your Hugo website for all images, even the ones in your markdown? Listen to my 'Resize all images' lighting talk on [HugoConf 2022](https://hugoconf.io/). Hope to see you there!
+So... with 2x 50% jpg compression you get perfect images, zero added complexity and you save bytes by a factor 10. Would you like to have that in your Hugo website for all images, even the ones in your markdown? Listen to my 'Resize all images' lighting talk on [HugoConf 2022](https://hugoconf.io/). I will show you how to achieve this with a minimal amount of code. Hope to see you there!
