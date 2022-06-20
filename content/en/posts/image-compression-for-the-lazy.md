@@ -92,6 +92,6 @@ I said that 1x 50% was only acceptable in some cases (on certain images) on a no
 
 Whether or not you are able to see the compression in the lower image depends largely on the pixel size of your device. When you are on a typical mobile phone (with a retina display), you will see two perfect images, while the upper one is almost 10 times larger than the lower one. When you are on a device with larger pixels (and a retina display), you might be able to spot the pixelated effect when you look very closely. Note that we are looking for the distortion effect that is visible in the top right image of this [4x close-up](/uploads/car/quality.png).
 
-## Come to HugoConf
+## HugoConf 2022
 
 So... with 2x 50% jpg compression you get perfect images, zero added complexity and you save bytes by a factor 10. I bet you would like to have that in your Hugo website for all images, even the ones in your markdown. Listen to my 'Resize all images' lighting talk on [HugoConf 2022](https://hugoconf.io/). I will show you how to achieve this with a minimal amount of code. Hope to see you there!
