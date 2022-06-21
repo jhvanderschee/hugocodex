@@ -96,4 +96,4 @@ Whether or not you are able to see the compression in the lower image depends la
 
 ## HugoConf 2022
 
-So... with 2x 50% jpg compression you get perfect images on retina and non-retina displays, zero added complexity and you save bytes by a factor 10. I bet you would like to have that in your Hugo website for all images, even the ones in your markdown. No problem! I will be giving a lighting talk on [HugoConf 2022](https://hugoconf.io/), called 'Resize all images', where I will show you how to achieve this with a minimal amount of code. Don't miss out. [Sign up now!](https://hugoconf.io/)
+So... with 2x 50% jpg compression you get (almost) perfect images on retina and non-retina displays, zero added complexity and you save bytes by a factor 10. I bet you would like to have that in your Hugo website for all images, even the ones in your markdown. No problem! I will be giving a lighting talk on [HugoConf 2022](https://hugoconf.io/), called 'Resize all images', where I will show you how to achieve this with a minimal amount of code. Don't miss out. [Sign up now!](https://hugoconf.io/)
