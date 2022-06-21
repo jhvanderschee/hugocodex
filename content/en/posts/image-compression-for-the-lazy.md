@@ -60,7 +60,7 @@ If we want perfect images on non-retina displays we can best use a heavily compr
 
 Below you will find an overview of the options ordered by file size. The conclusion is that if you care about 'perfect' images on non-retina displays, you should always compress the retina version. If I had to choose one option from the list below (because I wanted to define that globally in Hugo), I would choose the '2x 50% jpg' version. The 2x 50% jpg has a perfect non-retina appearance, a good retina appearance and an acceptable size.  
 
-> I would choose the '2x 50% jpg' version...
+> The 2x 50% jpg has a perfect non-retina appearance, a good retina appearance and an acceptable size.
 
 <br>
 
