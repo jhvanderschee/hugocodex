@@ -54,7 +54,7 @@ But there is another much more visible difference on retina displays. The larger
 
 ## Zero complexity
 
-If we want perfect images on non-retina displays we can best use a heavily compressed retina image. With a source set we could win some quality or save some bytes, but that would also add complexity. The same goes for using the 'webp' format, as [webp is not yet fully supported](https://caniuse.com/?search=%20webp).
+If we want perfect images on non-retina displays we can best use a heavily compressed retina image. With a source set we could win some quality or save some bytes, but that would also add complexity. The same goes for using the 'webp' format, as [webp is not yet fully supported](https://caniuse.com/?search=%20webp). Code costs money and so does added complexity. Additionally, I am lazy. Therefore I prefer the simplest solution possible: using just one jpg image.
 
 ## One size to rule them all
 
@@ -96,4 +96,4 @@ Whether or not you are able to see the compression in the lower image depends la
 
 ## HugoConf 2022
 
-So... with 2x 50% jpg compression you get perfect images on retina and non-retina displays, zero added complexity and you save bytes by a factor 10. I bet you would like to have that in your Hugo website for all images, even the ones in your markdown. No problem! It will  to my 'Resize all images' lighting talk on [HugoConf 2022](https://hugoconf.io/). I will show you how to achieve this with a minimal amount of code. Hope to see you there!
+So... with 2x 50% jpg compression you get perfect images on retina and non-retina displays, zero added complexity and you save bytes by a factor 10. I bet you would like to have that in your Hugo website for all images, even the ones in your markdown. No problem! I will be giving a lighting talk on [HugoConf 2022](https://hugoconf.io/), called 'Resize all images', where I will show you how to achieve this with a minimal amount of code. Don't miss out. [Sign up now!](https://hugoconf.io/)
