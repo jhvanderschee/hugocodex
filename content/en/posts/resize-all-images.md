@@ -23,7 +23,7 @@ assetDir: static
 
 ## 3. Create a compression rule
 
-Now we can start. Let us assume that our front matter looks like this:
+Now we can start. Let us assume that your front matter looks like this:
 
 ```
 ---
@@ -32,25 +32,25 @@ image: /path/to/my/image.jpg
 ---
 ```
 
-Our path is stored in our front matter variable, thus in '.Params.image'. This could be a featured image, we want to use in the header of our website/post. We have defined this image in our layout and we want it to be scaled. To find the appropriate asset, we use a Hugo variable called 'resources' (without a captital). Because we set the 'assetDir' to the static folder, this variable contains all static files. You can target an individual asset/resource with a 'GetMatch' statement in combination with the path to your image. This looks like this:
+Your path is stored in your front matter variable, thus in '.Params.image'. This could be a featured image, you want to use in the header of our website/post. Naturally, you would like to resize this image. To find the appropriate image, we use a Hugo variable called 'resources' (without a captital). Because we have set the 'assetDir' to the static folder, this variable contains everything in your static directory. You can target an individual asset/resource with a 'GetMatch' statement in combination with the path to your image. This looks like this:
 
 ```
 resources.GetMatch .Params.image
 ```
 
-The above code 'finds' your asset/resource. Next you have to choose an image resize strategy. This can be either 'Resize', 'Fit', 'Fill', 'Crop'. I use Fit in this example to make sure my image is always smaller than 600 pixels (on each side). I use a 'Smart' crop and I use 50% image quality as explained in [Image compression for the lazy](/blog/image-compression-for-the-lazy). This results into:
+The above code 'finds' your asset/resource. Next you have to choose an image resize strategy. This can be either 'Resize', 'Fit', 'Fill', 'Crop'. In this example I use 'Fit' to make sure my image is always smaller than 600 pixels (on each side). I use a 'Smart' crop and I use 50% image quality as explained in [Image compression for the lazy](/blog/image-compression-for-the-lazy). This results into:
 
 ```
 (resources.GetMatch .Params.image).Fit "600x600 jpg Smart q50"
 ```
 
-Finally I want the get the relative URL to this image, which means I have to add '.RelPermalink' and wrap the whole thing into brackets:
+Finally you probably want the get the relative URL to this image. You can get this by adding '.RelPermalink' and wrapping the whole thing into brackets, like this:
 
 ```
 ((resources.GetMatch .Params.image).Fit "600x600 jpg Smart q50").RelPermalink
 ```
 
-The above code will result in an URL that points to a resized version of my original image. But if my original image does not exist (anymore) my code will fail and Hugo will trow an error. Therefore it is smart to check the existance of your desired resource (wrap 'resources.GetMatch' in an if statement), which looks like this:
+The above code will result in an URL that points to a resized version of my original image. But if your original image does not exist (anymore) your code will fail and Hugo will trow an error. Therefore it is smart to check the existance of your desired resource (wrap 'resources.GetMatch' in an if statement), which looks like this:
 
 ```
 {{ if (resources.GetMatch .Params.image) }}
