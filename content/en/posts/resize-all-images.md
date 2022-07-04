@@ -3,7 +3,7 @@ title: Resize all images
 date: 2022-07-04
 ---
 
-Images are an important part of your page load (20% on average). Every byte counts when you want to [get a 100% Google Lighthouse Score](https://www.usecue.com/blog/how-to-get-a-100-google-lighthouse-score/). I will show you how you can resize all images in your Hugo project, even when you are using an external CMS for content and when you have clients uploading these images.
+Images are an important part of your page load (20% on average). I will show you how you can resize all images in your Hugo project, even when you are using an external CMS for content and when you have clients uploading these images. Every byte counts when you want to [get a 100% Google Lighthouse Score](https://www.usecue.com/blog/how-to-get-a-100-google-lighthouse-score/). 
 
 ## 1. Choose your method
 
