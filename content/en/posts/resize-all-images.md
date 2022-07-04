@@ -7,7 +7,7 @@ Images are an important part of your page load (20% on average). I will show you
 
 ## 1. Choose your method
 
-First you have to choose your method. I like too keep things simple. Therefore I always use the '[one image technique](/blog/image-compression-for-the-lazy)', where you use a heavily compressed (50%) retina (thus oversized) jpg image for both retina and non-retina displays. A typical image tag, using this technique, looks as simple as this:
+First you have to choose your method. I like too keep things simple. Therefore I always use the [one image technique](/blog/image-compression-for-the-lazy), where you use a heavily compressed (50%) retina (thus oversized) jpg image for both retina and non-retina displays. A typical image tag, using this technique, looks as simple as this:
 
 ```
 <img src="large_heavily_compressed.jpg" />
