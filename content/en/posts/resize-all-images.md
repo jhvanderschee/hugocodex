@@ -3,19 +3,21 @@ title: Resize all images
 date: 2022-07-04
 ---
 
-Images are an important part of your page load (20% on average). I will show you how you can resize all images in your Hugo project, even when you are using an external CMS for content and when you have clients uploading these images. Every byte counts when you want to [get a 100% Google Lighthouse Score](https://www.usecue.com/blog/how-to-get-a-100-google-lighthouse-score/). 
+Thank you for joining this Lightning talk about 'image resizing'. Hugo is known for its fast page loads. However, if you want to get instantly loading webpages, you also need to resize your images properly. Fortunately this is a feature that is build into Hugo. In this talk I will tell you how you can configure Hugo so that it automatically resizes and compresses all images on your website, even the ones that are uploaded through an external CMS by your client. 
 
 ## 1. Choose your method
 
-First you have to choose your method. I like too keep things simple. Therefore I always use the [one image technique](/blog/image-compression-for-the-lazy), where you use a heavily compressed (50%) retina (thus oversized) jpg image for both retina and non-retina displays. A typical image tag, using this technique, looks as simple as this:
+First you need to choose your resizing and compression method. I like too keep things simple. Therefore I always use the [one image technique](/blog/image-compression-for-the-lazy), where you use an oversized heavily compressed jpg image. A typical image, like this one, is twice to ten times smaller than its original, while the image tag looks as simple as this:
 
 ```
 <img src="large_heavily_compressed.jpg" />
 ```
 
-## 2. Set the assetdir
+If you want to learn more about this technique, please visit HugoCodex.org, a website full of Hugo tips and tricks.
 
-Hugo can automatically resize images upon build. However, Hugo you can only resize images that live in your 'asset directory'. I store all my images in the static folder, so I always define my static folder to be the asset directory. You can do this by adding the following line to your config file:
+## 2. Set the asset directory
+
+As said, Hugo can automatically resize images. It does so during the build process. However, Hugo you can only resize images that live in an assigned 'asset directory'. I store all my images in the 'static' folder, so I always define my static folder to be the asset directory. You can do this by adding the following line to your configuration file:
 
 ```
 assetDir: static
