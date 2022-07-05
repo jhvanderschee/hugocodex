@@ -3,7 +3,7 @@ title: Resize all images
 date: 2022-07-04
 ---
 
-Thank you for joining this Lightning talk about 'image resizing'. Hugo is known for its fast page loads. However, if you want to get instantly loading webpages, you also need to resize your images properly. Fortunately this is a feature that is build into Hugo. In this talk I will tell you how you can configure Hugo so that it automatically resizes and compresses all images on your website, even the ones that are uploaded through an external CMS by your client. 
+Thank you for joining this Lightning talk about 'image resizing'. Hugo is known for its fast page loads. However, if you want to get instantly loading webpages, you also need to resize your images properly. Fortunately Hugo can resize images natively. In this talk I will tell you how you can configure Hugo so that it automatically resizes and compresses all images in your project, even the ones that are uploaded through an external CMS by your client. 
 
 ## 1. Choose your method
 
