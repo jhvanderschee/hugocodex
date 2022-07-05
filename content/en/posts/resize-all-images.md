@@ -40,7 +40,7 @@ Your path is stored in your front matter variable, thus in '.Params.image'. This
 resources.GetMatch .Params.image
 ```
 
-The above code 'finds' your asset/resource. Next you have to choose an image resize strategy. This can be either 'Resize', 'Fit', 'Fill', 'Crop'. In this example I use 'Fit' to make sure my image is always smaller than 600 pixels (on each side). I use a 'Smart' crop and I use 50% image quality as explained in [Image compression for the lazy](/blog/image-compression-for-the-lazy). This results into:
+This code 'finds' your asset/resource. Next you have to choose an image resize strategy. This can be either 'Resize', 'Fit', 'Fill', 'Crop'. In this example I use 'Fit' to make sure my image is always smaller than 600 pixels (on each side). I use a 'Smart' crop and I use 50% image quality as explained before in the [one image technique](/blog/image-compression-for-the-lazy). This results into:
 
 ```
 (resources.GetMatch .Params.image).Fit "600x600 jpg Smart q50"
