@@ -2,6 +2,8 @@
 title: Blog
 url: /es/blog/
 ---
-## About this blog
+## Acerca de este Blog
 
-In our blog we keep you updated on stuff that is going on at this website. Our blog is currently only available in [English](/blog/).
+En nuestro blog te mantenemos al día en las cosas relevantes que ocurren en este sitio web.
+
+If you prefer, you can read the original english versión of: [English](/blog/).
