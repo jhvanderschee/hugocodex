@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.appendChild(newdiv);
 
     //add classes to links to be able to initiate lightboxes
-    var elements = document.querySelectorAll('a');
+    var elements = document.querySelectorAll('a:not(.no-lightbox)');
     elements.forEach(element => {
         var url = element.getAttribute('href');
         if(url) {

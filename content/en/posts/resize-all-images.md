@@ -90,6 +90,6 @@ Happy coding!
 
 NB. This HugoConf (the 2022 edition) hosted some other interesting image-related talks. They are all worth watching. Here is an overview of them:
 
-- <a href="https://www.youtube.com/watch?v=JpxiKUHzoqM&t=21270s">Making Image Uploads Faster with Figmage - Ravi Lingineni</a>
-- <a href="https://www.youtube.com/watch?v=JpxiKUHzoqM&t=30304s">Custom Shortcodes for the Win - Chris Griffing</a>
-- <a href="https://youtu.be/ACRN43SbF2g?t=23476">How to Achieve Perfect Google Lighthouse Scores Using Hugo - Scott Reilly</a>
+- <a href="https://www.youtube.com/watch?v=JpxiKUHzoqM&t=21270s" target="_blank" class="no-lightbox">Making Image Uploads Faster with Figmage - Ravi Lingineni</a>
+- <a href="https://www.youtube.com/watch?v=JpxiKUHzoqM&t=30304s" target="_blank" class="no-lightbox">Custom Shortcodes for the Win - Chris Griffing</a>
+- <a href="https://youtu.be/ACRN43SbF2g?t=23476" target="_blank" class="no-lightbox">How to Achieve Perfect Google Lighthouse Scores Using Hugo - Scott Reilly</a>
