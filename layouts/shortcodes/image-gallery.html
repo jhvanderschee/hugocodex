@@ -8,9 +8,9 @@
 
 {{ $dir := .Params.gallery_dir }}
 <ul class="image-gallery">
-{{ range (readDir (printf "assets/%s" $dir)) }}
+{{ range (readDir (printf "static" $dir)) }}
   {{- $image := resources.Get (printf "%s/%s" $dir .Name) -}}
-  {{- $imageurl := printf "/%s/%s" $dir .Name -}}
+  {{- $imageurl := printf "%s/%s" $dir .Name -}}
   {{- $imagetitle := index (split .Name ".") 0 -}}
     <li>
       <a href="{{ ($image.Fit "1600x1600 q50").Permalink }}" title="{{ $imagetitle }}" class="lightbox-image">

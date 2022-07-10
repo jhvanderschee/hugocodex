@@ -18,6 +18,8 @@ outputs:
     - RSS
     - Lunr
 
+assetDir: static
+
 outputFormats:
   Lunr:
     baseName: "index"
