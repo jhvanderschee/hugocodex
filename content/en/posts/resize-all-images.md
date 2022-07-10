@@ -87,3 +87,9 @@ Note that we use '.Destination' for the source of the original image and '.Text'
 In this short [lightning talk](https://hugoconf.io/) I have explained how to resize all images in your Hugo project, using [one image technique](/blog/image-compression-for-the-lazy/). Not only did we resize layout images, but we also targeted the images in the markdown through a render hook. Resizing all images will result in faster page loads and a better user experience.
 
 Happy coding!
+
+NB. This HugoConf (the 2022 edition) hosted some other interesting image-related talks. They are all worth watching. Here is an overview of them:
+
+- [Making Image Uploads Faster with Figmage - Ravi Lingineni](https://hugoconf.io/)
+- [Custom Shortcodes for the Win - Chris Griffing](https://hugoconf.io/)
+- [How to Achieve Perfect Google Lighthouse Scores Using Hugo - Scott Reilly](https://hugoconf.io/)
