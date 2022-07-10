@@ -6,9 +6,9 @@
     .image-gallery li a img {width: 100%; display: block;}
 </style>
 
-{{ $dir := .Params.gallery_dir }}
+{{ $dir := string (.Get "gallery_dir") }}
 <ul class="image-gallery">
-{{ range (readDir (printf "static" $dir)) }}
+{{ range (readDir (print "/static" $dir)) }}
   {{- $image := resources.Get (printf "%s/%s" $dir .Name) -}}
   {{- $imageurl := printf "%s/%s" $dir .Name -}}
   {{- $imagetitle := index (split .Name ".") 0 -}}
