@@ -16,7 +16,7 @@ The shortcode creates an image and a link to Youtube. The classes on this link t
 
 Step 1. Download the file [youtube.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/shortcodes/youtube.html)
 <br />Step 2. Save the file in the 'layouts/partials/shortcodes' directory of your project
-<br />Step 3. Add the following line to your content on the place where you want your instagram pictures to appear:
+<br />Step 3. Add the following line to your content on the place where you want your Youtube video to appear:
 
 ```
 {{</* youtube id="qtIqKaDlqXo" image="/uploads/youtubeposter.jpg" */>}}
