@@ -23,4 +23,8 @@
 .shortcode-vimeo img {
     display: block;
 }
+@media (max-width: 45rem) {
+    .shortcode-vimeo::before {background-size: auto 15vw;}
+    .shortcode-vimeo::after {background-position: calc(100% - 3vw) calc(100% - 3vw); background-size: auto 5vw;}
+}
 </style>
