@@ -11,7 +11,7 @@ layout: home
 
 Si eres un desarrollador front-end y estas queriendo dar el salto a Hugo: has venido al lugar adecuado. Encontrarás acá alguno valiosos recursos, como una guía para empezar y retazos de código fuente.
 
-[Privacidad](/privacy/) - <a class="manage-consent" href="#manage-consent">Manage consent</a> - [English](/)
+[Privacidad](/privacy/) - <a class="manage-consent" href="#manage-consent">Manage consent</a> - [English](https://hugocodex.org)
 
 ### Créditos
 
