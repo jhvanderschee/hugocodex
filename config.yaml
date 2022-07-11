@@ -48,3 +48,4 @@ languages:
     permalinks:
       posts: blog/:filename
       getting-started: empezando/:filename
+      

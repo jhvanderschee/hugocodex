@@ -19,7 +19,8 @@ Crea un fichero 'footer.html' tal que este otro:
 </html>
 ```
 
-Store both files in the '/layouts/partials' directory. Now update your '/layouts/index.html' file and make sure it looks like this (replacing the code with links to the partials):
+
+Guarda ambos ficheros en el directorio '/layouts/partials/'. Ahora actualiza tu fichero '/layouts/index.html' y aegurate de que se ve así (reemplazando el código fuente con los enlaces a los parciales):
 
 ```
 {{ partial "header.html" . }}
@@ -28,7 +29,7 @@ Store both files in the '/layouts/partials' directory. Now update your '/layouts
 {{ partial "footer.html" . }}
 ```
 
-Your project should now looks like this:
+Tu proyecto debería ahora verse así: 
 
 ```
 /content/_index.md

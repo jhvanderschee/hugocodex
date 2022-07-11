@@ -1,14 +1,14 @@
 ---
-title: 5. Add another content file
+title: 5. Añade otro fichero de contenido
 ---
 
-Our website is taking shape ;-). But we are missing a nice contact page. To create it, we should create a file '/content/contact.md'. This file should look like this:
+Nuestro sitio web va tomando forma ;-). Si bine... ¿no echamos de menos una linda página de contacto?. Para crearla, deberíamos crear el fichero '/content/contact.md'. Este fichero debería verse tal que así:
 
 ```
 ---
-title: Contact page
+title: Página de Contacto
 ---
-Send me an email at joost@vdschee.nl
+Enviar correo-e a donhugo@librebits.info
 ```
 
 We already had a layout file (index.html), but that file was only valid for the homepage. Therefore we now need another file. This file can be an exact copy of the 'index.html' file and you should name it 'single.html'. You must store this file in the '/layouts/_default/' directory.
