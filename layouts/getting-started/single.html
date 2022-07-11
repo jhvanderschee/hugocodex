@@ -8,14 +8,14 @@
             {{ partial "breadcrumbs.html" . }}
             <h1>Getting started</h1>
             </header>
-            <h2>Lessson {{ .Title }}</h2>
+            <h2>{{ i18n "lesson" }} {{ .Title }}</h2>
             
             {{ .Content }}
           
-            {{ if ne .PrevInSection nil }}<br /><p>{{ with .PrevInSection }}<a href="{{ .RelPermalink }}" class="btn">Next: {{ .Title }}</a>{{ end }}</p>{{ end }}
+            {{ if ne .PrevInSection nil }}<br /><p>{{ with .PrevInSection }}<a href="{{ .RelPermalink }}" class="btn">{{ i18n "next" }}: {{ .Title }}</a>{{ end }}</p>{{ end }}
 
             <br>
-            <h3>Lessons</h3>
+            <h3>{{ i18n "lessons" }}</h3>
             <ul style="margin-left: 0">
             {{ range (where .Site.RegularPages "Section" .Section ) }}
                 <li style="list-style: none;"><a href="{{ .RelPermalink }}" style="{{ if eq .RelPermalink $.RelPermalink }}color: silver;{{ end }}">{{ .Title }}</a></li>

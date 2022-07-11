@@ -4,5 +4,11 @@ official_docs:
 lessons:
   other: Lecciones
 
+lesson:
+  other: Lección
+
 start_with:
   other: Empezar con
+
+next:
+  other: Siguiente

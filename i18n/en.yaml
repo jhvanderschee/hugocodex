@@ -2,7 +2,14 @@ official_docs:
   other: Official Hugo Docs
 
 lessons:
-  other: Lesson
+  other: Lessons
+
+lesson:
+  other: lesson
 
 start_with:
   other: Start with
+
+next:
+  other: Next
+  
