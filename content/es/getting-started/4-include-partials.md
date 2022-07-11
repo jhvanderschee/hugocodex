@@ -1,10 +1,10 @@
 ---
-title: 4. Include your first partials
+title: 4. Incluye tu primer Parcial
 ---
 
-A website typically consists of a few elements that get repeated on every page, like a header with a menu and a footer. Instead of adding them to every page, you can use a 'partial'. Partials need to be saved in the '/layouts/partials' directory. 
+Un sitio web típicamente consiste en en unos pocos elementos elements que van repitiéndose en cada página,  como una cabecera con un menu y un pie de página. En vez de agregarlo a cada página, puedes usar un 'parcial'. Los Parciales han de ser guardados en el directorio '/layouts/partials'. 
 
-Create a 'header.html' file that looks like this:
+Crea un fichero 'header.html' tal que este :
 
 ```
 <html>
@@ -12,7 +12,7 @@ Create a 'header.html' file that looks like this:
 <body>
 ```
 
-Create a 'footer.html' file that looks like this:
+Crea un fichero 'footer.html' tal que este otro:
 
 ```
 </body>

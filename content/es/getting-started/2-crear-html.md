@@ -20,4 +20,4 @@ Debes guardar el fichero 'config.yaml' en la raíz de tu proyecto y el fichero '
 /config.yaml
 ```
 
-Ahora puedes teclear el comando 'hugo server' en la línea de comandos y pulsar enter. Hugo te dirá que tu sitio web vive ahora en http://localhost:1313. Si vas ahora a dichar dirección en tu navegador, encontrarás tu sitio web.
+Ahora puedes teclear el comando 'hugo server' en la línea de comandos y pulsar enter. Hugo te dirá que tu sitio web vive ahora en http://localhost:1313. Si vas ahora a dicha dirección en tu navegador, encontrarás tu sitio web.

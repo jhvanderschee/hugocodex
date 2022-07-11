@@ -7,12 +7,12 @@ index.html', vamos a separar el código fuente del contenido. Hugo usa [Markdown
 
 ```
 ---
-title: My first content file
+title: Mi primer fichero de contenido
 ---
-My first paragraph in Markdown
+Mi primer párrafo en Markdown
 ```
 
-Save the file in the 'content' directory. Now change your '/layouts/index.html' file, so it look like this:
+Guarda el fichero en en el directorio 'content' . Ahora cambia el fichero '/layouts/index.html' , tal que así: 
 
 ```
 <html>
@@ -24,10 +24,34 @@ Save the file in the 'content' directory. Now change your '/layouts/index.html' 
 </html>
 ```
 
-This effectively separates the code from the content. Content now lives in the '/content/_index.md' file and the HTML/code lives in the '/layouts/index.html' file. Your project should now looks like this:
+De esta manera separamos el código fuente del contenido. El contenido vive ahora en '/content/_index.md' y el código HTML vive en el fichero '/layouts/index.html'. Tu proyecto tiene esta forma:
 
 ```
 /content/_index.md
 /layouts/index.html
 /config.yaml`
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
