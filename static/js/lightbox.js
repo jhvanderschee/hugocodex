@@ -14,7 +14,7 @@ function is_vimeolink(url,el) {
             if (xmlhttp.status == 200) {
                 var response = JSON.parse(xmlhttp.responseText);
                 id = response.video_id;
-                console.log(id);
+                //console.log(id);
                 el.classList.add('lightbox-vimeo');
                 el.setAttribute('data-id',id);
 
