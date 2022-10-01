@@ -1,0 +1,10 @@
+<div class="image">
+    <h1>UNDER CONSTRUCTION: Productsimages partial </h1>
+    <ul>
+        <li><a href="{{ .Params.image }}" class="productimage" style="background-image: url({{ .Params.image }});"><span class="overlay"></span></a></li>
+<!-- Original -logic : Do we have more than 3 images ?-->
+	{{/* if gt (index .Params,image ).size > 2 */}}
+	{{/* range  gt (index .Params.images ..  or item.image.size == nil li><a href="{{ item.image }}" class="productimage" style="background-image: url({{ item.image }});"><span class="overlay"></span></a></li> */}}
+<!-- End Original -->
+    </ul>
+</div>

@@ -5,5 +5,9 @@ menu:
     url: /add-ons/
   - title: Blog
     url: /blog/
+  - title: Donate
+    url: /products/    
+  - title: Cart
+    url: /donate/cart
   - title: About
     url: /about/
