@@ -1,3 +1,6 @@
 <script type="text/javascript">
- redirectToPayment('https://useplink.com/payment/{{ .Get 0 }}');
+ 
+ window.onload = function() {
+     redirectToPayment('https://useplink.com/payment/{{ .Get 0 }}');
+ }
 </script>
