@@ -30,16 +30,16 @@
 		</div>
 		{{ end }}
 	{{ if gt (index .Params.variants  0).price 0 }}
-	<div>
-	    <input type="submit" data-url="{{ .RelPermalink }}" data-sku="{{ (index .Params.variants 0).sku }}" data-title="{{ .Title }}" data-varianttype="{{ .Params.variant_type }}" data-variantname="{{ (index .Params.variants 0).name }}" data-price="{{ (index .Params.variants 0).price }}" data-image="{{ .Params.image }}" value="Add to cart" />
-	</div>
-	{{ end }}
+		<div>
+		    <input type="submit" data-url="{{ .RelPermalink }}" data-sku="{{ (index .Params.variants 0).sku }}" data-title="{{ .Title }}" data-varianttype="{{ .Params.variant_type }}" data-variantname="{{ (index .Params.variants 0).name }}" data-price="{{ (index .Params.variants 0).price }}" data-image="{{ .Params.image }}" value="Add to cart" />
+		</div>
+		{{ end }}
 
-    </form>
+	    </form>
 
-    {{ .Content }}
-    
-    {{ partial "productimages.html" . }}
+	    {{ .Content }}
+	    
+	    {{ partial "productimages.html" . }}
 
    	</article>
 

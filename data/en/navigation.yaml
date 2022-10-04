@@ -8,4 +8,6 @@ menu:
   - title: About
     url: /about/
   - title: Donate
-    url: /donate/
+    url: /donate/    
+  - title: Cart
+    url: /donate/cart
