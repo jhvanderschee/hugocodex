@@ -2,7 +2,7 @@
 
 #cartlink {position: relative; top: 0.1rem;}
 #cartlink .itemcount {
-    background: #d9230f;
+    background: rgb(247, 44, 114);
     color: white;
     font-weight: bold;
     position: absolute;
