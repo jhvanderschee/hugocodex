@@ -19,7 +19,6 @@ Before you can add the webshop you need to [create a Mollie account](https://www
 Download the files and add them to your folders. Make sure the bottom of your layout document looks like the code below. The paymentlink should be the personal re-usable link you just created. 
 
 ```
-<!-- webshop -->
 <link rel="stylesheet" href="/css/webshop.css">
 <script type="text/javascript" src="/js/webshop.js"></script>
 <script type="text/javascript">
