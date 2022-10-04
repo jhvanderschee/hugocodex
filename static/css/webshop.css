@@ -37,7 +37,7 @@
 
 #checkout {display: flex; flex-wrap: wrap; margin-top: 2rem;}
 #checkout > form {width: 100%; max-width: 30rem; margin-right: 4rem;}
-#checkout > div {max-width: 15rem;}
+#checkout > div {max-width: 13rem;}
 @media only screen and (max-width: 600px)  {
     #checkout > div {max-width: 100%;}
     #checkout > form {margin-right: 0rem;}
