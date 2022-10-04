@@ -28,7 +28,7 @@ footer code
 
 #### Step 3. Create some products
 
-Create some products. They should be part of the 'products' collection and each 'product.md' file should look like this:
+Create some products. They should be part of the 'products' section and each 'product.md' file should look like this:
 
 ```
 ---
