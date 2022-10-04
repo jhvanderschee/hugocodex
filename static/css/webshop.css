@@ -19,6 +19,7 @@
 }
 
 #shoppingcart {margin: 2rem 0;}
+#shoppingcart form {max-width: 100%;}
 #shoppingcart > div {text-align: right; padding-top: 0.25rem; font-size: 1.7rem;}
 #shoppingcart > table {width: 100%;}
 #shoppingcart > table tr > * {text-align: center; line-height: 1.2; padding: 0.8125rem 0 0.9375rem;}
