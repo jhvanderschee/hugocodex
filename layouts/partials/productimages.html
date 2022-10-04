@@ -1,8 +1,6 @@
 <div class="image">
     <ul>
         <li><a href="{{ .Params.image }}" class="productimage" style="background-image: url({{ .Params.image }});"><span class="overlay"></span></a></li>
-<!-- Original -logic : Do we have more than 3 images ?-->
 	{{ range .Params.images }} <li><a href="{{ .image }}" class="productimage" style="background-image: url({{ .image }});"><span class="overlay"></span></a></li>{{ end }}
-<!-- End Original -->
     </ul>
 </div>
