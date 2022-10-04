@@ -1,5 +1,5 @@
 ---
-title: checkout
+title: Checkout
 url: donate/checkout
 ---
 {{< checkout >}}
