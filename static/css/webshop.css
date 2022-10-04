@@ -1,0 +1,105 @@
+/* WEBSHOP */
+
+#cartlink {position: relative; top: 0.1rem;}
+#cartlink .itemcount {
+    background: #d9230f;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    line-height: 1.125rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 100%;
+    text-align: center;
+    z-index: 3;
+    top: 0;
+    margin-left: 0.6rem;
+    margin-top: -0.2rem;
+    display: none;
+}
+
+#shoppingcart {margin: 2rem 0;}
+#shoppingcart > div {text-align: right; padding-top: 0.25rem; font-size: 1.7rem;}
+#shoppingcart > table {width: 100%;}
+#shoppingcart > table tr > * {text-align: center; line-height: 1.2; padding: 0.8125rem 0 0.9375rem;}
+#shoppingcart > table tr > *:first-child,
+#shoppingcart > table tr > *:nth-child(2) {text-align: left;}
+#shoppingcart > table tr > *:last-child {text-align: right;}
+#shoppingcart > table tr > *:first-child {padding-right: 1.25rem; width: 4rem;}
+#shoppingcart > table tr > th {border-bottom: 0.125rem solid #dddddd;; padding: 0 0 0.5rem;}
+#shoppingcart > table tr > td {border-bottom: 0.0625rem solid #dddddd;}
+#shoppingcart > table tr > th:nth-child(2) {width: 50%;}
+#shoppingcart .productavatar {display: block; width: 4rem; height: 4rem; border-radius: 100%; background-size: cover; background-position: 50% 50%;}
+@media only screen and (max-width: 800px)  {
+    #shoppingcart > table tr > *:nth-child(3) {display: none;}
+}
+
+#checkout {display: flex; flex-wrap: wrap; margin-top: 2rem;}
+#checkout > form {width: 100%; max-width: 30rem; margin-right: 4rem;}
+#checkout > div {max-width: 15rem;}
+@media only screen and (max-width: 600px)  {
+    #checkout > div {max-width: 100%;}
+    #checkout > form {margin-right: 0rem;}
+}
+#checkoutcalculation {background: rgba(0,0,0,0.1); border-radius: 0.25rem; padding: 0.75rem 1rem 1rem; text-align: right; margin-bottom: 1rem;}
+#checkoutcalculation span {float: left;}
+#checkoutcalculation .sum {border-top: 0.1rem solid rgba(0,0,0,0.5); padding-top: 0.1rem; margin-top: 0.35rem;}
+
+.submitbutton {text-align: right; margin-top: 1rem;}
+.submitbutton a {margin: 0 0 0.5rem; display: inline-block;}
+.submitbutton input {margin: 0.5rem 0 1rem 2rem;}
+
+.product form {margin: 0 0 1.5rem;}
+.product article {max-width: 57rem;}
+
+#productlist {display: flex; flex-wrap: wrap; margin-left: -3.33%;}
+#productlist li {list-style: none; width: 30%; text-align: center; margin: 0 0 2rem 3.33%;}
+#productlist li a {text-decoration: none; line-height: 1.3; display: block; color: #777;}
+#productlist li a:hover, #productlist li a:hover h2 {color: #d9230f;}
+#productlist li a div {margin-bottom: 0.3rem;}
+#productlist li a h2 {margin-bottom: 0.2rem; margin-top: 0.2rem; font-size: 0.8rem; padding: 0; color: #777;}
+@media only screen and (max-width: 800px)  {
+    #productlist {margin-left: -5%;}
+    #productlist li {width: 45%; margin-left: 5%;}
+}
+@media only screen and (max-width: 400px)  {
+    #productlist {margin-left: 0%;}
+    #productlist li {width: 100%; margin-left: 0;}
+}
+
+body.product .productpage {display: flex;}
+body.product .productpage .image {margin-top: -0.35rem;}
+body.product .productpage > div:nth-child(1) {width: 57%;}
+body.product .productpage > div:nth-child(2) {width: 43%;}
+body.product .productpage > div.text > * {margin-left: 6.66%;}
+
+.productimage {padding-bottom: 70%; background-size: cover; background-position: 50% 50%; display: block; position: relative;}
+.productimage > .overlay {position: absolute; width: 100%; padding-bottom: 70%;}
+
+body.product div.image > ul {display: flex; flex-wrap: wrap; margin-left: -1%;}
+body.product div.image > ul li {list-style: none; width: 24%; margin: 0 0 1% 1%;}
+body.product div.image > ul li:first-child {width: 100%; margin-bottom: 1%;}
+
+body.product div.text div.image {display: none;}
+body.product .content h1 {text-align: left; padding-top: 0;}
+body.product .content h2 {padding-top: 0; position: relative; bottom: 0.2rem;}
+
+
+
+#checkout_progress {display: block; text-align: center;}
+#checkout_progress li {width: 110px; text-align: left; display: inline-block; border-top: 1px solid #dddddd; padding-top: 8px;}
+#checkout_progress li.past {border-color: #d9230f;}
+#checkout_progress li:last-child {border: 0; width: 55px;}
+#checkout_progress li > span > * {
+    white-space: nowrap;
+    display: inline-block;
+    -ms-transform: translateX(-50%); /* IE 9 */
+    -webkit-transform: translateX(-50%); /* Chrome, Safari, Opera */
+    transform: translateX(-50%);
+}
+#checkout_progress li > *:before {position: absolute; margin: -16px 0 0 -5px; width: 11px; height: 11px; content: ""; 
+    border-radius: 99px; border: 2px solid white; 
+    box-shadow: 0px 0px 0.1px 1px #bbb; background: white;
+}
+#checkout_progress li.past > span:before,
+#checkout_progress li.current > span:before {box-shadow: 0px 0px 0.1px 1px #d9230f; background: #d9230f;}
