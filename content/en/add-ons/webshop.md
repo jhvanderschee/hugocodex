@@ -14,12 +14,17 @@ This is a simple webshop with serveral payment methods that does not require a m
 
 Before you can add the webshop you need to [create a Mollie account](https://www.mollie.com). Mollie will ask you to register your website. They will verify if you have a proper return policy, clearly mentioned company data and clear general terms and conditions. Once your website is approved by Mollie you can add payment methods. Go to [https://useplink.com](https://useplink.com) and register. Within your Mollie dashboard you can click on your profile and select 'Payment links' to go to your Plink account. Create a re-usable link with a variable amount and description. Once you have done that, you are ready to add the webshop to your website.
 
-#### Step 1. Add the footer files with the payment link
+#### Step 1. Add scripts to the footer
 
 Download the files and add them to your folders. Make sure the bottom of your layout document looks like the code below. The paymentlink should be the personal re-usable link you just created. 
 
 ```
-footer code
+<!-- webshop -->
+<link rel="stylesheet" href="/css/webshop.css">
+<script type="text/javascript" src="/js/webshop.js"></script>
+<script type="text/javascript">
+ updateCartCount();
+</script>
 ```
 
 #### Step 2. Add the cart, checkout and paylink shortcodes
