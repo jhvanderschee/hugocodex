@@ -31,7 +31,6 @@
     {{ end -}}
 
   </head>
-  <body class="{{ .Type }} {{ .Layout }}">
-      {{ printf "%#v" .Layout }}
+  <body id="top" class="{{ if .IsHome }}home{{ else }}{{ end }} {{ .Section }}">
     <div class="main">
       {{ partial "navigation.html" . }}
