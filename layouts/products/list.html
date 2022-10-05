@@ -16,9 +16,11 @@
 		    
                 {{  range (where .Site.RegularPages "Section" .Section ).ByTitle }}
                     <li>
-			<a href="{{ .RelPermalink}}" class="productimage" style="background-image: url({{ .Params.image }});"><span class="overlay"></span></a>
-			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-			<h3>{{/* .Params.image.price */}}</h3>
+			<a href="{{ .RelPermalink}}">
+			    <div class="productimage" style="background-image: url({{ .Params.image }});"><span class="overlay"></span></div>
+			</a>    
+			<a href="{{ .RelPermalink }}"><h2>{{ .Title }}</h2></a>
+			<span>€ {{ (index .Params.variants 0).price }}</span>
 		    </li>
                 {{ end }}
                 </ul>
