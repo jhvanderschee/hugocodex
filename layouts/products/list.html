@@ -1,5 +1,4 @@
 {{ partial "header.html" . }}
-
 <div class="content">
     <div class="container">
 
@@ -15,9 +14,12 @@
 
                 <ul class="columns">
 		    
-                {{ range (where .Site.RegularPages "Section" .Section ).ByTitle }}
-                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>		   
- 		    <li><a href="{{ .Params.image }}" class="productimage" style="background-image: url({{ .Params.image }});"><span class="overlay"></span></a></li>
+                {{  range (where .Site.RegularPages "Section" .Section ).ByTitle }}
+                    <li>
+			<a href="{{ .RelPermalink}}" class="productimage" style="background-image: url({{ .Params.image }});"><span class="overlay"></span></a>
+			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+			<h3>{{/* .Params.image.price */}}</h3>
+		    </li>
                 {{ end }}
                 </ul>
 
