@@ -32,5 +32,6 @@
 
   </head>
   <body class="{{ .Type }} {{ .Layout }}">
+      {{ printf "%#v" .Layout }}
     <div class="main">
       {{ partial "navigation.html" . }}

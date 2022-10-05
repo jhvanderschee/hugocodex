@@ -16,7 +16,8 @@
                 <ul class="columns">
 		    
                 {{ range (where .Site.RegularPages "Section" .Section ).ByTitle }}
-                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>		   
+ 		    <li><a href="{{ .Params.image }}" class="productimage" style="background-image: url({{ .Params.image }});"><span class="overlay"></span></a></li>
                 {{ end }}
                 </ul>
 
