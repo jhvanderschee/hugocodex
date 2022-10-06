@@ -49,5 +49,6 @@ languages:
     permalinks:
       posts: blog/:filename
       getting-started: empezando/:filename
+      add-ons: complementos/:filename
       products: donaciones/:filename
 
