@@ -31,6 +31,6 @@
     {{ end -}}
 
   </head>
-  <body id="top" class="{{ if .IsHome }}home{{ else }}{{ end }}{{ .Section }}">
+  <body id="top" class="{{ if .IsHome }}home{{ else }}{{ end }}{{ if .IsPage }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}">
     <div class="main">
       {{ partial "navigation.html" . }}

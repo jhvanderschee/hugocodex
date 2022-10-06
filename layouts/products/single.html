@@ -1,14 +1,12 @@
 {{ partial "header.html" . }}
 
-<div class="content product">
+<div class="content">
     <div class="container">
 
         <article>
-            <header class="post-header">
+            <div class="post-header">
 		{{ partial "breadcrumbs.html" . }}
-		<h1>{{ .Title }}</h1>
-
-	    </header>
+	    </div>
 
 	    
 	    {{ if( gt (index  .Params.variants  0  ).price  0  ) }} 
