@@ -6,38 +6,40 @@
         <article>
             <div class="post-header">
 		{{ partial "breadcrumbs.html" . }}
+		<br />
 	    </div>
-
 	    
-	    {{ if( gt (index  .Params.variants  0  ).price  0  ) }} 
-	    <h2>&euro; <span class="productprice"> {{ (index .Params.variants 0).price  | lang.FormatNumber 2 }}</span></h2>
-	    {{ else }} share-buttons {{ end }}
+	    <div class="productpage">
+		{{ partial "productimages.html" . }}
 
-	    <form action="/donate/cart" onsubmit="return addToCart(this)">
+		<div class="text">
+		    <h1>{{ .Title }}</h1>
+		    
+		    {{ if( gt (index  .Params.variants  0  ).price  0  ) }} 
+		    <h2>&euro; <span class="productprice"> {{ (index .Params.variants 0).price  | lang.FormatNumber 2 }}</span></h2>
+		    {{ else }} share-buttons {{ end }}
 
-		{{/* Let's Iterate over ^^ the products variants, so that we can sell it as a nice 'selector' list to choose from ? */}}
+		    <form action="/donate/cart" onsubmit="return addToCart(this)">
 
-		{{ if (index .Params.variants 1).name }}
-
+			{{ if (index .Params.variants 1).name }}
 		
-		<div>
-		    <label for="variant">Choose a {{/* .Params.variants.name */}}:</label>
-		    <select onchange="updateBuyButton(this)" id="variant" name="variant">
-			{{ range $variants :=.Params.variants }}<option data-sku="{{ $variants.sku }}" data-variantname="{{ .Params.variants.name }}" data-price="{{ $variants.price }}">{{ $variants.name }}</option>{{ end }}
-		    </select>
-		</div>
-		{{ end }}
-	{{ if gt (index .Params.variants  0).price 0 }}
-		<div>
-		    <input type="submit" data-url="{{ .RelPermalink }}" data-sku="{{ (index .Params.variants 0).sku }}" data-title="{{ .Title }}" data-varianttype="{{ .Params.variant_type }}" data-variantname="{{ (index .Params.variants 0).name }}" data-price="{{ (index .Params.variants 0).price }}" data-image="{{ .Params.image }}" value="Add to cart" />
-		</div>
-		{{ end }}
+			<div>
+			    <label for="variant">Choose a {{/* .Params.variants.name */}}:</label>
+			    <select onchange="updateBuyButton(this)" id="variant" name="variant">
+				{{ range $variants :=.Params.variants }}<option data-sku="{{ $variants.sku }}" data-variantname="{{ .Params.variants.name }}" data-price="{{ $variants.price }}">{{ $variants.name }}</option>{{ end }}
+			    </select>
+			</div>
+			{{ end }}
+			{{ if gt (index .Params.variants  0).price 0 }}
+			<div>
+			    <input type="submit" data-url="{{ .RelPermalink }}" data-sku="{{ (index .Params.variants 0).sku }}" data-title="{{ .Title }}" data-varianttype="{{ .Params.variant_type }}" data-variantname="{{ (index .Params.variants 0).name }}" data-price="{{ (index .Params.variants 0).price }}" data-image="{{ .Params.image }}" value="Add to cart" />
+			</div>
+			{{ end }}
 
-	    </form>
-
-	    {{ .Content }}
-	    
-	    {{ partial "productimages.html" . }}
+		    </form>
+		    {{ .Content }}
+		</div>
+	    </div>
 
    	</article>
 
