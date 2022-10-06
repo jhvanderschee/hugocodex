@@ -1,24 +1,30 @@
 ---
-title: Webshop
+title: Tienda online
 ---
 
 ### Introducción
 
-This is a simple webshop with serveral payment methods that does not require a monthly fee. Great for a simple webshop. The webshop currently does not allow for variable (variable) tax calculations. It also does not provide an alternative shipping address, although that can be added easily. An email parser would allow you to automate the buying processes even further.
 Esta es una sencilla tienda online con diferentes formas de pago que no requiere una cuota mensual. Muy convenviente para un simple comercio electrónico. La tienda online no
-permite por ahora el calculo de impuestos
+permite por ahora el calculo de impuestos variables. Tampoco proporciona una dirección de envío alternativa, si bien esta puede añadirse fácilmente. Un  parser de email podría
+analizar y automatizar el proceso de compra más aún.
 
-### How it works
+### Funcionamiento
 
 ...
 
-### Installation
+### Instalación
 
-Before you can add the webshop you need to [create a Mollie account](https://www.mollie.com). Mollie will ask you to register your website. They will verify if you have a proper return policy, clearly mentioned company data and clear general terms and conditions. Once your website is approved by Mollie you can add payment methods. Go to [https://useplink.com](https://useplink.com) and register. Within your Mollie dashboard you can click on your profile and select 'Payment links' to go to your Plink account. Create a re-usable link with a variable amount and description. Once you have done that, you are ready to add the webshop to your website.
 
-#### Step 1. Add scripts to the footer
+Antes de poder añadir la tienda online a tu sitio web es necesario [crear una cuenta en Mollie](https://www.mollie.com). Mollie te preguntará si quieres registrar tu sitio
+web. Verificarán que dispones de una política de devolución adecuada, unos datos empresariarales y unos claros 'términos y condiciones generales de compra'. Una vez el sitio web
+haya sido aprobado por Mollie podrás agregar formas de pago.  Ve a registrarte a [https://useplink.com](https://useplink.com). Una vez en tu panel de control puedes hacer click en
+tu perfil y seleccionar 'Payment links' para ir a tu cuenta Plink. Crea un enlace reutilizable con una cantidad variable y descripción. Una vez hecho esto, está todo listo para
+agregar tu tienda online al sitio web.
 
-Download the files and add them to your folders. Make sure the bottom of your layout document looks like the code below. The paymentlink should be the personal re-usable link you just created. 
+#### Paso 2. Añade los <scripts> necesarios al <footer>
+
+Descarga los ficheros y añadelos a tus carpetas. Asegurate de que el final de tu fichero de plantilla ('layout') comprende código fuente que se muestra más abajo. El 'paymentlink'
+debería ser el enlace personal y reutilizable que acabas de crear.
 
 ```
 <link rel="stylesheet" href="/css/webshop.css">
@@ -28,13 +34,15 @@ Download the files and add them to your folders. Make sure the bottom of your la
 </script>
 ```
 
-#### Step 2. Add the cart, checkout and paylink shortcodes
+#### Step 2. Añade el carrito de la compra, y los 'shortcodes' Hugo para el 'checkout' y el 'paylink'
 
 ...
 
-#### Step 3. Create some products
 
-Create some products. They should be part of the 'products' section and each 'product.md' file should look like this:
+
+#### Step 3. Crea algunos productos
+
+Crea algunos productos. Deberían ser parte de la sección 'productos' y cada fichero 'producto.md' debería verse así :
 
 ```
 ---
@@ -55,6 +63,8 @@ variants:
   sku: beerpint
 order_number: 2
 ---
-
-I like beer a lot! IPA, Guinness, Stout, craft beers... and I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
 ```
+
+Nos encanta la cerveza! IPA, Guinness, Stout, cervezas artesanas... y nos encanta probar nuevos sabores. Regálanos un quinto para probar o una jarra para darnos un buen trago!
+
+
