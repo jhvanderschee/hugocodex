@@ -262,10 +262,14 @@ function redirectToPayment(paymentlink) {
 }
 
 
-// init the buy button to prevent 'wrong' starting state
+// init functions
 if(document.getElementById('variant')) updateBuyButton(document.getElementById('variant'));
 if(document.getElementById('shoppingcart')) populateCart();
 if(document.getElementById('checkout')) {
-    var form= document.getElementById('checkout').querySelector('form');
+    var form = document.getElementById('checkout').querySelector('form');
+    initCheckoutForm(form);
+    populateMiniCart();
     form.onchange({target: form});
 }
+
+updateCartCount();
