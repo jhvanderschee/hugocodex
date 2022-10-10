@@ -27,8 +27,25 @@ Download the files and add them to your folders. Make sure the bottom of your la
 ```
 
 #### Step 2. Add the cart, checkout and paylink shortcodes
-
+	
 ...
+
+As one knows, Hugo allows you to 'include' reusable code snippets onto [ellegant so called shortcodes](https://gohugo.io/templates/shortcode-templates/). Let's make use of
+them in order to embed our [cart](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/cart.html) source code made of a simple but ellegant table + form combination.
+
+For the checkout form embedding let's build [a checkout shortcode](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/checkout.html).
+
+For the payment redirection, [we'll use some JavaScript](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/redirect-to-payment.html) :
+
+```
+<script type="text/javascript">
+ 
+ window.onload = function() {
+     redirectToPayment('https://useplink.com/payment/{{ .Get 0 }}');
+ }
+</script>
+```
+
 
 #### Step 3. Create some products
 
