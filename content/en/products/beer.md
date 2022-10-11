@@ -14,7 +14,7 @@ variants:
 - name: pint
   price: 4.25
   sku: beerpint
-order_number: 2
+weight: 3
 ---
 
 I like beer a lot! IPA, Guinness, Stout, craft beers... and I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.

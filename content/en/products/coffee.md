@@ -17,7 +17,7 @@ variants:
 - name: venti
   price: 4.3
   sku: coffeeventi
-order_number: 1
+weight: 2
 ---
 
 A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
