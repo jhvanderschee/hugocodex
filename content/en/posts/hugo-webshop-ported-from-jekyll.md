@@ -3,7 +3,7 @@ title: Hugo webshop ported from Jekyll
 date: "2022-10-12"
 ---
 
-I have been wanting to port the webshop from https://jekyllcodex.org/ to this website for a while, but could not find the time to do it. Fortunately, my Spanish friend Fenix wanted to help me out. He ported the Jekyll webshop to Hugo. You can find a [demo](/donate/) by clicking on 'Donate' in the header.
+I have been wanting to port the webshop from https://jekyllcodex.org to this website for a while, but could not find the time to do it. Fortunately, my Spanish friend Fenix wanted to help me out. He ported the Jekyll webshop to Hugo. You can find a [demo](/donate/) by clicking on 'Donate' in the header.
 
 Fenix replaced the layouts with shortcodes, which improved the usability. He also replaced all Liquid code with the Go templating language. The webshop is using Mollie, which is great for European payments. If you want to sell in the US you can replace the dynamic payment link from Mollie with a dynamic Paypal link.
 
