@@ -21,9 +21,6 @@ Download the files and add them to your folders. Make sure the bottom of your la
 ```
 <link rel="stylesheet" href="/css/webshop.css">
 <script type="text/javascript" src="/js/webshop.js"></script>
-<script type="text/javascript">
- updateCartCount();
-</script>
 ```
 
 #### Step 2. Add the cart, checkout and paylink shortcodes
