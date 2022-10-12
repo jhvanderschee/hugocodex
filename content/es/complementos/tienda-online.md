@@ -21,7 +21,7 @@ haya sido aprobado por Mollie podrás agregar formas de pago.  Ve a registrarte 
 tu perfil y seleccionar 'Payment links' para ir a tu cuenta Plink. Crea un enlace reutilizable con una cantidad variable y descripción. Una vez hecho esto, está todo listo para
 agregar tu tienda online al sitio web.
 
-#### Paso 2. Añade los <scripts> necesarios al <footer>
+#### Paso 1. Añade los 'scripts' necesarios al 'footer'
 
 Descarga los ficheros y añadelos a tus carpetas. Asegurate de que el final de tu fichero de plantilla ('layout') comprende código fuente que se muestra más abajo. El 'paymentlink'
 debería ser el enlace personal y reutilizable que acabas de crear.
@@ -34,13 +34,27 @@ debería ser el enlace personal y reutilizable que acabas de crear.
 </script>
 ```
 
-#### Step 2. Añade el carrito de la compra, y los 'shortcodes' Hugo para el 'checkout' y el 'paylink'
+#### Paso 2. Añade el carrito de la compra, y los 'shortcodes' Hugo para el 'checkout' y el 'paylink'
 
-...
+Como es sabido, Hugo permite 'incluir' y [reutilizar retazos de código fuente en los elegantes llamados 'shortcodes'](https://gohugo.io/templates/shortcode-templates/). Usemosles
+para embeber nuestro [carrito de la compra](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/cart.html) hecho de una simple pero elegante combinación de tabla + formulario.
+
+Para embeber el formulario de checkout hagamos un ['checkout shortcode'](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/checkout.html).
+
+Para el redirecionamiento del pago [usaremos un poco de JavaScript](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/redirect-to-payment.html) :
+
+```
+<script type="text/javascript">
+ 
+ window.onload = function() {
+     redirectToPayment('https://useplink.com/payment/{{ .Get 0 }}');
+ }
+</script>
+```
 
 
 
-#### Step 3. Crea algunos productos
+#### Paso 3. Crea algunos productos
 
 Crea algunos productos. Deberían ser parte de la sección 'productos' y cada fichero 'producto.md' debería verse así :
 

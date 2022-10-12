@@ -15,7 +15,7 @@
 
                 <ul id="productlist">
 		    
-                {{  range (where .Site.RegularPages "Section" .Section ).ByTitle }}
+                {{  range (where .Site.RegularPages "Section" .Section ) }}
                     <li>
 			<a href="{{ .RelPermalink}}">
 			    <div class="productimage" style="background-image: url({{ .Params.image }});"><span class="overlay"></span></div>
