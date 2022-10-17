@@ -13,7 +13,9 @@ analizar y automatizar el proceso de compra más aún.
 Desde la perspectiva el comprador, el proceso de compra tiene se divide  en 3 sencillos pasos :
 
 1.- Carrito de la Compra
+
 2.- Checkout
+
 3.- Pago 
 
 Veamos como podemos alcanzar esto.
@@ -51,12 +53,8 @@ Para el redirecionamiento del pago [usaremos un poco de JavaScript](https://gith
 
 Descarga los 3 archivos mencionados y guardalos en el directorio 'layouts/shortcodes' de tu proyecto.
 
-De este modo puedes invocar a los 3 subprocesos de compra en cualquier lugar de tu sitio web simplemente llamando al 'shortcode' correspondiente. Por ejemplo, en el caso de que
-quieras mostrar el carrito de la compra :
+De este modo puedes invocar a cualquiera de los 3 subprocesos mencionados anteriormente en cualquier lugar de tu proyecto simplemente llamando al 'shortcode' correspondiente. 
 
-```
-{<  >}
-```
 
 Señalar que en esta ocasión hemos [reescrito la url](https://gohugo.io/content-management/urls/#set-url-in-front-matter).
 
