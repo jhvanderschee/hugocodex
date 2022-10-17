@@ -64,24 +64,22 @@ Señalar que en esta ocasión hemos [reescrito la url](https://gohugo.io/content
 Crea algunos productos. Deberían ser parte de la sección 'productos' y cada fichero 'producto.md' debería verse así :
 
 ```
----
-title: Buy me a beer
-image: "/uploads/beer/5.jpg"
+title: Invitame a una cerveza
+image: "/uploads/products/beer/5.jpg"
 images:
-- image: "/uploads/beer/2.jpg"
-- image: "/uploads/beer/3.jpg"
-- image: "/uploads/beer/4.jpg"
-- image: "/uploads/beer/1.jpg"
+- image: "/uploads/products/beer/2.jpg"
+- image: "/uploads/products/beer/3.jpg"
+- image: "/uploads/products/beer/4.jpg"
+- image: "/uploads/products/beer/1.jpg"
 variant_type: size
 variants:
-- name: half-a-pint
+- name: media-pinta
   price: 2.75
   sku: beerhalfapint
-- name: pint
+- name: pinta
   price: 4.25
   sku: beerpint
 order_number: 2
----
 ```
 
 Nos encanta la cerveza! IPA, Guinness, Stout, cervezas artesanas... y nos encanta probar nuevos sabores. Regálanos un quinto para probar o una jarra para darnos un buen trago!
