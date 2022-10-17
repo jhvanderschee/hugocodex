@@ -10,7 +10,13 @@ analizar y automatizar el proceso de compra más aún.
 
 ### Funcionamiento
 
-...
+Desde la perspectiva el comprador, el proceso de compra tiene se divide  en 3 sencillos pasos :
+
+1.- Carrito de la Compra
+2.- Checkout
+3.- Pago 
+
+Veamos como podemos alcanzar esto.
 
 ### Instalación
 
@@ -43,15 +49,16 @@ Para embeber el formulario de checkout hagamos un ['checkout shortcode'](https:/
 
 Para el redirecionamiento del pago [usaremos un poco de JavaScript](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/redirect-to-payment.html) :
 
+Descarga los 3 archivos mencionados y guardalos en el directorio 'layouts/shortcodes' de tu proyecto.
+
+De este modo puedes invocar a los 3 subprocesos de compra en cualquier lugar de tu sitio web simplemente llamando al 'shortcode' correspondiente. Por ejemplo, en el caso de que
+quieras mostrar el carrito de la compra :
+
 ```
-<script type="text/javascript">
- 
- window.onload = function() {
-     redirectToPayment('https://useplink.com/payment/{{ .Get 0 }}');
- }
-</script>
+{<  >}
 ```
 
+Señalar que en esta ocasión hemos [reescrito la url](https://gohugo.io/content-management/urls/#set-url-in-front-matter).
 
 
 #### Paso 3. Crea algunos productos

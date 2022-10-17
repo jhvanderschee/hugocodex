@@ -8,7 +8,13 @@ This is a simple webshop with serveral payment methods that does not require a m
 
 ### How it works
 
-...
+From the buyer perspective, the purchasing process is divided in 3 simple steps :
+
+1.- Shopping Cart
+2.- Checkout
+3.- Payment 
+
+Let's see how can we achieve this.
 
 ### Installation
 
@@ -34,7 +40,9 @@ For the checkout form embedding let's build [a checkout shortcode](https://githu
 
 For the payment redirection, [we'll use some JavaScript](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/redirect-to-payment.html).
 
-Note that we re-wrote the url.
+Download those 3 files and save them in the 'layouts/shortcodes' directory of your project.
+
+Note that in this occasion we [re-wrote the url](https://gohugo.io/content-management/urls/#set-url-in-front-matter).
 
 Download the referred files and put them .... [ ]
 
