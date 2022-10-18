@@ -20,7 +20,15 @@ Let's see how can we achieve this.
 
 ### Installation
 
-Before you can add the webshop you need to [create a Mollie account](https://www.mollie.com). Mollie will ask you to register your website. They will verify if you have a proper return policy, clearly mentioned company data and clear general terms and conditions. Once your website is approved by Mollie you can add payment methods. Go to [https://useplink.com](https://useplink.com) and register. Within your Mollie dashboard you can click on your profile and select 'Payment links' to go to your Plink account. Create a re-usable link with a variable amount and description. Once you have done that, you are ready to add the webshop to your website.
+Before you can add the webshop, in order to manage the payments, you need to [create a Mollie account](https://www.mollie.com) or a [Paypal one](https://paypal.com). 
+
+Mollie will ask you to register your website. They will verify if you have a proper return policy, clearly mentioned company data and clear general terms and conditions. Once your
+website is approved by Mollie you can add payment methods. Go to [https://useplink.com](https://useplink.com) and register. Within your Mollie dashboard you can click on your
+profile and select 'Payment links' to go to your Plink account. Create a re-usable link with a variable amount and description. 
+
+If you choose to use [Paypal and the payment methods it is offering, you'll need to configure your Paypal.me profile](https://paypal.me).
+
+Once you have done that, you are ready to add the webshop to your website in 4 easy steps.
 
 #### Step 1. Add scripts to the footer
 
@@ -31,7 +39,7 @@ Download the files and add them to your folders. Make sure the bottom of your la
 <script type="text/javascript" src="/js/webshop.js"></script>
 ```
 
-#### Step 2. Add the cart, checkout and paylink shortcodes
+#### Step 2. Create the 'cart', 'checkout' and 'paylink' shortcodes
 	
 ...
 
@@ -40,14 +48,21 @@ them in order to embed our [cart](https://github.com/jhvanderschee/hugocodex/blo
 
 For the checkout form embedding let's build [a checkout shortcode](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/checkout.html).
 
-For the payment redirection, [we'll use some JavaScript](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/redirect-to-payment.html).
+For the payment redirection, [we'll use some JavaScript](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/paypal-buttons.html).
 
-Download those 3 files and save them in the 'layouts/shortcodes' directory of your project so that you can invoke any of the 3 above mentioned subprocesses at any place in your project.
+Download those 3 files and [save them in the 'layouts/shortcodes'](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/)  of your project.
+
+Like this you can invoke any of the 3 above mentioned subprocesses at any place in your project simply by calling the given 'shortcode', as we'll see in the next step.
 
 Note that in this occasion we [re-wrote the url](https://gohugo.io/content-management/urls/#set-url-in-front-matter) in some of the files. Like this we can enjoy even more granular control for individual pieces of content.
 
 
-#### Step 3. Create some products
+#### Step 3. Create the 'cart', 'checkout' and 'paylink' content pages
+
+Let's [create the relevant markdown formatted content pages containing the shortcodes](https://github.com/jhvanderschee/hugocodex/blob/main/content/en). That is to say the
+'cart.md', 'checkout.md'  and 'paylink.md'. You can do so in the root of the 'content/' folder and rewrite the urls how you would like them.
+
+#### Step 4. Create some products
 
 Create some products. They should be part of the 'products' section and each 'product.md' file should look like this:
 
