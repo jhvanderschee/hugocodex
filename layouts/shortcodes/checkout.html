@@ -76,6 +76,6 @@
 
             <div style="margin-top: 50px; position: relative; top: 30px;">
                     <ul id="checkout_progress">
-                        <li class="past"><span><a href="{{ with .GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}">Shopping cart</a></span></li><li class="current"><span><a href="#">Checkout</a></span></li><li><span><span>Payment</span></span></li>
+                        <li class="past"><span><a href="{{ with .Site.GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}">Shopping cart</a></span></li><li class="current"><span><a href="#">Checkout</a></span></li><li><span><span>Payment</span></span></li>
                     </ul>
             </div>
