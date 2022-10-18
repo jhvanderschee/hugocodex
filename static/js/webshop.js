@@ -270,8 +270,14 @@ if(document.getElementById('shoppingcart')) populateCart();
 if(document.getElementById('checkout')) {
     var form = document.getElementById('checkout').querySelector('form');
     initCheckoutForm(form);
-    populateMiniCart();
+    //populateMiniCart();
     form.onchange({target: form});
 }
 
 updateCartCount();
+
+
+var carttotal = getCartTotal();
+var addontotal = getAddonTotal();
+var paymenttotal = parseFloat(carttotal + addontotal).toFixed(2);
+if(document.getElementById('paymenttotal')) document.getElementById('paymenttotal').innerHTML  = paymenttotal;
