@@ -68,7 +68,7 @@ granularidad en los contenidos.
 
 #### Paso 3. Crea las páginas para el 'carrito de la compra', 'checkout' y 'paylink'
 
-Creemos ahora [las páginas de contenido en formato markdown que incorporarán los 'shortcodes'](https://github.com/jhvanderschee/hugocodex/blob/main/). Esto es 'cart.md',
+Creemos ahora [las páginas de contenido en formato markdown que incorporarán los 'shortcodes'](https://github.com/jhvanderschee/hugocodex/blob/main/content/es). Esto es 'cart.md',
 'checkout.md' y 'paylink.md'. Puedes hacerlo en la raíz del directorio 'content/' y luego reescribir las urls a tu conveniencia.
 
 
