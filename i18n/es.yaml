@@ -21,3 +21,21 @@ share_on:
 
 quantity:
   other: Cantidad
+
+Your shopping cart is currently empty:
+  other: tu carrito de la compra está vacío
+  
+add to cart:
+  other: Añadir al carrito
+
+Shopping cart:
+  other: Carrito de la compra
+
+Price:
+  other: Precio
+
+continue shopping:
+  other: continuar comprando
+
+Add to cart:
+  other: Añadir al carrito

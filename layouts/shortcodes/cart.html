@@ -6,25 +6,25 @@
                             <th></th>
                             <th></th>
                             <th>{{ i18n "quantity" }}</th>
-                            <th>&nbsp;&nbsp;Price</th>
+                            <th>&nbsp;&nbsp; {{ i18n "Price" }}</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="6" style="text-align: center;">Your shopping cart is currently empty.</td>
+                            <td colspan="6" style="text-align: center;">{{ i18n "Your shopping cart is currently empty."}}</td>
                         </tr>
                     </tbody>
                 </table>
 
                 <div>&euro; <span class="carttotal">0.00</span></div>
 
-                <form action="{{ with .Site.GetPage `checkout.md` }}{{ .RelPermalink }}{{ end }}"><div class="submitbutton"><a href="/donate" class="gray">continue shopping</a><input type="submit" value="Proceed to checkout" /></div></form>
+                <form action="{{ with .Site.GetPage `checkout.md` }}{{ .RelPermalink }}{{ end }}"><div class="submitbutton"><a href="/donate" class="gray">{{ i18n "continue shopping" }}</a><input type="submit" value="Proceed to checkout" /></div></form>
 
             </div>
 
             <div style="margin-top: 50px; position: relative; top: 30px;">
                     <ul id="checkout_progress">
-                        <li class="current"><span><a href="#">Shopping cart</a></span></li><li><span><span>Checkout</span></span></li><li><span><span>Payment</span></span></li>
+                        <li class="current"><span><a href="#">{{ i18n "Shopping cart" }}</a></span></li><li><span><span>Checkout</span></span></li><li><span><span>Payment</span></span></li>
                     </ul>
             </div>
         </div>
