@@ -61,7 +61,7 @@
                         <textarea name="message"></textarea>
                     </div>
 
-                    <div class="submitbutton"><a href="/donate/cart" class="gray">back to cart</a><input type="submit" value="Proceed to payment" onclick="setOrderNumber(this.parentNode.parentNode);" /></div>
+                    <div class="submitbutton"><a href="{{ with .Site.GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}" class="gray">back to cart</a><input type="submit" value="Proceed to payment" onclick="setOrderNumber(this.parentNode.parentNode);" /></div>
 
                 </form>
                 <div>
