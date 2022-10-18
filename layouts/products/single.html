@@ -19,7 +19,7 @@
 		    <h2>&euro; <span class="productprice"> {{ (index .Params.variants 0).price | lang.FormatNumber 2 }}</span></h2>
 		    {{ else }}{{ partial "share-buttons.html" . }}{{ end }}
 
-		    <form action="/donate/cart" onsubmit="return addToCart(this)">
+		    <form action="{{ with .Site.GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}" onsubmit="return addToCart(this)">
 
 			{{ if (index .Params.variants 1).name }}
 		

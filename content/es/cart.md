@@ -1,6 +1,6 @@
 ---
 title: Cart
-url: donate/cart
+url: donar/cart
 ---
 
 {{< cart >}}

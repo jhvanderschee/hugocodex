@@ -2,4 +2,4 @@
 title: Redirecting to payment page
 url: donar/paylink
 ---
-{{< redirect-to-payment "ssMgtkddEzgC4rKKJJ9T" >}}
+{{< redirect-to-mollie "ssMgtkddEzgC4rKKJJ9T" >}}

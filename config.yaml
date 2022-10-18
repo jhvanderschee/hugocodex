@@ -50,5 +50,5 @@ languages:
       posts: blog/:filename
       getting-started: empezando/:filename
       add-ons: complementos/:filename
-      products: donaciones/:filename
+      products: donar/:filename
 
