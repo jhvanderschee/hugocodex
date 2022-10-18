@@ -1,5 +1,10 @@
 ---
-title: Redirecting to payment page
+title: Choose payment method
 url: donate/paylink
 ---
-{{< redirect-to-paypal "ARLAOALKgJkpvAynfrxup8sP6NiLzBTpe6leWyLs7QJHnUMsCt8tKKVFWJzLg4zP0jky8IlPddUX2YCt" >}}
+
+Choose one of the Paypal payment methods below.
+
+&nbsp;
+
+{{< paypal-buttons "ARLAOALKgJkpvAynfrxup8sP6NiLzBTpe6leWyLs7QJHnUMsCt8tKKVFWJzLg4zP0jky8IlPddUX2YCt" >}}
