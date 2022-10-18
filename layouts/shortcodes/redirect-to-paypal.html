@@ -19,16 +19,12 @@
 
   <script src="https://www.paypal.com/sdk/js?client-id={{ .Get 0 }}&enable-funding=venmo&currency=EUR" data-sdk-integration-source="button-factory"></script>
   <script>
+
   function initPayPalButton() {
-    var description = document.querySelector('#smart-button-container #description');
+    
     var amount = document.querySelector('#smart-button-container #amount');
-    var descriptionError = document.querySelector('#smart-button-container #descriptionError');
-    var priceError = document.querySelector('#smart-button-container #priceLabelError');
+    var description = document.querySelector('#smart-button-container #description');
     var invoiceid = document.querySelector('#smart-button-container #invoiceid');
-    var invoiceidError = document.querySelector('#smart-button-container #invoiceidError');
-
-    var elArr = [description, amount];
-
 
     var purchase_units = [];
     purchase_units[0] = {};
@@ -48,18 +44,7 @@
       },
 
       onInit: function (data, actions) {
-        actions.disable();
-
-        elArr.forEach(function (item) {
-          item.addEventListener('keyup', function (event) {
-            var result = elArr.every(validate);
-            if (result) {
-              actions.enable();
-            } else {
-              actions.disable();
-            }
-          });
-        });
+        //nothing
       },
 
       onClick: function () {
