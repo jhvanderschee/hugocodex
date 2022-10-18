@@ -1,5 +1,6 @@
 ---
 title: Complementos para Hugo
+url: complementos
 ---
 ## Extendiendo la funcionalidad de Hugo
 
