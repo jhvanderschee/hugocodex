@@ -61,13 +61,13 @@
                         <textarea name="message"></textarea>
                     </div>
 
-                    <div class="submitbutton"><a href="{{ with .Site.GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}" class="gray">back to cart</a><input type="submit" value="Proceed to payment" onclick="setOrderNumber(this.parentNode.parentNode);" /></div>
+                    <div class="submitbutton"><a href="{{ with .Site.GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}" class="gray">back to cart</a><input type="submit" value="{{ i18n "Pay" }}" onclick="setOrderNumber(this.parentNode.parentNode);" /></div>
 
                 </form>
                 <div>
-                    <label style="padding-top: 0.8rem;">Payment total</label>
+                    <label style="padding-top: 0.8rem;">{{ i18n "Payment total" }}</label>
                     <div id="checkoutcalculation">
-                        <span>Shopping cart: </span>€ 0.00
+                        <span>{{ i18n "Shopping cart"}}: </span>€ 0.00
                     </div>
                     <p><em>{{ .Get 0 }}</em></p>
                 </div>

@@ -18,7 +18,7 @@
 
                 <div>&euro; <span class="carttotal">0.00</span></div>
 
-                <form action="{{ with .Site.GetPage `checkout.md` }}{{ .RelPermalink }}{{ end }}"><div class="submitbutton"><a href="/donate" class="gray">{{ i18n "continue shopping" }}</a><input type="submit" value="Proceed to checkout" /></div></form>
+                <form action="{{ with .Site.GetPage `checkout.md` }}{{ .RelPermalink }}{{ end }}"><div class="submitbutton"><a href="/donate" class="gray">{{ i18n "continue shopping" }}</a><input type="submit" value="{{ i18n "Proceed to checkout" }}"/></div></form>
 
             </div>
 

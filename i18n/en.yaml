@@ -39,3 +39,12 @@ continue shopping:
 
 Add to cart:
   other: Add to cart
+
+Proceed to checkout:
+  other: Proceed to checkout
+
+Pay:
+  other: Pay
+
+Payment total:
+  other: Payment total
