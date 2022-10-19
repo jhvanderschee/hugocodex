@@ -48,3 +48,39 @@ Pay:
 
 Payment total:
   other: Total a pagar
+
+First name:
+  other: Nombre
+
+Last name:
+  other: Apellido
+
+Email address:
+  other: Dirección de correo electrónico
+
+Address:
+  other: Dirección
+
+Zipcode:
+  other: Código postal
+
+City:
+  other: Ciudad
+
+Shipping:
+  other: Envío
+
+Country:
+  other: País
+
+Gift wrapping:
+  other: Envoltorio de regalo
+
+Not gift wrapped:
+  other: Sin envoltorio de regalo
+  
+Message:
+  other: Mensaje
+  
+back to cart:
+  other: volver al carrito de la compra

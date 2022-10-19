@@ -48,3 +48,39 @@ Pay:
 
 Payment total:
   other: Payment total
+
+First name:
+  other: First name
+
+Last name:
+  other: Last name
+
+Email address:
+  other: Email address
+
+Address:
+  other: Address
+
+Zipcode:
+  other: Zipcode
+
+City:
+  other: City
+
+Shipping:
+  other: Shipping
+
+Country:
+  other: Country
+
+Gift wrapping:
+  other: Gift wrapping
+
+Not gift wrapped:
+  other: Not gift wrapped
+  
+Message:
+  other: Message
+
+back to cart:
+  other: back to cart
