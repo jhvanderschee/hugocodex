@@ -17,4 +17,4 @@ variants:
 weight: 5
 ---
 
-Sponsoring BEP [through Github](https://github.com/sponsors/bep) will get me some very cool Hugo stickers. That enables me to decorate my laptop, my walls, my doors, my bike and my kids! I will at least need 3 months of sponsoring on the 9 dollar plan, but feel free to buy me 6 months or a full year. BEP deserves it!
+If you buy this, I will sponsoring BEP [through Github](https://github.com/sponsors/bep), which will get me some very cool Hugo stickers. That enables me to decorate my laptop, my walls, my doors, my bike and my kids! I feel that I need at least 3 months of sponsoring on the 9 dollar plan, but feel free to buy me 6 months or a full year. BEP deserves it!
