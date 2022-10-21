@@ -5,13 +5,13 @@ images:
 - image:
 variant_type: variant
 variants:
-- name: normal
+- name: just the stickers
   price: 27
   sku: stickers-3-months
-- name: extra love (6 months)
+- name: with extra love (6 months)
   price: 54
   sku: stickers-6-months
-- name: even more love (1 year)
+- name: with even more love (1 year)
   price: 108
   sku: stickers-1-year
 weight: 5
