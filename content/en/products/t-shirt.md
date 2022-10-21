@@ -1,5 +1,5 @@
 ---
-title: Buy me some Hugo stickers
+title: Buy me Hugo stickers
 image: "/uploads/products/stickers.jpg"
 images:
 - image:
