@@ -3,15 +3,15 @@ title: Buy me Hugo stickers
 image: "/uploads/products/stickers.jpg"
 images:
 - image:
-variant_type: duration
+variant_type: variant
 variants:
-- name: 3 months
+- name: normal
   price: 27
   sku: stickers-3-months
-- name: 6 months (extra love)
+- name: extra love (6 months)
   price: 54
   sku: stickers-6-months
-- name: 1 year (even more love)
+- name: even more love (1 year)
   price: 108
   sku: stickers-1-year
 weight: 5
