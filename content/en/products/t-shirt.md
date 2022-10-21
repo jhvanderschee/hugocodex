@@ -3,7 +3,7 @@ title: Buy me Hugo stickers
 image: "/uploads/products/stickers.jpg"
 images:
 - image:
-variant_name: duration
+variant_type: duration
 variants:
 - name: 3 months
   price: 27

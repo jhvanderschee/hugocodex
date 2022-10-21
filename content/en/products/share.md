@@ -3,7 +3,7 @@ title: Share the love
 image: "/uploads/products/share.jpg"
 images:
 - image: 
-variant_name: size
+variant_type: size
 variants:
 - title: Normal
   price: 0

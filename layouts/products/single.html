@@ -24,7 +24,7 @@
 			{{ if (index .Params.variants 1).name }}
 		
 			<div>
-			    <label for="variant">Choose a {{ .Params.variants_type }}:</label>
+			    <label for="variant">Choose a {{ .Params.variant_type }}:</label>
 			    <select onchange="updateBuyButton(this)" id="variant" name="variant">
 				{{ range $variants :=.Params.variants }}<option data-sku="{{ $variants.sku }}" data-variantname="{{ $variants.name }}" data-price="{{ $variants.price }}">{{ $variants.name }}</option>{{ end }}
 			    </select>

@@ -4,7 +4,7 @@ image: "/uploads/products/chocolates/1.jpg"
 images:
 - image: "/uploads/products/chocolates/2.jpg"
 - image: "/uploads/products/chocolates/3.jpg"
-variant_type: size
+variants_type: size
 variants:
 - name: 
   price: 9.95
