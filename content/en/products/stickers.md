@@ -5,7 +5,7 @@ images:
 - image:
 variant_type: variant
 variants:
-- name: just the stickers (3 months)
+- name: stickers (3 months)
   price: 27
   sku: stickers-3-months
 - name: stickers + love (6 months)
