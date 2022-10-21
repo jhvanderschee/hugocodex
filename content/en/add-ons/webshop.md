@@ -50,9 +50,7 @@ Let's [create the relevant markdown formatted content pages containing the short
 
 #### Step 5. Create some products
 
-Create some products. They should be part of the 'products' section and each 'product.md' file should look like this:
-
-E.g. for the buy-me-beer.md we could do :
+Create a new Hugo section (folder in the root) and call it 'products'. In this folder you can create your products and your product overview. Each 'my-product-name.md' file should look like this:
 
 ```
 ---
