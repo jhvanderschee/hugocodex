@@ -12,15 +12,15 @@ We do not have a database, so we have to create our cart in localStorage. In thi
 
 ### Installation
 
+#### Step 1. Create a Mollie or Paypal account
+
 Before you can add the webshop, in order to manage the payments, you need to [create a Mollie account](https://www.mollie.com) or a [Paypal one](https://paypal.com). Mollie only works for companies within the EU(?) and Paypal works globally.
 
 Mollie will ask you to register your website. They will verify if you have a proper return policy, clearly mentioned company data and clear general terms and conditions. Once your website is approved by Mollie you can add payment methods. Go to [https://useplink.com](https://useplink.com) and register. Within your Mollie dashboard you can click on your profile and select 'Payment links' to go to your Plink account. Create a re-usable link with a variable amount and description. 
 
 If you have chosen for a Paypal account, you need to go to the developer dashboard. There you will find 'My apps & Credentials'. At this page you have to click the 'Create App' button, which will give you a 'client_id'. 
 
-Once you have done the above, you are ready to add the webshop to your website in 4 easy steps.
-
-#### Step 1. Add scripts to the footer
+#### Step 2. Add scripts to the footer
 
 Download the files and add them to your folders. Make sure the bottom of your layout document looks like the code below.
 
@@ -29,7 +29,7 @@ Download the files and add them to your folders. Make sure the bottom of your la
 <script type="text/javascript" src="/js/webshop.js"></script>
 ```
 
-#### Step 2. Create the 'cart', 'checkout' and 'paylink' shortcodes
+#### Step 3. Create the 'cart', 'checkout' and 'paylink' shortcodes
 	
 ...
 
@@ -47,12 +47,12 @@ Like this you can invoke any of the 3 above mentioned subprocesses at any place 
 Note that in this occasion we [re-wrote the url](https://gohugo.io/content-management/urls/#set-url-in-front-matter) in some of the files. Like this we can enjoy even more granular control for individual pieces of content.
 
 
-#### Step 3. Create the 'cart', 'checkout' and 'paylink' content pages
+#### Step 4. Create the 'cart', 'checkout' and 'paylink' content pages
 
 Let's [create the relevant markdown formatted content pages containing the shortcodes](https://github.com/jhvanderschee/hugocodex/blob/main/content/en). That is to say the
 'cart.md', 'checkout.md'  and 'paylink.md'. You can do so in the root of the 'content/' folder and rewrite the urls how you would like them.
 
-#### Step 4. Create some products
+#### Step 5. Create some products
 
 Create some products. They should be part of the 'products' section and each 'product.md' file should look like this:
 
