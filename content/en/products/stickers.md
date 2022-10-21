@@ -8,10 +8,10 @@ variants:
 - name: 3 months
   price: 27
   sku: stickers-3-months
-- name: 6 months
+- name: 6 months (extra love)
   price: 54
   sku: stickers-6-months
-- name: 1 year
+- name: 1 year (even more love)
   price: 108
   sku: stickers-1-year
 weight: 5
