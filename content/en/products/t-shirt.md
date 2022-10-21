@@ -1,6 +1,6 @@
 ---
 title: Buy me some Hugo stickers
-image: "/uploads/products/sticker.jpg"
+image: "/uploads/products/stickers.jpg"
 images:
 - image:
 variant_type:
