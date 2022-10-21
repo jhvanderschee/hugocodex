@@ -12,19 +12,17 @@ We do not have a database, so we have to create our cart in localStorage. In thi
 
 ### Installation
 
-Before you can add the webshop, in order to manage the payments, you need to [create a Mollie account](https://www.mollie.com) or a [Paypal one](https://paypal.com). 
+Before you can add the webshop, in order to manage the payments, you need to [create a Mollie account](https://www.mollie.com) or a [Paypal one](https://paypal.com). Mollie only works for companies within the EU(?) and Paypal works globally.
 
-Mollie will ask you to register your website. They will verify if you have a proper return policy, clearly mentioned company data and clear general terms and conditions. Once your
-website is approved by Mollie you can add payment methods. Go to [https://useplink.com](https://useplink.com) and register. Within your Mollie dashboard you can click on your
-profile and select 'Payment links' to go to your Plink account. Create a re-usable link with a variable amount and description. 
+Mollie will ask you to register your website. They will verify if you have a proper return policy, clearly mentioned company data and clear general terms and conditions. Once your website is approved by Mollie you can add payment methods. Go to [https://useplink.com](https://useplink.com) and register. Within your Mollie dashboard you can click on your profile and select 'Payment links' to go to your Plink account. Create a re-usable link with a variable amount and description. 
 
-If you choose to use [Paypal and the payment methods it is offering, you'll need to configure your Paypal.me profile](https://paypal.me).
+If you have chosen for a Paypal account, you need to go to the developer dashboard. There you will find 'My apps & Credentials'. At this page you have to click the 'Create App' button, which will give you a 'client_id'. 
 
-Once you have done that, you are ready to add the webshop to your website in 4 easy steps.
+Once you have done the above, you are ready to add the webshop to your website in 4 easy steps.
 
 #### Step 1. Add scripts to the footer
 
-Download the files and add them to your folders. Make sure the bottom of your layout document looks like the code below. The paymentlink should be the personal re-usable link you just created. 
+Download the files and add them to your folders. Make sure the bottom of your layout document looks like the code below.
 
 ```
 <link rel="stylesheet" href="/css/webshop.css">
