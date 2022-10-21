@@ -6,9 +6,9 @@ images:
 variant_type:
 variants:
 - name: Normal
-  price: 30
+  price: 27
   sku: stickers
 weight: 5
 ---
 
-Sponsoring BEP [through Github](https://github.com/sponsors/bep) will get me some stickers. Two months of sponsoring on the 15 dollar plan will get me a huge amount of Hugo stickers. That enables me to decorate my laptop, my walls, my doors, my bike and my kids!
+Sponsoring BEP [through Github](https://github.com/sponsors/bep) will get me some stickers. Three months of sponsoring on the 9 dollar plan will get a bunch of Hugo stickers. That enables me to decorate my laptop, my walls, my doors, my bike and my kids!
