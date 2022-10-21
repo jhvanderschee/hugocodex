@@ -11,4 +11,4 @@ variants:
 weight: 5
 ---
 
-Sponsoring [BEP](https://github.com/sponsors/bep) will get me some stickers. Two months of sponsoring on the 15 dollar plan ensures a huge amount of Hugo stickers to stick to my laptop, walls, doors, bike, etc!
+Sponsoring [BEP](https://github.com/sponsors/bep) will get me some stickers. Two months of sponsoring on the 15 dollar plan ensures a huge amount of Hugo stickers. That enables me to decorate my laptop, my walls, my doors, my bike and my kids!
