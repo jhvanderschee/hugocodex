@@ -8,15 +8,7 @@ This is a simple webshop with serveral payment methods that does not require a m
 
 ### How it works
 
-From the buyer perspective, the purchasing process is divided in 3 simple steps :
-
-1.- Shopping Cart
-
-2.- Checkout
-
-3.- Payment 
-
-Let's see how can we achieve this.
+We do not have a database... so we create a cart in localStorage. In this cart we store everything: all productinfo and the users preferences, like the amount and the variant. Once we get to the cart page we can simply read our cart array from localStorage. Note that this does not verify if the price is still correct. After the cart you are sent to the checkout. On this page you are asked to fill out a form with your personal information. Once you submit this, this info is sent to the shop owner. After this step you are redirected to a payment page. In all of these steps the pages rely on the localStorage for their information. To connect the final payment to the filled out form a unique order number is being generated during the checkout process. This number is sent a long to the payment link (Mollie) or button (Paypal).
 
 ### Installation
 
