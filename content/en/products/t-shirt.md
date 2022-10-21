@@ -1,15 +1,14 @@
 ---
-title: Buy me a t-shirt
-image: "/uploads/products/t-shirt/view3.jpeg"
+title: Buy me some Hugo stickers
+image: "/uploads/products/sticker.jpg"
 images:
-- image: "/uploads/products/t-shirt/view.jpeg"
-- image: "/uploads/products/t-shirt/view4.jpeg"
-variant_type: size
+- image:
+variant_type:
 variants:
 - name: Normal
-  price: 25.7
-  sku: tshirt
+  price: 30
+  sku: stickers
 weight: 5
 ---
 
-This awesome t-shirt is for sale at [zazzle.com](https://www.zazzle.com/jekyll_t_shirt-235672519224817294). I would really like to have it, but I do not allow myself to spent this much on a single t-shirt. Will you buy me one?
+[Sponsoring BEP](https://github.com/sponsors/bep) will get me some stickers. Two months of sponsoring on the 15 dollar plan ensures a huge amount of Hugo stickers to stick to my laptop, walls, doors, bike, etc!
