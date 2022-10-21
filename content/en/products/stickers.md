@@ -1,0 +1,20 @@
+---
+title: Buy me Hugo stickers
+image: "/uploads/products/stickers.jpg"
+images:
+- image:
+variant_type: duration
+variants:
+- name: 3 months
+  price: 27
+  sku: stickers-3-months
+- name: 6 months
+  price: 54
+  sku: stickers-6-months
+- name: 1 year
+  price: 108
+  sku: stickers-1-year
+weight: 5
+---
+
+Sponsoring BEP [through Github](https://github.com/sponsors/bep) will get me some very cool Hugo stickers. That enables me to decorate my laptop, my walls, my doors, my bike and my kids! I will at least need 3 months of sponsoring on the 9 dollar plan, but feel free to buy me 6 months or a full year. BEP deserves it!
