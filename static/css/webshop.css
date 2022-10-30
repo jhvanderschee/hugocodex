@@ -84,7 +84,7 @@ body.product div.image > ul li:first-child {width: 100%; margin-bottom: 1%;}
 body.product div.text div.image {display: none;}
 body.product .content h1 {text-align: left; padding-top: 0;}
 body.product .content h2 {padding-top: 0; position: relative; bottom: 0.2rem;}
-@media only screen and (max-width: 800px)  {
+@media only screen and (max-width: 700px)  {
     body.product div.image {display: none;}
     body.product div.text div.image {display: block; margin: 2.25rem 0 1.25rem 0;}
     body.product .productpage > div.text > * {margin-left: 0;}
