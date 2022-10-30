@@ -10,24 +10,22 @@ analizar y automatizar el proceso de compra más aún.
 
 ### Funcionamiento
 
-Desde la perspectiva el comprador, el proceso de compra tiene se divide  en 3 sencillos pasos :
-
-1.- Carrito de la Compra
-
-2.- Checkout
-
-3.- Pago 
+No usamos una base de datos, por lo que crearemos nuestro carrito de la compra en localStorage. En este carrito guardaremos todo: toda la información del producto, las preferencias de usuario, como la cantidad y la variante del producto. En las páginas de producto los productos son añadidos al  array que compone localStorage. Una vez obtenemos la página de nuestro carrito de la compra podemos simplemente leer dicho array y mostrarlo en nuestra pantalla (usando javascript). A continuación, seremos redirigidos al checkout (mediante el botón 'Proceder al checkout'). En esta página de checkout se nos requiere el que rellenemos un formulario con nuestros datos personales. Una vez enviado esto, dicha información se envía al dueño de la tienda via e-mail. Finalmente somos enviados a la página en la que proceder al pago. Para conectar dicho pago al formulario recién enviado se ha generado un número de pedido único durante el proceso de checkout. Dicho número (también almacenado en localStorage) es enviado con el hiperenlace (Mollie) o mediante un botón (Paypal).
 
 Veamos como podemos alcanzar esto.
 
 ### Instalación
 
 
-Antes de poder añadir la tienda online a tu sitio web es necesario [crear una cuenta en Mollie](https://www.mollie.com). Mollie te preguntará si quieres registrar tu sitio
+Antes de poder añadir la tienda online a tu sitio web es necesario [crear una cuenta en Mollie](https://www.mollie.com) o [en Paypal](https://paypal.com) para gestionar los pagos. Mollie funciona exclusivamente para países de la Unión Europea y Paypal funciona globalmente. Mollie te preguntará si quieres registrar tu sitio
 web. Verificarán que dispones de una política de devolución adecuada, unos datos empresariarales y unos claros 'términos y condiciones generales de compra'. Una vez el sitio web
 haya sido aprobado por Mollie podrás agregar formas de pago.  Ve a registrarte a [https://useplink.com](https://useplink.com). Una vez en tu panel de control puedes hacer click en
-tu perfil y seleccionar 'Payment links' para ir a tu cuenta Plink. Crea un enlace reutilizable con una cantidad variable y descripción. Una vez hecho esto, está todo listo para
-agregar tu tienda online al sitio web.
+tu perfil y seleccionar 'Payment links' para ir a tu cuenta Plink. Crea un enlace reutilizable (requerido para el 'Paso 3' de este tutorial) con una cantidad variable y descripción.
+
+Si optas por usar [Paypal y los métodos de pago que ofrece, necesitarás configurar tu perfil  Paypal.me](https://paypal.me).  En él encontrarás el apartado 'Mis Apps & Credenciales'. En dicha página haz click en el botón 'Crear App', el cual te asignará un 'client_id'. Dicho 'client_id' será necesario en la parte final del 'Paso 3' de este  manual.
+
+Ya sea 'Mollie' o 'Paypal.me', una vez escogido y configurado uno de los dos servicios de pago online referidos anteriormente , está todo listo para
+agregar tu tienda online al sitio web en cuatro sencillos pasos.
 
 #### Paso 1. Añade los 'scripts' necesarios al 'footer'
 
@@ -42,24 +40,32 @@ debería ser el enlace personal y reutilizable que acabas de crear.
 </script>
 ```
 
-#### Paso 2. Añade el carrito de la compra, y los 'shortcodes' Hugo para el 'checkout' y el 'paylink'
+#### Paso 2. Crea los 'shortcodes' del carrito de la compra,  'checkout' y 'paylink'
 
 Como es sabido, Hugo permite 'incluir' y [reutilizar retazos de código fuente en los elegantes llamados 'shortcodes'](https://gohugo.io/templates/shortcode-templates/). Usemosles
 para embeber nuestro [carrito de la compra](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/cart.html) hecho de una simple pero elegante combinación de tabla + formulario.
 
 Para embeber el formulario de checkout hagamos un ['checkout shortcode'](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/checkout.html).
 
-Para el redirecionamiento del pago [usaremos un poco de JavaScript](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/redirect-to-payment.html) :
+Para el redirecionamiento del pago [usaremos un poco de JavaScript](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/paypal-buttons.html) :
 
-Descarga los 3 archivos mencionados y guardalos en el directorio 'layouts/shortcodes' de tu proyecto.
+Descarga los 3 archivos mencionados y [guardalos en el directorio 'layouts/shortcodes'][a checkout shortcode](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/) de tu proyecto.
 
-De este modo puedes invocar a cualquiera de los 3 subprocesos mencionados anteriormente en cualquier lugar de tu proyecto simplemente llamando al 'shortcode' correspondiente. 
-
-
-Señalar que en esta ocasión hemos [reescrito la url](https://gohugo.io/content-management/urls/#set-url-in-front-matter).
+De este modo puedes invocar a cualquiera de los 3 subprocesos mencionados anteriormente en cualquier lugar de tu proyecto simplemente llamando al 'shortcode' correspondiente, como
+veremos en el siguiente paso. 
 
 
-#### Paso 3. Crea algunos productos
+Señalar que en esta ocasión hemos [reescrito la url](https://gohugo.io/content-management/urls/#set-url-in-front-matter), de tal manera que así podemos disfrutar de una mayor
+granularidad en los contenidos.
+
+#### Paso 3. Crea las páginas para el 'carrito de la compra', 'checkout' y 'paylink'
+
+Creemos ahora [las páginas de contenido en formato markdown que incorporarán los 'shortcodes'](https://github.com/jhvanderschee/hugocodex/blob/main/content/es). Esto es 'cart.md',
+'checkout.md' y 'paylink.md'. Puedes hacerlo en la raíz del directorio 'content/' y luego reescribir las urls a tu conveniencia.
+
+
+
+#### Paso 4. Crea algunos productos
 
 Crea algunos productos. Deberían ser parte de la sección 'productos' y cada fichero 'producto.md' debería verse así :
 

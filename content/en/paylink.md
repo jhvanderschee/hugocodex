@@ -1,9 +1,9 @@
 ---
-title: Choose payment method
+title: Payment
 url: donate/paylink
 ---
 
-Choose one of the Paypal payment methods below. 
+## Choose your payment method
 
 You will be paying 'Usecue' and you will see your order number as a reference. You will have to pay &euro;<span id="paymenttotal"></span>.
 

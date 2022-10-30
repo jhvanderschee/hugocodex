@@ -21,3 +21,66 @@ share_on:
 
 quantity:
   other: Quantity
+
+Your shopping cart is currently empty:
+  other: Your shopping cart is currently empty
+  
+add to cart:
+  other: add to cart
+
+Shopping cart:
+  other: Shopping cart
+
+Price:
+  other: Price
+
+continue shopping:
+  other: continue shopping
+
+Add to cart:
+  other: Add to cart
+
+Proceed to checkout:
+  other: Proceed to checkout
+
+Pay:
+  other: Pay
+
+Payment total:
+  other: Payment total
+
+First name:
+  other: First name
+
+Last name:
+  other: Last name
+
+Email address:
+  other: Email address
+
+Address:
+  other: Address
+
+Zipcode:
+  other: Zipcode
+
+City:
+  other: City
+
+Shipping:
+  other: Shipping
+
+Country:
+  other: Country
+
+Gift wrapping:
+  other: Gift wrapping
+
+Not gift wrapped:
+  other: Not gift wrapped
+  
+Message:
+  other: Message
+
+back to cart:
+  other: back to cart

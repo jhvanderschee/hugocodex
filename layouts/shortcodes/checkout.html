@@ -6,37 +6,37 @@
                     <input name="ordernumber" value="" type="hidden">
 
                     <div class="half">
-                        <label for="firstname">First name</label>
+                        <label for="firstname">{{ i18n "First name" }}</label>
                         <input type="text" name="firstname" required />
                     </div>
 
                     <div class="half">
-                        <label for="lastname">Last name</label>
+                        <label for="lastname">{{ i18n "Last name" }}</label>
                         <input type="text" name="lastname" required />
                     </div>
 
                     <div>
-                        <label for="email">Email address</label>
+                        <label for="email">{{ i18n "Email address" }}</label>
                         <input type="email" name="email" required />
                     </div>
 
                     <div>
-                        <label for="address">Address</label>
+                        <label for="address">{{ i18n "Address" }}</label>
                         <input type="text" name="address" required />
                     </div>
 
                     <div class="half">
-                        <label for="zipcode">Zipcode</label>
+                        <label for="zipcode">{{ i18n "Zipcode" }}</label>
                         <input type="text" name="zipcode" required />
                     </div>
 
                     <div class="half">
-                        <label for="city">City</label>
+                        <label for="city">{{ i18n "City" }}</label>
                         <input type="text" name="city" required />
                     </div>
 
                     <div>
-                        <label for="shipping">Shipping</label>
+                        <label for="shipping">{{ i18n "Shipping" }}</label>
                         <select name="shipping" required onchange="if(this.value == 'NL') document.querySelector('input[name=\'country\']').value = 'The Netherlands'; else document.querySelector('input[name=\'country\']').value = ''">
                             <option value=""></option>
                             <option value="NL" data-title="Shipping NL">The Netherlands (+ &euro; 0.00)</option>
@@ -46,28 +46,28 @@
                     </div>
 
                     <div>
-                        <label for="country">Country</label>
+                        <label for="country">{{ i18n "Country" }}</label>
                         <input type="text" name="country" required />
                     </div>
 
                     <div>
-                        <label>Gift wrapping</label>
-                        <label><input type="radio" name="wrapped" value="no" required> Not gift wrapped</label>
-                        <label><input type="radio" name="wrapped" data-title="Gift wrapped" value="yes" data-price="2" required> Gift wrapped (+ &euro; 2.00)</label>
+                        <label>{{ i18n "Gift wrapping" }}</label>
+                        <label><input type="radio" name="wrapped" value="no" required> {{ i18n "Not gift wrapped" }}</label>
+                        <label><input type="radio" name="wrapped" data-title="Gift wrapped" value="yes" data-price="2" required> {{ i18n "Gift wrapped" }} (+ &euro; 2.00)</label>
                     </div>
 
                     <div>
-                        <label for="message">Message</label>
+                        <label for="message">{{ i18n "Message" }}</label>
                         <textarea name="message"></textarea>
                     </div>
 
-                    <div class="submitbutton"><a href="{{ with .Site.GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}" class="gray">back to cart</a><input type="submit" value="Proceed to payment" onclick="setOrderNumber(this.parentNode.parentNode);" /></div>
+                    <div class="submitbutton"><a href="{{ with .Site.GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}" class="gray">{{ i18n "back to cart" }}</a><input type="submit" value="{{ i18n "Pay" }}" onclick="setOrderNumber(this.parentNode.parentNode);" /></div>
 
                 </form>
                 <div>
-                    <label style="padding-top: 0.8rem;">Payment total</label>
+                    <label style="padding-top: 0.8rem;">{{ i18n "Payment total" }}</label>
                     <div id="checkoutcalculation">
-                        <span>Shopping cart: </span>€ 0.00
+                        <span>{{ i18n "Shopping cart"}}: </span>€ 0.00
                     </div>
                     <p><em>{{ .Get 0 }}</em></p>
                 </div>
@@ -76,6 +76,6 @@
 
             <div style="margin-top: 50px; position: relative; top: 30px;">
                     <ul id="checkout_progress">
-                        <li class="past"><span><a href="{{ with .Site.GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}">Shopping cart</a></span></li><li class="current"><span><a href="#">Checkout</a></span></li><li><span><span>Payment</span></span></li>
+                        <li class="past"><span><a href="{{ with .Site.GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}">{{ i18n "Shopping cart"}}</a></span></li><li class="current"><span><a href="#">Checkout</a></span></li><li><span><span>Payment</span></span></li>
                     </ul>
             </div>
