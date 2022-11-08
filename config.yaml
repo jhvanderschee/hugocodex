@@ -1,4 +1,4 @@
-baseURL: "https://hugocodex.org"
+gbaseURL: "https://hugocodex.org"
 defaultContentLanguage: en
 languageCode: "en-us"
 
