@@ -22,7 +22,7 @@ web. Verificarán que dispones de una política de devolución adecuada, unos da
 haya sido aprobado por Mollie podrás agregar formas de pago.  Ve a registrarte a [https://useplink.com](https://useplink.com). Una vez en tu panel de control puedes hacer click en
 tu perfil y seleccionar 'Payment links' para ir a tu cuenta Plink. Crea un enlace reutilizable (requerido para el 'Paso 3' de este tutorial) con una cantidad variable y descripción.
 
-Si optas por usar [Paypal y los métodos de pago que ofrece, necesitarás configurar tu perfil  Paypal.me](https://paypal.me).  En él encontrarás el apartado 'Mis Apps & Credenciales'. En dicha página haz click en el botón 'Crear App', el cual te asignará un 'client_id'. Dicho 'client_id' será necesario en la parte final del 'Paso 3' de este  manual.
+Si optas por usar Paypal y los métodos de pago que ofrece, necesitarás configurar tu panel Web.  En él encontrarás el apartado 'Mis Apps & Credenciales'. En dicha página haz click en el botón 'Crear App', el cual te asignará un 'client_id'. Dicho 'client_id' será necesario en la parte final del 'Paso 3' de este  manual.
 
 Ya sea 'Mollie' o 'Paypal.me', una vez escogido y configurado uno de los dos servicios de pago online referidos anteriormente , está todo listo para
 agregar tu tienda online al sitio web en cuatro sencillos pasos.
