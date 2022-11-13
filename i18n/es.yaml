@@ -15,3 +15,72 @@ getting_started:
 
 next:
   other: Siguiente
+
+share_on:
+  other: Compartir en
+
+quantity:
+  other: Cantidad
+
+Your shopping cart is currently empty:
+  other: tu carrito de la compra está vacío
+  
+add to cart:
+  other: Añadir al carrito
+
+Shopping cart:
+  other: Carrito de la compra
+
+Price:
+  other: Precio
+
+continue shopping:
+  other: continuar comprando
+
+Add to cart:
+  other: Añadir al carrito
+
+Proceed to checkout:
+  other: Proceder al checkout
+
+Pay:
+  other: Proceder al pago
+
+Payment total:
+  other: Total a pagar
+
+First name:
+  other: Nombre
+
+Last name:
+  other: Apellido
+
+Email address:
+  other: Dirección de correo electrónico
+
+Address:
+  other: Dirección
+
+Zipcode:
+  other: Código postal
+
+City:
+  other: Ciudad
+
+Shipping:
+  other: Envío
+
+Country:
+  other: País
+
+Gift wrapping:
+  other: Envoltorio de regalo
+
+Not gift wrapped:
+  other: Sin envoltorio de regalo
+  
+Message:
+  other: Mensaje
+  
+back to cart:
+  other: volver al carrito de la compra

@@ -2,8 +2,10 @@ menu:
   - title: Empezando
     url: /es/empezando/
   - title: Complementos
-    url: /es/add-ons/
+    url: /es/complementos/
   - title: Blog
     url: /es/blog/
   - title: Acerca de
     url: /es/acerca-de/
+  - title: Donar
+    url: /es/donar/

@@ -25,7 +25,12 @@
     
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="stylesheet" href="/css/style.css?version={{now}}">
+
+    {{ with .OutputFormats.Get "rss" -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
   </head>
-  <body class="{{.Type}} {{.Layout}}">
+  <body id="top" class="{{ if .IsHome }}home{{ else }}{{ end }}{{ if .IsPage }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}">
     <div class="main">
       {{ partial "navigation.html" . }}

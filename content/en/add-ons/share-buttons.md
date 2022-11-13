@@ -8,7 +8,7 @@ It can be very useful to allow people to easily share the content they have just
 
 ### How it works
 
-The script reads the `.Permalink` and creates a share link. If the page has a `.Params.image` an additional Pinterest button wil be shown.
+The script reads the `.Permalink` and creates a share link. The partial has some config options to adjust the colors and the icons that are shown.
 
 ### Installation
 

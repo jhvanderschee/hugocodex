@@ -1,28 +1,31 @@
 {{ partial "header.html" . }}
-
 <div class="content">
     <div class="container">
 
-            <article class="post">
+            <article>
                 <header class="post-header">
                     {{ partial "breadcrumbs.html" . }}
-                    <h1>{{ .Title }}</h1>
+                    <h1 class="post-title">{{ .Title }}</h1>
                 </header>
-                
+		<div class="post-content">
+		
                 {{ .Content }}
 
-                <br>
+                <br />
 
-		<h2> About this products donation page</h2>
-		<p> Although the primary function of this products donation page is to illustrate how the works, you can actually buy me one of the products below. If you think I saved you a huge amount of time... return the favor. If you do not have any money to spare, please share the love by posting something about this website on social media. I would like that just as much. Thank you, you are the best!</p>
-
-                <ul class="columns">
+                <ul id="productlist">
 		    
-                {{ range (where .Site.RegularPages "Section" .Section ).ByTitle }}
-                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{  range (where .Site.RegularPages "Section" .Section ) }}
+                    <li>
+			<a href="{{ .RelPermalink}}">
+			    <div class="productimage" style="background-image: url({{ .Params.image }});"><span class="overlay"></span></div>
+			</a>    
+			<a href="{{ .RelPermalink }}"><h2>{{ .Title }}</h2></a>
+			<span>€ {{ (index .Params.variants 0).price | lang.FormatNumber 2 }}</span>
+		    </li>
                 {{ end }}
                 </ul>
-
+		</div>
             </article>
 
     </div>

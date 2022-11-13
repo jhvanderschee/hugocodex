@@ -1,5 +1,5 @@
 ---
-title: Buy me a beer
+title: Invitame a una cerveza
 image: "/uploads/products/beer/5.jpg"
 images:
 - image: "/uploads/products/beer/2.jpg"
@@ -8,13 +8,13 @@ images:
 - image: "/uploads/products/beer/1.jpg"
 variant_type: size
 variants:
-- name: half-a-pint
+- name: media-pinta
   price: 2.75
   sku: beerhalfapint
-- name: pint
+- name: pinta
   price: 4.25
   sku: beerpint
-weight: 3
+order_number: 2
 ---
 
 I like beer a lot! IPA, Guinness, Stout, craft beers... and I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
