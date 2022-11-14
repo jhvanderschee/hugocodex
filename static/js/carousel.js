@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const ele = carousel.querySelector('ul');
       const scrolllength = carousel.querySelector('ul li:nth-child(2)').offsetLeft - carousel.querySelector('ul li:nth-child(1)').offsetLeft;
-      const amountvisible = Math.round(ele.offsetWidth/scrolllength)-1;
+      const amountvisible = Math.round(ele.offsetWidth/scrolllength);
       const bullets = carousel.querySelectorAll('ol li');
       const nextarrow = carousel.querySelector('.next');
       const prevarrow = carousel.querySelector('.prev');
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
       prevarrow.style.display = 'block';
       ele.scrollLeft = 0;
       bullets[0].classList.add('selected');
-      var removeels = carousel.querySelectorAll('ol li:nth-last-child(-n + '+(amountvisible)+')');
+      var removeels = carousel.querySelectorAll('ol li:nth-last-child(-n + '+(amountvisible-1)+')');
       removeels.forEach(function(removeel) {
           removeel.remove();
        });
