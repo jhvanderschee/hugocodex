@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
       //setInterval for autoplay
       if(carousel.getAttribute('duration')) {
         setInterval(function(){ 
-          if (ele.classList.contains('interacted')==false) {
+          if (ele != document.querySelector(".carousel:hover ul") && ele.classList.contains('interacted')==false) {
             nextarrow.click();
           }
         }, carousel.getAttribute('duration'));
