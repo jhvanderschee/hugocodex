@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const ele = carousel.querySelector('ul');
       const scrolllength = carousel.querySelector('ul li:nth-child(2)').offsetLeft - carousel.querySelector('ul li:nth-child(1)').offsetLeft;
-      const amountvisible = Math.round(ele.offsetWidth/scrolllength);
+      const amountvisible = Math.round(ele.offsetWidth/carousel.querySelector('ul li:nth-child(1)').offsetWidt);
       const bullets = carousel.querySelectorAll('ol li');
       const nextarrow = carousel.querySelector('.next');
       const prevarrow = carousel.querySelector('.prev');
@@ -15,10 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
       prevarrow.style.display = 'block';
       ele.scrollLeft = 0;
       bullets[0].classList.add('selected');
-      var removeels = carousel.querySelectorAll('ol li:nth-last-child(-n + '+(amountvisible-1)+')');
-      removeels.forEach(function(removeel) {
+      if(amountvisible>1) {
+        var removeels = carousel.querySelectorAll('ol li:nth-last-child(-n + '+(amountvisible-1)+')');
+        removeels.forEach(function(removeel) {
           removeel.remove();
-       });
+        });
+      }
 
       const setSelected = function() {
           bullets.forEach(function(bullet) {
@@ -52,40 +54,44 @@ document.addEventListener('DOMContentLoaded', function() {
               carousel.querySelector('ol li:last-child a').click();
           }
       }
+      
+      const setInteracted = function() {
+        ele.classList.add('interacted');
+      }
           
       // Attach the handlers
       ele.addEventListener("scroll", debounce(setSelected));
+      ele.addEventListener("touchstart", setInteracted);
+      ele.addEventListener('keydown', function (e){
+          if(e.key == 'ArrowLeft') ele.classList.add('interacted');
+          if(e.key == 'ArrowRight') ele.classList.add('interacted');
+      });
+
       nextarrow.addEventListener("click", nextSlide);
+      nextarrow.addEventListener("mousedown", setInteracted);
+      nextarrow.addEventListener("touchstart", setInteracted);
+
       prevarrow.addEventListener("click", prevSlide);
+      prevarrow.addEventListener("mousedown", setInteracted);
+      prevarrow.addEventListener("touchstart", setInteracted);
+
       bullets.forEach(function(bullet) {
-          bullet.querySelector('a').addEventListener('click', scrollTo);
+        bullet.querySelector('a').addEventListener('click', scrollTo);
+        bullet.addEventListener("mousedown", setInteracted);
+        bullet.addEventListener("touchstart", setInteracted);
       });
 
       //setInterval for autoplay
       if(carousel.getAttribute('duration')) {
-          setInterval(function(){ 
-          if (ele != document.querySelector(".carousel:hover ul") && !carousel.classList.contains('interacted')) {
-              nextarrow.click();
+        setInterval(function(){ 
+          if (ele.classList.contains('interacted')==false) {
+            nextarrow.click();
           }
-          }, carousel.getAttribute('duration'));
+        }, carousel.getAttribute('duration'));
       }
-  
+    
+    
   }); //end foreach
-
-  document.addEventListener('keydown', function (e){
-      var elements = document.querySelectorAll('.carousel');
-
-      if(e.key == 'ArrowLeft') {
-          elements.forEach( function(element) {
-              element.querySelector('.prev').click();
-          });
-      }
-      if(e.key == 'ArrowRight') {
-          elements.forEach( function(element) {
-              element.querySelector('.next').click();
-          });
-      }
-  });
 
 }); //end onload
 
