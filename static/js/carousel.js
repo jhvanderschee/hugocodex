@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   carousels.forEach(function( carousel ) {
 
       const ele = carousel.querySelector('ul');
-      const scrolllength = carousel.querySelector('ul li:nth-child(2)').offsetLeft - carousel.querySelector('ul li:nth-child(1)').offsetLeft;
-      const amountvisible = Math.round(ele.offsetWidth/ele.querySelector('li').offsetWidth);
+      const amountvisible = Math.round(ele.offsetWidth/ele.querySelector('li:nth-child(1)').offsetWidth);
       const bullets = carousel.querySelectorAll('ol li');
       const slides = carousel.querySelectorAll('ul li');
       const nextarrow = carousel.querySelector('.next');
@@ -15,15 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
       nextarrow.style.display = 'block';
       prevarrow.style.display = 'block';
       ele.scrollLeft = 0;
-      slides[0].classList.add('selected');  
       bullets[0].classList.add('selected');
+      slides[0].classList.add('selected');
       if(amountvisible>1) {
         var removeels = carousel.querySelectorAll('ol li:nth-last-child(-n + '+(amountvisible-1)+')');
         removeels.forEach(function(removeel) {
           removeel.remove();
         });
       }
-    
+
       const setSelected = function() {
           bullets.forEach(function(bullet) {
              bullet.classList.remove('selected');
@@ -31,11 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
           slides.forEach(function(slide) {
              slide.classList.remove('selected');
           });
-          var nthchild = (Math.round((ele.scrollLeft/scrolllength)+1));
-          carousel.querySelector('ol li:nth-child('+nthchild+')').classList.add('selected');  
+          const scrolllength = carousel.querySelector('ul li:nth-child(2)').offsetLeft - carousel.querySelector('ul li:nth-child(1)').offsetLeft;
+          const nthchild = (Math.round((ele.scrollLeft/scrolllength)+1));
+          carousel.querySelector('ol li:nth-child('+nthchild+')').classList.add('selected'); 
           carousel.querySelector('ul li:nth-child('+nthchild+')').classList.add('selected'); 
           if(carousel.parentElement.parentElement.querySelector('.dynamictitle')) {
-              var title = carousel.querySelector('ul li:nth-child('+nthchild+') img').getAttribute('title'); 
+              const title = carousel.querySelector('ul li:nth-child('+nthchild+') img').getAttribute('title'); 
               if(title) carousel.parentElement.parentElement.querySelector('.dynamictitle').innerHTML = title;
           }
       }
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const setInteracted = function() {
         ele.classList.add('interacted');
       }
-      
+          
       // Attach the handlers
       ele.addEventListener("scroll", debounce(setSelected));
       ele.addEventListener("touchstart", setInteracted);
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
           if(e.key == 'ArrowLeft') ele.classList.add('interacted');
           if(e.key == 'ArrowRight') ele.classList.add('interacted');
       });
-    
+
       nextarrow.addEventListener("click", nextSlide);
       nextarrow.addEventListener("mousedown", setInteracted);
       nextarrow.addEventListener("touchstart", setInteracted);
@@ -109,20 +109,20 @@ document.addEventListener('DOMContentLoaded', function() {
 * @param  {Function} fn The function to debounce
 */
 function debounce (fn) {
-  // Setup a timer
-  let timeout;
-  // Return a function to run debounced
-  return function () {
-    // Setup the arguments
-    let context = this;
-    let args = arguments;
-    // If there's a timer, cancel it
-    if (timeout) {
-      window.cancelAnimationFrame(timeout);
-    }
-    // Setup the new requestAnimationFrame()
-    timeout = window.requestAnimationFrame(function () {
-      fn.apply(context, args);
-    });
-  };
+// Setup a timer
+let timeout;
+// Return a function to run debounced
+return function () {
+  // Setup the arguments
+  let context = this;
+  let args = arguments;
+  // If there's a timer, cancel it
+  if (timeout) {
+    window.cancelAnimationFrame(timeout);
+  }
+  // Setup the new requestAnimationFrame()
+  timeout = window.requestAnimationFrame(function () {
+    fn.apply(context, args);
+  });
+};
 }
