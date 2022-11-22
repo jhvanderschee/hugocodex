@@ -1,11 +1,11 @@
 menu:
-  - title: Getting started
-    url: /getting-started/
-  - title: Add-ons
-    url: /add-ons/
-  - title: Blog
-    url: /blog/
-  - title: About
-    url: /about/
-  - title: Donate
-    url: /donate/
+- title: Add-ons
+  url: /add-ons/
+- title: Getting started
+  url: /getting-started/
+- title: Blog
+  url: /blog/
+- title: About
+  url: /about/
+- title: Donate
+  url: /donate/
