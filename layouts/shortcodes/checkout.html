@@ -61,7 +61,7 @@
                         <textarea name="message"></textarea>
                     </div>
 
-                    <div class="submitbutton"><a href="{{ with .Site.GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}" class="gray">{{ i18n "back to cart" }}</a><input type="submit" value="{{ i18n "Pay" }}" onclick="setOrderNumber(this.parentNode.parentNode);" /></div>
+                    <div class="submitbutton"><a href="{{ with .Site.GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}" class="gray">{{ i18n "back to cart" }}</a><input type="submit" value="{{ i18n `Proceed to payment` }}" onclick="setOrderNumber(this.parentNode.parentNode);" /></div>
 
                 </form>
                 <div>
