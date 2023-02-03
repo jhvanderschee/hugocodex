@@ -5,9 +5,9 @@ date: 2023-02-03
 
 To get analytics in a Hugo Jamstack website, you can use one of the following approaches:
 
-1. Third-party analytics tools such as Google Analytics, Mixpanel, or Piwik. These tools provide a tracking code that you can embed in your JAMstack website to collect user behavior data.
-1. Custom server-side tracking: You can use a serverless function to track user behavior data and store it in a database.
-1. Use an all-in-one service provider.
+- Third-party analytics tools such as Google Analytics, Mixpanel, or Piwik. These tools provide a tracking code that you can embed in your JAMstack website to collect user behavior data.
+- Custom server-side tracking: You can use a serverless function to track user behavior data and store it in a database.
+- Use an all-in-one service provider.
 
 It should be noted that all three options have their downsides. 
 
