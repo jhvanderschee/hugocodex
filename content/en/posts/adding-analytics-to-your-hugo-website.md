@@ -11,15 +11,15 @@ To get analytics in a Hugo Jamstack website, you can use one of the following ap
 
 It should be noted that all three options have their downsides. 
 
-## Third-party analytics
+### Third-party analytics
 
 The first solution may appear free, but is most likely breaking the GDPR law. The best is to use a paid privacy-friendly solution.
 
-## Server-side analytics
+### Server-side analytics
 
 The second solution: server-side tracking, requires you to set up a traditional server (such as a LAMP or MEAN stack) to collect and process analytics data. It will require you to program the analytics solution from scratch or install an open-source solution. 
 
-## An all-in-one service provider
+### An all-in-one service provider
 
 The third option is an all-in-one service provider, that includes analytics. This option will most likely cost you money. There are several all-in-one service providers, like Netlify and CloudCannon. Netlify costs 9 dollar per website per month (just for the analytics). CloudCannon has (very limited) integrated usage statistics, but starts at 45 dollar per month.
 
