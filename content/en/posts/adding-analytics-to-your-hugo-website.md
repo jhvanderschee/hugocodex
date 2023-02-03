@@ -21,6 +21,6 @@ The second solution: server-side tracking, requires you to set up a traditional 
 
 ### An all-in-one service provider
 
-The third option is an all-in-one service provider, that includes analytics. This option will most likely cost you money. There are several all-in-one service providers, like [Netlify](https://www.netlify.com/) and [CloudCannon](https://cloudcannon.com/). Netlify costs 9 dollar per website per month (just for the analytics). CloudCannon has (very limited) integrated usage statistics, but starts at 45 dollar per month.
+The third option is an all-in-one service provider, that includes analytics. This option will most likely cost you money. There are several all-in-one service providers, like [Netlify](https://www.netlify.com/) and [CloudCannon](https://cloudcannon.com/). Netlify costs 9 dollar per website per month (just for the analytics). CloudCannon has (very limited) integrated usage statistics and starts at 45 dollar per month.
 
 Note that I run a LOT of Hugo websites. I have set up my own all-in-one service JUST for Hugo websites. It is a fixed-fee one-stop-shop that includes analytics. It shows you traffic and hits per month and per day. More info? Check out [cms.usecue.com](https://cms.usecue.com/)!
