@@ -17,7 +17,7 @@ The first solution may appear free, but is most likely breaking the GDPR law. Th
 
 ### Server-side analytics
 
-The second solution: server-side tracking, requires you to set up a traditional server (such as a LAMP or MEAN stack) to collect and process analytics data. It will require you to program the analytics solution from scratch or install an open-source solution. A good option is to install the good (but old) [AWstats](https://www.awstats.org/).
+The second solution: server-side tracking, requires you to set up a traditional server (such as a LAMP or MEAN stack) or serverless functions to collect and process analytics data. It will require you to program the analytics yourself or install an open-source solution. A good option is to install the good (but old) [AWstats](https://www.awstats.org/).
 
 ### An all-in-one service provider
 
