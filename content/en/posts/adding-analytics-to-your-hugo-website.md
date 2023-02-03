@@ -1,5 +1,6 @@
 ---
 title: Adding analytics to your Hugo website
+date: 2023-02-03
 ---
 
 To get analytics in a Hugo Jamstack website, you can use a combination of the following approaches:
