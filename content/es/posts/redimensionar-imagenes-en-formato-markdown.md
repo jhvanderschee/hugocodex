@@ -1,6 +1,6 @@
 ---
-title: 'Redimensionar imágenes en formato markdown'
-date: '2022-04-08'
+title: Redimensionar imágenes en formato markdown
+date: "2022-04-08"
 ---
 Así como Mr.Hugo ha estado construyendo sitios Web Wordpress hasta 2015, Don Hugo ha estado construyendo sitios Web principalmente con Drupal hasta 2020.
 
@@ -9,7 +9,7 @@ Algunas cosas de Drupal me parecían muy útiles. Una de ellas era su capacidad 
 
 Cuando empezamos a usar Hugo en el verano de 2022 pudimos comprobar que Hugo podía redimensionar las imágenes en el tiempo de construcción (_on build time_) del website. Era necesario que el comando para hacer eso fuera escrito bien fuera en forma de _shortcode_ o como parte del diseño o _layout_ .
 
-A pesar de que el uso de _shortcodes_ representaban un paso en la dirección acertada, editores _típicos_ (como el que usa el gestor de contenidos o CMS que promovemos [cms.usecue.com](https://cms.usecue.com) ) creaban imágenes sin redimensionar. Pero... cuando vimos la respuesta que BEP daba [esta respuesta](https://discourse.gohugo.io/t/is-this-possible-with-hugo/38089/6?u=jhvanderschee) a una pregunta aparentemente no relacionada con la cuestión, nos dimos cuenta de que Hugo puede redimensionar  imágenes en formato markdown estándar gracias a los llamados _render hooks_! De immediato navegamos por la documentación y creamos un _hook_ para ser añadido en el proyecto que teníamos entonces entre manos ...  y funcionó! 
+A pesar de que el uso de _shortcodes_ representaban un paso en la dirección acertada, editores _típicos_ (como el que usa el gestor de contenidos o CMS que promovemos [cms.usecue.com](https://cms.usecue.com) ) creaban imágenes sin redimensionar. Pero... cuando vimos la respuesta que BEP daba [esta respuesta](https://discourse.gohugo.io/t/is-this-possible-with-hugo/38089/6?u=jhvanderschee) a una pregunta aparentemente no relacionada con la cuestión, nos dimos cuenta de que Hugo puede redimensionar  imágenes en formato markdown estándar gracias a los llamados _render hooks_! De immediato navegamos por la documentación y creamos un _hook_ para ser añadido en el proyecto que teníamos entonces entre manos ...  y funcionó !!! 
 
 El fichero se llama  '/layouts/_default/_markup/render-image.html'y contiene el siguiente código fuente:
 
