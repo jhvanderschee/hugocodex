@@ -23,4 +23,4 @@ This is a [true gem](https://discourse.gohugo.io/t/breadcrumb-gives-error-when-t
     {{- end }}
   </nav>
 {{- end }}
-```git pul
+```
