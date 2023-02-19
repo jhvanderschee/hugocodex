@@ -59,4 +59,4 @@ Step 4. Make sure the bottom of your layout document looks like this:
 </html>
 ```
 
-Enjoy the _future-dates_ functionality!
+Enjoy the _future-dates_ functionality !
