@@ -1,9 +1,8 @@
 ---
 title: Future dates
-date: 2022-06-24
+date: "2022-06-24"
 draft: true
 ---
-
 ## Introduction
 
 In case of and event listing, you want to show only future dates. This is hard, because Hugo only knows what day it is on rebuild, which can be days or months ago. Therefore we need a javascript solution to to solve this problem.
@@ -60,4 +59,4 @@ Step 4. Make sure the bottom of your layout document looks like this:
 </html>
 ```
 
-Enjoy the _future-dates_ functionality !
+Enjoy the _future-dates_ functionality!
