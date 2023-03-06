@@ -7,40 +7,16 @@ Breadcrumb paths are a single line of links (often placed above the title) that 
 
 ### How it works
 
-This code looks at the path of the current page to destill the breadcrumb path. This approach has a small footprint, as only the current page has to be consulted during the build of the breadcrumbs. Additionally, this code does not require the breadcrumbs to be explicitly defined in the front matter / YAML. This means the path can be defined by your file and folder structure or by your (native Hugo) path variables. The following code looks at the permalink and translates it into a breadcrumb/path.
-
-[expand]
+This code looks at the Ancestors variable to create the breadcrumb path. This approach has a small footprint. Additionally, this code does not require the breadcrumbs to be explicitly defined in the front matter / YAML.
 
 ```
 <ul id="breadcrumbs">
-    <li><a href="/">Home</a></li>
-    {{- $.Scratch.Set "url" "" -}}
-    {{- range (split .RelPermalink "/") -}}
-        {{- if (gt (len .) 0) -}}    
-            {{- $.Scratch.Set "isPage" "false" -}}
-            {{- $.Scratch.Add "url" (print "/" . ) -}}
-            {{- if $.Site.GetPage (print . ".md") -}}
-                {{- with $.Site.GetPage (print . ".md") -}}
-                    {{- if .IsPage -}}
-                        {{- $.Scratch.Set "isPage" "true" -}}
-                    {{- end -}}
-                {{- end -}}
-            {{- end -}}
-            {{- if eq ($.Scratch.Get "isPage") "true" -}}
-                {{- with $.Site.GetPage (print . ".md") -}}
-                    <li><a href="{{ $.Scratch.Get `url` }}">{{ .Title }}</a></li>
-                {{- end -}}
-            {{- else -}}
-                <li><a href="{{ $.Scratch.Get `url` }}">{{ humanize . }}</a></li>
-            {{- end -}}
-        {{- end -}}
-    {{- end -}}
+    {{- range .Ancestors.Reverse }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{- end }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 </ul>
 ```
-
-Note that I have added an example on how to manually replace/change certain titles (here: posts > blog).
-
-[/expand]
 
 ### Installation
 
