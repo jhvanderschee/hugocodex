@@ -16,7 +16,7 @@ This code looks at the path of the current page to destill the breadcrumb path. 
     {{- range .Ancestors.Reverse }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{- end }}
-    <li><a href="{{ .RelPermalink }}" aria-current="location">{{ .Title }}</a></li>
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 </ul>
 ```
 

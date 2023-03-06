@@ -12,6 +12,6 @@ This is a [true gem](https://discourse.gohugo.io/t/breadcrumb-gives-error-when-t
     {{- range .Ancestors.Reverse }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{- end }}
-    <li><a href="{{ .RelPermalink }}" aria-current="location">{{ .Title }}</a></li>
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 </ul>
 ```
