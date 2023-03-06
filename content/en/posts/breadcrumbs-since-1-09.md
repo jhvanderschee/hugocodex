@@ -16,4 +16,4 @@ This is a [true gem](https://discourse.gohugo.io/t/breadcrumb-gives-error-when-t
 </ul>
 ```
 
-*UPDATED 2023-03-06*
+*UPDATED 2023-03-06: You can find this code now also in the [breadcrumbs add-on](/add-ons/breadcrumbs/).*
