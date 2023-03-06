@@ -17,4 +17,4 @@ To check if it has children we simply check the length of the .Pages variable:
 {{ if len .Pages }}haschildren{{ end }}
 ```
 
-Hopefully you like this [new approach](/add-ons/nested-menu/)!
+Hopefully you like this new approach for a [nested auto-collapsing menu](/add-ons/nested-menu/)!
