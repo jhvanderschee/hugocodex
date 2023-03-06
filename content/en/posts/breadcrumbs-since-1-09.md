@@ -8,19 +8,14 @@ This is a [true gem](https://discourse.gohugo.io/t/breadcrumb-gives-error-when-t
 > Generating a trail of breadcrumbs became much simpler with Hugo v0.109.0 and later. Use the .Ancestors method on .Page.
 
 ```
-{{- with .Ancestors.Reverse }}
-  <nav>
-    {{- $p := . | append $ }}
-    {{- range $k, $_ := $p }}
-      {{- if $k }}
-        <span class="breadcrumb-separator">&raquo;</span>
-      {{- end }}
-      {{- $ariaCurrent := "true" }}
-      {{- if eq $k (sub (len $p) 1) }}
-        {{- $ariaCurrent = "page" }}
-      {{- end }}
-      <a aria-current="{{ $ariaCurrent }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+<ul id="breadcrumbs">
+    {{- range .Ancestors.Reverse }}
+        <li class="">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
     {{- end }}
-  </nav>
-{{- end }}
+    <li>
+        <a href="{{ .RelPermalink }}" aria-current="location">{{ .Title }}</a>
+    </li>
+</ul>
 ```
