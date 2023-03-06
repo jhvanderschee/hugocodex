@@ -10,12 +10,8 @@ This is a [true gem](https://discourse.gohugo.io/t/breadcrumb-gives-error-when-t
 ```
 <ul id="breadcrumbs">
     {{- range .Ancestors.Reverse }}
-        <li class="">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{- end }}
-    <li>
-        <a href="{{ .RelPermalink }}" aria-current="location">{{ .Title }}</a>
-    </li>
+    <li><a href="{{ .RelPermalink }}" aria-current="location">{{ .Title }}</a></li>
 </ul>
 ```
