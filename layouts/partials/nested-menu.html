@@ -10,19 +10,11 @@ ul.nestedmenu li > a {color: #444444!important;}
 ul.nestedmenu li.active > a {color: rgb(247, 44, 114)!important;}
 </style>
 
+{{ .Scratch.Set "ancestors" .Ancestors }}
+{{ .Scratch.Set "curRelPermalink" .RelPermalink }}
+
 {{ with .Site.GetPage (print "/" .Section "/_index.md") }}
-
-    {{ $.Scratch.Set "haschildren" "" }}
-    {{ range .Pages }}
-        {{ $urlparts := split (print .File.Dir .File.BaseFileName) "/" }}
-        {{ range $index, $value := (first (len $urlparts) $urlparts) }}
-            {{ $.Scratch.Add "haschildren" (print " " (delimit (first $index $urlparts) "/") "/") }}
-        {{ end }}
-    {{ end }}
-    {{ $.Scratch.Set "haschildren" (uniq (split ($.Scratch.Get "haschildren") " ")) }}
-
     <ul class="nestedmenu">
-        {{ partial "nested-menu-partial.html" (dict "context" . "pagecontext" $.Page "regularpages" .Pages) }}
+        {{ partial "nested-menu-partial.html" (dict "curRelPermalink" ($.Scratch.Get "curRelPermalink") "ancestors" ($.Scratch.Get "ancestors") "context" . ) }}
     </ul>
-
 {{ end }}
