@@ -22,7 +22,7 @@ ul.nestedmenu li.active > a {color: rgb(247, 44, 114)!important;}
     {{ $.Scratch.Set "haschildren" (uniq (split ($.Scratch.Get "haschildren") " ")) }}
 
     <ul class="nestedmenu">
-        {{ partial "nested-menu-partial.html" (dict "context" . "pagecontext" $.Page "regularpages" .RegularPages) }}
+        {{ partial "nested-menu-partial.html" (dict "context" . "pagecontext" $.Page "regularpages" .Pages) }}
     </ul>
 
 {{ end }}
