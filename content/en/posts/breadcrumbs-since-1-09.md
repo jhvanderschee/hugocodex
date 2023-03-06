@@ -15,3 +15,5 @@ This is a [true gem](https://discourse.gohugo.io/t/breadcrumb-gives-error-when-t
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 </ul>
 ```
+
+*UPDATED 2023-03-06*
