@@ -9,8 +9,6 @@ Breadcrumb paths are a single line of links (often placed above the title) that 
 
 This code looks at the Ancestors variable to create the breadcrumb path. This approach has a small footprint. Additionally, this code does not require the breadcrumbs to be explicitly defined in the front matter / YAML.
 
-[expand]
-
 ```
 <ul id="breadcrumbs">
     {{- range .Ancestors.Reverse }}
@@ -19,10 +17,6 @@ This code looks at the Ancestors variable to create the breadcrumb path. This ap
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 </ul>
 ```
-
-Note that I have added an example on how to manually replace/change certain titles (here: posts > blog).
-
-[/expand]
 
 ### Installation
 
