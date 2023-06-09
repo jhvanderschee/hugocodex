@@ -1,7 +1,6 @@
 ---
-title: 'Form builder'
+title: Form builder
 ---
-
 ### Introduction
 
 Forms are the most important parts of a websites. They range from simple contact forms to forms that handle complete webshop orders or event sign-ups. WordPress has extremely popular form solutions, like ‘Contact Form 7’ and ‘Gravity Forms’, but Hugo does not. To fill this void I created a basic form builder for Hugo.
@@ -55,7 +54,7 @@ forms:
 And add this to your layout:
 
 ```
-{{ if (index .Page.Params.forms 0) }}
+{{ if (index page.Params.forms 0) }}
   {{ partial "form.html" (dict "context" . "form" 0) }}
 {{ end }}
 ```
@@ -87,7 +86,7 @@ Step 2. Download the file [form.html](https://github.com/jhvanderschee/hugocodex
 Step 3. Save the file in the ‘layouts/partials’ directory of your project  
 Step 4. Add the following line to your layout on the place where you want the form to appear:  
 ```
-{{ if (index .Page.Params.forms 0) }}
+{{ if (index page.Params.forms 0) }}
   {{ partial "form.html" (dict "context" . "form" 0) }}
 {{ end }}
 ```
