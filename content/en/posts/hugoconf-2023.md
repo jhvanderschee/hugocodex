@@ -2,11 +2,11 @@
 title: HugoConf 2023
 date: "2023-09-19"
 ---
-After last year’s successful HugoConf, with 32 speakers and more than 500 registered attendees from 49 countries, we had so much fun producing and taking part that we decided to do it again!
+After last year’s successful HugoConf, with 32 speakers and more than 500 registered attendees from 49 countries, we at CloudCannon had so much fun producing and taking part that they decided to do it again!
 
 Since its first public version, released back in 2013, Hugo has become an incredibly popular static site generator, most well known for its build speeds. Hugo is also the go-to tool of many of CloudCannon’s Partners and Experts, who bring live visual editing to their non-technical clients with the help of our CMS.
 
-When we first added Hugo support to our CMS we knew that there was a dedicated community of developers who felt strongly about Hugo, its lightning build speeds, and its ability to create lean and performant static websites. We followed up by releasing Bookshop support for live visual editing within Hugo, which we [debuted](https://www.youtube.com/watch?v=BSFDSXU3E-w) at last year’s HugoConf.
+When CloudCannon first added Hugo support to our CMS they knew that there was a dedicated community of developers who felt strongly about Hugo, its lightning build speeds, and its ability to create lean and performant static websites. CloudCannon followed up by releasing Bookshop support for live visual editing within Hugo, which they [debuted](https://www.youtube.com/watch?v=BSFDSXU3E-w) at last year’s HugoConf.
 
 ## Save the date: Thursday 21 September
 
