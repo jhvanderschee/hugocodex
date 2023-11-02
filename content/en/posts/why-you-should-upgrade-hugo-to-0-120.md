@@ -7,9 +7,9 @@ When you are building multilingual websites and you are using a CMS then you wan
 ```
 permalinks:
   page:
-	yoursection: /xyz/:filename
+    yoursection: /xyz/:filename
   section:
-	yoursection: /xyz/
+    yoursection: /xyz/
 ```
 
 Looks great right? Well worth the upgrade if you ask me.
