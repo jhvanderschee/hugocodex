@@ -12,4 +12,4 @@ permalinks:
     yoursection: /xyz/
 ```
 
-Awesome right? Well worth the upgrade if you ask me.
+Awesome right? Now you do not have to bother your clients with the URL of the list page (if you make your front matter available for editing in your CMS). Well worth the upgrade if you ask me.
