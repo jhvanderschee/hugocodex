@@ -12,4 +12,4 @@ permalinks:
     yoursection: /xyz/
 ```
 
-Looks great right? Well worth the upgrade if you ask me.
+Awesome right? Well worth the upgrade if you ask me.
