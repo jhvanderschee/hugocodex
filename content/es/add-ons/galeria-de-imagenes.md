@@ -21,7 +21,7 @@ Paso 1. Descarga el fichero  [image-gallery.html](https://raw.githubusercontent.
 Paso 2. Guárdalo en el directorio 'layouts/partials'.  
 Paso 3. Añade la siguiente línea a tu plantilla en el lugar donde quieres que aparezca tu galería de imágenes: 
 ```
-{{ partial "image-gallery" (dict "context" . "gallery_dir" "album") }}
+{{ partial "image-gallery" (dict "context" . "gallery_dir" "/album") }}
 ```
 
 ### Instalación del shortcode 
@@ -31,5 +31,5 @@ Paso2. Guárdalo en el directorio 'layouts/shortcodes'.
 Paso3. Añade la siguiente línea  al fichero 'markdown' correspondiente a tu contenido, en el lugar donde quieres que aparezca tu galería de imágenes:  
 
 ```
-{{</* image-gallery gallery_dir="album" */>}}
+{{</* image-gallery gallery_dir="/album" */>}}
 ```
