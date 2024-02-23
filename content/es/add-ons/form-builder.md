@@ -1,15 +1,17 @@
 ---
 title: Form builder
 ---
-### Introduction
+### Introducción
 
-Forms are the most important parts of a websites. They range from simple contact forms to forms that handle complete webshop orders or event sign-ups. WordPress has extremely popular form solutions, like ‘Contact Form 7’ and ‘Gravity Forms’, but Hugo does not. To fill this void I created a basic form builder for Hugo.
 
-### How it works
+Los formularios son de las partes más importantes de un sitio web. Abarcan desde simples formularios de contacto hasta formularios que gestionan pedidos completos de tiendas web o inscripciones a eventos. WordPress tiene soluciones de formularios muy populares, como 'Contact Form 7' y 'Gravity Forms', pero Hugo no. Para llenar este vacío hemos creado un constructor de formularios básico para Hugo.
 
-The form uses HTML5. The form can be submitted by CloudCannon or Netlify. The first only works on CloudCannon hosting. You can choose between showing placeholders in the inputs or labels above it. Two special fields are available: a field named ‘name’ (type ‘text’) will show ‘first name’ and ‘last name’ input boxes on one line. A field named ‘address’ (type ‘text’) will show ‘address’, ‘city’ and ‘postal code’ input boxes.
 
-To create a form, add the following code to the front matter of your page:
+### Cómo funciona
+
+El formulario utiliza HTML5. El formulario puede ser enviado por CloudCannon o Netlify. El primero sólo funciona en CloudCannon hosting. Puedes elegir entre mostrar marcadores de posición en las entradas o etiquetas encima. Hay dos campos especiales disponibles: un campo llamado 'nombre' (tipo 'texto') mostrará las casillas de entrada 'nombre' y 'apellido' en una línea. Un campo llamado "dirección" (tipo "texto") mostrará las casillas de entrada "dirección", "ciudad" y "código postal".
+
+Para crear un formulario, añade el siguiente código a la cabecera de tu página:
 
 ```
 ---
@@ -51,7 +53,7 @@ forms:
 ---
 ```
 
-And add this to your layout:
+Y a tu plantill/layout :
 
 ```
 {{ if (index page.Params.forms 0) }}
@@ -59,7 +61,7 @@ And add this to your layout:
 {{ end }}
 ```
 
-CloudCannon users should add the available options to their ‘config.yaml’ file to make the experience for content editors even smoother.
+Quienes usen CloudCannon pueden  habilitar las opciones en su ‘config.yaml’ para enriquecer la experiencia de la edición de contenido.
 
 ```
 params: 
@@ -78,6 +80,7 @@ params:
 ```
 
 Disclaimer: Note that there is no select (dropdown) support (yet). Also note that browser support is not perfect. The native HTML5 date picker is not available in every browser and that HMTL5 validation does not work in IE9, Safari for desktop and Opera Mini.
+Disclaimer: Nótese que no se soporta (aún) selección  (dropdown)
 
 ### Installation
 
