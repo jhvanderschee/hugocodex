@@ -3,3 +3,5 @@ resources/
 .hugo_build.lock
 
 babel-git-hugocodex.org
+
+sandbox/
