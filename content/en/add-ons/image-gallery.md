@@ -19,7 +19,7 @@ Step 2. Save the file in the ‘layouts/partials directory of your project
 Step 3. Add the following line to your layout on the place where you want the image gallery to appear:  
 
 ```
-{{ partial "image-gallery" (dict "context" . "gallery_dir" "album") }}
+{{ partial "image-gallery" (dict "context" . "gallery_dir" "/album") }}
 ```
 
 ### Shortcode installation
@@ -29,5 +29,5 @@ Step 2. Save the file in the ‘layouts/shortcodes directory of your project
 Step 3. Add the following line to your content on the place where you want the image gallery to appear:  
 
 ```
-{{</* image-gallery gallery_dir="album" */>}}
+{{</* image-gallery gallery_dir="/album" */>}}
 ```
