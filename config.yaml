@@ -4,7 +4,6 @@ languageCode: "en-us"
 
 disableKinds: 
   - taxonomy
-  - taxonomyTerm
   - term
 
 markup:
