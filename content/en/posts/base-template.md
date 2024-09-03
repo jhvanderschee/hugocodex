@@ -8,7 +8,6 @@ draft: true
 
 We are (always) improving the process/workflow. Now that we have learned the basics of: is it time for a more elaborated Templating / Layouts strategy ?
 
-
 ## A first Templating approach 
 
 When speaking about Hugo Layouts : you tipically simply define
@@ -55,4 +54,4 @@ Last but not least: did you knew that you can override a given block in a specif
 
 [Mike 's video tutorial](https://gohugo.io/templates/base/) in official Hugo Doc shows us how to in a more detailed and visual way.
 
-< have fun with Hugo :-) / >
+have fun with Hugo
