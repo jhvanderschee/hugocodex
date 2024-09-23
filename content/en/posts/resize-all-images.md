@@ -73,10 +73,12 @@ Now we have resized images in our layout. But what about the content images? For
 ... and put this logic inside:
 
 ```
-{{ if (resources.GetMatch .Destination) }}
-  <img src="
-  {{ ((resources.GetMatch .Destination).Fit `600x600 jpg Smart q50`).RelPermalink | safeURL }}
-  " alt="{{ .Text }}" />
+{{ with (resources.GetMatch .Destination) }}
+    {{ if ne .MediaType.SubType "svg" }}
+        <img src="{{ (.Resize `900x jpg Smart q50`).RelPermalink | safeURL }}" alt="{{ $.Text }}" />
+    {{ else }}
+        <img src="{{ .RelPermalink | safeURL }}" alt="{{ $.Text }}" />
+    {{ end }}
 {{ end }}
 ```
 
