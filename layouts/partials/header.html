@@ -7,7 +7,7 @@
     
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     {{ if ne .Layout "home" }}
-      <meta name="description" content="{{ .Summary }}">
+      <meta name="description" content="{{ .Summary | plainify }}">
     {{ else }}
       <meta name="description" content="{{ $.Site.Params.description }}">
     {{ end }}
@@ -17,7 +17,7 @@
     <meta property="og:type" content="article">
     {{ if .Params.image }}<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.image }}" />{{ end }}
     <meta property="og:site_name" content="{{ .Site.Title }}"/>
-    <meta property="og:description" content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ $.Site.Params.description }}{{ end }}"/>
+    <meta property="og:description" content="{{ if .Summary }}{{ .Summary | plainify }}{{ else }}{{ $.Site.Params.description }}{{ end }}"/>
 
     <link rel="shortcut icon" type="image/png" href="/img/icon-192x192.png">
     <link rel="shortcut icon" sizes="196x196" href="/img/icon-192x192.png">
