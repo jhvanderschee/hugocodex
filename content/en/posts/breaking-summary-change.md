@@ -1,5 +1,5 @@
 ---
-title: Breaking Summary change
+title: Breaking summary change
 date: 2024-10-10
 ---
 
