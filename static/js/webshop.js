@@ -247,7 +247,7 @@ function getCartTotal() {
 }
 
 func initAddons() {
-    if (localStorage.getItem("addons")) var cart = JSON.parse(localStorage.getItem("addons"));
+    if (localStorage.getItem("addons")) var addons = JSON.parse(localStorage.getItem("addons"));
         else var addons = new Array();
     return addons;
 }
