@@ -33,10 +33,9 @@ function updateProductPrice(price) {
     }
 }
 
-function initCart() {
-    if (localStorage.getItem("cart")) var cart = JSON.parse(localStorage.getItem("cart"));
-        else var cart = new Array();
-    return cart;
+function initLocalStorageArray(name) {
+    if (localStorage.getItem(name)) return JSON.parse(localStorage.getItem(name));
+        else return new Array();
 }
 
 function updateCartCount() {
@@ -44,7 +43,7 @@ function updateCartCount() {
     // assumes itemcount look like 
     // <span class="itemcount">0</span>
 
-    var cart = initCart();
+    var cart = initLocalStorageArray("cart");
 
     var itemcount = 0;
     for (i = 0; i < cart.length; ++i) {
@@ -64,7 +63,7 @@ function addToCart(el) {
     // assumes execution onsubmit of a form where el is the form and the submit button (input[type="submit"]) looks like 
     // <input type="submit" data-url="" data-sku="" data-title="" data-varianttype="" data-variantname="" data-price="" data-image="" value="Add to cart" />
 
-    var cart = initCart();
+    var cart = initLocalStorageArray("cart");
 
     // increment quantity when sku exists
     var found = false;
@@ -99,7 +98,7 @@ function addToCart(el) {
 }
 
 function populateCart() {
-    var cart = initCart();
+    var cart = initLocalStorageArray("cart");
     var carttotal = 0;
 
     document.getElementById('shoppingcart').querySelector('tbody').innerHTML = '<tr><td colspan="6" style="text-align: center;">Your shopping cart is currently empty.</td></tr>';
@@ -125,7 +124,7 @@ function populateCart() {
 
 function removeFromCart(sku) {
     
-    var cart = initCart();
+    var cart = initLocalStorageArray("cart");
     for (i = 0; i < cart.length; ++i) {
         if(cart[i].sku == sku) {
             cart.splice(i, 1);
@@ -138,7 +137,7 @@ function removeFromCart(sku) {
 
 function updateQuantity(sku,quantity) {
     
-    var cart = initCart();
+    var cart = initLocalStorageArray("cart");
     for (i = 0; i < cart.length; ++i) {
         if(cart[i].sku == sku) {
             cart[i].quantity = parseInt(quantity);
@@ -209,7 +208,7 @@ function setOrderNumber(el) {
 
 function initCheckoutForm(el) {
 
-    var cart = initCart();
+    var cart = initLocalStorageArray("cart");
 
     // add order input (hidden)
     var newinput = document.createElement("input");
@@ -236,7 +235,7 @@ function getCartTotal() {
     
     // sum of prices in the cart
 
-    var cart = initCart();
+    var cart = initLocalStorageArray("cart");
     var carttotal = 0;
     if(cart.length) {
         for (i = 0; i < cart.length; ++i) {
@@ -246,19 +245,12 @@ function getCartTotal() {
     return carttotal;
 }
 
-func initAddons() {
-    if (localStorage.getItem("addons")) var addons = JSON.parse(localStorage.getItem("addons"));
-        else var addons = new Array();
-    return addons;
-}
-
-
 function getAddonTotal() {
     
     // sum of prices in the addons
 
     var addontotal = 0;
-    var addons = initAddons();
+    var addons = initLocalStorageArray("addons");
     for (i=0; i<addons.length; i++){
         addontotal = addontotal + parseFloat(addons[i].price);
     }
