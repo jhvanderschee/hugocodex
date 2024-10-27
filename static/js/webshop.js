@@ -33,24 +33,29 @@ function updateProductPrice(price) {
     }
 }
 
+function initCart() {
+    if (localStorage.getItem("cart")) var cart = JSON.parse(localStorage.getItem("cart"));
+        else var cart = new Array();
+    return cart;
+}
+
 function updateCartCount() {
     
     // assumes itemcount look like 
     // <span class="itemcount">0</span>
 
-    if(localStorage.getItem("cart")) {
-        var cart = JSON.parse(localStorage.getItem("cart"));
-        var itemcount = 0;
-        for (i = 0; i < cart.length; ++i) {
-            itemcount += cart[i].quantity;
-        }
+    var cart = initCart();
 
-        var elements = document.querySelectorAll('.itemcount'), i;
-        for (i = 0; i < elements.length; ++i) {
-            elements[i].innerHTML = itemcount;
-            if(itemcount == 0) elements[i].style.display = 'none';
-            else elements[i].style.display = 'initial';
-        }
+    var itemcount = 0;
+    for (i = 0; i < cart.length; ++i) {
+        itemcount += cart[i].quantity;
+    }
+
+    var elements = document.querySelectorAll('.itemcount'), i;
+    for (i = 0; i < elements.length; ++i) {
+        elements[i].innerHTML = itemcount;
+        if(itemcount == 0) elements[i].style.display = 'none';
+        else elements[i].style.display = 'initial';
     }
 }
 
@@ -59,8 +64,7 @@ function addToCart(el) {
     // assumes execution onsubmit of a form where el is the form and the submit button (input[type="submit"]) looks like 
     // <input type="submit" data-url="" data-sku="" data-title="" data-varianttype="" data-variantname="" data-price="" data-image="" value="Add to cart" />
 
-    if (localStorage.getItem("cart")) var cart = JSON.parse(localStorage.getItem("cart"));
-    else var cart = new Array();
+    var cart = initCart();
 
     // increment quantity when sku exists
     var found = false;
@@ -95,7 +99,7 @@ function addToCart(el) {
 }
 
 function populateCart() {
-    var cart = JSON.parse(localStorage.getItem("cart")), i;
+    var cart = initCart();
     var carttotal = 0;
 
     document.getElementById('shoppingcart').querySelector('tbody').innerHTML = '<tr><td colspan="6" style="text-align: center;">Your shopping cart is currently empty.</td></tr>';
@@ -121,7 +125,7 @@ function populateCart() {
 
 function removeFromCart(sku) {
     
-    var cart = JSON.parse(localStorage.getItem("cart")), i;
+    var cart = initCart();
     for (i = 0; i < cart.length; ++i) {
         if(cart[i].sku == sku) {
             cart.splice(i, 1);
@@ -134,7 +138,7 @@ function removeFromCart(sku) {
 
 function updateQuantity(sku,quantity) {
     
-    var cart = JSON.parse(localStorage.getItem("cart")), i;
+    var cart = initCart();
     for (i = 0; i < cart.length; ++i) {
         if(cart[i].sku == sku) {
             cart[i].quantity = parseInt(quantity);
@@ -205,7 +209,7 @@ function setOrderNumber(el) {
 
 function initCheckoutForm(el) {
 
-    var cart = JSON.parse(localStorage.getItem("cart")), i;
+    var cart = initCart();
 
     // add order input (hidden)
     var newinput = document.createElement("input");
@@ -232,7 +236,7 @@ function getCartTotal() {
     
     // sum of prices in the cart
 
-    var cart = JSON.parse(localStorage.getItem("cart")), i;
+    var cart = initCart();
     var carttotal = 0;
     if(cart.length) {
         for (i = 0; i < cart.length; ++i) {
@@ -242,12 +246,19 @@ function getCartTotal() {
     return carttotal;
 }
 
+func initAddons() {
+    if (localStorage.getItem("addons")) var cart = JSON.parse(localStorage.getItem("addons"));
+        else var addons = new Array();
+    return addons;
+}
+
+
 function getAddonTotal() {
     
     // sum of prices in the addons
 
     var addontotal = 0;
-    var addons = JSON.parse(localStorage.getItem("addons")), i;
+    var addons = initAddons();
     for (i=0; i<addons.length; i++){
         addontotal = addontotal + parseFloat(addons[i].price);
     }
@@ -264,20 +275,21 @@ function redirectToPayment(paymentlink) {
 }
 
 
-// init functions
-if(document.getElementById('variant')) updateBuyButton(document.getElementById('variant'));
-if(document.getElementById('shoppingcart')) populateCart();
-if(document.getElementById('checkout')) {
-    var form = document.getElementById('checkout').querySelector('form');
-    initCheckoutForm(form);
-    //populateMiniCart();
-    form.onchange({target: form});
+// init functions after DOM tree is loaded
+window.addEventListener('DOMContentLoaded', function() {
+    if(document.getElementById('variant')) updateBuyButton(document.getElementById('variant'));
+    if(document.getElementById('shoppingcart')) populateCart();
+    if(document.getElementById('checkout')) {
+        var form = document.getElementById('checkout').querySelector('form');
+        initCheckoutForm(form);
+        //populateMiniCart();
+        form.onchange({target: form});
+    }
+
+    updateCartCount();
+
+    var carttotal = getCartTotal();
+    var addontotal = getAddonTotal();
+    var paymenttotal = parseFloat(carttotal + addontotal).toFixed(2);
+    if(document.getElementById('paymenttotal')) document.getElementById('paymenttotal').innerHTML  = paymenttotal;
 }
-
-updateCartCount();
-
-
-var carttotal = getCartTotal();
-var addontotal = getAddonTotal();
-var paymenttotal = parseFloat(carttotal + addontotal).toFixed(2);
-if(document.getElementById('paymenttotal')) document.getElementById('paymenttotal').innerHTML  = paymenttotal;
