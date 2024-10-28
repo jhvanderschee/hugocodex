@@ -1,7 +1,6 @@
 ---
 title: Redimensionar todas las imágenes
 date: 2022-07-04
-draft: false
 ---
 
 {{< vimeo id="727145223" image="/uploads/resizeallimages.png" >}}
@@ -95,4 +94,4 @@ Además de mi charla, la HugoConf (edición 2022) albergó otras charlas interes
 - <a href="https://www.youtube.com/watch?v=JpxiKUHzoqM&t=30304s" target="_blank" class="no-lightbox">Shortcodes personalizados para ganar - Chris Griffing</a>
 - <a href="https://youtu.be/ACRN43SbF2g?t=23494" target="_blank" class="no-lightbox">Cómo lograr puntuaciones perfectas en Google Lighthouse usando Hugo - Scott Reilly</a>
 
-¡Feliz codificación!
+< Happy coding /> !
