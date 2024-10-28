@@ -1,42 +1,39 @@
 ---
-title: A more elaborated Templating / Layouts strategy ?
+title: ¿Una estrategia más elaborada de plantillas / diseños?
 date: 2024-02-26
-draft: true
 ---
 
-##  Context : templating / layouts approach
+## Contexto: enfoque de plantillas / diseños
 
-We are (always) improving the process/workflow. Now that we have learned the basics of: is it time for a more elaborated Templating / Layouts strategy ?
+Estamos (siempre) mejorando el proceso/flujo de trabajo. Ahora que hemos aprendido lo básico (veáse la sección 'Empezando'), ¿es momento para una estrategia de plantillas / diseños más elaborada?
 
+## Un primer enfoque de plantillas
 
-## A first Templating approach 
-
-When speaking about Hugo Layouts : you tipically simply define
+Cuando hablamos de diseños de Hugo: típicamente simplemente defines
 
 ```
-my-hugo-project
-|._ layouts/ Home (or index) html template
+mi-proyecto-hugo
+|._ layouts/ Home (o index) plantilla html
            |._ _default/single.html
            |. _/default/list.html
 ```
 
 Bien. Para empezar...
-El punto aqui es que tipicamente terminarias reutilizando codigo de esos... teniendo que copiar algunos snippets alrededor de estos 3 layouts 'starter' para un sitio web basico.
-Pero espera ... ¿qué pasa si el sitio web requiere más flexibilidad de plantillas? O ... el diseño general (interfaz de usuario / UI ~ estilo CSS) requiere algo más de complejidad?
+El punto aquí es que típicamente terminarías reutilizando código de esos... teniendo que copiar algunos fragmentos de código alrededor de estos 3 layouts 'iniciales' para un sitio web básico.
+Pero espera... ¿qué pasa si el sitio web requiere más flexibilidad de plantillas? O... ¿el diseño general (interfaz de usuario / UI ~ estilo CSS) requiere algo más de complejidad?
 
-## We can do better : hello baseof.html layout and 'blocks' to the rescue
+## Podemos hacerlo mejor: hola layout baseof.html y 'bloques' al rescate
 
-Let's improve our workflow by sketching some pseudocode :
+Mejoremos nuestro flujo de trabajo esbozando algo de pseudocódigo:
 
+* <header /> sección 'header'
+* baseof.html -> sección principal "contenido"
+    [bloque]
+* <footer /> -> sección "footer"
 
-* < header />             'header' section
-* baseof.html   ->  main "content' section 
-    [ block ]
-* < footer />   ->       "footer' section
+### Definición de bloque
 
-### Block definition
-
-Let's create a content block  :
+Creemos un bloque de contenido:
 
 ```
 {{ block "content" . }}
@@ -44,7 +41,7 @@ Let's create a content block  :
 {{ end }}
 ```
 
-Ahá. Now feel free to reuse it wherever you want in other templates (e.g. in the 'single.html' or 'list.html' ), by defining them following this syntax inside other layouts:
+Ahá. Ahora siéntete libre de reutilizarlo donde quieras en otras plantillas (por ejemplo, en 'single.html' o 'list.html'), definiéndolos siguiendo esta sintaxis dentro de otros diseños:
 
 ```
 {{ define "content" }}
@@ -52,11 +49,8 @@ Ahá. Now feel free to reuse it wherever you want in other templates (e.g. in th
 {{ end }}
 ```
 
-> NOTE: the context aka 'the dot'  '.' is required 
+> NOTA: el contexto, también conocido como 'el punto' '.', es necesario.
 
+[El video tutorial de Mike](https://gohugo.io/templates/base/) en la documentación oficial de Hugo lo explica de manera detallada. Puedes disfrutar de la explicación completa allí.
 
-
-
-[Mike 's video tutorial](https://gohugo.io/templates/base/) on official Hugo Doc explains it in a dettailed way. You can enjoy the full explanation there.
-
-< have fun with Hugo / >
+< diviértete con Hugo / >
