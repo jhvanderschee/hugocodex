@@ -10,5 +10,3 @@ Fenix and me (Joost van der Schee) talked for almost an hour about static site g
 Check it out! And because this is our first try at a pod-/screencast, do [let us know](mailto:joost@vdschee.nl) what you think of it! Should we create more content like this? We know the presentation is rough around the edges, but we wanted you to feel like you were in the (virtual) room with us. Looking forward to your feedback. 
 
 Greetings from Madrid and Amsterdam,
-
-Fenix and Joost
