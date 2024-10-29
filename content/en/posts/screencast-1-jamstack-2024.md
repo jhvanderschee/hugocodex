@@ -15,5 +15,3 @@ Resources mentioned :
 * [Matt Billamn Jamstack 2024 talk @ TheJam.dev](https://www.youtube.com/watch?v=j3uvh9994tc)
 * [Jamstack.wtf :-)](https://jamstack.wtf)
 * [Jekyll For Front-End Developers - JekyllConf 2019](https://www.youtube.com/watch?v=ztJJ1GSlYgI)
-
-![jamstack-2024-hugo.png](/uploads/jamstack-2024-hugo.png)
