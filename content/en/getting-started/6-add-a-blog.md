@@ -22,7 +22,7 @@ The date should be the current date. The time is optional. Additionally we are g
         <li>
             {{ if .Date }}{{ .Date | time.Format ":date_long" }}{{ end }}
             <h2>{{ .Title }}</h2>
-            <p>{{ .Summary }}... <a href="{{ .RelPermalink }}">Read more</a></p>
+            <p>{{ .Summary | plainify }}... <a href="{{ .RelPermalink }}">Read more</a></p>
         </li>
     {{ end }}
     </ul>
