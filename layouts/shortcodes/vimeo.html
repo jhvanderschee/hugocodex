@@ -9,7 +9,7 @@
 
 
 <p><a class="shortcode-vimeo" href="https://vimeo.com/{{ .Get `id` }}" title="Play Vimeo video" target="_blank">
-    <img src="{{ if (resources.GetMatch (.Get `image`)) }}{{ ((resources.GetMatch (.Get `image`)).Fill `1200x675 jpg Smart q50`).RelPermalink | safeURL }}{{ end }}" alt="Vimeo video {{ .Get `id` }}" />
+    <img src="{{ if (resources.GetMatch (.Get `image`)) }}{{ ((resources.GetMatch (.Get `image`)).Fill `1200x675 jpg Center q50`).RelPermalink | safeURL }}{{ end }}" alt="Vimeo video {{ .Get `id` }}" />
     <span class="playbutton"></span>
 </a></p>
 
