@@ -146,7 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 window.addEventListener('keydown', (event) => {
-    console.log(event.key);
     switch (event.key) {
         case "ArrowLeft":
             if (document.getElementById('prev')) document.getElementById('prev').click();
