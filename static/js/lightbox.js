@@ -143,3 +143,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+window.addEventListener('keydown', (event) => {
+    console.log(event.key);
+    switch (event.key) {
+        case "ArrowLeft":
+            if (document.getElementById('prev')) document.getElementById('prev').click();
+            break;
+        case "ArrowRight":
+            if (document.getElementById('prev')) document.getElementById('next').click();
+            break;
+        case "Escape":
+            if (document.getElementById('close')) document.getElementById('close').click();
+            break;
+    }
+});
