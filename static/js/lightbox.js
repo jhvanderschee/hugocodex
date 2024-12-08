@@ -21,7 +21,7 @@ function is_vimeolink(url, el) {
                 el.addEventListener("click", function (event) {
                     event.preventDefault();
                     document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/' + el.getAttribute('data-id') + '/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
-                    document.getElementById('lightbox').style.display = 'block';
+                    document.getElementById('lightbox').classList.add('open');
 
                     setGallery(this);
                 });
