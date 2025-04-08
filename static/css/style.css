@@ -66,7 +66,10 @@ pre {
     border: 0.0625rem solid #cccccc;
     border-radius: 0.25rem;
     overflow: auto;
+    position: relative;
 }
+pre > .copy-code { position: sticky; top: 0; margin-left: auto;  left: calc(100% - 1rem);  width: 1rem; height: 1rem; background:red; padding: 0;  background: url('/img/copy.svg') center center / contain no-repeat; display: block;  margin-bottom: -1rem;}
+pre > .copy-code.copied { background-image: url('/img/check.svg');}
 img {display: block; max-width: 100%;}
 .content ul {margin-left: 2.5rem;}
 
@@ -162,6 +165,17 @@ table a {color: #666666; text-decoration: underline; text-decoration-color: rgba
 #footer img:first-child {margin-right: 0.8rem; margin-top: 0.15rem; height: 4.9rem;}
 
 
+.switch-input { position: absolute; opacity: 0; pointer-events: none; scroll-margin-top: 8rem;}
+.switch { position: relative; background: white;  border: 1px solid #aaa; padding: 0.5rem; border-radius: .5rem; display: grid; grid-template-columns: 1fr 1fr; grid-gap: .4rem; isolation: isolate; max-width: 10rem;}
+.switch::before { content: "";  position: absolute; width: calc(50% - .25em); position: absolute; left: 0.25em; height: calc(100% - .5em); top: 50%; transform: translateY(-50%);  background:rgb(247, 44, 114); z-index: -1; border-radius: .4rem;  transition: 250ms;}
+.switch label { padding: 0.2em .45em 0.3em; text-align: center;  transition: 333ms ease;  cursor: pointer; margin: 0; }
+div.content div:is(.simple,.complex) { display: none; }
+
+.switch-input:last-of-type:checked ~ .switch::before { transform: translate(calc(100% + 0em), -50%); }
+.switch-input:first-of-type:checked ~ .switch label:first-of-type { color: white;}
+.switch-input:last-of-type:checked ~ .switch label:last-of-type { color: white;}
+.switch-input:first-of-type:checked ~ div.simple,
+.switch-input:last-of-type:checked ~ div.complex { display: block;}
 
 @media (max-width: 55rem) {
     .threecols .col {width: 47.5%;}

@@ -1,0 +1,53 @@
+{{ partial "header.html" . }}
+
+<div class="content">
+	<div class="container">
+
+		<article>
+			<div class="post-header">
+				{{ partial "breadcrumbs.html" . }}
+				<br />
+			</div>
+
+			<div class="productpage">
+				{{ partial "productimages.html" . }}
+
+				<div class="text">
+					<h1>{{ .Title }}</h1>
+
+					{{ if( gt (index .Params.variants 0 ).price 0 ) }}
+					<h2>&euro; <span class="productprice"> {{ (index .Params.variants 0).price | lang.FormatNumber 2 }}</span></h2>
+					{{ else }}{{ partial "share-buttons.html" . }}{{ end }}
+
+
+					{{ if (index .Params.variants 1).name }}
+						<div>
+							<label for="variant">Choose a {{ .Params.variant_type }}:</label>
+							<select onchange="updateBuyButton()" id="variant" name="variant">
+								{{ range $variant :=.Params.variants }}
+									<option 
+										data-payment-url="{{ $variant.stripe_payment_link }}"
+										data-price="{{ $variant.price }}">
+										{{ $variant.name }}
+									</option>
+								{{ end }}
+							</select>
+						</div>
+						<a href="" class="pay btn">Buy now</a>
+					{{ else }}
+						{{ if gt (index .Params.variants  0).price 0 }}
+							<a href="{{ (index .Params.variants 0).stripe_payment_link }}" class="pay btn">Buy now</a>
+						{{ end }}
+					{{ end }}
+
+					{{ partial "productimages.html" . }}
+
+					{{ .Content }}
+				</div>
+			</div>
+		</article>
+	</div>
+</div>
+
+{{ partial "footer.html" . }}
+

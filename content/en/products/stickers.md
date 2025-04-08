@@ -1,4 +1,7 @@
 ---
+outputs:
+    - html
+    - simple
 title: Buy me Hugo stickers
 image: "/uploads/products/stickers.jpg"
 images:
@@ -8,12 +11,15 @@ variants:
 - name: stickers (3 months)
   price: 27
   sku: stickers-3-months
+  stripe_payment_link: https://buy.stripe.com/test_dR6cN0c3JgwyfrqfZ4
 - name: stickers + love (6 months)
   price: 54
   sku: stickers-6-months
+  stripe_payment_link: https://buy.stripe.com/test_6oEfZc8Rxgwy9329AH
 - name: stickers + more love (1 year)
   price: 108
   sku: stickers-1-year
+  stripe_payment_link: https://buy.stripe.com/test_00g14i1p54NQ7YY3ck
 weight: 5
 ---
 

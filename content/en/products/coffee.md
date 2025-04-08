@@ -1,4 +1,7 @@
 ---
+outputs:
+    - html
+    - simple
 title: Buy me a coffee
 image: "/uploads/products/coffee/1.jpg"
 images:
@@ -11,12 +14,15 @@ variants:
 - name: tall
   price: 2.5
   sku: coffeetall
+  stripe_payment_link: https://buy.stripe.com/test_9AQ7sG7Nt3JM1AA7su
 - name: grande
   price: 3.5
   sku: coffeegrande
+  stripe_payment_link: https://buy.stripe.com/test_fZe8wKgjZ9465QQ3cf
 - name: venti
   price: 4.3
   sku: coffeeventi
+  stripe_payment_link: https://buy.stripe.com/test_9AQ5kygjZ3JMa767sw
 weight: 2
 ---
 

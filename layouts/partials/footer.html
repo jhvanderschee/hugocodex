@@ -20,6 +20,7 @@
 
 
 <script type="text/javascript" src="/js/text-expand.js"></script>
+<script type="text/javascript" src="/js/copy-code.js"></script>
 
 <script type="text/javascript" src="/js/lightbox.js"></script>
 <link rel="stylesheet" href="/css/lightbox.css">
@@ -27,11 +28,16 @@
 <script type="text/javascript" src="/js/carousel.js"></script>
 
 <!-- webshop -->
-<link rel="stylesheet" href="/css/webshop.css">
-<script type="text/javascript" src="/js/webshop.js"></script>
-<script type="text/javascript">
- updateCartCount();
-</script>
+{{ if in .RelPermalink "/simple/" }}
+    <script type="text/javascript" src="/js/webshop-simple.js"></script>
+    <link rel="stylesheet" href="/css/webshop-simple.css">
+{{ else }}
+    <script type="text/javascript" src="/js/webshop.js"></script>
+    <link rel="stylesheet" href="/css/webshop.css">
+    <script type="text/javascript">
+    updateCartCount();
+    </script>
+{{ end }}
 
 <link rel="stylesheet" href="/css/carousel.css">
 

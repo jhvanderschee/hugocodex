@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+
+<div class="content">
+  <div class="container">
+
+          <article class="post">
+            <header class="post-header">
+            {{ partial "breadcrumbs.html" . }}
+            <h1>{{ .Title }}</h1>
+            </header>
+
+            <input type="radio" class='switch-input' name='view' id='view_simple' checked>
+            <input type="radio" class='switch-input' name='view' id='view_complex'>
+            <div class="switch">
+              <label for="view_simple">Simple</label>
+              <label for="view_complex">Complex</label>
+            </div>
+
+
+            {{ $split := split .Content "<hr>"}}
+            <div class="simple">
+              {{ index $split 0 | markdownify }}
+            </div>
+            <div class="complex">
+              {{ index $split 1 | markdownify }}
+            </div>
+
+      
+          </article>
+
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
+ 

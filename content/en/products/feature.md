@@ -1,4 +1,7 @@
 ---
+outputs:
+    - html
+    - simple
 title: Sponsor a feature
 image: "/uploads/products/feature.jpg"
 images:
@@ -8,6 +11,7 @@ variants:
 - name: Normal
   price: 150
   sku: feature
+  stripe_payment_link: https://buy.stripe.com/test_aEU14iaZFeoq5QQ009
 weight: 6
 ---
 

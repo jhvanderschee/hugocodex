@@ -51,3 +51,9 @@ languages:
       getting-started: empezando/:filename
       add-ons: complementos/:filename
       products: donar/:filename
+
+outputFormats:
+  simple:
+    baseName: /simple/index
+    mediaType: text/html
+    permalinkable: true

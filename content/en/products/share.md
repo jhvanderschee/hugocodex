@@ -1,4 +1,7 @@
 ---
+outputs:
+    - html
+    - simple
 title: Share the love
 image: "/uploads/products/share.jpg"
 images:

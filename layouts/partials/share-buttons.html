@@ -14,7 +14,7 @@
 {{/*  Code  */}}
 {{ $url := printf "%s" .Permalink | absLangURL }}
 {{ $textBody := print .Title "\n\n" (.Summary | plainify | truncate 200) "\n\n" $url "\n" }}
-{{ $encodedSummary := strings.TrimPrefix "=" (querify "" (.Summary | plainify | truncate 200))  }}
+{{ $encodedSummary := strings.TrimPrefix "=" (.Summary | plainify | truncate 200) }}
 <nav class="sharebuttons">
     <span>{{ i18n "share_on" }}:</span>
     <ul>
