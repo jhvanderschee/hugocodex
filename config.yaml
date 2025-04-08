@@ -39,6 +39,7 @@ languages:
       getting-started: getting-started/:filename
       add-ons: add-ons/:filename
       products: donate/:filename
+      simple-products: simple-donate/:filename
   es:
     languageName: Spaans
     title: Hugo Codex
@@ -51,6 +52,7 @@ languages:
       getting-started: empezando/:filename
       add-ons: complementos/:filename
       products: donar/:filename
+      simple-products: simple-donar/:filename
 
 outputFormats:
   simple:
