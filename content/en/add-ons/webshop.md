@@ -28,13 +28,7 @@ Download the files and add them to your folders. Make sure the bottom of your la
 
 #### Step 3. Create the 'cart', 'checkout' and 'paylink' shortcodes
 	
-You need the following shortcodes:
-
-- [cart.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/cart.html)
-- [checkout.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/checkout.html)
-- [paypal-buttons.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/paypal-buttons.html)
-
-Download those 3 files and save them in the [layouts/shortcodes](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/) folder of your project.
+You need the shortcodes [cart.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/cart.html), [checkout.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/checkout.html) and [paypal-buttons.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/paypal-buttons.html). Download these 3 files and save them in the [layouts/shortcodes](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/) folder of your project.
 
 #### Step 4. Create the 'cart', 'checkout' and 'paylink' content pages
 
