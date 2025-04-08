@@ -46,7 +46,7 @@ I like beer a lot! IPA, Guinness, Stout, craft beers... and I love to try new on
 ```
 
 #### Step 5. Add scripts to the footer
-Download the [Javascript](https://hugocodex.org/js/webshop-simple.js) file and add it to your project. Make sure the bottom of your layout document looks like the code below.
+Download [webshop-simple.js](https://hugocodex.org/js/webshop-simple.js) and add it to your project. Make sure the bottom of your layout document looks like the code below.
 
 ```
 <script type="text/javascript" src="/js/webshop-simple.js"></script>
