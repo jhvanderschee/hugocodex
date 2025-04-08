@@ -4,7 +4,7 @@ title: Webshop (simple)
 
 ### Introduction
 
-This is a simple webshop using [Stripe](https://stripe.com/) that does not require a monthly fee. Great for a simple webshop. [Checkout the demo!](/simple-donate) Note that this webshop does not have cart options, or extra's like add-ons costs for shipping, etcetera. If you are looking for these functionalities, use the [other implementation](/add-ons/webshop).
+This is a simple webshop using Stripe that does not require a monthly fee. Great for a simple webshop. [Checkout the demo!](/simple-donate) Note that this webshop does not have cart options, or extra's like add-ons costs for shipping, etcetera. If you are looking for these functionalities, use the [other implementation](/add-ons/webshop).
 
 ### How it works
 

@@ -4,7 +4,7 @@ title: Webshop
 
 ### Introduction
 
-This is a webshop with several payment methods that does not require a monthly fee. The webshop currently does not allow for variable tax calculations. It also does not provide an alternative shipping address, although that can be added easily. An email parser would allow you to automate the buying processes even further.
+This is a webshop with several payment methods that does not require a monthly fee. The webshop currently does not allow for variable tax calculations. It also does not provide an alternative shipping address, although that can be added easily. An email parser would allow you to automate the buying processes even further. If you are looking for something less complex, try the [simpler implementation](/add-ons/webshop-simple), using Stripe instead of PayPal.
 
 ### How it works
 
