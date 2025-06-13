@@ -11,7 +11,7 @@
 {{ if $image }}{{ else }}{{ $image = resources.GetRemote (print "https://i.ytimg.com/vi/" (.Get 0) "/sddefault.jpg") }}{{ end }}
 
 <a class="shortcode-youtube" href="https://www.youtube.com/watch?v={{ .Get 0 }}" title="Play Youtube video" target="_blank">
-    <img src="{{ if $image }}{{ ($image.Fill `720x403 webp Center q75`).Permalink | safeURL }}{{ end }}" alt="Youtube video {{ .Get 0 }}" />
+    <img src="{{ if $image }}{{ ($image.Fill `1200x675 webp Center q75`).Permalink | safeURL }}{{ end }}" alt="Youtube video {{ .Get 0 }}" />
 </a>
 
 <style>
