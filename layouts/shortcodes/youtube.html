@@ -7,8 +7,11 @@
 */}}
 -->
 
-<a class="shortcode-youtube" href="https://www.youtube.com/watch?v={{ .Get `id` }}" title="Play Youtube video" target="_blank">
-    <img src="{{ if (resources.GetMatch (.Get `image`)) }}{{ ((resources.GetMatch (.Get `image`)).Fill `1200x675 jpg Smart q50`).RelPermalink | safeURL }}{{ end }}" alt="Youtube video {{ .Get `id` }}" />
+{{ $image := resources.GetRemote (print "https://i.ytimg.com/vi/" (.Get 0) "/maxresdefault.jpg") }}
+{{ if $image }}{{ else }}{{ $image = resources.GetRemote (print "https://i.ytimg.com/vi/" (.Get 0) "/sddefault.jpg") }}{{ end }}
+
+<a class="shortcode-youtube" href="https://www.youtube.com/watch?v={{ .Get 0 }}" title="Play Youtube video" target="_blank">
+    <img src="{{ if $image }}{{ ($image.Fill `720x403 webp Center q75`).Permalink | safeURL }}{{ end }}" alt="Youtube video {{ .Get 0 }}" />
 </a>
 
 <style>
