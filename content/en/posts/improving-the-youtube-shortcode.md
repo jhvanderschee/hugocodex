@@ -1,6 +1,6 @@
 ---
-title: 'Improvement of the lightbox'
-date: '2024-11-29'
+title: 'Improvement of the Youtube shortcode'
+date: '2025-06-20'
 ---
 
-We have added a smooth transition to the lightbox, as well as the option to navigate with the arrow keys and close the lightbox with the Escape key. [Check it out](/add-ons/lightbox/)!
+I have added an improvement to the Youtube shortcode. It now downloads the Youtube image automatically and resizes and crops it to fit a 16:9 layout. This requires `assetDir: static` in your config.
