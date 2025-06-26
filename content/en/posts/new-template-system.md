@@ -1,5 +1,5 @@
 ---
-title: New template system in v0.146.0
+title: New template system in Hugo v0.146.0
 date: 2025-06-26
 ---
 
