@@ -43,8 +43,8 @@ images:
 
 ### Template installation
 
-Step 5. Download the file [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/carousel.html)  
-Step 6. Save the file in the ‘layouts/partials’ directory of your project  
+Step 5. Download the file [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_partials/carousel.html)  
+Step 6. Save the file in the ‘layouts/_partials’ directory of your project  
 Step 7. Add this to your layout:  
 ```
 {{ partial "carousel.html" (dict "context" . "items" "1" "height" "50" "unit" "%" "duration" "7000") }}
@@ -52,8 +52,8 @@ Step 7. Add this to your layout:
 
 ### Shortcode installation
 
-Step 5. Download the file [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/shortcodes/carousel.html)  
-Step 6. Save the file in the ‘layouts/partials/shortcodes’ directory of your project  
+Step 5. Download the file [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_shortcodes/carousel.html)  
+Step 6. Save the file in the ‘layouts/_partials/_shortcodes’ directory of your project  
 Step 7. Add this to your content (.md file):  
 ```
 {{</* carousel items="1" height="500" unit="px" duration="7000" */>}}

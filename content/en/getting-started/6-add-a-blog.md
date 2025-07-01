@@ -29,7 +29,7 @@ The date should be the current date. The time is optional. Additionally we are g
 {{ partial "footer.html" . }}
 ```
 
-You can additionally update your 'single.html' in the '_defaults' directory and add the '.Date' parameter. It should then look something like this:
+You can additionally update your 'page.html' in the '_defaults' directory and add the '.Date' parameter. It should then look something like this:
 
 ```
 {{ partial "header.html" . }}
@@ -46,9 +46,9 @@ This will make sure your posts (single pages) also show the date of the post. Yo
 /content/contact.md
 /content/posts/hello-world.md
 /layouts/index.html
-/layouts/_default/single.html
-/layouts/_default/list.html
-/layouts/partials/header.html
-/layouts/partials/footer.html
+/layouts/page.html
+/layouts/list.html
+/layouts/_partials/header.html
+/layouts/_partials/footer.html
 /config.yaml
 ```

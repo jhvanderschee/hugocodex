@@ -49,8 +49,8 @@ function getComparedate() {
 ## Installation
 
 Step 1. Make sure your elements look like this: `<div future-date="YYYYMMDD">...</div>` <br>
-Step 2. Download the file [future-dates.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layout/partials/future-dates.html)<br>
-Step 3. Save the file in the 'layouts/partials/' directory of your project<br>
+Step 2. Download the file [future-dates.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layout/_partials/future-dates.html)<br>
+Step 3. Save the file in the 'layouts/_partials/' directory of your project<br>
 Step 4. Make sure the bottom of your layout document looks like this:
 
 ```

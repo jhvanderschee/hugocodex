@@ -2,7 +2,7 @@
 title: 4. Include your first partials
 ---
 
-A website typically consists of a few elements that get repeated on every page, like a header with a menu and a footer. Instead of adding them to every page, you can use a 'partial'. Partials need to be saved in the '/layouts/partials' directory. 
+A website typically consists of a few elements that get repeated on every page, like a header with a menu and a footer. Instead of adding them to every page, you can use a 'partial'. Partials need to be saved in the '/layouts/_partials' directory. 
 
 Create a 'header.html' file that looks like this:
 
@@ -19,7 +19,7 @@ Create a 'footer.html' file that looks like this:
 </html>
 ```
 
-Store both files in the '/layouts/partials' directory. Now update your '/layouts/index.html' file and make sure it looks like this (replacing the code with links to the partials):
+Store both files in the '/layouts/_partials' directory. Now update your '/layouts/index.html' file and make sure it looks like this (replacing the code with links to the partials):
 
 ```
 {{ partial "header.html" . }}
@@ -33,7 +33,7 @@ Your project should now looks like this:
 ```
 /content/_index.md
 /layouts/index.html
-/layouts/partials/header.html
-/layouts/partials/footer.html
+/layouts/_partials/header.html
+/layouts/_partials/footer.html
 /config.yaml
 ```

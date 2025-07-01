@@ -14,8 +14,8 @@ The shortcode creates an image and a link to Vimeo. The classes on this link tel
 
 ### Installation
 
-Step 1. Download the file [vimeo.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/shortcodes/vimeo.html)
-<br />Step 2. Save the file in the 'layouts/partials/shortcodes' directory of your project
+Step 1. Download the file [vimeo.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_shortcodes/vimeo.html)
+<br />Step 2. Save the file in the 'layouts/_partials/_shortcodes' directory of your project
 <br />Step 3. Add the following line to your content on the place where you want your Vimeo video to appear:
 
 ```

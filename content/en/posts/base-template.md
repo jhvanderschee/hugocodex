@@ -15,7 +15,7 @@ When speaking about Hugo Layouts : you tipically simply define
 ```
 my-hugo-project
 |._ layouts/ Home (or index) html template
-           |._ _default/single.html
+           |._ page.html
            |. _/default/list.html
 ```
 
@@ -40,7 +40,7 @@ Let's create a content block  :
 > NOTE: the context aka 'the dot'  '.' is required 
 
 ### Block definition 
-Ahá. Now feel free to reuse it wherever you want in other templates (e.g. in the 'single.html' or 'list.html' ), by defining them following this syntax inside other layouts:
+Ahá. Now feel free to reuse it wherever you want in other templates (e.g. in the 'page.html' or 'list.html' ), by defining them following this syntax inside other layouts:
 
 ```
 {{ define "content" }}

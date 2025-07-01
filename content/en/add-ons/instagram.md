@@ -14,8 +14,8 @@ For information on how this works, visit [PPI Loader](https://profilepageimages.
 
 ### Template installation
 
-Step 1. Download the file [instagram.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/instagram.html)
-<br />Step 2. Save the file in the 'layouts/partials' directory of your project
+Step 1. Download the file [instagram.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_partials/instagram.html)
+<br />Step 2. Save the file in the 'layouts/_partials' directory of your project
 <br />Step 3. Add the following line to your layout on the place where you want your instagram pictures to appear:
 
 ```
@@ -24,8 +24,8 @@ Step 1. Download the file [instagram.html](https://raw.githubusercontent.com/jhv
 
 ### Shortcode installation
 
-Step 1. Download the file [instagram.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/shortcodes/instagram.html)
-<br />Step 2. Save the file in the 'layouts/partials/shortcodes' directory of your project
+Step 1. Download the file [instagram.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_shortcodes/instagram.html)
+<br />Step 2. Save the file in the 'layouts/_partials/_shortcodes' directory of your project
 <br />Step 3. Add the following line to your content on the place where you want your instagram pictures to appear:
 
 ```

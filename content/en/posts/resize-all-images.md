@@ -67,7 +67,7 @@ The above code will result in an URL that points to a resized version of my orig
 Now we have resized images in our layout. But what about the content images? For images in the markdown, you can use a 'render hook'. This is a file that describes/overrides how markdown images are handled. To use the above approach in the render hook you should create the following file:
 
 ```
-/layouts/_default/_markup/render-image.html
+/layouts/_markup/render-image.html
 ```
 
 ... and put this logic inside:

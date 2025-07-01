@@ -16,8 +16,8 @@ Reading time: {{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}
 
 ### Installation
 
-Step 1. Download the file [reading-time.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/reading-time.html)
-<br />Step 2. Save the file in the 'layouts/partials' directory of your project
+Step 1. Download the file [reading-time.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_partials/reading-time.html)
+<br />Step 2. Save the file in the 'layouts/_partials' directory of your project
 <br />Step 3. Add the following line to your layout on the place where you want the reading time indicator to appear:
 
 ```

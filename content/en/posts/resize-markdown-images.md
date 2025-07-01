@@ -7,7 +7,7 @@ Before 2015 I was building WordPress websites. Some things in WordPress I really
 
 When I switched to Hugo in June 2021 I was happy to find that Hugo could resize images 'on build time'. The command to do so had to be written in a shortcode or a layout. Although shortcodes were a step in the right direction, 'regular' markdown editors (like my CMS [cms.usecue.com](https://cms.usecue.com) is using) still created unresized images. But... when I saw BEP give [this answer](https://discourse.gohugo.io/t/is-this-possible-with-hugo/38089/6?u=jhvanderschee) to a relatively unrelated question, I realized Hugo can resize standard markdown images through render hooks! I immediately browsed through the docs and created a hook to add to my most recent project... and it worked! 
 
-The file is called '/layouts/_default/_markup/render-image.html' and contains the following code:
+The file is called '/layouts/_markup/render-image.html' and contains the following code:
 
 ```
 {{ if (resources.GetMatch .Destination) }}

@@ -34,5 +34,5 @@ This script detects external links and PDF's. It automagically adds 'target="_bl
 
 ### Installation
 
-Step 1. Download the file [render-link.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_default/_markup/render-link.html)
-<br />Step 2. Save the file in the 'layouts/_default/_markup/' directory of your project
+Step 1. Download the file [render-link.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_markup/render-link.html)
+<br />Step 2. Save the file in the 'layouts/_markup/' directory of your project

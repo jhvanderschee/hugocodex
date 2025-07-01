@@ -12,8 +12,8 @@ This script reads the folders in your section and automatically creates an auto-
 
 ### Installation
 
-Step 1. Download the file [nested-menu.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/nested-menu.html) and the file  [nested-menu-partial.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/nested-menu-partial.html)
-<br />Step 2. Save the files in the ‘layouts/partials’ directory of your project
+Step 1. Download the file [nested-menu.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_partials/nested-menu.html) and the file  [nested-menu-partial.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_partials/nested-menu-partial.html)
+<br />Step 2. Save the files in the ‘layouts/_partials’ directory of your project
 <br />Step 3. Add the following line to your layout on the place where you want the nested menu to appear:
 
 ```

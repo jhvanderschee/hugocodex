@@ -43,13 +43,13 @@ debería ser el enlace personal y reutilizable que acabas de crear.
 #### Paso 2. Crea los 'shortcodes' del carrito de la compra,  'checkout' y 'paylink'
 
 Como es sabido, Hugo permite 'incluir' y [reutilizar retazos de código fuente en los elegantes llamados 'shortcodes'](https://gohugo.io/templates/shortcode-templates/). Usemosles
-para embeber nuestro [carrito de la compra](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/cart.html) hecho de una simple pero elegante combinación de tabla + formulario.
+para embeber nuestro [carrito de la compra](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/_shortcodes/cart.html) hecho de una simple pero elegante combinación de tabla + formulario.
 
-Para embeber el formulario de checkout hagamos un ['checkout shortcode'](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/checkout.html).
+Para embeber el formulario de checkout hagamos un ['checkout shortcode'](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/_shortcodes/checkout.html).
 
-Para el redirecionamiento del pago [usaremos un poco de JavaScript](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/paypal-buttons.html) :
+Para el redirecionamiento del pago [usaremos un poco de JavaScript](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/_shortcodes/paypal-buttons.html) :
 
-Descarga los 3 archivos mencionados y [guardalos en el directorio 'layouts/shortcodes'](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/shortcodes/) de tu proyecto.
+Descarga los 3 archivos mencionados y [guardalos en el directorio 'layouts/_shortcodes'](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/_shortcodes/) de tu proyecto.
 
 De este modo puedes invocar a cualquiera de los 3 subprocesos mencionados anteriormente en cualquier lugar de tu proyecto simplemente llamando al 'shortcode' correspondiente, como
 veremos en el siguiente paso. 

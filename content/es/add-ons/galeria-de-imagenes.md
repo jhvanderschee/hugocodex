@@ -17,8 +17,8 @@ presente. El nombre del fichero, sin la extensión, es el pie de foto.
 
 ### Instalación de la plantilla
 
-Paso 1. Descarga el fichero  [image-gallery.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/image-gallery.html).
-Paso 2. Guárdalo en el directorio 'layouts/partials'.  
+Paso 1. Descarga el fichero  [image-gallery.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_partials/image-gallery.html).
+Paso 2. Guárdalo en el directorio 'layouts/_partials'.  
 Paso 3. Añade la siguiente línea a tu plantilla en el lugar donde quieres que aparezca tu galería de imágenes: 
 ```
 {{ partial "image-gallery" (dict "context" . "gallery_dir" "/album") }}
@@ -26,8 +26,8 @@ Paso 3. Añade la siguiente línea a tu plantilla en el lugar donde quieres que 
 
 ### Instalación del shortcode 
 
-Paso1. Descarga el fichero [image-gallery.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/shortcodes/image-gallery.html)  
-Paso2. Guárdalo en el directorio 'layouts/shortcodes'.  
+Paso1. Descarga el fichero [image-gallery.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_shortcodes/image-gallery.html)  
+Paso2. Guárdalo en el directorio 'layouts/_shortcodes'.  
 Paso3. Añade la siguiente línea  al fichero 'markdown' correspondiente a tu contenido, en el lugar donde quieres que aparezca tu galería de imágenes:  
 
 ```

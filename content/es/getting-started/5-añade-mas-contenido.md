@@ -11,7 +11,7 @@ title: Página de Contacto
 Enviar correo-e a hola@mundo.net
 ```
 
-Ya teníamos un fichero de diseño (index.html), pero dicho fichero era únicamente válido para la pagina de inicio. Dicho fichero puede ser una copia exacta del fichero 'index.html' y deberías renombrarlo a 'single.html'. Lo guardarás en el directorio'/layouts/_default/' .
+Ya teníamos un fichero de diseño (index.html), pero dicho fichero era únicamente válido para la pagina de inicio. Dicho fichero puede ser una copia exacta del fichero 'index.html' y deberías renombrarlo a 'page.html'. Lo guardarás en el directorio'/layouts/' .
 
 Tu proyecto debería ahora verse así:
 
@@ -19,9 +19,9 @@ Tu proyecto debería ahora verse así:
 /content/_index.md
 /content/contact.md
 /layouts/index.html
-/layouts/_default/single.html
-/layouts/partials/header.html
-/layouts/partials/footer.html
+/layouts/page.html
+/layouts/_partials/header.html
+/layouts/_partials/footer.html
 /config.yaml`
 ```
 

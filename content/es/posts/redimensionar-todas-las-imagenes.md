@@ -67,7 +67,7 @@ El código anterior generará una URL que apunta a una versión redimensionada d
 Ahora tenemos imágenes redimensionadas en nuestro diseño. Pero, ¿qué pasa con las imágenes de contenido? Para las imágenes en el markdown, puedes usar un 'render hook'. Este es un archivo que describe/sobrescribe cómo se manejan las imágenes en markdown. Para usar el enfoque anterior en el render hook, debes crear el siguiente archivo:
 
 ```
-/layouts/_default/_markup/render-image.html
+/layouts/_markup/render-image.html
 ```
 
 ... y colocar esta lógica dentro:

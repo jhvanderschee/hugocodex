@@ -20,8 +20,8 @@ This code looks at the Ancestors variable to create the breadcrumb path. This ap
 
 ### Installation
 
-Step 1. Download the file [breadcrumbs.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/breadcrumbs.html)
-<br />Step 2. Save the file in the ‘layouts/partials’ directory of your project
+Step 1. Download the file [breadcrumbs.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_partials/breadcrumbs.html)
+<br />Step 2. Save the file in the ‘layouts/_partials’ directory of your project
 <br />Step 3. Add the following line to your layout on the place where you want the breadcrumbs to appear:
 
 ```

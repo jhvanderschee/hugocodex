@@ -52,8 +52,8 @@ images:
 
 ### Instalación de la plantilla
 
-Paso 5. Descarga el fichero [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/partials/carousel.html)  
-Paso 6. Guarda el fichero en   directorio ‘layouts/partials’ de tu proyecto  
+Paso 5. Descarga el fichero [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_partials/carousel.html)  
+Paso 6. Guarda el fichero en   directorio ‘layouts/_partials’ de tu proyecto  
 Paso 7. Añade esto a tu plantilla :  
 ```
 {{ partial "carousel.html" (dict "context" . "items" "1" "height" "50" "unit" "%" "duration" "7000") }}
@@ -61,8 +61,8 @@ Paso 7. Añade esto a tu plantilla :
 
 ### Instalación del  'Shortcode'
 
-Paso 5. Descarga el fichero [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/shortcodes/carousel.html)  
-Paso 6. Guarda el fichero en el directorio ‘layouts/partials/shortcodes’ de tu proyecto  
+Paso 5. Descarga el fichero [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_shortcodes/carousel.html)  
+Paso 6. Guarda el fichero en el directorio ‘layouts/_partials/_shortcodes’ de tu proyecto  
 Paso 7. Añade esto a tu contenido (el fichero .md ):  
 ```
 {{</* carousel items="1" height="500" unit="px" duration="7000" */>}}

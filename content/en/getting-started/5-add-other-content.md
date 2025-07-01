@@ -11,7 +11,7 @@ title: Contact page
 Send me an email at joost@vdschee.nl
 ```
 
-We already had a layout file (index.html), but that file was only valid for the homepage. Therefore we now need another file. This file can be an exact copy of the 'index.html' file and you should name it 'single.html'. You must store this file in the '/layouts/_default/' directory.
+We already had a layout file (index.html), but that file was only valid for the homepage. Therefore we now need another file. This file can be an exact copy of the 'index.html' file and you should name it 'page.html'. You must store this file in the '/layouts/' directory.
 
 Your project should now looks like this:
 
@@ -19,9 +19,9 @@ Your project should now looks like this:
 /content/_index.md
 /content/contact.md
 /layouts/index.html
-/layouts/_default/single.html
-/layouts/partials/header.html
-/layouts/partials/footer.html
+/layouts/page.html
+/layouts/_partials/header.html
+/layouts/_partials/footer.html
 /config.yaml
 ```
 

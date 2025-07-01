@@ -14,7 +14,7 @@ Cuando hablamos de diseños de Hugo: típicamente simplemente defines
 ```
 mi-proyecto-hugo
 |._ layouts/ Home (o index) plantilla html
-           |._ _default/single.html
+           |._ page.html
            |. _/default/list.html
 ```
 
@@ -41,7 +41,7 @@ Creemos un bloque de contenido:
 {{ end }}
 ```
 
-Ahá. Ahora siéntete libre de reutilizarlo donde quieras en otras plantillas (por ejemplo, en 'single.html' o 'list.html'), definiéndolos siguiendo esta sintaxis dentro de otros diseños:
+Ahá. Ahora siéntete libre de reutilizarlo donde quieras en otras plantillas (por ejemplo, en 'page.html' o 'list.html'), definiéndolos siguiendo esta sintaxis dentro de otros diseños:
 
 ```
 {{ define "content" }}

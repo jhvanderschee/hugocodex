@@ -20,8 +20,8 @@ This search relies on the index from Google. It queries the Google Search engine
 
 ### Installation
 
-Step 1. Download the file [search-google.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/partials/search-google.html) and change the domain name
-<br />Step 2. Save the file in the '/layouts/partials/' directory of your project
+Step 1. Download the file [search-google.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/_partials/search-google.html) and change the domain name
+<br />Step 2. Save the file in the '/layouts/_partials/' directory of your project
 <br />Step 3. Add the following statement to your layout where you want the search box to appear:
 
 ```
