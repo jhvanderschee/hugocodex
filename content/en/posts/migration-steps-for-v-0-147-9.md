@@ -3,7 +3,7 @@ title: Migration steps for Hugo v0.147.9
 date: 2025-07-01
 ---
 
-Migrating to anything above Hugo v0.146 requires the following steps:
+Migrating to v0.146.0 and up requires the following steps:
 
 - move everything from the `_default` directory to the root of the `layouts` folder
 - remove the `_default` folder
