@@ -9,7 +9,8 @@ Migrating to anything above 0.146 requires the following steps:
 - remove the `_default` folder
 - rename all `single.html` files to `page.html`
 - rename all `list.html` files to `section.html`
-- move everything from the `page` folder to the root of the `layouts` folder
+- move everything from the `layouts/page` folder to the root of the `layouts` folder
+- remove the `page` folder
 - rename the config.yaml (or toml/json) file to hugo.yaml (or toml/json)
 - replace `:filename` to `:contentbasename`
 
