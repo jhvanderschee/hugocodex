@@ -60,7 +60,6 @@
         }
         if(!term || results.length == 0) {
                 if(term) document.querySelector('#lunrsearchresults').innerHTML = "<p>{{ i18n `No_results_for` }} '" + term + "'.<p>";
-                else document.querySelector('#lunrsearchresults').innerHTML = "<p>{{ i18n `No_results` }}...<p>";
         }
         return false;
     }
