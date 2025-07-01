@@ -11,8 +11,12 @@
             
             {{ .Content }}
 
-            {{ if or (eq .RelPermalink "/search/") (eq .RelPermalink "/es/search/") }}<div class="row">
+            {{ if or (eq .RelPermalink "/search-google/") (eq .RelPermalink "/es/search-google/") }}<div class="row">
               <div class="col-xs-8">{{ partial "search-google.html" . }}</div>
+            </div>{{ end }}
+
+            {{ if or (eq .RelPermalink "/search/") (eq .RelPermalink "/es/search/") }}<div class="row">
+              <div class="col-xs-8">{{ partial "lunr.html" . }}</div>
             </div>{{ end }}
           
           </article>

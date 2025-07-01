@@ -1,0 +1,76 @@
+<script src="/js/lunr.js"></script>
+
+<style>
+    #lunrsearchresults ul {margin: 0; display: block;}
+    #lunrsearchresults p {margin-bottom: 2em; font-style: italic; margin-top: 0.3rem;}
+    .lunrsearchresult {margin-bottom: 1.5em; list-style: none;}
+    .lunrsearchresult .title {color: rgb(247, 44, 114); font-weight: 500; text-decoration: underline; font-size: 1.1rem;}
+    .lunrsearchresult .url {color: #999; position: relative; top: 0.1rem;;}
+    .lunrsearchresult a {display: block; text-decoration: none; color: black; line-height: 1.6;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+<form onsubmit="lunr_search(document.getElementById('q').value);">
+    <div class="form-group">
+        <label for="q" style="opacity: 0; position: absolute; pointer-events: none;">{{ i18n "Search" }}:</label>
+        <input type="text" name="q" id="q" class="form-control" placeholder="{{ i18n `Enter_search` }}..." />
+    </div>
+</form>
+
+<div id="lunrsearchresults">
+    <p>{{ i18n `No_results` }}...</p>
+</div>
+
+<script>
+    var documents = [{{- range $key, $value := .Site.Pages -}}
+        {
+        "id": {{ $key }},
+        "url": "{{ $value.Permalink }}",
+        "title": "{{ $value.Title }}",
+        "body": "{{ $value.Content }}"
+        }, {{- end -}}];
+    
+    var idx = lunr(function () {
+        this.ref('id')
+        this.field('title')
+        this.field('body')
+    
+        documents.forEach(function (doc) {
+            this.add(doc)
+        }, this)
+    });
+    function lunr_search(term) {
+        document.getElementById('lunrsearchresults').innerHTML = '<ul></ul>';
+        if(term) {
+            document.getElementById('lunrsearchresults').innerHTML = "<p>{{ i18n `Results_for` }} '" + term + "'</p>" + document.getElementById('lunrsearchresults').innerHTML;
+            var results = idx.search(term);
+            if(results.length>0){
+                for (var i = 0; i < results.length; i++) {
+                    var ref = results[i]['ref'];
+                    var url = documents[ref]['url'];
+                    var title = documents[ref]['title'];
+                    var body = documents[ref]['body'];
+                    var div = document.createElement("div");
+                    div.innerHTML = body;
+                    body = div.textContent || div.innerText || "";
+                    body = body.substring(0,160)+'...';
+    
+                    document.querySelector('#lunrsearchresults ul').innerHTML = document.querySelector('#lunrsearchresults ul').innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><span class='body'>"+ body +"</span><br /><span class='url'>"+ url +"</span></a></li>";
+                }
+            }
+        }
+        if(!term || results.length == 0) {
+                if(term) document.querySelector('#lunrsearchresults').innerHTML = "<p>{{ i18n `No_results_for` }} '" + term + "'.<p>";
+                else document.querySelector('#lunrsearchresults').innerHTML = "<p>{{ i18n `No_results` }}...<p>";
+        }
+        return false;
+    }
+    
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    var q = urlParams.get('q');
+    lunr_search(q);
+
+
+</script>

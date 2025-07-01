@@ -84,3 +84,18 @@ Message:
 
 back to cart:
   other: back to cart
+
+Search:
+  other: Search
+
+Enter_search:
+  other: Enter your search terms here
+
+No_results:
+  other: No search results found
+
+No_results_for:
+  other: No search results found for
+
+Results_for:
+  other: Search results for

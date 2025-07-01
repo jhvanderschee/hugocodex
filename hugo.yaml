@@ -11,20 +11,7 @@ markup:
     renderer:
       unsafe: true
 
-outputs:
-  home:
-    - HTML
-    - RSS
-    - Lunr
-
 assetDir: static
-
-outputFormats:
-  Lunr:
-    baseName: "index"
-    isPlainText: true
-    mediaType: "application/json"
-    notAlternative: true
 
 languages:
   en:
@@ -35,11 +22,11 @@ languages:
     contentDir: content/en
     weight: 1
     permalinks: 
-      posts: blog/:filename
-      getting-started: getting-started/:filename
-      add-ons: add-ons/:filename
-      products: donate/:filename
-      simple-products: simple-donate/:filename
+      posts: blog/:contentbasename
+      getting-started: getting-started/:contentbasename
+      add-ons: add-ons/:contentbasename
+      products: donate/:contentbasename
+      simple-products: simple-donate/:contentbasename
   es:
     languageName: Spaans
     title: Hugo Codex
@@ -48,11 +35,11 @@ languages:
     contentDir: content/es
     weight: 2
     permalinks:
-      posts: blog/:filename
-      getting-started: empezando/:filename
-      add-ons: complementos/:filename
-      products: donar/:filename
-      simple-products: simple-donar/:filename
+      posts: blog/:contentbasename
+      getting-started: empezando/:contentbasename
+      add-ons: complementos/:contentbasename
+      products: donar/:contentbasename
+      simple-products: simple-donar/:contentbasename
 
 outputFormats:
   simple:

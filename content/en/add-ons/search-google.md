@@ -1,5 +1,5 @@
 ---
-title: Search (Google)
+title: Search with Google
 ---
 
 ### Introduction
