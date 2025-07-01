@@ -14,4 +14,4 @@ Migrating to v0.146.0 and up requires the following steps:
 - rename the config.yaml (or toml/json) file to hugo.yaml (or toml/json)
 - replace `:filename` to `:contentbasename`
 
-If you had an empty `single.html` in your `layouts/page` directory, you should follow [these instructions](https://discourse.gohugo.io/t/possible-bug-single-layout-for-pages-in-v0-147-9/55179/8).
+If you had an empty `single.html` in your `layouts` directory and non-empty one in your `layouts/page` directory, you should follow [these instructions](https://discourse.gohugo.io/t/possible-bug-single-layout-for-pages-in-v0-147-9/55179/8).
