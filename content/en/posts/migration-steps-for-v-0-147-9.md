@@ -1,6 +1,6 @@
 ---
 title: Migration steps for Hugo v0.147.9
-date: 2025-06-
+date: 2025-07-01
 ---
 
 Migrating to anything above 0.146 requires the following steps:
