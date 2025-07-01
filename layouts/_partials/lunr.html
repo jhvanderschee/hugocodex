@@ -18,9 +18,7 @@
     </div>
 </form>
 
-<div id="lunrsearchresults">
-    <p>{{ i18n `No_results` }}...</p>
-</div>
+<div id="lunrsearchresults"></div>
 
 <script>
     var documents = [{{- range $key, $value := .Site.Pages -}}
