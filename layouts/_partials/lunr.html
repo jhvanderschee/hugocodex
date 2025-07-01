@@ -11,7 +11,7 @@
     .lunrsearchresult a:hover .title {text-decoration: underline;}
 </style>
 
-<form onsubmit="lunr_search(document.getElementById('q').value);">
+<form onsubmit="lunr_search(document.getElementById('q').value); return false;">
     <div class="form-group">
         <label for="q" style="opacity: 0; position: absolute; pointer-events: none;">{{ i18n "Search" }}:</label>
         <input type="text" name="q" id="q" class="form-control" placeholder="{{ i18n `Enter_search` }}..." />
