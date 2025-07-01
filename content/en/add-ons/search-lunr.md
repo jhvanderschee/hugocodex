@@ -12,9 +12,9 @@ This search relies on a local index. It uses the Lunr.js script to search. This 
 
 ### Installation
 
-Step 1. Download the file [search-lunr.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/search-lunr.html)
+Step 1. Download the file [lunr.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/_partials/lunr.html)
 <br />Step 2. Save the file in the '_includes' directory of your project
-<br />Step 3. Download the file [lunr.js](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/js/lunr.js)
+<br />Step 3. Download the file [lunr.js](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/_partials/lunr.html)
 <br />Step 4. Save the file in the 'js' (root) directory of your project
 <br />Step 5. Add the following statement to your layout where you want the search box to appear:
 
