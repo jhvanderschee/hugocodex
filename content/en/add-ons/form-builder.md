@@ -59,7 +59,7 @@ And add this to your layout:
 {{ end }}
 ```
 
-CloudCannon users should add the available options to their ‘config.yaml’ file to make the experience for content editors even smoother.
+CloudCannon users should add the available options to their ‘hugo.yaml’ file to make the experience for content editors even smoother.
 
 ```
 params: 

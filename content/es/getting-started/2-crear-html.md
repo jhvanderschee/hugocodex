@@ -2,7 +2,7 @@
 title: 2. Crear algo de HTML
 ---
 
-Una vez instalado Hugo, empezemos con una página web bien simple. Primero debes crear dos ficheros. Primero creas un fichero vacío llamado  'config.yaml'. Luego creas un fichero llamado 'index.html' con algún simple HTML:
+Una vez instalado Hugo, empezemos con una página web bien simple. Primero debes crear dos ficheros. Primero creas un fichero vacío llamado  'hugo.yaml'. Luego creas un fichero llamado 'index.html' con algún simple HTML:
 
 ```
 <html>
@@ -13,11 +13,11 @@ Una vez instalado Hugo, empezemos con una página web bien simple. Primero debes
 </html>
 ```
 
-Debes guardar el fichero 'config.yaml' en la raíz de tu proyecto y el fichero 'index.html' en una carpeta llamada 'layouts'. Tu proyecto se verá ahora así :
+Debes guardar el fichero 'hugo.yaml' en la raíz de tu proyecto y el fichero 'index.html' en una carpeta llamada 'layouts'. Tu proyecto se verá ahora así :
 
 ```
 /layouts/index.html
-/config.yaml
+/hugo.yaml
 ```
 
 Ahora puedes teclear el comando 'hugo server' en la línea de comandos y pulsar enter. Hugo te dirá que tu sitio web vive ahora en http://localhost:1313. Si vas ahora a dicha dirección en tu navegador, encontrarás tu sitio web.

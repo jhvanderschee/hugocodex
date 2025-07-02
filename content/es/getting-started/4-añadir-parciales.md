@@ -36,5 +36,5 @@ Tu proyecto debería ahora verse así:
 /layouts/index.html
 /layouts/_partials/header.html
 /layouts/_partials/footer.html
-/config.yaml`
+/hugo.yaml`
 ```

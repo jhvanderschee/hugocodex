@@ -69,7 +69,7 @@ To create an overview page, look at this example.
 Put this code in a file called 'list.html' and store it in your 'layouts/_defaults' folder, next to your 'page.html'. Your file tree will now look like this:
 
 ```
-├── config.yaml
+├── hugo.yaml
 ├── content
 │   └── _index.md
 └── layouts
@@ -104,7 +104,7 @@ Here is your walk-through:
 - Create a free account at [cloudcannon.com](https://cloudcannon.com/)
 - Create a website and name it
 - Select Hugo as the site buider
-- Create an empty ‘config.yaml’ file in the root
+- Create an empty ‘hugo.yaml’ file in the root
 - Upload your ‘home.html’ file to the ‘layouts’ directory
 - Upload your ‘_index.md’ file to the ‘contents’ directory
 - Visit your website on the URL CloudCannon created for you

@@ -61,7 +61,7 @@ Y a tu plantill/layout :
 {{ end }}
 ```
 
-Quienes usen CloudCannon pueden  habilitar las opciones en su ‘config.yaml’ para enriquecer la experiencia de la edición de contenido.
+Quienes usen CloudCannon pueden  habilitar las opciones en su ‘hugo.yaml’ para enriquecer la experiencia de la edición de contenido.
 
 ```
 params: 

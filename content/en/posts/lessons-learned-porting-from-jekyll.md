@@ -40,7 +40,7 @@ Hugo is able to resize images. These resized images end up in the 'resources' di
 
 ### About the config file
 
-In Jekyll the config file is called '\_config.yml'. In Hugo this is 'config.yaml'. Note that in modern versions of Hugo you can also use the 'yml' extension. Another remarkable thing is that Jekyll requires you to list your collections in the config file. Hugo does not have this requirement.
+In Jekyll the config file is called '\_config.yml'. In Hugo this is 'hugo.yaml'. Note that in modern versions of Hugo you can also use the 'yml' extension. Another remarkable thing is that Jekyll requires you to list your collections in the config file. Hugo does not have this requirement.
 
 ### Preventing output
 
@@ -101,7 +101,7 @@ Then you can use the this command to output a language specific date: `{{ .Date 
 
 ### Multilingual setup
 
-When you want a multilingual setup, you have to use `defaultContentLanguage: nl` on the root level of your config.yaml file. Additionally you need a languages variable, that looks something like this:
+When you want a multilingual setup, you have to use `defaultContentLanguage: nl` on the root level of your hugo.yaml file. Additionally you need a languages variable, that looks something like this:
 
 ```
 languages:

@@ -29,7 +29,7 @@ De esta manera separamos el código fuente del contenido. El contenido vive ahor
 ```
 /content/_index.md
 /layouts/index.html
-/config.yaml`
+/hugo.yaml`
 ```
 
 
