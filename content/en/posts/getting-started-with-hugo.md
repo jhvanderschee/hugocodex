@@ -35,7 +35,7 @@ Now you create an 'home.html' file and you replace your PHP tags with Go templat
 </html>
 ```
 
-This 'home.html' file is your new homepage template. You need to store it in your project folder under 'layouts'. You might want to make a copy of this file in 'layouts/_defaults' and call it 'page.html'. You need to place the html files you want to include in your project folder under 'layouts/_partials'. Finally you have to create a root folder 'content' in your project and fill it with an '_index.md' file that looks like this:
+This 'home.html' file is your new homepage template. You need to store it in your project folder under 'layouts'. You might want to make a copy of this file in 'layouts' and call it 'page.html'. You need to place the html files you want to include in your project folder under 'layouts/_partials'. Finally you have to create a root folder 'content' in your project and fill it with an '_index.md' file that looks like this:
 
 
 ```
@@ -66,7 +66,7 @@ To create an overview page, look at this example.
 </html>
 ```
 
-Put this code in a file called 'list.html' and store it in your 'layouts/_defaults' folder, next to your 'page.html'. Your file tree will now look like this:
+Put this code in a file called 'list.html' and store it in your 'layouts' folder, next to your 'page.html'. Your file tree will now look like this:
 
 ```
 ├── hugo.yaml
@@ -74,10 +74,9 @@ Put this code in a file called 'list.html' and store it in your 'layouts/_defaul
 │   └── _index.md
 └── layouts
     ├── home.html
-    ├── _defaults
-    │   ├── list.html
-    │   └── page.html
-    └── partials
+    ├── section.html
+    ├── page.html
+    └── _partials
         ├── footer.html
         ├── header.html
         └── sidebar.html
