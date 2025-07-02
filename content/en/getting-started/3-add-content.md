@@ -11,7 +11,7 @@ title: My first content file
 My first paragraph in Markdown
 ```
 
-Save the file in the 'content' directory. Now change your '/layouts/index.html' file, so it look like this:
+Save the file in the 'content' directory. Now change your '/layouts/home.html' file, so it look like this:
 
 ```
 <html>
@@ -23,10 +23,10 @@ Save the file in the 'content' directory. Now change your '/layouts/index.html' 
 </html>
 ```
 
-This effectively separates the code from the content. Content now lives in the '/content/_index.md' file and the HTML/code lives in the '/layouts/index.html' file. Your project should now looks like this:
+This effectively separates the code from the content. Content now lives in the '/content/_index.md' file and the HTML/code lives in the '/layouts/home.html' file. Your project should now looks like this:
 
 ```
 /content/_index.md
-/layouts/index.html
-/config.yaml
+/layouts/home.html
+/hugo.yaml
 ```
