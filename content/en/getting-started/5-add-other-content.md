@@ -11,18 +11,18 @@ title: Contact page
 Send me an email at joost@vdschee.nl
 ```
 
-We already had a layout file (index.html), but that file was only valid for the homepage. Therefore we now need another file. This file can be an exact copy of the 'index.html' file and you should name it 'page.html'. You must store this file in the '/layouts/' directory.
+We already had a layout file (home.html), but that file was only valid for the homepage. Therefore we now need another file. This file can be an exact copy of the 'home.html' file and you should name it 'page.html'. You must store this file in the '/layouts/' directory.
 
 Your project should now looks like this:
 
 ```
 /content/_index.md
 /content/contact.md
-/layouts/index.html
+/layouts/home.html
 /layouts/page.html
 /layouts/_partials/header.html
 /layouts/_partials/footer.html
-/config.yaml
+/hugo.yaml
 ```
 
 I noticed that I had to restart Hugo for these changes. You can do this by pressing Ctrl-C and re-enter the 'hugo server' command on the command line.

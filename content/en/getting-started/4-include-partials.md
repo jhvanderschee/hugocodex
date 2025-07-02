@@ -19,7 +19,7 @@ Create a 'footer.html' file that looks like this:
 </html>
 ```
 
-Store both files in the '/layouts/_partials' directory. Now update your '/layouts/index.html' file and make sure it looks like this (replacing the code with links to the partials):
+Store both files in the '/layouts/_partials' directory. Now update your '/layouts/home.html' file and make sure it looks like this (replacing the code with links to the partials):
 
 ```
 {{ partial "header.html" . }}
@@ -32,8 +32,8 @@ Your project should now looks like this:
 
 ```
 /content/_index.md
-/layouts/index.html
+/layouts/home.html
 /layouts/_partials/header.html
 /layouts/_partials/footer.html
-/config.yaml
+/hugo.yaml
 ```

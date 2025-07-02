@@ -12,7 +12,7 @@ date: 2016-02-01 10:00:00
 This is my first blog post
 ```
 
-The date should be the current date. The time is optional. Additionally we are going to add a (new) layout file for our blog overview (a list view of our posts). Hugo requires you to name this file 'list.html' and store it in the '_default' directory. This file looks like this:
+The date should be the current date. The time is optional. Additionally we are going to add a (new) layout file for our blog overview (a list view of our posts). Hugo requires you to name this file 'section.html' and store it in the 'layouts' directory. This file looks like this:
 
 ```
 {{ partial "header.html" . }}
@@ -29,7 +29,7 @@ The date should be the current date. The time is optional. Additionally we are g
 {{ partial "footer.html" . }}
 ```
 
-You can additionally update your 'page.html' in the '_defaults' directory and add the '.Date' parameter. It should then look something like this:
+You can additionally update your 'page.html' in the 'layouts' directory and add the '.Date' parameter. It should then look something like this:
 
 ```
 {{ partial "header.html" . }}
@@ -45,10 +45,10 @@ This will make sure your posts (single pages) also show the date of the post. Yo
 /content/_index.md
 /content/contact.md
 /content/posts/hello-world.md
-/layouts/index.html
+/layouts/home.html
 /layouts/page.html
-/layouts/list.html
+/layouts/section.html
 /layouts/_partials/header.html
 /layouts/_partials/footer.html
-/config.yaml
+/hugo.yaml
 ```
