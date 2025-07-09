@@ -3,7 +3,7 @@ title: Useful body classes
 date: 2025-07-09
 ---
 
-Styling becomes much easier when the body of your HTML document has the right classes. These classes are very useful:
+Styling becomes much easier when the body of your HTML document has the right classes. The following classes are very useful. Note that this assumes you give your sections (folders in the root of the content) english plural names, like 'products' or 'reviews'.
 
 ```
 <body class="{{ if .IsHome}}home{{ end }}">
