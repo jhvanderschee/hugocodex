@@ -46,7 +46,7 @@ If you combine these statements you get something like this (notice the minus ch
 ">
 ```
 
-This will result in one of the situations below, which will make styling them with CSS a breeze.
+This will result in one of the situations below, which will make styling these pages with CSS a breeze.
 
 ```
 <body class="home">
