@@ -52,7 +52,7 @@ The code below will add a 'page' class to the body if the content is not part of
 ">
 ```
 
-This will result in one of the situations below.
+This will result in one of the situations below, which will make styling them with CSS a breeze.
 
 ```
 <body class="home">
@@ -66,5 +66,3 @@ This will result in one of the situations below.
 ```
 <body class="page">
 ```
-
-These pages are easy to style with CSS.
