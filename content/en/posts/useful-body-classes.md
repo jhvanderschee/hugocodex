@@ -16,17 +16,11 @@ content/
 └── contact.md
 ```
 
-### Homepage
-
 The code below will add the class 'home' to your body for the homepage.
 
 ```
 {{ if .IsHome}}home{{ end }}
 ```
-
-
-
-### Sections
 
 The code below will add the section name (like 'products') to the class of the body for the list page. For the single page it will add 'product'.
 
@@ -36,13 +30,11 @@ The code below will add the section name (like 'products') to the class of the b
 
 The code below will add a 'page' class to the body if the content is not part of a section (typically these are markdown files in the root, including the homepage).
 
-### Other pages
-
 ```
 {{ if eq .Type `page` }}page{{ end }}
 ```
 
-### Result
+## Result
 
 If you combine these statements you get something like this:
 
