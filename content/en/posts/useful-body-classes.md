@@ -16,7 +16,7 @@ content/
 └── contact.md
 ```
 
-## Homepage
+### Homepage
 
 ```
 {{ if .IsHome}}home{{ end }}
@@ -24,7 +24,7 @@ content/
 
 The above code will add the class 'home' to your body for the homepage.
 
-## Sections
+### Sections
 
 ```
 {{ if eq .Kind `page` }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}
@@ -32,7 +32,7 @@ The above code will add the class 'home' to your body for the homepage.
 
 The above code will add the section name (like 'products') to the class of the body for the list page. For the single page it will add 'product'.
 
-## Other pages
+### Other pages
 
 ```
 {{ if eq .Type `page` }}page{{ end }}
