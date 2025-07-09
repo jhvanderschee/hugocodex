@@ -12,7 +12,7 @@ Styling becomes much easier when the body of your HTML document has the right cl
 The above code will add the class 'home' to your body for the homepage.
 
 ```
-{{ if and (eq .Kind `page`) .Section }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}
+{{ if eq .Kind `page` }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}
 ```
 
 The above code will add the section name (like 'products') to the class of the body for the list page. For the single page it will add 'product'.
