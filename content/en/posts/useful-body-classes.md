@@ -42,7 +42,9 @@ The code below will add a 'page' class to the body if the content is not part of
 {{ if eq .Type `page` }}page{{ end }}
 ```
 
-## Result
+### Result
+
+If you combine these statements you get something like this:
 
 ```
 <body class="
