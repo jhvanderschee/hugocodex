@@ -42,14 +42,14 @@ If you combine these statements you get something like this:
 <body class="
 {{ if .IsHome}}home{{ end }}
 {{ if eq .Kind `page` }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}
-{{ if eq .Type `page` }}page{{ end }}
+{{ if and (eq .Type `page`) (ne .IsHome true) }}page{{ end }}
 ">
 ```
 
 This will result in one of the situations below, which will make styling them with CSS a breeze.
 
 ```
-<body class="home page">
+<body class="home">
 ```
 ```
 <body class="products">
