@@ -27,7 +27,7 @@ content/
 ## Homepage
 
 ```
-<body class="{{ if .IsHome}}home{{ end }}">
+{{ if .IsHome}}home{{ end }}
 ```
 
 The above code will add the class 'home' to your body for the homepage.
@@ -35,7 +35,7 @@ The above code will add the class 'home' to your body for the homepage.
 ## Sections
 
 ```
-<body class="{{ if eq .Kind `page` }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}">
+{{ if eq .Kind `page` }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}
 ```
 
 The above code will add the section name (like 'products') to the class of the body for the list page. For the single page it will add 'product'.
@@ -43,7 +43,13 @@ The above code will add the section name (like 'products') to the class of the b
 ## Other pages
 
 ```
-<body class="{{ if eq .Type `page` }}page{{ end }}">
+{{ if eq .Type `page` }}page{{ end }}
 ```
 
 The above code will add a 'page' class to the body if the content is not part of a section (typically these are markdown files in the root, including the homepage).
+
+```
+<body class="{{ if .IsHome}}home{{ end }}
+{{ if eq .Kind `page` }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}
+{{ if eq .Type `page` }}page{{ end }}">
+```
