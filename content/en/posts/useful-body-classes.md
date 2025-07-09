@@ -11,14 +11,6 @@ content/
 │   ├── _index.md <-- list page
 │   ├── product-1.md <-- single page
 │   └── product-2.md
-├── books/
-│   ├── _index.md
-│   ├── book-1.md
-│   └── book-2.md
-├── films/
-│   ├── _index.md
-│   ├── film-1.md 
-│   └── film-2.md
 ├── _index.md <-- homepage
 ├── about.md <-- other page
 └── contact.md
@@ -48,6 +40,8 @@ The above code will add the section name (like 'products') to the class of the b
 
 The above code will add a 'page' class to the body if the content is not part of a section (typically these are markdown files in the root, including the homepage).
 
+## Result
+
 ```
 <body class="
 {{ if .IsHome}}home{{ end }}
@@ -55,3 +49,14 @@ The above code will add a 'page' class to the body if the content is not part of
 {{ if eq .Type `page` }}page{{ end }}
 ">
 ```
+
+This will result in one of the situations below.
+
+```
+<body class="home">
+<body class="products">
+<body class="product">
+<body class="page">
+```
+
+These pages are easy to style with CSS.
