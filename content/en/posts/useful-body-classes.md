@@ -55,7 +55,7 @@ The code below will add a 'page' class to the body if the content is not part of
 This will result in one of the situations below, which will make styling them with CSS a breeze.
 
 ```
-<body class="home">
+<body class="home page">
 ```
 ```
 <body class="products">
