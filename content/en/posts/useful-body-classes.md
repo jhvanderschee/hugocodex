@@ -1,6 +1,6 @@
 ---
 title: Useful body classes
-date: 2025-06-09
+date: 2025-07-09
 ---
 
 Styling becomes much easier when the body of your HTML document has the right classes. These classes are very useful:
