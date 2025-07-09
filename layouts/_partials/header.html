@@ -32,9 +32,9 @@
 
   </head>
   <body id="top" class="
-  {{- if .IsHome }}home{{ end }}
-  {{- if .IsPage }}{{ replace (.Section | singularize) `simple-` `` }}{{ else }}{{ .Section }}{{ end }}
-  {{- if and (eq .Type `page`) (ne .IsHome true) }}page{{ end }}
+  {{- if .IsHome }}home{{ end -}}
+  {{- if .IsPage }}{{ replace (.Section | singularize) `simple-` `` }}{{ else }}{{ .Section }}{{ end -}}
+  {{- if and (eq .Type `page`) (ne .IsHome true) }}page{{ end -}}
   ">
     <div class="main">
       {{ partial "navigation.html" . }}
