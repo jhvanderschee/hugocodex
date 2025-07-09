@@ -6,7 +6,7 @@ date: 2025-07-09
 Styling becomes much easier when the body of your HTML document has the right classes. These classes are very useful:
 
 ```
-{{ if .IsHome}}home{{ ebd }}
+{{ if .IsHome}}home{{ end }}
 ```
 
 The above code will add the class 'home' to your body for the homepage.
