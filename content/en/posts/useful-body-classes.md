@@ -40,9 +40,9 @@ If you combine these statements you get something like this:
 
 ```
 <body class="
-{{- if .IsHome}}home{{ end }}
-{{- if eq .Kind `page` }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}
-{{- if and (eq .Type `page`) (ne .IsHome true) }}page{{ end }}
+{{- if .IsHome}}home{{ end -}}
+{{- if eq .Kind `page` }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end -}}
+{{- if and (eq .Type `page`) (ne .IsHome true) }}page{{ end -}}
 ">
 ```
 
