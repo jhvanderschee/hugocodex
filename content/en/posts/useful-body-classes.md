@@ -49,7 +49,9 @@ The above code will add the section name (like 'products') to the class of the b
 The above code will add a 'page' class to the body if the content is not part of a section (typically these are markdown files in the root, including the homepage).
 
 ```
-<body class="{{ if .IsHome}}home{{ end }}
+<body class="
+{{ if .IsHome}}home{{ end }}
 {{ if eq .Kind `page` }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}
-{{ if eq .Type `page` }}page{{ end }}">
+{{ if eq .Type `page` }}page{{ end }}
+">
 ```
