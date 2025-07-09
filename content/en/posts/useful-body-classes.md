@@ -56,8 +56,14 @@ This will result in one of the situations below.
 
 ```
 <body class="home">
+```
+```
 <body class="products">
+```
+```
 <body class="product">
+```
+```
 <body class="page">
 ```
 
