@@ -36,7 +36,7 @@ The code below will add a 'page' class to the body if the content is not part of
 
 ## Result
 
-If you combine these statements you get something like this (notice the minus signs to prevent extra spaces):
+If you combine these statements you get something like this (notice the minus characters to prevent extra spaces):
 
 ```
 <body class="
