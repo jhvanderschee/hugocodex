@@ -28,7 +28,7 @@ The code below will add the section name (like 'products') to the class of the b
 {{ if eq .Kind `page` }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}
 ```
 
-The code below will add a 'page' class to the body if the content is not part of a section (typically these are markdown files in the root, including the homepage).
+The code below will add a 'page' class to the body if the content is not part of a section (typically these are markdown files in the root, including the homepage). To exclude the homepage we can test against the `.IsHome` variable.
 
 ```
 {{ if eq .Type `page` }}page{{ end }}
