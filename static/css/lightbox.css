@@ -72,7 +72,7 @@
     display: block;
 }   
 #lightbox #prev, #lightbox #next {height: 50px; line-height: 36px; display: none; margin-top: -25px; position: fixed; top: 50%; padding: 0 15px; cursor: pointer; text-decoration: none; z-index: 99; color: white; font-size: 60px;}
-#lightbox.gallery #prev, #lightbox.gallery #next {display: block;}
+#lightbox.lightbox-gallery #prev, #lightbox.lightbox-gallery #next {display: block;}
 #lightbox #prev {left: 0;}
 #lightbox #next {right: 0;}
 #lightbox #close {height: 50px; width: 50px; position: fixed; cursor: pointer; text-decoration: none; z-index: 99; right: 0; top: 0;}
