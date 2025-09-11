@@ -10,7 +10,7 @@ The carousel is based on a [carousel with CSS scroll snap](https://codepen.io/jo
 
 ### How it works
 
-This is in improved version of the old [Manual Slider/Carousel](/add-ons/slider-carousel-manual). Just write a list with only images in you content and the list will automatically be converted into a carousel, like this:
+Just write a list with only images in you content and the list will automatically be converted into a carousel, like this:
 
 ```
 - ![](/uploads/slider/image1.jpg)
@@ -19,6 +19,8 @@ This is in improved version of the old [Manual Slider/Carousel](/add-ons/slider-
 
 - ![](/uploads/slider/image1.jpg)
 - ![](/uploads/slider/image2.jpg)
+
+Note that this is an improved version of the [old slider/carousel](/add-ons/slider-carousel-manual), which had to be invoked manually. 
 
 ### Installation
 
