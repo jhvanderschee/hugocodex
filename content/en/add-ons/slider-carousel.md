@@ -17,8 +17,8 @@ Just write a list with only images in you content and the list will automaticall
 - ![](/uploads/slider/image2.jpg)
 ```
 
-- [![](/uploads/slider/image1.jpg)](/uploads/slider/image1.jpg)
-- [![](/uploads/slider/image2.jpg)](/uploads/slider/image2.jpg)
+- ![](/uploads/slider/image1.jpg)
+- ![](/uploads/slider/image2.jpg)
 
 Note that this is an improved version of the [old slider/carousel](/add-ons/slider-carousel-manual), which had to be invoked manually, but was suitable for headers (because it was available as a partial) and had a lot more options.
 
