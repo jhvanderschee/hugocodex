@@ -16,7 +16,7 @@ Consider the following 'retina-ready' image of 881.7kb (0.9Mb) of this orange La
 We could save a lot of bandwidth by adding a 'source set'. This would instruct the browser to get a low resolution version on non-retina displays. This means we use a 1x image and a 2x image. Both these images could be compressed to save even more bandwith. But what is the right amount of compression for images on retina and non-retina displays?  
 <br>
 
-|Compression|Size|
+|Quality|Size|
 |----|----|
 |[1x 10% jpg](/uploads/car/1x-10.jpg)|12.6kb|
 |[1x 20% jpg](/uploads/car/1x-20.jpg)|18.0kb|
@@ -29,7 +29,7 @@ We could save a lot of bandwidth by adding a 'source set'. This would instruct t
 |[1x 90% jpg](/uploads/car/1x-90.jpg)|73.6kb|
 |[1x 100% jpg](/uploads/car/1x-100.jpg)|246.6kb|
 
-|Compression|Size|
+|Quality|Size|
 |----|----|
 |[2x 10% jpg](/uploads/car/2x-10.jpg)|32.2kb|
 |[2x 20% jpg](/uploads/car/2x-20.jpg)|50.1kb|
