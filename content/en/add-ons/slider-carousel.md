@@ -4,9 +4,7 @@ title: Slider/Carousel
 
 ### Introduction
 
-A lot of websites have a slider (or carousel). Most of them in the header. The big question is: [Should I add a carousel](https://shouldiuseacarousel.com/) to my Hugo website? If you decide you should... this page shows you how to use a decent one. 
-
-The carousel is based on a [carousel with CSS scroll snap](https://codepen.io/joosts/pen/MWJBPgo). This carousel weighs only 3kb (uncompressed). On desktop you can interact with the arrows and the bullets, on mobile you can swipe. It kinda works without Javascript. This carousel supports native lazy loading (because it uses regular image tags instead of background images). You can put multiple carousels on one page and the carousel will 'pause' on hover. Content is stored in a data file and design decisions are stored in the include variables.
+This carousel is based on a [carousel with CSS scroll snap](https://codepen.io/joosts/pen/MWJBPgo). This carousel weighs only 3kb (uncompressed). On desktop you can interact with the arrows and the bullets, on mobile you can swipe. It kinda works without Javascript. This carousel supports native lazy loading (because it uses regular image tags instead of background images). You can put multiple carousels on one page and the carousel will 'pause' on hover.
 
 ### How it works
 
