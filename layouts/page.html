@@ -9,7 +9,7 @@
             <h1>{{ .Title }}</h1>
             </header>
             
-            {{ .Content }}
+            {{ partial "list-to-carousel" .Content }}
 
             {{ if or (eq .RelPermalink "/search-google/") (eq .RelPermalink "/es/search-google/") }}<div class="row">
               <div class="col-xs-8">{{ partial "search-google.html" . }}</div>

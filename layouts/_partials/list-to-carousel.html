@@ -1,0 +1,24 @@
+{{- $duration := "7000" -}}
+
+
+{{- $content := $ -}}
+{{- $imageListPattern := `<ul>\s*(<li>\s*<img[^>]*>\s*</li>\s*)+</ul>` -}}
+{{- $imageLists := findRE $imageListPattern $content -}}
+{{- range $il_index,$il := $imageLists -}}
+  {{- $listItems := findRE `<li>\s*<img[^>]*>\s*</li>` . -}}
+  {{- $itemCount := len $listItems -}}
+  {{- $items := `<ul>` -}}
+  {{- range $i,$li := $listItems -}}
+    {{- $img := index (findRE `(?s)<img.*?>` .) 0 }}
+    {{- $items = print $items `<li id="c` $il_index `_slide` $i `">` $img `</li>` -}}
+  {{- end -}}
+  {{- $items = print $items `</ul>` -}}
+  {{- $indicators := `<ol>` -}}
+  {{- range $i,$li := $listItems -}}
+    {{- $indicators = print $indicators `<li><a href="#c` $il_index `_slide` $i `"></a></li>` -}}
+  {{- end -}}
+  {{- $indicators = print $indicators `</ol>` -}}
+  {{- $replacement := printf `<div id="carousel_{{ $il_index }}" class="auto-carousel" duration="%s">%s%s<div class="prev">&lsaquo;</div><div class="next">&rsaquo;</div></div>` $duration $items $indicators  -}}
+  {{- $content = replace $content . $replacement -}}
+{{- end -}}
+{{- $content | safeHTML -}}

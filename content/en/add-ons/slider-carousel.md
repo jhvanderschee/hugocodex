@@ -10,51 +10,31 @@ The carousel is based on a [carousel with CSS scroll snap](https://codepen.io/jo
 
 ### How it works
 
-You can define how long each slide should stay on the screen (in miliseconds) and how many slides (items) are shown at once. You can also define the height of the slider as a number, and the unit as ‘%’ or ‘px’. This makes the slider responsive. If you set the height to ‘50’ and the unit to ‘%’, the dimensions will always be 2:1, but the height will vary. If you set the height to ‘500’ and the unit to ‘px’ the height will always be the same, but the dimensions will vary.
+This is in improved version of the old [Manual Slider/Carousel](/add-ons/slider-carousel-manual). Just write a list with only images in you content and the list will automatically be converted into a carousel, like this:
 
-{{< carousel items="1" height="500" unit="px" duration="7000" >}}
+```
+- ![](/uploads/slider/image1.jpg)
+- ![](/uploads/slider/image2.jpg)
+```
 
-{{< carousel items="2" height="35" unit="%" duration="5000" >}}
+- ![](/uploads/slider/image1.jpg)
+- ![](/uploads/slider/image2.jpg)
 
 ### Installation
 
-Step 1. Download the file [carousel.js](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/static/js/carousel.js) and [carousel.css](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/static/css/carousel.css)
+Step 1. Download the file [auto-carousel.js](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/static/js/auto-carousel.js) and [auto-carousel.css](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/static/css/auto-carousel.css)
 <br />Step 2. Save the file in the '/js' and '/css' directory of your project
 <br />Step 3. Make sure the footer of your layout document looks like this:
 
 ```
-<script type="text/javascript" src="/js/carousel.js"></script>
-<link rel="stylesheet" href="/css/carousel.css">
+<script type="text/javascript" src="/js/auto-carousel.js"></script>
+<link rel="stylesheet" href="/css/auto-carousel.css">
 </body>
 </html>
 ```
-Step 4. Create a carousel.yaml file in your data directory with this content:  
-```
-images: 
-  - image: /uploads/slider/image1.jpg
-    content_html: "1"
-  - image: /uploads/slider/image2.jpg
-    content_html: "2"
-  - image: /uploads/slider/image3.jpg
-    content_html: "3"
-  - image: /uploads/slider/image4.jpg
-    content_html: "4"
-```
-
-### Template installation
-
-Step 5. Download the file [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_partials/carousel.html)  
+Step 4. Download the file [list-to-carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_partials/list-to-carousel.html)  
 Step 6. Save the file in the ‘layouts/_partials’ directory of your project  
-Step 7. Add this to your layout:  
+Step 7. Add this to your layout where you would normally call `.Content`:  
 ```
-{{ partial "carousel.html" (dict "context" . "items" "1" "height" "50" "unit" "%" "duration" "7000") }}
-```
-
-### Shortcode installation
-
-Step 5. Download the file [carousel.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_shortcodes/carousel.html)  
-Step 6. Save the file in the ‘layouts/_partials/_shortcodes’ directory of your project  
-Step 7. Add this to your content (.md file):  
-```
-{{</* carousel items="1" height="500" unit="px" duration="7000" */>}}
+{{ partial "list-to-carousel.html" .Content }}
 ```
