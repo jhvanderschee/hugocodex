@@ -1,6 +1,6 @@
 .auto-carousel {position: relative; margin: 1rem 0!important;}
 .auto-carousel ul {overflow: auto; display: flex; flex-wrap: nowrap; scroll-snap-type: x mandatory; scroll-snap-points-y: repeat(100%); scroll-behavior: smooth; background: gray; -ms-overflow-style: none; scrollbar-width: none; margin: 0!important; padding: 0; cursor: grab; user-select: none;}
-.auto-carousel ul.grabbing {cursor: grabbing;}
+.auto-carousel ul.grabbing {cursor: grabbing; scroll-snap-type: none;}
 .auto-carousel ul::-webkit-scrollbar {display: none; /* Hide scrollbar for Chrome, Safari and Opera */} 
 .auto-carousel ul li {position: relative; min-width: 100%; list-style: none; background: url() center center / cover no-repeat; scroll-snap-align: start; pointer-events: none;}
 .auto-carousel ul li > img {border-radius: 0;}
