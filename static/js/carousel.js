@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
           ele.classList.add('grabbing');
           startX = e.pageX - ele.offsetLeft;
           scrollLeft = ele.scrollLeft;
+          ele.classList.add('interacted');
       });
       ele.addEventListener('mouseleave', () => {
           isDown = false;
