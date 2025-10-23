@@ -84,10 +84,14 @@ document.addEventListener('DOMContentLoaded', function() {
       ele.addEventListener('mouseleave', () => {
           isDown = false;
           ele.classList.remove('grabbing');
+          ele.scrollLeft = ele.scrollLeft - 1; //trigger scroll event to update selected bullet
+          ele.scrollLeft = ele.scrollLeft + 1; //trigger scroll event to update selected bullet
       });
       ele.addEventListener('mouseup', () => {
           isDown = false;
           ele.classList.remove('grabbing');
+          ele.scrollLeft = ele.scrollLeft - 1; //trigger scroll event to update selected bullet
+          ele.scrollLeft = ele.scrollLeft + 1; //trigger scroll event to update selected bullet
       });
       ele.addEventListener('mousemove', (e) => {
           if(!isDown) return;
