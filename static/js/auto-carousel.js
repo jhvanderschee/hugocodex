@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const slides = carousel.querySelectorAll('ul li');
       const nextarrow = carousel.querySelector('.next');
       const prevarrow = carousel.querySelector('.prev');
+      let isDown = false;
+      let startX;
+      let scrollLeft;
 
       // Initialize the carousel
       nextarrow.style.display = 'block';
@@ -71,6 +74,32 @@ document.addEventListener('DOMContentLoaded', function() {
       ele.addEventListener('keydown', function (e){
           if(e.key == 'ArrowLeft') ele.classList.add('interacted');
           if(e.key == 'ArrowRight') ele.classList.add('interacted');
+      });
+      ele.addEventListener('mousedown', (e) => {
+          isDown = true;
+          ele.classList.add('grabbing');
+          startX = e.pageX - ele.offsetLeft;
+          scrollLeft = ele.scrollLeft;
+          ele.classList.add('interacted');
+      });
+      ele.addEventListener('mouseleave', () => {
+          isDown = false;
+          ele.classList.remove('grabbing');
+          ele.scrollLeft = ele.scrollLeft - 1; //trigger scroll event to update selected bullet
+          ele.scrollLeft = ele.scrollLeft + 1; //trigger scroll event to update selected bullet
+      });
+      ele.addEventListener('mouseup', () => {
+          isDown = false;
+          ele.classList.remove('grabbing');
+          ele.scrollLeft = ele.scrollLeft - 1; //trigger scroll event to update selected bullet
+          ele.scrollLeft = ele.scrollLeft + 1; //trigger scroll event to update selected bullet
+      });
+      ele.addEventListener('mousemove', (e) => {
+          if(!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - ele.offsetLeft;
+          const walk = (x - startX) * 3; //scroll-fast
+          ele.scrollLeft = scrollLeft - walk;
       });
 
       nextarrow.addEventListener("click", nextSlide);
