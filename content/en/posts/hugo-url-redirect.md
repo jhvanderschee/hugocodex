@@ -28,6 +28,4 @@ Hugo now creates pages based on the built-in [alias.html template](https://githu
 </html>
 ```
 
-You don't need to do anything with the code above, it is just to show the logic of the generated redirect.
-
-Happy coding!
+You don't need to do anything with the code above, it is just to show the logic of the generated redirect. Happy coding!
