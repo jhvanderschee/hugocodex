@@ -12,7 +12,6 @@ aliases
 - /my-old-url
 - /even-older-url
 ---
-...
 ```
 
 Hugo now creates pages based on the built in [alias.html template](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/alias.html). That looks like this:
