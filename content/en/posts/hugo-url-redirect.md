@@ -1,5 +1,5 @@
 ---
-title: Hugo - Creating a URL Redirect
+title: Creating a URL Redirect
 date: 2025-11-14
 ---
 
