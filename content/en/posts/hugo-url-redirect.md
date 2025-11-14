@@ -14,7 +14,7 @@ aliases
 ---
 ```
 
-Hugo now creates pages based on the built in [alias.html template](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/alias.html). That looks like this:
+Hugo now creates pages based on the built-in [alias.html template](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/alias.html). That looks like this:
 
 ```
 <!DOCTYPE html>
@@ -27,5 +27,7 @@ Hugo now creates pages based on the built in [alias.html template](https://githu
   </head>
 </html>
 ```
+
+You don't need to do anything with the code above, it is just to show the logic of the generated redirect.
 
 Happy coding!
