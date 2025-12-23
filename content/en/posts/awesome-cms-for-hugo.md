@@ -1,5 +1,5 @@
 ---
-title: An awesome CMS for Hugo
+title: "Sitepins: An awesome CMS for Hugo"
 date: 2025-12-23
 ---
 
