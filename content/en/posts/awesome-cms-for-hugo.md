@@ -7,4 +7,4 @@ So you have a Hugo website but you have no CMS? [Check out Sitepins.](https://si
 
 [![](/uploads/sitepins.png)](https://sitepins.com/)
 
-PS. We know the author of Sitepins. His name is Mehedi from [Zeon Studio](https://zeon.studio). We have reviewed his CMS project multiple times. He is a passionate person and a kind soul. He has created some great Hugo themes and is a well known person in the community. He knows what he is doing. We fully trust Mehedi to take good care of you guys, so do not hesitate and [check out his amazing project](https://sitepins.com/) and get yourself an amazing deal!
+PS. We know the author of Sitepins. His name is Mehedi from [Zeon Studio](https://zeon.studio). We have reviewed his CMS project multiple times. He is a passionate person and a kind soul. He has created some great Hugo themes and is a well known person in the community. He knows what he is doing. We fully trust Mehedi to take good care of you guys, so do not hesitate and [check out this project](https://sitepins.com/) and get yourself an amazing deal!
