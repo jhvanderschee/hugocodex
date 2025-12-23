@@ -9,4 +9,4 @@ From somebody who created [a CMS for Hugo](https://cms.usecue.com) himself... le
 
 [![](/uploads/sitepins.png)](https://sitepins.com/)
 
-PS. I (Joost) know the author. His name is Mehedi. I have reviewed his CMS project multiple times. He is a passionate person and kind soul. He has created some great Hugo themes and is a well known person in the community. He knows what he is doing. I fully trust Mehedi to take good care of you guys, so do not hesitate and [check out his amazing project](https://sitepins.com/) and get yourself an amazing deal!
+PS. We know the author of [Sitepins](https://sitepins.com/). His name is Mehedi. We have reviewed his CMS project multiple times. He is a passionate person and kind soul. He has created some great Hugo themes and is a well known person in the community. He knows what he is doing. We fully trust Mehedi to take good care of you guys, so do not hesitate and [check out his amazing project](https://sitepins.com/) and get yourself an amazing deal!
