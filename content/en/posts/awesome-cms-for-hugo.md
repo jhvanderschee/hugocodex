@@ -7,4 +7,4 @@ So you have a Hugo website but you have no CMS? Check out Sitepins, [a CMS for H
 
 [Try Sitepins today!](https://sitepins.com/)
 
-PS. I know the author. His name is Mehedi. He is a passionate person and kind soul. He has created some great Hugo themes and also worked with the CloudCannon team (who I know as well). I fully trust Mehedi to take good care of you guys, so do not hesitate and check out his amazing project!
+PS. I know the author. His name is Mehedi. I have reviewed his CMS project multiple times. He is a passionate person and kind soul. He has created some great Hugo themes and is a well known person in the community. He knows what he is doing. I fully trust Mehedi to take good care of you guys, so do not hesitate and check out his amazing project!
