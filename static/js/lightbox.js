@@ -72,6 +72,17 @@ function setGallery(el) {
     document.getElementById('prev').addEventListener("click", function () {
         gallery_elements[prevkey].click();
     });
+    document.addEventListener('keydown', function(event) {
+        if(event.key === "ArrowRight") {
+            gallery_elements[nextkey].click();
+        }
+        if(event.key === "ArrowLeft") {
+            gallery_elements[prevkey].click();
+        }
+        if(event.key === "Escape") {
+            document.getElementById('close').click();
+        }
+    });
 }
 function getQueryVariable(url, variable) {
     var urlparts = url.split("?");
