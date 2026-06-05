@@ -46,3 +46,8 @@ outputFormats:
     baseName: /simple/index
     mediaType: text/html
     permalinkable: true
+outputs:
+  home:
+    - html
+    - rss
+    - json
