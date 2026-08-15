@@ -234,7 +234,7 @@ function getCartTotal() {
 
     var cart = JSON.parse(localStorage.getItem("cart")), i;
     var carttotal = 0;
-    if(cart.length) {
+    if(cart && cart.length) {
         for (i = 0; i < cart.length; ++i) {
             carttotal += parseFloat(cart[i].quantity * cart[i].price);
         }
@@ -248,8 +248,10 @@ function getAddonTotal() {
 
     var addontotal = 0;
     var addons = JSON.parse(localStorage.getItem("addons")), i;
-    for (i=0; i<addons.length; i++){
-        addontotal = addontotal + parseFloat(addons[i].price);
+    if(addons) {
+        for (i=0; i<addons.length; i++){
+            addontotal = addontotal + parseFloat(addons[i].price);
+        }
     }
     return addontotal;
 }
@@ -261,6 +263,28 @@ function redirectToPayment(paymentlink) {
     var checkoutcalculation = getCartTotal() + getAddonTotal();
     var ordernumber = localStorage.getItem('ordernumber');
     document.location.href = paymentlink+'/'+checkoutcalculation+'/Order%20number%20'+ordernumber;
+}
+
+function payWithUsecue(id, lang) {
+
+    // is used on the paylink page/layout
+    // pay.js turns the page it is loaded on into a payment page, but it reads its parameters
+    // from the url, so we write them to the address bar first and load the script afterwards
+
+    var amount = getCartTotal() + getAddonTotal();
+    var ordernumber = localStorage.getItem('ordernumber');
+
+    var url = new URL(window.location.href);
+    url.searchParams.set('id', id);
+    if(amount > 0) url.searchParams.set('amount', amount.toFixed(2));
+    if(ordernumber) url.searchParams.set('specification', 'Order number '+ordernumber);
+    if(lang) url.searchParams.set('lang', lang);
+    window.history.replaceState(window.history.state, '', url.toString());
+
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://pos.usecue.com/p/js/pay.js';
+    document.body.appendChild(script);
 }
 
 

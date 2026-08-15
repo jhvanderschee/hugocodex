@@ -40,6 +40,18 @@ languages:
       add-ons: complementos/:contentbasename
       products: donar/:contentbasename
       simple-products: simple-donar/:contentbasename
+  nl:
+    languageName: Nederlands
+    title: Hugo Codex
+    params:
+      description: "Hugo, het website framework dat razendsnel is, want snel is gewoon beter."
+    contentDir: content/nl
+    weight: 3
+    permalinks:
+      posts: blog/:contentbasename
+      getting-started: aan-de-slag/:contentbasename
+      add-ons: uitbreidingen/:contentbasename
+      products: doneren/:contentbasename
 
 outputFormats:
   simple:

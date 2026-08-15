@@ -8,15 +8,21 @@ Paul Irish did a nice thing. He created [a lighter Youtube embed](https://github
 
 ### How it works
 
-The shortcode creates an image and a link to Vimeo. The classes on this link tell the CSS to add the Vimeo logo and add a play button. This makes it look like an embed. Note that when you load the [lightbox](/add-ons/lightbox/) from this website, your video will automatically open in a lightbox instead of in a new page. Below you find a demo (with the lightbox enabled).
+The shortcode fetches the poster of your video from the Vimeo oEmbed API at build time and stores it on your own server. It then creates an image and a link to Vimeo. The classes on this link tell the CSS to add the Vimeo logo and add a play button. This makes it look like an embed. Note that when you load the [lightbox](/add-ons/lightbox/) from this website, your video will automatically open in a lightbox instead of in a new page. Below you find a demo (with the lightbox enabled).
 
-{{< vimeo id="727145223" image="/uploads/resizeallimages.png" >}}
+{{< vimeo 727145223 >}}
 
 ### Installation
 
 Step 1. Download the file [vimeo.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_shortcodes/vimeo.html)
 <br />Step 2. Save the file in the 'layouts/_partials/_shortcodes' directory of your project
 <br />Step 3. Add the following line to your content on the place where you want your Vimeo video to appear:
+
+```
+{{</* vimeo 727145223 */>}}
+```
+
+If you prefer to use your own poster instead of the one from Vimeo, add an image parameter:
 
 ```
 {{</* vimeo id="727145223" image="/uploads/resizeallimages.png" */>}}

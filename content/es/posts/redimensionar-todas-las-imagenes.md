@@ -3,7 +3,7 @@ title: Redimensionar todas las imágenes
 date: 2022-07-04
 ---
 
-{{< vimeo id="727145223" image="/uploads/resizeallimages.png" >}}
+{{< vimeo 727145223 >}}
 
 Gracias por unirte a esta charla relámpago sobre 'redimensionamiento de imágenes'. Hugo es conocido por sus rápidas cargas de página. Sin embargo, si deseas obtener páginas web que se carguen instantáneamente, también necesitas redimensionar tus imágenes adecuadamente. Afortunadamente, Hugo puede redimensionar las imágenes por sí mismo. En esta charla te contaré cómo puedes configurar Hugo para que automáticamente redimensione y comprima todas las imágenes de tu proyecto, incluso aquellas que son cargadas a través de un CMS externo por tu cliente.
 

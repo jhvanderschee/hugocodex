@@ -1,0 +1,6 @@
+<script type="text/javascript">
+
+ window.onload = function() {
+     payWithUsecue('{{ .Get "id" }}', '{{ .Get "lang" | default .Page.Language.Lang }}');
+ }
+</script>

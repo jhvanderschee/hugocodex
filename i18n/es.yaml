@@ -31,11 +31,20 @@ add to cart:
 Shopping cart:
   other: Carrito de la compra
 
+Checkout:
+  other: Checkout
+
+Payment:
+  other: Pago
+
 Price:
   other: Precio
 
 continue shopping:
   other: continuar comprando
+
+choose_a:
+  other: Elige un
 
 Add to cart:
   other: Añadir al carrito
@@ -78,6 +87,9 @@ Gift wrapping:
 
 Not gift wrapped:
   other: Sin envoltorio de regalo
+
+Gift wrapped:
+  other: Envoltorio de regalo
   
 Message:
   other: Mensaje

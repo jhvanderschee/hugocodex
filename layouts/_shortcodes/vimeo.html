@@ -1,15 +1,29 @@
-<!-- 
-{{/* 
-    
-    Usage: 
+<!--
+{{/*
+
+    Usage:
+    {{< vimeo 727145223 >}}
+
+    Optional: override the poster with your own image
     {{< vimeo id="727145223" image="/uploads/resizeallimages.png" >}}
-    
+
 */}}
 -->
 
+{{ $id := or (.Get `id`) (.Get 0) }}
+{{ $image := "" }}
+{{ with .Get `image` }}
+    {{ $image = resources.GetMatch . }}
+{{ else }}
+    {{ with resources.GetRemote (print "https://vimeo.com/api/oembed.json?width=1280&url=https%3A%2F%2Fvimeo.com%2F" $id) }}
+        {{ with (unmarshal .Content).thumbnail_url }}
+            {{ $image = resources.GetRemote . }}
+        {{ end }}
+    {{ end }}
+{{ end }}
 
-<p><a class="shortcode-vimeo" href="https://vimeo.com/{{ .Get `id` }}" title="Play Vimeo video" target="_blank">
-    <img src="{{ if (resources.GetMatch (.Get `image`)) }}{{ ((resources.GetMatch (.Get `image`)).Fill `1200x675 jpg Center q50`).RelPermalink | safeURL }}{{ end }}" alt="Vimeo video {{ .Get `id` }}" />
+<p><a class="shortcode-vimeo" href="https://vimeo.com/{{ $id }}" title="Play Vimeo video" target="_blank">
+    <img src="{{ if $image }}{{ ($image.Fill `1200x675 webp Center q50`).Permalink | safeURL }}{{ end }}" alt="Vimeo video {{ $id }}" />
     <span class="playbutton"></span>
 </a></p>
 

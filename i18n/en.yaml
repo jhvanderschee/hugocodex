@@ -31,11 +31,20 @@ add to cart:
 Shopping cart:
   other: Shopping cart
 
+Checkout:
+  other: Checkout
+
+Payment:
+  other: Payment
+
 Price:
   other: Price
 
 continue shopping:
   other: continue shopping
+
+choose_a:
+  other: Choose a
 
 Add to cart:
   other: Add to cart
@@ -78,6 +87,9 @@ Gift wrapping:
 
 Not gift wrapped:
   other: Not gift wrapped
+
+Gift wrapped:
+  other: Gift wrapped
   
 Message:
   other: Message
