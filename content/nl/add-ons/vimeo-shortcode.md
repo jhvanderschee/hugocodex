@@ -1,0 +1,29 @@
+---
+title: Vimeo shortcode
+---
+
+### Introductie
+
+Paul Irish deed iets moois. Hij maakte [een lichtere Youtube-embed](https://github.com/paulirish/lite-youtube-embed). Zijn oplossing vertraagt je website niet meer, zoals normale Youtube-embeds dat wel doen. Er is maar één nadeel: hij laadt content van Youtube zonder toestemming, terwijl Youtube een dienst is van een bedrijf dat bekendstaat om tracking en profilering. Dat is niet erg privacyvriendelijk. De oplossing is om de poster zelf te hosten en die naar Youtube te linken. Dat kan met een shortcode. En dat kan ook voor Vimeo.
+
+### Hoe het werkt
+
+De shortcode haalt de poster van je video tijdens de build op via de oEmbed API van Vimeo en slaat hem op je eigen server op. Daarna maakt hij een afbeelding en een link naar Vimeo. De classes op die link vertellen de CSS om het Vimeo-logo en een afspeelknop toe te voegen. Daardoor lijkt het op een embed. Let op: als je de [lightbox](/nl/uitbreidingen/lightbox/) van deze website laadt, opent je video automatisch in een lightbox in plaats van op een nieuwe pagina. Hieronder vind je een demo (met de lightbox aan).
+
+{{< vimeo 727145223 >}}
+
+### Installatie
+
+Stap 1. Download het bestand [vimeo.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_shortcodes/vimeo.html)
+<br />Stap 2. Sla het bestand op in de map 'layouts/_shortcodes' van je project
+<br />Stap 3. Voeg de volgende regel toe aan je content op de plek waar je je Vimeo-video wilt laten zien:
+
+```
+{{</* vimeo 727145223 */>}}
+```
+
+Gebruik je liever je eigen poster in plaats van die van Vimeo, voeg dan een image-parameter toe:
+
+```
+{{</* vimeo id="727145223" image="/uploads/resizeallimages.png" */>}}
+```

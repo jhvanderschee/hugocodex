@@ -6,7 +6,7 @@ images:
 - image: "/uploads/products/beer/3.jpg"
 - image: "/uploads/products/beer/4.jpg"
 - image: "/uploads/products/beer/1.jpg"
-variant_type: size
+variant_type: tamaño
 variants:
 - name: media-pinta
   price: 2.75

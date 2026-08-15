@@ -6,7 +6,7 @@ images:
 - image: "/uploads/products/coffee/3.jpg"
 - image: "/uploads/products/coffee/4.jpg"
 - image: "/uploads/products/coffee/5.jpg"
-variant_type: size
+variant_type: tamaño
 variants:
 - name: cortado
   price: 2.5
