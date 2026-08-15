@@ -1,16 +1,15 @@
 ---
-title: A more elaborated Templating / Layouts strategy ?
+title: A more elaborate templating/layouts strategy
 date: 2024-02-26
-draft: true
 ---
 
-##  Context : templating / layouts approach
+## Context: the templating/layouts approach
 
-We are (always) improving the process/workflow. Now that we have learned the basics of: is it time for a more elaborated Templating / Layouts strategy ?
+We are (always) improving the process and the workflow. Now that we have learned the basics: is it time for a more elaborate templating/layouts strategy?
 
-## A first Templating approach 
+## A first templating approach
 
-When speaking about Hugo Layouts : you tipically simply define
+When speaking about Hugo layouts, you typically define just this:
 
 ```
 my-hugo-project
@@ -19,17 +18,16 @@ my-hugo-project
            |. _/default/list.html
 ```
 
-Whe already spoke about [how to get started](/en/getting-started/)  and use partials for (e.g.) header and footer.
+We already talked about [how to get started](/getting-started/) and about using partials for (for example) the header and the footer.
 
-Fine. As a starter...
-The point here is that you tipically would end up re-using code from those... having to copy some snippets around this 3 'starter' layouts for a basic website.
-But wait... what if the website requires more templating flexibility ? Or ... the overall (User Interface / UI ~ CSS styling) design requires some more complexity ?
+Fine, as a start... The point is that you typically end up reusing code from those, copying snippets between these three 'starter' layouts for a basic website.
+But wait... what if the website requires more templating flexibility? Or what if the overall design (user interface / CSS styling) requires more complexity?
 
-## We can do better : hello baseof.html layout and 'blocks' to the rescue
+## We can do better: the baseof.html layout and 'blocks' to the rescue
 
-### Block definition
+### Defining a block
 
-Let's create a content block  :
+Let's create a content block:
 
 ```
 {{ block "content" . }}
@@ -37,10 +35,11 @@ Let's create a content block  :
 {{ end }}
 ```
 
-> NOTE: the context aka 'the dot'  '.' is required 
+> NOTE: the context, also known as 'the dot' ('.'), is required
 
-### Block definition 
-Ahá. Now feel free to reuse it wherever you want in other templates (e.g. in the 'page.html' or 'list.html' ), by defining them following this syntax inside other layouts:
+### Using a block
+
+Aha. Now feel free to reuse it wherever you want in other templates (for example in 'page.html' or 'section.html'), by defining them with this syntax inside other layouts:
 
 ```
 {{ define "content" }}
@@ -50,8 +49,8 @@ Ahá. Now feel free to reuse it wherever you want in other templates (e.g. in th
 {{ end }}
 ```
 
-Last but not least: did you knew that you can override a given block in a specific template ? 
+Last but not least: did you know that you can override a given block in a specific template?
 
-[Mike 's video tutorial](https://gohugo.io/templates/base/) in official Hugo Doc shows us how to in a more detailed and visual way.
+[Mike's video tutorial](https://gohugo.io/templates/base/) in the official Hugo docs shows how, in a more detailed and visual way.
 
-have fun with Hugo
+Have fun with Hugo!

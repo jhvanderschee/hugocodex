@@ -2,7 +2,6 @@
 title: Digitale downloads in de webshop
 translationKey: digital-downloads-in-the-webshop
 date: 2022-12-12
-draft: true
 ---
 
 Zo nu en dan krijgen we berichten via onze chatknop onderaan deze website. Sommige mensen stellen vragen, sommige willen bedanken en sommige komen met geweldige ideeën. Dat laatste was gisteren het geval. Andrei (zijn achternaam laat ik om privacyredenen weg) stelde zich voor en vroeg of het mogelijk zou zijn om de webshop in Jekyll Codex te gebruiken voor digitale downloads.

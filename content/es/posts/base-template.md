@@ -1,7 +1,6 @@
 ---
 title: ¿Una estrategia más elaborada de plantillas / diseños?
 date: 2024-02-26
-draft: true
 ---
 
 ## Contexto: enfoque de plantillas / diseños

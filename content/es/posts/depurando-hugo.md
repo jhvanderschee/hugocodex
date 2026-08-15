@@ -2,7 +2,6 @@
 title: Depurando Hugo
 translationKey: debugging-hugo
 date: 2022-10-05
-draft: true
 ---
 
 Llevo ya medio año construyendo sitios web con Hugo. En estos últimos seis meses he sufrido mucho y he aprendido mucho. He aprendido que mi estrategia de aprendizaje es "aprender a base de errores".

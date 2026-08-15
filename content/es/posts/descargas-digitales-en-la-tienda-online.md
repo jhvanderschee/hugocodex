@@ -2,7 +2,6 @@
 title: Descargas digitales en la tienda online
 translationKey: digital-downloads-in-the-webshop
 date: 2022-12-12
-draft: true
 ---
 
 De vez en cuando recibimos mensajes a través del botón de chat que hay al final de este sitio web. Algunas personas hacen preguntas, otras quieren dar las gracias y otras aportan grandes ideas. Esto último fue lo que pasó ayer. Andrei (omito su apellido por motivos de privacidad) se presentó y me preguntó si sería posible usar la tienda online de Jekyll Codex para crear descargas digitales.

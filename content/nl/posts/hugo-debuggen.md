@@ -2,7 +2,6 @@
 title: Hugo debuggen
 translationKey: debugging-hugo
 date: 2022-10-05
-draft: true
 ---
 
 Ik bouw nu een half jaar websites met Hugo. In die zes maanden heb ik veel geworsteld en veel geleerd. Ik heb geleerd dat mijn leerstrategie "leren met vallen en opstaan" is.

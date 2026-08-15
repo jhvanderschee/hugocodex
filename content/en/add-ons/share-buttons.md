@@ -1,6 +1,5 @@
 ---
 title: Share buttons
-
 ---
 ### Introduction
 

@@ -6,7 +6,7 @@ date: 2018-01-02
 
 ## Step 1. Create a basic website
 
-A website typically consists of a few elements. The header with a menu, a sidebar, the content and the footer. Back in the days we used frames to put these components together. Nowadays we use includes. These includes require a programming language to work, like PHP. Using PHP however introduces a lot of vulnerabilities. What if we could prevent that by design? Well... you can with Hugo...
+A website typically consists of a few elements. The header with a menu, a sidebar, the content and the footer. Back in the day we used frames to put these components together. Nowadays we use includes. These includes require a programming language to work, like PHP. Using PHP however introduces a lot of vulnerabilities. What if we could prevent that by design? Well... you can with Hugo...
 
 You used to create an 'index.php' file and do something like this:
 
@@ -22,7 +22,7 @@ content
 </html>
 ```
 
-Now you create an 'home.html' file and you replace your PHP tags with Go templating tags, like so:
+Now you create a 'home.html' file and you replace your PHP tags with Go templating tags, like so:
 
 ```
 <html>
@@ -67,7 +67,7 @@ To create an overview page, look at this example.
 </html>
 ```
 
-Put this code in a file called 'list.html' and store it in your 'layouts' folder, next to your 'page.html'. Your file tree will now look like this:
+Put this code in a file called 'section.html' and store it in your 'layouts' folder, next to your 'page.html'. Your file tree will now look like this:
 
 ```
 ├── hugo.yaml
@@ -89,7 +89,7 @@ Put this code in a file called 'list.html' and store it in your 'layouts' folder
 
 ## Step 2. Preview your website
 
-Opening the folder of your project in a browser does not work, so you need to have an enivronment that runs Hugo. You can install Hugo through command-line on your own machine. Just follow these simple instructions:
+Opening the folder of your project in a browser does not work, so you need an environment that runs Hugo. You can install Hugo through the command line on your own machine. Just follow these simple instructions:
 
 * install Hugo with [these simple instructions](https://gohugo.io/getting-started/installing/)
 * open a terminal in your project folder and type: `hugo server`
@@ -97,13 +97,13 @@ Opening the folder of your project in a browser does not work, so you need to ha
 
 ## Step 3. Host your website
 
-Oh, how I hate shared hosting accounts… untill Hugo. Shared hosting accounts are cheap but unreliable. However, a Git based static site provides us with a back-up (actually the source code), which makes me feel a whole lot safer. CloudCannon exports the static version of your site to an FTP account on every update, enabling you to use an hosting environment of your choice. Just connect your FTP account through the CloudCannon options. So if your cheap hosting account goes down, the source code will still live on in Git and in your CloudCannon environment, enabling you to push the site to another cheap hosting account. Isn’t that reassuring?
+Oh, how I hate shared hosting accounts… until Hugo. Shared hosting accounts are cheap but unreliable. However, a Git based static site provides us with a back-up (actually the source code), which makes me feel a whole lot safer. CloudCannon exports the static version of your site to an FTP account on every update, enabling you to use a hosting environment of your choice. Just connect your FTP account through the CloudCannon options. So if your cheap hosting account goes down, the source code will still live on in Git and in your CloudCannon environment, enabling you to push the site to another cheap hosting account. Isn’t that reassuring?
 
 Here is your walk-through:
 
 - Create a free account at [cloudcannon.com](https://cloudcannon.com/)
 - Create a website and name it
-- Select Hugo as the site buider
+- Select Hugo as the site builder
 - Create an empty ‘hugo.yaml’ file in the root
 - Upload your ‘home.html’ file to the ‘layouts’ directory
 - Upload your ‘_index.md’ file to the ‘contents’ directory

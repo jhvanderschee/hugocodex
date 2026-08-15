@@ -1,7 +1,6 @@
 ---
 title: Fechas futuras
 date: "2022-06-24"
-draft: true
 ---
 ## Introducción
 

@@ -1,7 +1,6 @@
 ---
 title: Toekomstige datums
 date: "2022-06-24"
-draft: true
 ---
 ## Introductie
 

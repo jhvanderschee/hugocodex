@@ -3,7 +3,7 @@ title: HugoConf 2023
 translationKey: hugoconf-2023
 date: "2023-09-19"
 ---
-After last year’s successful HugoConf, with 32 speakers and more than 500 registered attendees from 49 countries, we at CloudCannon had so much fun producing and taking part that they decided to do it again!
+After last year’s successful HugoConf, with 32 speakers and more than 500 registered attendees from 49 countries, we at CloudCannon had so much fun producing it and taking part that we decided to do it again!
 
 Since its first public version, released back in 2013, Hugo has become an incredibly popular static site generator, most well known for its build speeds. Hugo is also the go-to tool of many of CloudCannon’s Partners and Experts, who bring live visual editing to their non-technical clients with the help of our CMS.
 

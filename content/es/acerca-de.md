@@ -6,7 +6,7 @@ title: 'Acerca de Hugo Codex'
 
 ### Para desarrolladores de front-end 
 
-Hugo Codex ha sido creado por  Joost van der Schee ([@jhvanderschee](https://twitter.com/jhvanderschee) or [jhvanderschee@gmail.com](mailto:jhvanderschee@gmail.com)) para hacer más fácil a los compañeros desarrolladores de front-end la elección de la tecnología para webs estáticas en su siguiente proyecto. La sección [empezando](/empezando) muestra incluso como hacerlo sin necesidad de usar la línea de comandos. Si quieres saber más acerca de Hugo, por favor visita la documentación de Hugo  oficial. Puedes encontrar el enlace en el menu más arriba.
+Hugo Codex ha sido creado por  Joost van der Schee ([@jhvanderschee](https://twitter.com/jhvanderschee) or [jhvanderschee@gmail.com](mailto:jhvanderschee@gmail.com)) para hacer más fácil a los compañeros desarrolladores de front-end la elección de la tecnología para webs estáticas en su siguiente proyecto. La sección [empezando](/es/empezando) muestra incluso como hacerlo sin necesidad de usar la línea de comandos. Si quieres saber más acerca de Hugo, por favor visita la documentación de Hugo  oficial. Puedes encontrar el enlace en el menu más arriba.
 
 ### Porque Hugo?
 

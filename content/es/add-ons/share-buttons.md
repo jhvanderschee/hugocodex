@@ -1,6 +1,5 @@
 ---
 title: Botones de compartir
-
 ---
 ### Introducción
 

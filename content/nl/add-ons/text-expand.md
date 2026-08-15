@@ -1,6 +1,5 @@
 ---
 title: Tekst uitklappen
-
 ---
 ### Introductie
 

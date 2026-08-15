@@ -1,6 +1,5 @@
 ---
 title: Slider/Carrusel
-draft: false
 ---
 
 ### Introducción

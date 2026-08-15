@@ -1,6 +1,5 @@
 ---
 title: Expandir texto
-
 ---
 ### Introducción
 

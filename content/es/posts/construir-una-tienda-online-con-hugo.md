@@ -2,7 +2,6 @@
 title: Construir una tienda online con Hugo
 translationKey: building-a-webshop-with-hugo
 date: 2022-09-30
-draft: true
 ---
 Esto llevaba mucho tiempo en nuestra lista de deseos: construir una tienda online sencilla en Jekyll sin pagar una cuota mensual a un tercero. ¡Y por fin lo he conseguido! Para ver cómo funciona, visita mi [página de donaciones](/es/donar). La tienda online solo necesita dos ajustes: la dirección de correo para la confirmación y tu enlace de pago de Plink. La configuración se hace en minutos y solo requiere una cuenta de Mollie. No hay limitaciones en el diseño de las páginas de producto. Usa HTML API, un principio sobre el que Lea Verou, del MIT, ha investigado bastante y que ha demostrado ser fácil de implementar. En la página de donaciones hemos mostrado cómo puede funcionar esto con variantes de producto.
 

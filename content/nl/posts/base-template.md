@@ -1,7 +1,6 @@
 ---
 title: Een uitgebreidere templating-/layoutstrategie?
 date: 2024-02-26
-draft: true
 ---
 
 ##  Context: aanpak van templating/layouts

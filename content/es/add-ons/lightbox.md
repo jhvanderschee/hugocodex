@@ -1,6 +1,5 @@
 ---
-title: Mejorando la ventana Lightbox
-date: '2024-11-29'
+title: Lightbox
 ---
 
 ## Introducción

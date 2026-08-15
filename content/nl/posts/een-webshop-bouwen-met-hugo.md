@@ -2,7 +2,6 @@
 title: Een webshop bouwen met Hugo
 translationKey: building-a-webshop-with-hugo
 date: 2022-09-30
-draft: true
 ---
 Dit stond al lang op ons verlanglijstje: een simpele webshop in Jekyll bouwen zonder maandelijks bedrag aan een derde partij te betalen. En eindelijk is het me gelukt! Wil je zien hoe het werkt, kijk dan op mijn [donatiepagina](/nl/doneren). De webshop heeft maar twee instellingen nodig: het e-mailadres voor de bevestiging en je Plink-betaallink. Het opzetten kost een paar minuten en vereist alleen een Mollie-account. Er zijn geen beperkingen aan de vormgeving van de productpagina's. Hij gebruikt HTML API, een principe waar Lea Verou van MIT flink onderzoek naar heeft gedaan en dat bewezen eenvoudig te implementeren is. Op de donatiepagina laten we zien hoe dit met productvarianten kan werken.
 
