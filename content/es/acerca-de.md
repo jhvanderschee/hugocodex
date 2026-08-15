@@ -1,4 +1,5 @@
 ---
+translationKey: about
 title: 'Acerca de Hugo Codex'
 ---
 > "Hugo Codex quiere facilitarte la elección de Hugo para tu siguiente proyecto."

@@ -1,4 +1,5 @@
 ---
+translationKey: image-gallery
 title: 'Galería de Imágenes'
 ---
 

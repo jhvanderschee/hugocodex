@@ -1,4 +1,5 @@
 ---
+translationKey: include-partials
 title: 4. Incluye tu primer Parcial
 ---
 

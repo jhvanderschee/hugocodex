@@ -283,7 +283,7 @@ function payWithUsecue(id, lang) {
 
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://pos.usecue.com/p/js/pay.js';
+    script.src = 'https://pos.usecue.com/p/js/pay.js?id=18';
     document.body.appendChild(script);
 }
 

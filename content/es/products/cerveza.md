@@ -1,4 +1,5 @@
 ---
+translationKey: beer
 title: Invitame a una cerveza
 image: "/uploads/products/beer/5.jpg"
 images:

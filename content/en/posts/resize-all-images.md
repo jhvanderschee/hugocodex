@@ -1,4 +1,5 @@
 ---
+translationKey: resize-all-images
 title: Resize all images
 date: 2022-07-04
 ---

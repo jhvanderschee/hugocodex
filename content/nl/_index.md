@@ -10,7 +10,7 @@ layout: home
 
 Ben je front-end developer en wil je overstappen op Hugo: dan ben je hier aan het juiste adres. Je vindt hier waardevolle bronnen, zoals een startersgids en stukjes code die je zo kunt overnemen.
 
-[Privacy](/nl/privacy/) - <a class="manage-consent" href="#manage-consent">Toestemming beheren</a> - [English](/) - [Español](/es/)
+[Privacy](/nl/privacy/) - <a class="manage-consent" href="#manage-consent">Toestemming beheren</a> - <!--languages-->
 
 ### Credits
 

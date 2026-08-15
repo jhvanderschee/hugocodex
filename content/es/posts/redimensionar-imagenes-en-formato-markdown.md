@@ -1,4 +1,5 @@
 ---
+translationKey: resize-markdown-images
 title: Redimensionar imágenes en formato markdown
 date: "2022-04-08"
 ---

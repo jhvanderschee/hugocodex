@@ -1,4 +1,5 @@
 ---
+translationKey: install-hugo
 title: 1. Hugo installeren
 ---
 

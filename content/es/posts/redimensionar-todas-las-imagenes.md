@@ -1,4 +1,5 @@
 ---
+translationKey: resize-all-images
 title: Redimensionar todas las imágenes
 date: 2022-07-04
 ---

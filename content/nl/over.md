@@ -1,4 +1,5 @@
 ---
+translationKey: about
 title: 'Over Hugo Codex'
 url: over
 ---

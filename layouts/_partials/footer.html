@@ -3,18 +3,20 @@
     <div class="container">
         
         <div class="threecols">
+            {{ $languages := partial "language-links.html" . }}
             {{ with .GetPage "/_index.md" }}
+                {{ $content := replace .Content "<!--languages-->" $languages }}
                 <div class="col">
-                    {{ print "<h3" (index (split .Content "<h3") 1) | safeHTML }}
+                    {{ print "<h3" (index (split $content "<h3") 1) | safeHTML }}
                 </div>
                 <div class="col">
-                    {{ print "<h3" (index (split .Content "<h3") 2) | safeHTML }}
+                    {{ print "<h3" (index (split $content "<h3") 2) | safeHTML }}
                 </div>
                 <div class="col">
-                    {{ print "<h3" (index (split .Content "<h3") 3) | safeHTML }}
+                    {{ print "<h3" (index (split $content "<h3") 3) | safeHTML }}
                 </div>
             {{ end }}
-        </div>    
+        </div>
     </div>
 </div>
 

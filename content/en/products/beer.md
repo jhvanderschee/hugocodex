@@ -1,4 +1,5 @@
 ---
+translationKey: beer
 outputs:
     - html
     - simple

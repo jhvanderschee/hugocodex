@@ -1,4 +1,5 @@
 ---
+translationKey: beer
 title: Trakteer me op een biertje
 image: "/uploads/products/beer/5.jpg"
 images:

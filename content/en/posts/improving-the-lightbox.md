@@ -1,4 +1,5 @@
 ---
+translationKey: improving-the-lightbox
 title: 'Improvement of the lightbox'
 date: '2024-11-29'
 ---

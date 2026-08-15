@@ -1,0 +1,15 @@
+{{- /* Links to the other languages. Points at the translation of the current
+       page (matched by filename or by the `translationKey` front matter) and
+       falls back to the home page of that language when no translation exists. */ -}}
+{{- $page := . -}}
+{{- $links := slice -}}
+{{- range .Site.Sites -}}
+    {{- if ne .Language.Lang $page.Language.Lang -}}
+        {{- $url := .Home.RelPermalink -}}
+        {{- with where $page.AllTranslations "Language.Lang" .Language.Lang -}}
+            {{- $url = (index . 0).RelPermalink -}}
+        {{- end -}}
+        {{- $links = $links | append (printf `<a href="%s" hreflang="%s">%s</a>` $url .Language.Lang .Language.LanguageName) -}}
+    {{- end -}}
+{{- end -}}
+{{- delimit $links " - " | safeHTML -}}

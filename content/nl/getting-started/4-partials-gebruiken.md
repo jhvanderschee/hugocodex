@@ -1,4 +1,5 @@
 ---
+translationKey: include-partials
 title: 4. Je eerste partials gebruiken
 ---
 

@@ -1,4 +1,5 @@
 ---
+translationKey: add-other-content
 title: 5. Add another content file
 ---
 

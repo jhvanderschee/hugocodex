@@ -1,4 +1,5 @@
 ---
+translationKey: migrating-from-jekyll-to-hugo
 title: Migrating from Jekyll to Hugo
 date: 2017-12-10 00:00:00 +0000
 ---

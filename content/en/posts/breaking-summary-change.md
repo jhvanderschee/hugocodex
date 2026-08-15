@@ -1,4 +1,5 @@
 ---
+translationKey: breaking-summary-change
 title: Breaking summary change
 date: 2024-10-10
 ---

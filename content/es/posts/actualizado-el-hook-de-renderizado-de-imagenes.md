@@ -1,4 +1,5 @@
 ---
+translationKey: updated-image-hook
 title: Actualizado el hook de renderizado de imágenes
 date: 2024-09-23
 ---

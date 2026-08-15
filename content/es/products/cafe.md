@@ -1,4 +1,5 @@
 ---
+translationKey: coffee
 title: Invitame a cafe
 image: "/uploads/products/coffee/1.jpg"
 images:

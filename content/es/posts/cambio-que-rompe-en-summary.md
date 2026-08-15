@@ -1,4 +1,5 @@
 ---
+translationKey: breaking-summary-change
 title: Cambio que rompe en .Summary
 date: 2024-10-10
 ---

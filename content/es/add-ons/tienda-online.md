@@ -1,4 +1,5 @@
 ---
+translationKey: webshop
 title: Tienda online
 ---
 

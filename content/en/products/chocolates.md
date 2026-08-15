@@ -1,4 +1,5 @@
 ---
+translationKey: chocolates
 outputs:
     - html
     - simple

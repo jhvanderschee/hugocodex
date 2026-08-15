@@ -1,4 +1,5 @@
 ---
+translationKey: share
 title: Deel de liefde
 image: "/uploads/products/share.jpg"
 images:

@@ -1,4 +1,5 @@
 ---
+translationKey: chocolates
 title: Trakteer me op bonbons
 image: /uploads/products/chocolates/1.jpg
 images:

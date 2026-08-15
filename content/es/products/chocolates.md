@@ -1,4 +1,5 @@
 ---
+translationKey: chocolates
 title: Invitame a unas chocolatinas
 image: "/uploads/products/chocolates/1.jpg"
 images:

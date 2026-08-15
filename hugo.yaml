@@ -28,7 +28,7 @@ languages:
       products: donate/:contentbasename
       simple-products: simple-donate/:contentbasename
   es:
-    languageName: Spaans
+    languageName: Español
     title: Hugo Codex
     params:
       description: "Hugo, que es súper rápido, porque rápido es simplemente mejor."

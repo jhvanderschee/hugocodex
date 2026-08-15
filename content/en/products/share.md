@@ -1,4 +1,5 @@
 ---
+translationKey: share
 outputs:
     - html
     - simple

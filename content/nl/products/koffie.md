@@ -1,4 +1,5 @@
 ---
+translationKey: coffee
 title: Trakteer me op koffie
 image: "/uploads/products/coffee/1.jpg"
 images:

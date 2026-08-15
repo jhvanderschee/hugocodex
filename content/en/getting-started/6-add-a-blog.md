@@ -1,4 +1,5 @@
 ---
+translationKey: add-a-blog
 title: 6. Add a blog
 ---
 

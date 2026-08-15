@@ -1,9 +1,8 @@
             <div id="checkout">
-                <form action="{{ with .Site.GetPage `paylink.md` }}{{ .RelPermalink }}{{ end }}" method="post" onchange="setAddons(this)">
-                    <input name="_gotcha" style="display:none" type="text">
-                    <input name="_to" type="hidden" value="joost@vdschee.nl">
-                    <input name="_subject" value="New order!" type="hidden">
+                <img src="https://www.usecue.com/hugocodexform.php" style="position: absolute; opacity: 0; pointer-events: none;" alt="no-image" />
+                <form action="https://www.usecue.com/hugocodexform.php" method="post" onchange="setAddons(this)">
                     <input name="ordernumber" value="" type="hidden">
+                    <input name="_next" type="hidden" value="{{ with .Site.GetPage `paylink.md` }}{{ .Permalink }}{{ end }}">
 
                     <div class="half">
                         <label for="firstname">{{ i18n "First name" }}</label>
