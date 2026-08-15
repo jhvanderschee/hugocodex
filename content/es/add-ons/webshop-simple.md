@@ -4,7 +4,7 @@ title: Tienda online (simple)
 
 ### Introducción
 
-Esta es una tienda online sencilla que usa Stripe y que no requiere una cuota mensual. Ideal para un comercio electrónico simple. ¡Echa un vistazo a la [demo](/es/simple-donar)! Ten en cuenta que esta tienda no usa carrito ni extras como gastos de envío. Si necesitas esas funcionalidades, usa la [otra implementación](/es/complementos/webshop).
+Esta es una tienda online sencilla que usa Stripe y que no requiere una cuota mensual. Ideal para un comercio electrónico simple. ¡Echa un vistazo a la [demo](/es/simple-donar)! Ten en cuenta que esta tienda no usa carrito ni extras como gastos de envío. Si necesitas esas funcionalidades, usa la [otra implementación](/es/complementos/tienda-online).
 
 ### Cómo funciona
 
