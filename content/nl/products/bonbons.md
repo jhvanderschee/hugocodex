@@ -12,4 +12,4 @@ variants:
   sku: chocolates
 weight: 4
 ---
-Koop een mooie doos bonbons voor me... niet voor mij, maar voor mijn vrouw. Haar bonbons geven levert me vrijwel zeker extra programmeertijd op in mijn Linux-hol.
+Koop een mooie doos bonbons voor me... niet voor mij, maar voor mijn vrouw. Haar bonbons geven levert me vrijwel zeker extra programmeertijd op in mijn Linux-powered man cave.

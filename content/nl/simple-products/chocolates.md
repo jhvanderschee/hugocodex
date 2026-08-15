@@ -12,4 +12,4 @@ variants:
   stripe_payment_link: https://buy.stripe.com/test_aEU3cqaZFeoq6UU9AF
 weight: 4
 ---
-Trakteer me op een chique doos bonbons... niet voor mij, maar voor mijn vrouw. Haar bonbons geven levert me vrijwel zeker extra programmeertijd op in mijn Linux-hol.
+Trakteer me op een chique doos bonbons... niet voor mij, maar voor mijn vrouw. Haar bonbons geven levert me vrijwel zeker extra programmeertijd op in mijn Linux-powered man cave.

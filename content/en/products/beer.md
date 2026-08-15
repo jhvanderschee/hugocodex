@@ -23,4 +23,4 @@ variants:
 weight: 3
 ---
 
-I like beer a lot! IPA, Guinness, Stout, craft beers... and I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
+I like beer a lot! IPA, Guinness, stout, craft beers... and I love to try new ones. Buy me half a pint to get going or a pint to get a good buzz.
