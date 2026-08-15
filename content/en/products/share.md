@@ -9,7 +9,7 @@ images:
 - image: 
 variant_type: size
 variants:
-- title: Normal
+- name: Normal
   price: 0
   sku: sharethelove
 weight: 1

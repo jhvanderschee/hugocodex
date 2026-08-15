@@ -5,7 +5,7 @@ images:
 - image: 
 variant_type: formaat
 variants:
-- title: Normaal
+- name: Normaal
   price: 0
   sku: sharethelove
 weight: 1
