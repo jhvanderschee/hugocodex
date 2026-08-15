@@ -1,8 +1,13 @@
             <div id="checkout">
-                <img src="https://www.usecue.com/hugocodexform.php" style="position: absolute; opacity: 0; pointer-events: none;" alt="no-image" />
                 <form action="https://www.usecue.com/hugocodexform.php" method="post" onchange="setAddons(this)">
                     <input name="ordernumber" value="" type="hidden">
                     <input name="_next" type="hidden" value="{{ with .Site.GetPage `paylink.md` }}{{ .Permalink }}{{ end }}">
+                    <!-- Timer against spam, filled in by the script below and checked by the form
+                         handler. It replaces a session cookie, which usecue.com cannot set from
+                         this page: that would be a third party cookie and Safari drops those. -->
+                    <input name="_token" value="" type="hidden">
+                    <!-- Honeypot: hidden from visitors, so anything filling it in is a bot. -->
+                    <input name="_gotcha" value="" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; opacity: 0; pointer-events: none;">
 
                     <div class="half">
                         <label for="firstname">{{ i18n "First name" }}</label>
@@ -63,6 +68,14 @@
                     <div class="submitbutton"><a href="{{ with .Site.GetPage `cart.md` }}{{ .RelPermalink }}{{ end }}" class="gray">{{ i18n "back to cart" }}</a><input type="submit" value="{{ i18n `Proceed to payment` }}" onclick="setOrderNumber(this.parentNode.parentNode);" /></div>
 
                 </form>
+                <script>
+                    // Starts the timer the moment the checkout is opened, exactly where the
+                    // tracking pixel used to sit. Filling in this form takes well over the five
+                    // seconds the handler asks for.
+                    fetch('https://www.usecue.com/hugocodexform.php')
+                        .then(function (response) { return response.ok ? response.text() : ''; })
+                        .then(function (token) { document.querySelector('#checkout [name="_token"]').value = token; });
+                </script>
                 <div>
                     <label style="padding-top: 0.8rem;">{{ i18n "Payment total" }}</label>
                     <div id="checkoutcalculation">
