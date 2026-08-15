@@ -1,5 +1,6 @@
 ---
 title: New template system in Hugo v0.146.0
+translationKey: new-template-system
 date: 2025-06-26
 ---
 

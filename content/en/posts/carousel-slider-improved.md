@@ -1,5 +1,6 @@
 ---
 title: Slider carousel improved
+translationKey: carousel-slider-improved
 date: 2025-10-23
 ---
 

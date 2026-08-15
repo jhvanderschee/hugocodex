@@ -1,5 +1,6 @@
 ---
 title: Useful body classes
+translationKey: useful-body-classes
 date: 2025-07-09
 ---
 

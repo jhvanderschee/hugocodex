@@ -1,5 +1,6 @@
 ---
 title: Lightweight slider/carousel added
+translationKey: lightweight-slider-carousel-added
 date: '2021-08-21'
 image: /uploads/slider/image1.jpg
 ---

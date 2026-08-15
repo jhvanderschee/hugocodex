@@ -1,5 +1,6 @@
 ---
 title: Creating a URL Redirect
+translationKey: hugo-url-redirect
 date: 2025-11-14
 ---
 

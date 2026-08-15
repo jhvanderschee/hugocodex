@@ -1,5 +1,6 @@
 ---
 title: "Sitepins: An awesome CMS for Hugo"
+translationKey: awesome-cms-for-hugo
 date: 2025-12-23
 ---
 

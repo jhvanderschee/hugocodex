@@ -1,5 +1,6 @@
 ---
 title: 'Shortcodes with usage comments'
+translationKey: shortcodes-with-usage-comments
 date: '2022-11-13'
 ---
 

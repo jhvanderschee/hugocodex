@@ -1,5 +1,6 @@
 ---
 title: HugoConf 2023
+translationKey: hugoconf-2023
 date: "2023-09-19"
 ---
 After last year’s successful HugoConf, with 32 speakers and more than 500 registered attendees from 49 countries, we at CloudCannon had so much fun producing and taking part that they decided to do it again!

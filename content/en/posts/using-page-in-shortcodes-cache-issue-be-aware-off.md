@@ -1,5 +1,6 @@
 ---
 title: Using 'page' in shortcodes ( cache / issue ? ) - be aware off
+translationKey: using-page-in-shortcodes-cache-issue-be-aware-off
 date: "2023-11-08"
 ---
 Since recent Hugo versions (we are now at v0.120) the ellegant 'page' notation was introduced. We can now have an easy access to a 'global Page object' !

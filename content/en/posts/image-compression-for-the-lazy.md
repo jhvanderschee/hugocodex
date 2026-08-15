@@ -1,5 +1,6 @@
 ---
 title: Image compression for the lazy 
+translationKey: image-compression-for-the-lazy
 date: 2022-06-19
 ---
 

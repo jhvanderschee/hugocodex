@@ -1,5 +1,6 @@
 ---
 title: Digital downloads in the webshop
+translationKey: digital-downloads-in-the-webshop
 date: 2022-12-12
 draft: true
 ---

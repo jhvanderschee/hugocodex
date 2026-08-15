@@ -1,5 +1,6 @@
 ---
 title: Instagram solution broken
+translationKey: instagram-solution-broken
 date: 2023-02-17
 ---
 

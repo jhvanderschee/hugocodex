@@ -1,5 +1,6 @@
 ---
 title: Adding analytics to your Hugo website
+translationKey: adding-analytics-to-your-hugo-website
 date: 2023-02-03
 ---
 

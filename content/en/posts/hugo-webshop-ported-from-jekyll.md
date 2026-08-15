@@ -1,5 +1,6 @@
 ---
 title: Hugo webshop ported from Jekyll
+translationKey: hugo-webshop-ported-from-jekyll
 date: "2022-10-12"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Debugging Hugo
+translationKey: debugging-hugo
 date: 2022-10-05
 draft: true
 ---

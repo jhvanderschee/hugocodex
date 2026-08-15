@@ -1,5 +1,6 @@
 ---
 title: Speaking at HugoConf 2023
+translationKey: speaking-at-hugoconf-2023
 date: 2023-10-01
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Spanish language added
+translationKey: spanish-language-added
 date: 2022-05-11
 ---
 

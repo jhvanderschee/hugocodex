@@ -1,5 +1,6 @@
 ---
 title: New share buttons
+translationKey: new-share-buttons
 date: "2022-10-12"
 ---
 

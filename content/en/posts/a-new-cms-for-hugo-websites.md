@@ -1,5 +1,6 @@
 ---
 title: A new CMS for Hugo websites
+translationKey: a-new-cms-for-hugo-websites
 date: 2021-11-19
 ---
 

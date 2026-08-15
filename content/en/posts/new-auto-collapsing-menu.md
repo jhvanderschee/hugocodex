@@ -1,5 +1,6 @@
 ---
 title: New auto-collapsing menu
+translationKey: new-auto-collapsing-menu
 date: 2023-03-06
 ---
 

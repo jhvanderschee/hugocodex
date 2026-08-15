@@ -1,5 +1,6 @@
 ---
 title: Carousel updated
+translationKey: carousel-updated
 date: "2022-05-23 13:00:00"
 ---
 

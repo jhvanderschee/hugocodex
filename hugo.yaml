@@ -52,6 +52,7 @@ languages:
       getting-started: aan-de-slag/:contentbasename
       add-ons: uitbreidingen/:contentbasename
       products: doneren/:contentbasename
+      simple-products: simple-doneren/:contentbasename
 
 outputFormats:
   simple:

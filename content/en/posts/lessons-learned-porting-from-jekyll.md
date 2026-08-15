@@ -1,5 +1,6 @@
 ---
 title: Lessons learned porting from Jekyll
+translationKey: lessons-learned-porting-from-jekyll
 date: "2021-09-19"
 ---
 I have been buiding around 30 Jekyll websites per year in the last 6 years. I recently switched completely to Hugo and I have been porting multiple websites from Jekyll to Hugo. I learned a few things along the way that you will need to know too, when you make the step from Jekyll to Hugo. I have been having a hard time learning Hugo, but in the end it was worth it, especially because of the low build times and the build-in image conversion I have gained. 

@@ -1,5 +1,6 @@
 ---
 title: 'Getting started with Hugo'
+translationKey: getting-started-with-hugo
 date: 2018-01-02
 ---
 

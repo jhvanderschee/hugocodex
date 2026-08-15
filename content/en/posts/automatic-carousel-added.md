@@ -1,5 +1,6 @@
 ---
 title: Automatic carousel added
+translationKey: automatic-carousel-added
 date: 2025-09-11
 ---
 

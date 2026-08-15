@@ -1,5 +1,6 @@
 ---
 title: Breadcrumbs since Hugo v0.109.0
+translationKey: breadcrumbs-since-1-09
 date: 2023-02-19
 ---
 

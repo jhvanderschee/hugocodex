@@ -1,5 +1,6 @@
 ---
 title: Breadcrumbs updated
+translationKey: breadcrumbs-updated
 date: 2021-12-09
 ---
 
