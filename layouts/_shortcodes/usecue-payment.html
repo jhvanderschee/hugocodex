@@ -1,6 +1,7 @@
 <script type="text/javascript">
 
- window.onload = function() {
+ // not window.onload, because the payment page should not wait for the images and the third party scripts
+ document.addEventListener('DOMContentLoaded', function() {
      payWithUsecue('{{ .Get "id" }}', '{{ .Get "lang" | default .Page.Language.Lang }}');
- }
+ });
 </script>
