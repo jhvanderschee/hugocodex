@@ -10,7 +10,7 @@ Gracias por unirte a esta charla relámpago sobre 'redimensionamiento de imágen
 
 ## 1. Elige tu método
 
-Primero necesitas elegir tu método de redimensionamiento y compresión. Me gusta mantener las cosas simples. Por eso siempre uso la [técnica de una sola imagen](/blog/image-compression-for-the-lazy), donde utilizas una imagen JPG de gran tamaño y altamente comprimida. Una imagen típica, como esta, es de dos a diez veces más pequeña que la original, mientras que la etiqueta de imagen se ve tan simple como esto:
+Primero necesitas elegir tu método de redimensionamiento y compresión. Me gusta mantener las cosas simples. Por eso siempre uso la [técnica de una sola imagen](/blog/image-compression-for-the-lazy/), donde utilizas una imagen JPG de gran tamaño y altamente comprimida. Una imagen típica, como esta, es de dos a diez veces más pequeña que la original, mientras que la etiqueta de imagen se ve tan simple como esto:
 
 ```
 <img src="large_heavily_compressed.jpg" />
@@ -43,7 +43,7 @@ Tu ruta está almacenada en la variable del front matter, es decir, en '.Params.
 resources.GetMatch .Params.image
 ```
 
-Este código 'encuentra' tu recurso/activo. A continuación, debes elegir una estrategia de redimensionamiento de imagen. Esto puede ser 'Resize', 'Fit', 'Fill', 'Crop'. En este ejemplo uso 'Fit' para asegurarme de que mi imagen siempre sea más pequeña que 600 píxeles (en cada lado). Uso un recorte 'Smart' y uso una calidad de imagen del 50%, como se explicó antes en la [técnica de una sola imagen](/blog/image-compression-for-the-lazy). Esto resulta en:
+Este código 'encuentra' tu recurso/activo. A continuación, debes elegir una estrategia de redimensionamiento de imagen. Esto puede ser 'Resize', 'Fit', 'Fill', 'Crop'. En este ejemplo uso 'Fit' para asegurarme de que mi imagen siempre sea más pequeña que 600 píxeles (en cada lado). Uso un recorte 'Smart' y uso una calidad de imagen del 50%, como se explicó antes en la [técnica de una sola imagen](/blog/image-compression-for-the-lazy/). Esto resulta en:
 
 ```
 (resources.GetMatch .Params.image).Fit "600x600 jpg Smart q50"
@@ -74,10 +74,12 @@ Ahora tenemos imágenes redimensionadas en nuestro diseño. Pero, ¿qué pasa co
 ... y colocar esta lógica dentro:
 
 ```
-{{ if (resources.GetMatch .Destination) }}
-  <img src="
-  {{ ((resources.GetMatch .Destination).Fit `600x600 jpg Smart q50`).RelPermalink | safeURL }}
-  " alt="{{ .Text }}" />
+{{ with (resources.GetMatch .Destination) }}
+    {{ if ne .MediaType.SubType "svg" }}
+        <img src="{{ (.Resize `900x jpg Smart q50`).RelPermalink | safeURL }}" alt="{{ $.Text }}" />
+    {{ else }}
+        <img src="{{ .RelPermalink | safeURL }}" alt="{{ $.Text }}" />
+    {{ end }}
 {{ end }}
 ```
 
@@ -95,4 +97,4 @@ Además de mi charla, la HugoConf (edición 2022) albergó otras charlas interes
 - <a href="https://www.youtube.com/watch?v=JpxiKUHzoqM&t=30304s" target="_blank" class="no-lightbox">Shortcodes personalizados para ganar - Chris Griffing</a>
 - <a href="https://youtu.be/ACRN43SbF2g?t=23494" target="_blank" class="no-lightbox">Cómo lograr puntuaciones perfectas en Google Lighthouse usando Hugo - Scott Reilly</a>
 
-< Happy coding /> !
+¡Feliz programación!
