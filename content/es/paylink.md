@@ -1,5 +1,8 @@
 ---
-title: Redirigiendo a la página de pago
+title: Pago
 url: donar/paylink
 ---
-{{< redirect-to-mollie "ssMgtkddEzgC4rKKJJ9T" >}}
+
+Un momento, estamos cargando la página de pago.
+
+{{< usecue-payment id="18" lang="en" >}}

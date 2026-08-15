@@ -23,16 +23,16 @@ quantity:
   other: Cantidad
 
 Your shopping cart is currently empty:
-  other: tu carrito de la compra está vacío
-  
+  other: tu carrito está vacío
+
 add to cart:
   other: Añadir al carrito
 
 Shopping cart:
-  other: Carrito de la compra
+  other: Carrito
 
 Checkout:
-  other: Checkout
+  other: Datos
 
 Payment:
   other: Pago
@@ -50,7 +50,7 @@ Add to cart:
   other: Añadir al carrito
 
 Proceed to checkout:
-  other: Proceder al checkout
+  other: Finalizar compra
 
 Proceed to payment:
   other: Proceder al pago
@@ -95,7 +95,7 @@ Message:
   other: Mensaje
   
 back to cart:
-  other: volver al carrito de la compra
+  other: volver al carrito
 
 Search:
   other: Search

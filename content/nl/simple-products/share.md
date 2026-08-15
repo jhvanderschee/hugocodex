@@ -1,5 +1,5 @@
 ---
-title: Deel de liefde
+title: Zeg het voort
 image: "/uploads/products/share.jpg"
 images:
 - image: 
@@ -11,4 +11,4 @@ variants:
 weight: 1
 ---
 
-Vind je deze website leuk, maar heb je geen geld over? Deel dan de liefde door iets over deze website op social media te zetten. Gebruik gerust de knoppen hierboven. Die delen de homepage. Bedankt, je bent geweldig!
+Vind je deze website leuk, maar heb je geen geld over? Zeg het dan voort door iets over deze website op social media te zetten. Gebruik gerust de knoppen hierboven. Die delen de homepage. Bedankt, je bent geweldig!
