@@ -12,8 +12,13 @@
       <meta name="description" content="{{ $.Site.Params.description }}">
     {{ end }}
 
+    {{- /* Always point at the html output, so the 'simple' rendering of a page
+           refers to the regular one instead of to itself. */ -}}
+    {{- $canonical := .Permalink -}}
+    {{- with .OutputFormats.Get "html" -}}{{- $canonical = .Permalink -}}{{- end }}
+
     <meta property="og:title" content="{{ .Title }}"/>
-    <meta property="og:url" content="{{ .Permalink }}"/>
+    <meta property="og:url" content="{{ $canonical }}"/>
     <meta property="og:type" content="article">
     {{ if .Params.image }}<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.image }}" />{{ end }}
     <meta property="og:site_name" content="{{ .Site.Title }}"/>
@@ -23,7 +28,21 @@
     <link rel="shortcut icon" sizes="196x196" href="/img/icon-192x192.png">
     <link rel="apple-touch-icon" href="/img/icon-192x192.png">
     
-    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="canonical" href="{{ $canonical }}">
+    {{- /* Alternates for every language this page exists in, including itself.
+           x-default points at the default language (the one served without a
+           URL prefix), so search engines know which version to show by default. */ -}}
+    {{- $translations := .AllTranslations -}}
+    {{- if gt (len $translations) 1 -}}
+      {{- range $translations }}
+        {{- $href := .Permalink -}}
+        {{- with .OutputFormats.Get "html" -}}{{- $href = .Permalink -}}{{- end }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ $href }}">
+        {{- if eq .Site.LanguagePrefix "" }}
+    <link rel="alternate" hreflang="x-default" href="{{ $href }}">
+        {{- end }}
+      {{- end }}
+    {{- end }}
     <link rel="stylesheet" href="/css/style.css?version={{now}}">
 
     {{ with .OutputFormats.Get "rss" -}}

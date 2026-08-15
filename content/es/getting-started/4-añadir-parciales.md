@@ -3,9 +3,9 @@ translationKey: include-partials
 title: 4. Incluye tu primer Parcial
 ---
 
-Un sitio web típicamente consiste en en unos pocos elementos elements que van repitiéndose en cada página,  como una cabecera con un menu y un pie de página. En vez de agregarlo a cada página, puedes usar un 'parcial'. Los Parciales han de ser guardados en el directorio '/layouts/_partials'. 
+Un sitio web suele constar de unos pocos elementos que se repiten en cada página, como una cabecera con un menú y un pie de página. En vez de añadirlos a cada página, puedes usar un 'parcial'. Los parciales han de guardarse en el directorio '/layouts/_partials'.
 
-Crea un fichero 'header.html' tal que este :
+Crea un fichero 'header.html' como este:
 
 ```
 <html>
@@ -13,7 +13,7 @@ Crea un fichero 'header.html' tal que este :
 <body>
 ```
 
-Crea un fichero 'footer.html' tal que este otro:
+Crea un fichero 'footer.html' como este otro:
 
 ```
 </body>
@@ -21,7 +21,7 @@ Crea un fichero 'footer.html' tal que este otro:
 ```
 
 
-Guarda ambos ficheros en el directorio '/layouts/_partials/'. Ahora actualiza tu fichero '/layouts/index.html' y aegurate de que se ve así (reemplazando el código fuente con los enlaces a los parciales):
+Guarda ambos ficheros en el directorio '/layouts/_partials/'. Ahora actualiza tu fichero '/layouts/home.html' y asegúrate de que se ve así (sustituyendo el código por las llamadas a los parciales):
 
 ```
 {{ partial "header.html" . }}
@@ -30,12 +30,12 @@ Guarda ambos ficheros en el directorio '/layouts/_partials/'. Ahora actualiza tu
 {{ partial "footer.html" . }}
 ```
 
-Tu proyecto debería ahora verse así: 
+Tu proyecto debería verse ahora así:
 
 ```
 /content/_index.md
-/layouts/index.html
+/layouts/home.html
 /layouts/_partials/header.html
 /layouts/_partials/footer.html
-/hugo.yaml`
+/hugo.yaml
 ```

@@ -1,6 +1,6 @@
 ---
 translationKey: beer
-title: Invitame a una cerveza
+title: Invítame a una cerveza
 image: "/uploads/products/beer/5.jpg"
 images:
 - image: "/uploads/products/beer/2.jpg"
@@ -18,4 +18,4 @@ variants:
 order_number: 2
 ---
 
-I like beer a lot! IPA, Guinness, Stout, craft beers... and I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
+¡Me gusta mucho la cerveza! IPA, Guinness, Stout, cervezas artesanales... y me encanta probar nuevas. Invítame a media pinta para arrancar o a una pinta para coger un buen puntillo.

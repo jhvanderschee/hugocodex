@@ -1,5 +1,5 @@
 ---
-title: Invitame a cafe
+title: Invítame a un café
 image: "/uploads/products/coffee/1.jpg"
 images:
 - image: "/uploads/products/coffee/2.jpg"
@@ -23,4 +23,4 @@ variants:
 weight: 2
 ---
 
-Un café perfecto por la mañana me alegra el día por completo. ¡Invitame a uno pequeño para empezar bien o a uno grande para aguantar todo el día!
+Un café perfecto por la mañana me alegra el día por completo. ¡Invítame a uno pequeño para empezar bien o a uno grande para aguantar todo el día!

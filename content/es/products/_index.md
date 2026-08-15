@@ -3,9 +3,7 @@ Title: Donar
 url: donar
 ---
 
-## Acerca de esta página de donación
+## Acerca de esta página de donaciones
 
-A pesar de que la función principal de esta página de donaciones es la de ilustrar como funciona [la tienda online](/es/complementos/tienda-online), puedes de hecho comprarnos alguno 
-de los productos que encontrarás más abajo. Si piensas que te hemos ahorrado una gran cantidad de tiempo... devuelve el favor. Si no dispones dinero sobrante, por favor comparte el
-cariño escribiendo algo sobre este sitio web las redes sociales. Muchas gracias. Eres lo mejor !
+Aunque la función principal de esta página de donaciones es ilustrar cómo funciona [la tienda online](/es/complementos/tienda-online), puedes comprarnos de verdad alguno de los productos que encontrarás más abajo. Si crees que te hemos ahorrado un montón de tiempo... devuélvenos el favor. Si no tienes dinero de sobra, comparte el cariño publicando algo sobre este sitio web en las redes sociales. ¡Muchas gracias, eres el mejor!
 

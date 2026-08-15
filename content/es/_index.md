@@ -9,15 +9,15 @@ layout: home
 
 ### Audiencia
 
-Si eres un desarrollador front-end y estas queriendo dar el salto a Hugo: has venido al lugar adecuado. Encontrarás acá algunos valiosos recursos, como una guía para empezar y retazos de código fuente.
+Si eres desarrollador front-end y estás queriendo dar el salto a Hugo: has venido al lugar adecuado. Aquí encontrarás recursos valiosos, como una guía para empezar y fragmentos de código.
 
-[Privacidad](/privacy/) - <a class="manage-consent" href="#manage-consent">Manage consent</a> - <!--languages-->
+[Privacidad](/privacy/) - <a class="manage-consent" href="#manage-consent">Gestionar consentimiento</a> - <!--languages-->
 
 ### Créditos
 
-Este sitio Web ha sido creado por DonHugo (Fenix).  
-Es un [escaparate](https://github.com/jhvanderschee/hugocodex) de sus propios scripts. Energizado por Hugo y alojado por Usecue. Si te gusta, por favor deja caer algunas palabras via twitter [@jhvanderschee](https://twitter.com/jhvanderschee) o en [joost@vdschee.nl](mailto:joost@vdschee.nl)</a>.
+Este sitio web ha sido creado por DonHugo (Fenix).  
+Es un [escaparate](https://github.com/jhvanderschee/hugocodex) de sus propios scripts. Funciona con Hugo y está alojado por Usecue. Si te gusta, escríbenos unas palabras por Twitter: [@jhvanderschee](https://twitter.com/jhvanderschee) o [joost@vdschee.nl](mailto:joost@vdschee.nl).
 
-### Energizado por
+### Funciona con
 
 <img src="/img/usecuecms.png" alt="Usecue CMS logo" height="84" onclick="window.open('http://cms.usecue.com');" /><img src="/img/github.png" alt="Github logo"  class="poweredby" height="104" onclick="window.open('http://github.com');" />

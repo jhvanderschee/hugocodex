@@ -1,5 +1,5 @@
 ---
-title: Invitame a pegatinas de Hugo
+title: Invítame a unas pegatinas de Hugo
 image: "/uploads/products/stickers.jpg"
 images:
 - image:
