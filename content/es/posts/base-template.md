@@ -44,7 +44,7 @@ Creemos un bloque de contenido:
 
 ### Uso del bloque
 
-Ahá. Ahora siéntete libre de reutilizarlo donde quieras en otras plantillas (por ejemplo, en 'page.html' o 'list.html'), definiéndolo con esta sintaxis dentro de otros diseños:
+Ahá. Ahora siéntete libre de reutilizarlo donde quieras en otras plantillas (por ejemplo, en 'page.html' o 'section.html'), definiéndolo con esta sintaxis dentro de otros diseños:
 
 ```
 {{ define "content" }}

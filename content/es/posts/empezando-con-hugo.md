@@ -67,7 +67,7 @@ Para crear una página de listado, fíjate en este ejemplo.
 </html>
 ```
 
-Pon este código en un archivo llamado 'list.html' y guárdalo en tu carpeta 'layouts', junto a tu 'page.html'. Tu árbol de archivos se verá ahora así:
+Pon este código en un archivo llamado 'section.html' y guárdalo en tu carpeta 'layouts', junto a tu 'page.html'. Tu árbol de archivos se verá ahora así:
 
 ```
 ├── hugo.yaml

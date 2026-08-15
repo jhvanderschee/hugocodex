@@ -1,5 +1,5 @@
 ---
-title: Usar 'page' en shortcodes ( ¿caché / problema? ) - ten cuidado
+title: Usar 'page' en shortcodes - cuidado con la caché
 translationKey: using-page-in-shortcodes-cache-issue-be-aware-off
 date: "2023-11-08"
 ---

@@ -24,7 +24,7 @@ Prima. Om mee te beginnen...
 Het punt is dat je meestal code uit die bestanden gaat hergebruiken... waarbij je stukjes moet kopiëren tussen deze 3 'starter'-layouts voor een basiswebsite.
 Maar wacht... wat als de website meer flexibiliteit in templating vraagt? Of... wat als het algehele ontwerp (User Interface / UI ~ CSS-styling) om wat meer complexiteit vraagt?
 
-## Het kan beter: hallo baseof.html-layout en 'blocks' te hulp
+## Het kan beter: de baseof.html-layout en 'blocks' te hulp
 
 ### Een block definiëren
 
@@ -38,8 +38,9 @@ Laten we een content-block maken:
 
 > LET OP: de context, ook wel 'de dot' '.', is verplicht
 
-### Een block definiëren
-Aha. Hergebruik hem nu gerust waar je maar wilt in andere templates (bijvoorbeeld in 'page.html' of 'list.html'), door ze binnen andere layouts met deze syntax te definiëren:
+### Een block gebruiken
+
+Aha. Hergebruik hem nu gerust waar je maar wilt in andere templates (bijvoorbeeld in 'page.html' of 'section.html'), door ze binnen andere layouts met deze syntax te definiëren:
 
 ```
 {{ define "content" }}
@@ -53,4 +54,4 @@ En als klap op de vuurpijl: wist je dat je een bepaald block in een specifieke t
 
 [De videotutorial van Mike](https://gohugo.io/templates/base/) in de officiële Hugo-documentatie laat gedetailleerder en visueler zien hoe dat werkt.
 
-veel plezier met Hugo
+Veel plezier met Hugo!

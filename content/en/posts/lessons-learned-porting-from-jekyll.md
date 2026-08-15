@@ -3,7 +3,7 @@ title: Lessons learned porting from Jekyll
 translationKey: lessons-learned-porting-from-jekyll
 date: "2021-09-19"
 ---
-I have been buiding around 30 Jekyll websites per year in the last 6 years. I recently switched completely to Hugo and I have been porting multiple websites from Jekyll to Hugo. I learned a few things along the way that you will need to know too, when you make the step from Jekyll to Hugo. I have been having a hard time learning Hugo, but in the end it was worth it, especially because of the low build times and the build-in image conversion I have gained. 
+I have been building around 30 Jekyll websites per year for the last 6 years. I recently switched completely to Hugo and I have been porting multiple websites from Jekyll to Hugo. I learned a few things along the way that you will need to know too, when you make the step from Jekyll to Hugo. I had a hard time learning Hugo, but in the end it was worth it, especially because of the low build times and the build-in image conversion I have gained. 
 
 Know that this is going to be a living document, so make sure to come back later to check this document again.
 
@@ -31,7 +31,7 @@ Data is the only directory that is the same in Jekyll and Hugo. You can rename y
 
 ### Builds
 
-Jekyll builds your website in de '\_site' directory on every update. Hugo only builds your website when you call the hugo command (instead of 'hugo server'). Hugo builds your website in a directory called 'public'. 
+Jekyll builds your website in the '\_site' directory on every update. Hugo only builds your website when you call the hugo command (instead of 'hugo server'). Hugo builds your website in a directory called 'public'. 
 
 ### Resources
 
@@ -45,7 +45,7 @@ In Jekyll the config file is called '\_config.yml'. In Hugo this is 'hugo.yaml'.
 
 ### Preventing output
 
-When you want to prevent output on a section/collection, you can wirte 'output: false' in Jekyll's config file. This is not possible in Hugo. The workaround is to create an empty 'page.html' in the layouts directory in the folder corresponding with the section/collection you want this to apply to. There is another trick that works, which is [this one](https://gohugo.io/content-management/build-options/#listing-pages-without-publishing-them).
+When you want to prevent output on a section/collection, you can write 'output: false' in Jekyll's config file. This is not possible in Hugo. The workaround is to create an empty 'page.html' in the layouts directory in the folder corresponding with the section/collection you want this to apply to. There is another trick that works, which is [this one](https://gohugo.io/content-management/build-options/#listing-pages-without-publishing-them).
 
 ### Setting permalinks
 
@@ -67,7 +67,7 @@ To be able to use all user images as resources, you simply add 'assetDir: static
 
 ### Getting the slug of the page
 
-There is no such thing as `page.slug`. You have to use `.File.BaseFileName` instead.
+There is no such thing as `page.slug` in Hugo. You have to use `.File.BaseFileName` instead.
 
 ### Cache busting your style.css
 
@@ -75,7 +75,7 @@ Use `<link href='/css/style.css?version={{ now }}' rel='stylesheet' type='text/c
 
 ### A many to many relationship
 
-If you for example want a 'car' to have an array of 'features' that are shared among cars, you are tipically looking at a many to many relationship. One car has many features and one feature belongs to many cars. You can model this by creating a page for your car with a front matter array with features. Instead of writing out the complete feature in your front matter, you only put the features slug in the front matter. Next you create a seperate section of features that match these keys. These keys allow you to find the matching item/page in the features section. The code for this is quite compact and looks like this:
+If you for example want a 'car' to have an array of 'features' that are shared among cars, you are typically looking at a many-to-many relationship. One car has many features and one feature belongs to many cars. You can model this by creating a page for your car with a front matter array with features. Instead of writing out the complete feature in your front matter, you only put the feature's slug in the front matter. Next you create a separate section of features that match these keys. These keys allow you to find the matching item/page in the features section. The code for this is quite compact and looks like this:
 
 ```
 {{- range .Params.features -}}

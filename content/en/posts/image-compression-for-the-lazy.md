@@ -4,17 +4,17 @@ translationKey: image-compression-for-the-lazy
 date: 2022-06-19
 ---
 
-No, this is not about lazy loading. We are talking about image compression only, as images are an important part of your page load (20% on average). Every byte counts when you want to [get a 100% Google Lighthouse Score](https://www.usecue.com/blog/how-to-get-a-100-google-lighthouse-score/). I was happy to find that [Boris Smus](https://github.com/borismus/image-zoom) did some great [ground work](https://web.dev/easy-high-dpi-images/) on [this topic](https://www.filamentgroup.com/lab/compressive-images.html), suggesting that a 'highly compressed 2x image is smaller in size and looks better than the uncompressed 1x image'. I used one of Boris his examples to illustrate this article, in which we will try to avoid any visible compression artifacts, while still compressing our image(s) significantly.
+No, this is not about lazy loading. We are talking about image compression only, as images are an important part of your page load (20% on average). Every byte counts when you want to [get a 100% Google Lighthouse Score](https://www.usecue.com/blog/how-to-get-a-100-google-lighthouse-score/). I was happy to find that [Boris Smus](https://github.com/borismus/image-zoom) did some great [groundwork](https://web.dev/easy-high-dpi-images/) on [this topic](https://www.filamentgroup.com/lab/compressive-images.html), suggesting that a 'highly compressed 2x image is smaller in size and looks better than the uncompressed 1x image'. I used one of Boris's examples to illustrate this article, in which we will try to avoid any visible compression artifacts, while still compressing our image(s) significantly.
 
 > We will try to avoid any visible compression artifacts, while still compressing our image(s) significantly.
 
 ## Our image
 
-Consider the following 'retina-ready' image of 881.7kb (0.9Mb) of this orange Lamborgini sports car. This images has four time the amount of pixels you are seeing, when you are on a device with a non-retina display. It looks perfect on any screen... but the fact that you just downloaded almost 1Mb is terrible.
+Consider the following 'retina-ready' image of 881.7kb (0.9Mb) of this orange Lamborghini sports car. This image has four times the number of pixels you are seeing, when you are on a device with a non-retina display. It looks perfect on any screen... but the fact that you just downloaded almost 1Mb is terrible.
 
 <p><img src="/uploads/car/2x-100.jpg" width="568"/></p>
 
-We could save a lot of bandwidth by adding a 'source set'. This would instruct the browser to get a low resolution version on non-retina displays. This means we use a 1x image and a 2x image. Both these images could be compressed to save even more bandwith. But what is the right amount of compression for images on retina and non-retina displays?  
+We could save a lot of bandwidth by adding a 'source set'. This would instruct the browser to get a low resolution version on non-retina displays. This means we use a 1x image and a 2x image. Both these images could be compressed to save even more bandwidth. But what is the right amount of compression for images on retina and non-retina displays?  
 <br>
 
 |Quality|Size|
@@ -49,7 +49,7 @@ Well, I would argue that non-retina displays (can) have such large pixels that a
 
 ## Perfect image quality
 
-But what if I told you that you could get a perfect (100%) image quality on a non-retina device while STILL saving more than half of the bytes? Impossible you might think... but that is not the case. 
+But what if I told you that you could get perfect (100%) image quality on a non-retina device while STILL saving more than half of the bytes? Impossible, you might think... but that is not the case. 
 
 If you want a perfect non-retina image you can (heavily) compress a retina-ready image (an image with 4 times as many pixels) and get a result that is very close to 100% image quality. Compression should be around 50% in order to save around 60% of all bytes. When you [look very closely](/uploads/car/quality.png), you can see some distortion (pixelated effect) in the orange side skirt of the lower left image, while there is none visible in the bottom right image. In other words: the 2x 50% jpg image looks perfect on a non-retina display, while the 1x 90% jpg image does not. 
 
@@ -87,7 +87,7 @@ Below you will find an overview of the options ordered by file size. The conclus
 
 ## Perfect yet 50%
 
-I said that 1x 50% jgp quality was only acceptable in some cases (on certain images) on a non-retina display. Why would 2x 50% be 'good' on retina displays? A 50% jpg quality on retina has [clear compression artifacts](/uploads/car/quality.png) (see top right image) and we said we wanted to 'avoid any visible compression artifacts'... The answer is simple. The pixels on most retina screens are so small that your eye is unable to see them seperately, making the distortion (almost) invisible. Your eye is blurring the image for you, resulting in what looks like a perfect image. This is why 50% rated 'good' on retina, while it was rated 'decent' on non-retina. 
+I said that 1x 50% jpg quality was only acceptable in some cases (on certain images) on a non-retina display. Why would 2x 50% be 'good' on retina displays? A 50% jpg quality on retina has [clear compression artifacts](/uploads/car/quality.png) (see top right image) and we said we wanted to 'avoid any visible compression artifacts'... The answer is simple. The pixels on most retina screens are so small that your eye is unable to see them separately, making the distortion (almost) invisible. Your eye is blurring the image for you, resulting in what looks like a perfect image. This is why 50% rated 'good' on retina, while it was rated 'decent' on non-retina. 
 
 Want proof? I challenge you to detect the difference between a perfect retina image and a 50% distorted one below (obviously you have to view them on a retina display, otherwise they will always be perfect)...
 
@@ -99,4 +99,4 @@ Whether or not you are able to see the compression in the lower image depends la
 
 ## HugoConf 2022
 
-So... with 2x 50% jpg compression you get (almost) perfect images on retina AND non-retina displays, zero added complexity and you save bytes by a factor 10 (or 2 if you ignore retina displays). I bet you would like to have that in your Hugo website for all images, even the ones in your markdown. No problem! I have submitted a lighting talk to [HugoConf 2022](https://hugoconf.io/), called 'Resize all images', where I will show you how to achieve this with a minimal amount of code. I am not sure I will make it to the final line-up, so I have also [published the full transcript](/blog/resize-all-images).
+So... with 2x 50% jpg compression you get (almost) perfect images on retina AND non-retina displays, zero added complexity and you save bytes by a factor 10 (or 2 if you ignore retina displays). I bet you would like to have that in your Hugo website for all images, even the ones in your markdown. No problem! I have submitted a lightning talk to [HugoConf 2022](https://hugoconf.io/), called 'Resize all images', where I will show you how to achieve this with a minimal amount of code. I am not sure I will make it to the final line-up, so I have also [published the full transcript](/blog/resize-all-images).

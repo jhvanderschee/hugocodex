@@ -1,5 +1,5 @@
 ---
-title: "'page' gebruiken in shortcodes ( cache / probleem? ) - let op"
+title: "'page' gebruiken in shortcodes - let op de cache"
 translationKey: using-page-in-shortcodes-cache-issue-be-aware-off
 date: "2023-11-08"
 ---

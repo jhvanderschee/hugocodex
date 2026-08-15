@@ -67,7 +67,7 @@ Wil je een overzichtspagina maken, kijk dan naar dit voorbeeld.
 </html>
 ```
 
-Zet deze code in een bestand met de naam 'list.html' en sla het op in je map 'layouts', naast je 'page.html'. Je bestandsboom ziet er dan zo uit:
+Zet deze code in een bestand met de naam 'section.html' en sla het op in je map 'layouts', naast je 'page.html'. Je bestandsboom ziet er dan zo uit:
 
 ```
 ├── hugo.yaml

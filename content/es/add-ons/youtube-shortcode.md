@@ -2,25 +2,22 @@
 title: Youtube shortcode
 ---
 
-### Introducción 
+### Introducción
 
-Paul Irish hizo algo lindo.Ha creado ["a lighter Youtube embed"](https://github.com/paulirish/lite-youtube-embed). Esta solución deja atrás la ralentización de tu sitio web, como
-hace el método normal sugerido por Youtube para embeber sus videos. Hay tan sólo un inconveniente: carga el contenido de Youtube sin consentimiento, mientras que Youtube es el
-servicio de una empresa conocida por sus prácticas de rastreo y pefilado. Todo ello no es sensible para con la privacidad. La solución es albergar el poster del video uno mismo y
-enlazarlo a Youtube. Hagamoslo mediante la implementación de shortcode.
+Paul Irish hizo algo estupendo. Creó [un embed de Youtube más ligero](https://github.com/paulirish/lite-youtube-embed). Su solución ya no ralentiza tu sitio web, como sí hacen los embeds normales de Youtube. Solo tiene una pega: carga contenido de Youtube sin consentimiento, y Youtube es un servicio de una empresa conocida por rastrear y hacer perfiles. Eso no es muy respetuoso con la privacidad. La solución es alojar tú mismo la imagen de portada (poster) y enlazarla a Youtube. Esto se puede hacer con un shortcode.
 
-### Funcionamiento
+### Cómo funciona
 
-El shortcode creates an image and a link to Youtube. The classes on this link tell the CSS to add the Youtube logo and add a play button. This makes it look like an embed. Note that when you load the [lightbox](/add-ons/lightbox/) from this website, your video will automatically open in a lightbox instead of in a new page. Below you find a demo (with the lightbox enabled).
+El shortcode crea una imagen y un enlace a Youtube. Las clases de este enlace le indican al CSS que añada el logo de Youtube y un botón de reproducción. Así parece un embed. Ten en cuenta que si cargas el [lightbox](/es/complementos/lightbox/) de este sitio web, tu vídeo se abrirá automáticamente en un lightbox en lugar de en una página nueva. Abajo encontrarás una demo (con el lightbox activado).
 
-{{< youtube id="qtIqKaDlqXo" image="/uploads/youtubeposter.jpg" >}}
+{{< youtube qtIqKaDlqXo >}}
 
-### Installation
+### Instalación
 
-Step 1. Download the file [youtube.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_shortcodes/youtube.html)
-<br />Step 2. Save the file in the 'layouts/_partials/_shortcodes' directory of your project
-<br />Step 3. Add the following line to your content on the place where you want your Youtube video to appear:
+Paso 1. Descarga el archivo [youtube.html](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/layouts/_shortcodes/youtube.html)
+<br />Paso 2. Guarda el archivo en el directorio 'layouts/_partials/_shortcodes' de tu proyecto
+<br />Paso 3. Añade la siguiente línea a tu contenido en el lugar donde quieras que aparezca tu vídeo de Youtube:
 
 ```
-{{</* youtube id="qtIqKaDlqXo" image="/uploads/youtubeposter.jpg" */>}}
+{{</* youtube qtIqKaDlqXo */>}}
 ```

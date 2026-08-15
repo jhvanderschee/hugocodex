@@ -3,7 +3,7 @@ title: Een webshop bouwen met Hugo
 translationKey: building-a-webshop-with-hugo
 date: 2022-09-30
 ---
-Dit stond al lang op ons verlanglijstje: een simpele webshop in Jekyll bouwen zonder maandelijks bedrag aan een derde partij te betalen. En eindelijk is het me gelukt! Wil je zien hoe het werkt, kijk dan op mijn [donatiepagina](/nl/doneren). De webshop heeft maar twee instellingen nodig: het e-mailadres voor de bevestiging en je Plink-betaallink. Het opzetten kost een paar minuten en vereist alleen een Mollie-account. Er zijn geen beperkingen aan de vormgeving van de productpagina's. Hij gebruikt HTML API, een principe waar Lea Verou van MIT flink onderzoek naar heeft gedaan en dat bewezen eenvoudig te implementeren is. Op de donatiepagina laten we zien hoe dit met productvarianten kan werken.
+Dit stond al lang op ons verlanglijstje: een simpele webshop in Hugo bouwen zonder maandelijks bedrag aan een derde partij te betalen. En eindelijk is het me gelukt! Wil je zien hoe het werkt, kijk dan op mijn [donatiepagina](/nl/doneren). De webshop heeft maar twee instellingen nodig: het e-mailadres voor de bevestiging en je Plink-betaallink. Het opzetten kost een paar minuten en vereist alleen een Mollie-account. Er zijn geen beperkingen aan de vormgeving van de productpagina's. Hij gebruikt het HTML API-principe, waar Lea Verou van MIT flink onderzoek naar heeft gedaan en dat eenvoudig te implementeren blijkt. Op de donatiepagina laten we zien hoe dit met productvarianten kan werken.
 
 De webshop accepteert alle betaalmethodes van Mollie:
 
@@ -34,8 +34,8 @@ Laten we eens kijken hoe we een simpele webshop aan onze op Hugo gebaseerde webs
 Dit is een simpele webshop met verschillende betaalmethodes waarvoor je geen maandbedrag hoeft te betalen. Ideaal voor een eenvoudige webshop. De webshop kan op dit moment geen variabele btw-berekeningen aan. Hij biedt ook geen afwijkend afleveradres, al is dat makkelijk toe te voegen. Met een e-mailparser zou je het bestelproces nog verder kunnen automatiseren.
 
 ### Hoe het werkt
-De webshop werkt in de basis zo: je maakt een link met een class 'addtocart' static/js/webshop.js^@57 die naar de winkelwagen linkt. De [gegeven
-layout](layouts/products/single.html 18 profiteert daarvan via het formulier:
+
+De webshop werkt in de basis zo: je maakt een link met een class 'addtocart' die naar de winkelwagen linkt. De productlayout gebruikt die via het formulier:
 
 ```
 	    <form action="/donate/cart" onsubmit="return addToCart(this)">
@@ -49,56 +49,36 @@ Deze link zoekt naar de attributen 'image', 'price' en 'description' en voegt he
 Wil je de winkelwagen niet gebruiken, gebruik dan gewoon een link met een class 'buy' en link direct naar de checkout-pagina. Zo zit er altijd maar één item in de winkelwagen.
 
 ```
-{% raw %}<a href="/checkout" class="buy" image="/path/to/productimage.jpg" price="1.00" description="test">Buy</a>{% endraw %}
+<a href="/checkout" class="buy" image="/path/to/productimage.jpg" price="1.00" description="test">Buy</a>
 ```
 
-Zodra de webshop draait, kun je alles bijschaven door de Liquid/HTML-code aan te passen. Kom je er niet uit hoe je mooie productpagina's met productvarianten maakt? Kijk dan gewoon naar de broncode van deze website op Github. Nog steeds hulp nodig? Stel een vraag op Stack Overflow, of betaal me om je te helpen.
+Zodra de webshop draait, kun je alles bijschaven door de template- en HTML-code aan te passen. Kom je er niet uit hoe je mooie productpagina's met productvarianten maakt? Kijk dan gewoon naar de broncode van deze website op Github. Nog steeds hulp nodig? Stel een vraag op Stack Overflow, of betaal me om je te helpen.
 
 [/expand]
 
-
-.
-.
-.
-.
-.
-. H
-.  u 
-.   g
-.    o
-.     n
-.      i
-.       z
-.        i
-.         n
-.          g
-.           \
-.            .
-
-
 ### Installatie
 
-Voordat je de webshop kunt toevoegen moet je [een Mollie-account aanmaken](https://www.mollie.com){: .gray}. Mollie vraagt je om je website te registreren. Ze controleren of je een fatsoenlijk retourbeleid, duidelijk vermelde bedrijfsgegevens en duidelijke algemene voorwaarden hebt. Zodra je website door Mollie is goedgekeurd kun je betaalmethodes toevoegen. Ga naar [https://useplink.com](https://useplink.com){: .gray} en registreer je. In je Mollie-dashboard kun je op je profiel klikken en 'Payment links' kiezen om naar je Plink-account te gaan. Maak een herbruikbare link met een variabel bedrag en een variabele omschrijving. Zodra je dat gedaan hebt, ben je klaar om de webshop aan je website toe te voegen.
+Voordat je de webshop kunt toevoegen moet je [een Mollie-account aanmaken](https://www.mollie.com). Mollie vraagt je om je website te registreren. Ze controleren of je een fatsoenlijk retourbeleid, duidelijk vermelde bedrijfsgegevens en duidelijke algemene voorwaarden hebt. Zodra je website door Mollie is goedgekeurd kun je betaalmethodes toevoegen. Ga naar [https://useplink.com](https://useplink.com) en registreer je. In je Mollie-dashboard kun je op je profiel klikken en 'Payment links' kiezen om naar je Plink-account te gaan. Maak een herbruikbare link met een variabel bedrag en een variabele omschrijving. Zodra je dat gedaan hebt, ben je klaar om de webshop aan je website toe te voegen.
 
 #### Stap 1. Voeg de footerbestanden met de betaallink toe
 
 Download de bestanden en zet ze in je mappen. Zorg dat de onderkant van je layout-document eruitziet als de code hieronder. De paymentlink moet de persoonlijke herbruikbare link zijn die je zojuist hebt gemaakt.
 
 ```
-{% raw %}...
+...
 
 <!-- webshop -->
 <script type="text/javascript" src="/js/webshop.js"></script>
 <link rel="stylesheet" href="/css/webshop.css">
 <script type="text/javascript">
     updateCartCount();
-    {% if page.layout == 'cart' %}populateCart();{% endif %}
-    {% if page.layout == 'checkout' %}initCheckoutForm(document.querySelector('#checkout form'));{% endif %}
-    {% if page.layout == 'paylink' %}redirectToPayment('https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T');{% endif %}
+    {{ if eq .Layout "cart" }}populateCart();{{ end }}
+    {{ if eq .Layout "checkout" }}initCheckoutForm(document.querySelector('#checkout form'));{{ end }}
+    {{ if eq .Layout "paylink" }}redirectToPayment('https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T');{{ end }}
 </script>
 
 </body>
-</html>{% endraw %}
+</html>
 ```
 
 #### Stap 2. Voeg de cart-, checkout- en paylink-bestanden toe
@@ -107,7 +87,7 @@ Je moet de bestanden 'cart.html', 'checkout.html' en 'paylink.html' downloaden s
 
 #### Stap 3. Maak een paar producten
 
-Maak een paar producten. Ze moeten onderdeel zijn van de collection 'products' en elk 'product.md'-bestand zou er zo uit moeten zien:
+Maak een paar producten. Ze moeten onderdeel zijn van de sectie 'products' en elk 'product.md'-bestand zou er zo uit moeten zien:
 
 ```
 ---

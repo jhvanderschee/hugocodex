@@ -6,7 +6,7 @@ date: 2018-01-02
 
 ## Step 1. Create a basic website
 
-A website typically consists of a few elements. The header with a menu, a sidebar, the content and the footer. Back in the day we used frames to put these components together. Nowadays we use includes. These includes require a programming language to work, like PHP. Using PHP however introduces a lot of vulnerabilities. What if we could prevent that by design? Well... you can with Hugo...
+A website typically consists of a few elements: the header with a menu, a sidebar, the content and the footer. Back in the day we used frames to put these components together. Nowadays we use includes. These includes require a programming language to work, like PHP. Using PHP however introduces a lot of vulnerabilities. What if we could prevent that by design? Well... you can with Hugo...
 
 You used to create an 'index.php' file and do something like this:
 
