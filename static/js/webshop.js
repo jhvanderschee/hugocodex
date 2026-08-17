@@ -1,3 +1,27 @@
+function getStoredItem(name) {
+
+    // storage is not always allowed: Safari with cookies blocked, private windows and
+    // some privacy extensions throw on the very first read, and a refusal has to read
+    // as 'nothing there' instead of stopping the script that asked
+
+    try {
+        return localStorage.getItem(name);
+    } catch (e) {
+        return null;
+    }
+}
+
+function getStoredJson(name) {
+
+    // same as above, and a leftover that is no longer valid json counts as nothing too
+
+    try {
+        return JSON.parse(localStorage.getItem(name));
+    } catch (e) {
+        return null;
+    }
+}
+
 function capitalizeFirstLetter(mystring) {
     return mystring.charAt(0).toUpperCase() + mystring.slice(1);
 }
@@ -38,8 +62,8 @@ function updateCartCount() {
     // assumes itemcount look like 
     // <span class="itemcount">0</span>
 
-    if(localStorage.getItem("cart")) {
-        var cart = JSON.parse(localStorage.getItem("cart"));
+    var cart = getStoredJson("cart");
+    if(cart) {
         var itemcount = 0;
         for (i = 0; i < cart.length; ++i) {
             itemcount += cart[i].quantity;
@@ -232,7 +256,7 @@ function getCartTotal() {
     
     // sum of prices in the cart
 
-    var cart = JSON.parse(localStorage.getItem("cart")), i;
+    var cart = getStoredJson("cart"), i;
     var carttotal = 0;
     if(cart && cart.length) {
         for (i = 0; i < cart.length; ++i) {
@@ -247,7 +271,7 @@ function getAddonTotal() {
     // sum of prices in the addons
 
     var addontotal = 0;
-    var addons = JSON.parse(localStorage.getItem("addons")), i;
+    var addons = getStoredJson("addons"), i;
     if(addons) {
         for (i=0; i<addons.length; i++){
             addontotal = addontotal + parseFloat(addons[i].price);
@@ -261,29 +285,74 @@ function redirectToPayment(paymentlink) {
     // is used on the paylink page/layout
 
     var checkoutcalculation = getCartTotal() + getAddonTotal();
-    var ordernumber = localStorage.getItem('ordernumber');
+    var ordernumber = getStoredItem('ordernumber');
     document.location.href = paymentlink+'/'+checkoutcalculation+'/Order%20number%20'+ordernumber;
 }
 
 function payWithUsecue(id, lang) {
 
     // is used on the paylink page/layout
-    // pay.js turns the page it is loaded on into a payment page, but it reads its parameters
-    // from the url, so we write them to the address bar first and load the script afterwards
+    // pay.js turns the page it is loaded on into a payment page. We hand it the parameters
+    // on its own script tag, because the address bar is not ours to count on: Safari
+    // refuses a replaceState that comes around too often and the frame would then be
+    // built from an address that never got the amount in it
 
     var amount = getCartTotal() + getAddonTotal();
-    var ordernumber = localStorage.getItem('ordernumber');
+    var ordernumber = getStoredItem('ordernumber');
 
+    var query = 'id='+encodeURIComponent(id);
+    if(amount > 0) query += '&amount='+encodeURIComponent(amount.toFixed(2));
+    if(ordernumber) query += '&specification='+encodeURIComponent('Order number '+ordernumber);
+    if(lang) query += '&lang='+encodeURIComponent(lang);
+
+    // the same parameters laid over the ones the page was opened with, so that an
+    // amount that came in through the link survives an empty cart
     var url = new URL(window.location.href);
     url.searchParams.set('id', id);
     if(amount > 0) url.searchParams.set('amount', amount.toFixed(2));
     if(ordernumber) url.searchParams.set('specification', 'Order number '+ordernumber);
     if(lang) url.searchParams.set('lang', lang);
-    window.history.replaceState(window.history.state, '', url.toString());
+
+    // where to send the visitor when the frame cannot be put up here
+    var paypage = 'https://pos.usecue.com/pay/'+url.search;
+
+    // the address bar is a nicety on top of that: nice to be able to read and adjust
+    // the parameters, no reason to leave the visitor without a page when it fails
+    try {
+        window.history.replaceState(window.history.state, '', url.toString());
+    } catch (e) {}
 
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://pos.usecue.com/p/js/pay.js?id=18';
+    script.src = 'https://pos.usecue.com/p/js/pay.js?'+query;
+
+    // a script that a blocker or a hiccup keeps from arriving leaves the visitor
+    // reading 'one moment please' forever, so send them to the payment page itself:
+    // they lose the address of this site, which beats losing the payment
+    script.onerror = function () {
+        window.location.replace(paypage);
+    };
+
+    // pay.js watches its own frame once it runs. These two are for the case where it
+    // never got that far, so nothing is watching and nothing is on screen.
+    function frameless() {
+        return !document.querySelector('iframe[src*="pos.usecue.com"]');
+    }
+
+    // it arrived and ran: either it put a frame up or it decided not to, and if it
+    // decided not to then nothing else is coming
+    script.onload = function () {
+        window.setTimeout(function () {
+            if(frameless()) window.location.replace(paypage);
+        }, 100);
+    };
+
+    // and a last stop for a script that neither arrives nor says that it will not,
+    // long enough that a slow connection is not mistaken for a broken one
+    window.setTimeout(function () {
+        if(frameless()) window.location.replace(paypage);
+    }, 8000);
+
     document.body.appendChild(script);
 }
 

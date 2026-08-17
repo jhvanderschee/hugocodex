@@ -2,6 +2,25 @@
 
  // not window.onload, because the payment page should not wait for the images and the third party scripts
  document.addEventListener('DOMContentLoaded', function() {
-     payWithUsecue('{{ .Get "id" }}', '{{ .Get "lang" | default .Page.Language.Lang }}');
+     var id = '{{ .Get "id" }}';
+     var lang = '{{ .Get "lang" | default .Page.Language.Lang }}';
+
+     // whatever goes wrong here, the visitor came to pay, so hand them the payment
+     // page on its own domain rather than leaving them on 'one moment please'
+     function fallback() {
+         var params = new URLSearchParams(window.location.search);
+         params.set('id', id);
+         params.set('lang', lang);
+         window.location.replace('https://pos.usecue.com/pay/?' + params.toString());
+     }
+
+     // payWithUsecue lives in webshop.js, which is not always there to be loaded
+     if (typeof payWithUsecue !== 'function') return fallback();
+
+     try {
+         payWithUsecue(id, lang);
+     } catch (e) {
+         fallback();
+     }
  });
 </script>
