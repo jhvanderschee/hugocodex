@@ -19,7 +19,7 @@ function is_vimeolink(url, el) {
 
                 el.addEventListener("click", function (event) {
                     event.preventDefault();
-                    document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/' + el.getAttribute('data-id') + '/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
+                    document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/' + el.getAttribute('data-id') + '/?autoplay=1&byline=0&title=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
                     document.body.classList.add('lightbox_visible');
 
                     setGallery(this);
@@ -146,7 +146,7 @@ var elements = document.querySelectorAll('a.lightbox-youtube');
 elements.forEach(element => {
     element.addEventListener("click", function (event) {
         event.preventDefault();
-        document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/' + this.getAttribute('data-id') + '?autoplay=1&showinfo=0&rel=0&start=' + parseInt(this.getAttribute('data-start')) + '&end=' + parseInt(this.getAttribute('data-end')) +'"></iframe></div>';
+        document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/' + this.getAttribute('data-id') + '?autoplay=1&showinfo=0&rel=0&start=' + parseInt(this.getAttribute('data-start')) + '&end=' + parseInt(this.getAttribute('data-end')) +'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>';
         document.body.classList.add('lightbox_visible');
         setGallery(this);
     });
