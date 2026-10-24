@@ -5,7 +5,7 @@
           <ul>
               {{ $pageURL := .Permalink }}
               
-              {{ range (index .Site.Data .Language.Lang).navigation.menu }}
+              {{ range (index hugo.Data .Language.Lang).navigation.menu }}
                 <li class="{{ if in $pageURL .url }}active{{ end }}"><a href="{{ .url }}">{{ .title }}</a></li>
               {{ end }}
 

@@ -1,6 +1,6 @@
 baseURL: "https://hugocodex.org"
 defaultContentLanguage: en
-languageCode: "en-us"
+locale: "en-us"
 
 disableKinds: 
   - taxonomy
@@ -15,7 +15,7 @@ assetDir: static
 
 languages:
   en:
-    languageName: English
+    label: English
     title: Hugo Codex
     params:
       description: "Hugo, the website framework that is super fast, because fast is simply better."
@@ -28,7 +28,7 @@ languages:
       products: donate/:contentbasename
       simple-products: simple-donate/:contentbasename
   es:
-    languageName: Español
+    label: Español
     title: Hugo Codex
     params:
       description: "Hugo, que es súper rápido, porque rápido es simplemente mejor."
@@ -41,7 +41,7 @@ languages:
       products: donar/:contentbasename
       simple-products: simple-donar/:contentbasename
   nl:
-    languageName: Nederlands
+    label: Nederlands
     title: Hugo Codex
     params:
       description: "Hugo, het website framework dat razendsnel is, want snel is gewoon beter."
