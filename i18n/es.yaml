@@ -23,13 +23,19 @@ quantity:
   other: Cantidad
 
 Your shopping cart is currently empty:
-  other: tu carrito de la compra está vacío
-  
+  other: tu carrito está vacío
+
 add to cart:
   other: Añadir al carrito
 
 Shopping cart:
-  other: Carrito de la compra
+  other: Carrito
+
+Checkout:
+  other: Datos
+
+Payment:
+  other: Pago
 
 Price:
   other: Precio
@@ -37,11 +43,14 @@ Price:
 continue shopping:
   other: continuar comprando
 
+choose_a:
+  other: Elige un
+
 Add to cart:
   other: Añadir al carrito
 
 Proceed to checkout:
-  other: Proceder al checkout
+  other: Finalizar compra
 
 Proceed to payment:
   other: Proceder al pago
@@ -78,12 +87,15 @@ Gift wrapping:
 
 Not gift wrapped:
   other: Sin envoltorio de regalo
+
+Gift wrapped:
+  other: Envoltorio de regalo
   
 Message:
   other: Mensaje
   
 back to cart:
-  other: volver al carrito de la compra
+  other: volver al carrito
 
 Search:
   other: Search
@@ -99,3 +111,6 @@ No_results_for:
 
 Results_for:
   other: Results for
+
+signature:
+  other: Fenix

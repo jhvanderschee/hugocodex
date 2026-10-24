@@ -1,6 +1,5 @@
 ---
 title: Text expand
-
 ---
 ### Introduction
 

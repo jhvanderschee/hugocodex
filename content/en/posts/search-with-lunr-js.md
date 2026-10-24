@@ -1,5 +1,6 @@
 ---
 title: Search with Lunr.js
+translationKey: search-with-lunr-js
 date: 2025-07-02
 ---
 

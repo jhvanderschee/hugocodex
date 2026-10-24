@@ -1,5 +1,5 @@
 ---
-title: Carrito de la compra
+title: Carrito
 url: donar/cart
 ---
 

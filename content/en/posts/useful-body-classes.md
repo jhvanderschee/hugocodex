@@ -1,9 +1,10 @@
 ---
 title: Useful body classes
+translationKey: useful-body-classes
 date: 2025-07-09
 ---
 
-Styling becomes much easier when the body of your HTML document has the right classes. The following classes are very useful. Note that this assumes you give your sections (folders in the root of the content) english plural names, like 'products' or 'reviews'. It assumes this structure:
+Styling becomes much easier when the body of your HTML document has the right classes. The following classes are very useful. Note that this assumes you give your sections (folders in the root of the content) English plural names, like 'products' or 'reviews'. It assumes this structure:
 
 ```
 content/

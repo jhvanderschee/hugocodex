@@ -1,4 +1,5 @@
 ---
+translationKey: hugobricks-updated
 title: Hugobricks has gotten an update
 date: "2024-09-26"
 ---

@@ -1,4 +1,5 @@
 ---
+translationKey: add-content
 title: 3. Add your first content
 ---
 

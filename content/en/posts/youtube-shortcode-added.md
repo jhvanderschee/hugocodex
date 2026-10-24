@@ -1,5 +1,6 @@
 ---
 title: Youtube shortcode added
+translationKey: youtube-shortcode-added
 date: 2021-12-10
 ---
 

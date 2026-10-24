@@ -1,6 +1,5 @@
 ---
-title: Search
+title: Buscar
 ---
-## Simple site search
 
-Below you can search this site, using the very simple [Google search box](/without-plugin/search-google). This site search uses the Google cache to find its pages. So if you want to use this too, make sure you have an [XML sitemap](/sitemap.xml) installed. This helps Google to find the latest additions to your website.
+A continuación puedes buscar en este sitio con [la búsqueda de Lunr.js](/es/complementos/search-lunr). Esta búsqueda usa un índice propio para encontrar sus páginas.

@@ -1,10 +1,11 @@
 ---
-title: Invitame a unas chocolatinas
+translationKey: chocolates
+title: Invítame a unas chocolatinas
 image: "/uploads/products/chocolates/1.jpg"
 images:
 - image: "/uploads/products/chocolates/2.jpg"
 - image: "/uploads/products/chocolates/3.jpg"
-variant_type: size
+variant_type: tamaño
 variants:
 - name: 
   price: 9.95
@@ -12,4 +13,4 @@ variants:
 order_number: 4
 ---
 
-Comprame una linda caja de chocolatinas... no para mí, sino para mi pareja. Al ofrecerle chocolates podré ganar tiempo de programación en mi masculina cueva Linux.
+Cómprame una bonita caja de chocolatinas... no para mí, sino para mi pareja. Regalarle bombones seguro que me consigue tiempo extra de programación en mi cueva con Linux.

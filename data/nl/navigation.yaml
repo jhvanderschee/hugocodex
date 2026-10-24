@@ -1,0 +1,11 @@
+menu:
+  - title: Aan de slag
+    url: /nl/aan-de-slag/
+  - title: Uitbreidingen
+    url: /nl/uitbreidingen/
+  - title: Blog
+    url: /nl/blog/
+  - title: Over
+    url: /nl/over/
+  - title: Doneren
+    url: /nl/doneren/

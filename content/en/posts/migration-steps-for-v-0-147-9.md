@@ -1,5 +1,6 @@
 ---
 title: Migration steps for Hugo v0.147.9
+translationKey: migration-steps-for-v-0-147-9
 date: 2025-07-01
 ---
 

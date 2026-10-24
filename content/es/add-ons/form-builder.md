@@ -3,15 +3,14 @@ title: Form builder
 ---
 ### Introducción
 
-
-Los formularios son de las partes más importantes de un sitio web. Abarcan desde simples formularios de contacto hasta formularios que gestionan pedidos completos de tiendas web o inscripciones a eventos. WordPress tiene soluciones de formularios muy populares, como 'Contact Form 7' y 'Gravity Forms', pero Hugo no. Para llenar este vacío hemos creado un constructor de formularios básico para Hugo.
+Los formularios son una de las partes más importantes de un sitio web. Abarcan desde simples formularios de contacto hasta formularios que gestionan pedidos completos de tiendas web o inscripciones a eventos. WordPress tiene soluciones de formularios muy populares, como 'Contact Form 7' y 'Gravity Forms', pero Hugo no. Para llenar este vacío hemos creado un constructor de formularios básico para Hugo.
 
 
 ### Cómo funciona
 
-El formulario utiliza HTML5. El formulario puede ser enviado por CloudCannon o Netlify. El primero sólo funciona en CloudCannon hosting. Puedes elegir entre mostrar marcadores de posición en las entradas o etiquetas encima. Hay dos campos especiales disponibles: un campo llamado 'nombre' (tipo 'texto') mostrará las casillas de entrada 'nombre' y 'apellido' en una línea. Un campo llamado "dirección" (tipo "texto") mostrará las casillas de entrada "dirección", "ciudad" y "código postal".
+El formulario utiliza HTML5. El formulario puede ser enviado por CloudCannon o Netlify. El primero solo funciona en el hosting de CloudCannon. Puedes elegir entre mostrar marcadores de posición en las entradas o etiquetas encima. Hay dos campos especiales disponibles: un campo llamado 'nombre' (tipo 'texto') mostrará las casillas de entrada 'nombre' y 'apellido' en una línea. Un campo llamado 'dirección' (tipo 'texto') mostrará las casillas de entrada 'dirección', 'ciudad' y 'código postal'.
 
-Para crear un formulario, añade el siguiente código a la cabecera de tu página:
+Para crear un formulario, añade el siguiente código al front matter de tu página:
 
 ```
 ---
@@ -53,7 +52,7 @@ forms:
 ---
 ```
 
-Y a tu plantill/layout :
+Y a tu plantilla ('layout'):
 
 ```
 {{ if (index page.Params.forms 0) }}
@@ -61,7 +60,7 @@ Y a tu plantill/layout :
 {{ end }}
 ```
 
-Quienes usen CloudCannon pueden  habilitar las opciones en su ‘hugo.yaml’ para enriquecer la experiencia de la edición de contenido.
+Quienes usen CloudCannon pueden habilitar estas opciones en su ‘hugo.yaml’ para enriquecer la experiencia de edición de contenido.
 
 ```
 params: 
@@ -79,15 +78,14 @@ params:
     - cloudcannon
 ```
 
-Disclaimer: Note that there is no select (dropdown) support (yet). Also note that browser support is not perfect. The native HTML5 date picker is not available in every browser and that HMTL5 validation does not work in IE9, Safari for desktop and Opera Mini.
-Disclaimer: Nótese que no se soporta (aún) selección  (dropdown)
+Aviso: ten en cuenta que (todavía) no hay soporte para el campo de selección (dropdown). Ten en cuenta también que el soporte de los navegadores no es perfecto: el selector de fecha nativo de HTML5 no está disponible en todos los navegadores y la validación de HTML5 no funciona en IE9, Safari para escritorio ni Opera Mini.
 
-### Installation
+### Instalación
 
-Step 1. Make sure your front matter of your page looks like the example above  
-Step 2. Download the file [form.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/_partials/form.html)  
-Step 3. Save the file in the ‘layouts/_partials’ directory of your project  
-Step 4. Add the following line to your layout on the place where you want the form to appear:  
+Paso 1. Asegúrate de que el front matter de tu página se parece al ejemplo de más arriba  
+Paso 2. Descarga el fichero [form.html](https://github.com/jhvanderschee/hugocodex/blob/main/layouts/_partials/form.html)  
+Paso 3. Guarda el fichero en el directorio ‘layouts/_partials’ de tu proyecto  
+Paso 4. Añade la siguiente línea a tu plantilla, en el lugar donde quieres que aparezca el formulario:  
 ```
 {{ if (index page.Params.forms 0) }}
   {{ partial "form.html" (dict "context" . "form" 0) }}

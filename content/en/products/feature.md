@@ -15,4 +15,4 @@ variants:
 weight: 6
 ---
 
-You can sponsor a feature from the 'without plugins' page/library. I will not only give you an honourable mention on the site, but I will also let you suggest some additional functionalities of this feature.
+You can sponsor a feature from the [add-ons library](/add-ons/). I will not only give you an honourable mention on the site, but I will also let you suggest additional functionality for that feature.

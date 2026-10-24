@@ -1,4 +1,5 @@
 ---
+translationKey: coffee
 outputs:
     - html
     - simple

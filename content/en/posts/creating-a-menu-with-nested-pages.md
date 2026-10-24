@@ -1,5 +1,6 @@
 ---
 title: Creating a menu with nested pages
+translationKey: creating-a-menu-with-nested-pages
 date: 2021-12-23
 ---
 

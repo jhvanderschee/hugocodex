@@ -1,4 +1,5 @@
 ---
+translationKey: resize-markdown-images
 title: 'Resize markdown images'
 date: '2022-04-08'
 ---

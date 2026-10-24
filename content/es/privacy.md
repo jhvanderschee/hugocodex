@@ -1,14 +1,14 @@
 ---
-title: Privacy policy
+title: Política de privacidad
 ---
-### Leaseweb hosting
+### Alojamiento en Leaseweb
 
-This website is hosted on Leaseweb servers. Usecue CMS is used as external CMS. Leaseweb (like any hosting company) can have full insight in visitor data, like connecting IP addresses, visited pages, etc. Note that Leaseweb is not known to actively profile visitors. By using a VPN you can (try to) prevent this!
+Este sitio web está alojado en servidores de Leaseweb. Como CMS externo se utiliza Usecue CMS. Leaseweb (como cualquier empresa de alojamiento) puede tener acceso completo a los datos de los visitantes, como las direcciones IP que se conectan, las páginas visitadas, etc. Cabe señalar que no consta que Leaseweb perfile activamente a los visitantes. ¡Usando una VPN puedes (intentar) evitarlo!
 
 ### Google Analytics
 
-This website uses Google Analytics. However, we have taken all actions we can to limit the power of Google. We have configured Google Analytics to anonymize IP addresses, use SSL at all time and we have agreed a Data Processing Amendment with Google. These measures were taken from a derective of the CBP (Dutch Institute for Privacy Protection) from 2018 on how to legally use Google Analytics without explicit consent.
+Este sitio web usa Google Analytics. Sin embargo, hemos tomado todas las medidas a nuestro alcance para limitar el poder de Google. Hemos configurado Google Analytics para que anonimice las direcciones IP y use SSL en todo momento, y hemos firmado un acuerdo de tratamiento de datos con Google. Estas medidas se tomaron a partir de una directriz de 2018 del CBP (el organismo neerlandés de protección de la privacidad) sobre cómo usar Google Analytics de forma legal sin consentimiento explícito.
 
 ### Crisp Chat
 
-The chat module in the bottom right corner uses Crisp Chat and upon loading that module, your visitor data is sent to Crisp Chat. This happens only if you approve third party cookies and scripts.
+El módulo de chat de la esquina inferior derecha usa Crisp Chat y, al cargarse ese módulo, tus datos de visitante se envían a Crisp Chat. Esto solo ocurre si aceptas las cookies y los scripts de terceros.
