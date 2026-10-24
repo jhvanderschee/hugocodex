@@ -7,13 +7,13 @@ Lightbox is a solution that loads your [image](/uploads/grumpycat2.jpg) [links](
 
 ### How it works
 
-Links that point to images, Youtube and Vimeo video's are automagically recognized and provided with an additional class by javascript. Video's get an additional data-id in case of a video. A listener adds the lightboxes to the body on a click on the link. The lightboxes is removed when you click on the background/overlay. You can prevent links from turning into lightboxes, by adding the 'no-lightbox' class.
+Links that point to images, Youtube and Vimeo videos (also unlisted ones) are automagically recognized when you click them. The image or video opens in the lightbox. Links in the same paragraph or list form a gallery, that you browse with the arrows or the arrow keys. The lightbox closes when you click on the background/overlay or press Escape. You can prevent links from turning into lightboxes, by adding the 'no-lightbox' class.
 
-Note that I wrote the code for this lightbox myself and tested it on a minimal amount of devices. It should work on mobile (tested on Android), IE9+ and all modern desktop browsers (tested on Firefox, Safari and Chrome).
+Note that I wrote the code for this lightbox myself. It works on mobile and in all modern desktop browsers.
 
 ### Installation
 
-Step 1. Download the file [lightbox.js](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/js/lightbox.js) and [lightbox.css](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/css/lightbox.css)
+Step 1. Download the file [lightbox.js](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/static/js/lightbox.js) and [lightbox.css](https://raw.githubusercontent.com/jhvanderschee/hugocodex/main/static/css/lightbox.css)
 <br />Step 2. Save the file in the '/js' and '/css' directory of your project
 <br />Step 3. Make sure the footer of your layout document looks like this:
 

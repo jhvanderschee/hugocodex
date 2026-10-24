@@ -10,11 +10,11 @@ No se requiere ningún ajuste a tus enlaces, solo sigue las instrucciones de ins
 
 ## Cómo funciona
 
-Los enlaces que apuntan a imágenes, videos de Youtube y Vimeo son reconocidos automáticamente y provistos con una clase adicional mediante _javascript_ . 
-Los videos obtienen un data-id adicional en caso de ser un video. Un listener añade los lightboxes al body cuando se hace clic en el enlace. El lightbox se elimina cuando haces clic en el fondo/superposición. Puedes evitar que los enlaces se conviertan en lightboxes añadiendo la clase 'no-lightbox'.
+Los enlaces que apuntan a imágenes, videos de Youtube y Vimeo (también los no listados) son reconocidos automáticamente cuando haces clic en ellos. La imagen o el video se abre en el lightbox. 
+Los enlaces en el mismo párrafo o lista forman una galería, que recorres con las flechas o las teclas de flecha. El lightbox se cierra cuando haces clic en el fondo/superposición o pulsas Escape. Puedes evitar que los enlaces se conviertan en lightboxes añadiendo la clase 'no-lightbox'.
 
-Ten en cuenta que escribimos el código fuente para este lightbox nosotros y lo probamos en una cantidad mínima de dispositivos. 
-Debería funcionar en móviles (probado en Android), IE9+ y todos los navegadores modernos de escritorio (probado en Firefox, Safari y Chrome).
+Ten en cuenta que escribimos el código fuente para este lightbox nosotros. 
+Funciona en móviles y en todos los navegadores modernos de escritorio.
 
 ## Instalación
 
