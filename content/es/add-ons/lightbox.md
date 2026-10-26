@@ -20,6 +20,7 @@ Ten en cuenta que el código de este lightbox lo escribimos nosotros mismos y lo
 
 
 ```
+<script type="text/javascript" src="https://player.vimeo.com/api/player.js"></script>
 <script type="text/javascript" src="/js/lightbox.js"></script>
 <link rel="stylesheet" href="/css/lightbox.css">
 </body>

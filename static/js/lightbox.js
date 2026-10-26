@@ -22,6 +22,22 @@ function is_vimeolink(url, el) {
                     document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/' + el.getAttribute('data-id') + '/?autoplay=1&byline=0&title=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
                     document.body.classList.add('lightbox_visible');
 
+                    //browsers like Safari only allow muted autoplay: then pause and let the visitor press play, so the video plays with sound
+                    if (typeof Vimeo !== 'undefined') {
+                        var player = new Vimeo.Player(document.querySelector('#lightbox iframe'));
+                        player.on('play', function checkMuted() {
+                            player.off('play', checkMuted);
+                            Promise.all([player.getMuted(), player.getVolume()]).then(function (values) {
+                                if (values[0] || values[1] == 0) {
+                                    player.pause();
+                                    player.setCurrentTime(0);
+                                    player.setMuted(false);
+                                    player.setVolume(1);
+                                }
+                            });
+                        });
+                    }
+
                     setGallery(this);
                 });
             }

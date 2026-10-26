@@ -18,6 +18,7 @@ Stap 1. Download de bestanden [lightbox.js](https://raw.githubusercontent.com/jh
 <br />Stap 3. Zorg dat de footer van je layoutbestand er zo uitziet:
 
 ```
+<script type="text/javascript" src="https://player.vimeo.com/api/player.js"></script>
 <script type="text/javascript" src="/js/lightbox.js"></script>
 <link rel="stylesheet" href="/css/lightbox.css">
 </body>
