@@ -8,9 +8,9 @@ _Lightbox_ es una solución que carga automáticamente tus enlaces a [imágenes]
 
 ### Cómo funciona
 
-Los enlaces que apuntan a imágenes y a vídeos de Youtube y Vimeo se reconocen automáticamente y reciben una clase adicional mediante _javascript_. En el caso de los vídeos se añade además un data-id. Un listener añade los lightboxes al body cuando se hace clic en el enlace. El lightbox se elimina cuando haces clic en el fondo/superposición. Puedes evitar que los enlaces se conviertan en lightboxes añadiendo la clase 'no-lightbox'.
+Los enlaces que apuntan a imágenes y a vídeos de Youtube y Vimeo (también los no listados) se reconocen automáticamente cuando haces clic en ellos. La imagen o el vídeo se abre en el lightbox. Los enlaces en el mismo párrafo o lista forman una galería, que recorres con las flechas o las teclas de flecha. El lightbox se cierra cuando haces clic en el fondo/superposición o pulsas Escape. Puedes evitar que los enlaces se conviertan en lightboxes añadiendo la clase 'no-lightbox'.
 
-Ten en cuenta que el código de este lightbox lo escribimos nosotros mismos y lo probamos en una cantidad mínima de dispositivos. Debería funcionar en móviles (probado en Android), IE9+ y todos los navegadores modernos de escritorio (probado en Firefox, Safari y Chrome).
+Ten en cuenta que el código de este lightbox lo escribimos nosotros mismos. Funciona en móviles y en todos los navegadores modernos de escritorio.
 
 ### Instalación
 

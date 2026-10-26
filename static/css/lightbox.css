@@ -1,165 +1,100 @@
-#lightbox,
-#lightbox::before {
-  opacity:0;
-  pointer-events:none;
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  left:0;
-  transition:all .3s ease-in-out
-}
+/* the lightbox of lightbox.js: the image or video of a link on a dark, blurred overlay, that fades in
+   and out. A dialog over the whole page, also while it fades out, after it has left the top layer */
 #lightbox {
-  position:fixed;
-  cursor:pointer;
-  z-index:9999999;
-  line-height:0;
-  font-family: sans-serif;
+    position: fixed;
+    inset: 0;
+    z-index: 9999999;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgba(0, 0, 0, .7);
+    backdrop-filter: grayscale(1) blur(2px);
+    color: #fff;
+    font-family: sans-serif;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    opacity: 0;
+    transition: opacity .3s ease-in-out, display .3s allow-discrete;
 }
-#lightbox::before {
-  backdrop-filter:grayscale(1)blur(2px);
-  transition:all .3s ease-in-out;
-  background:rgba(0,0,0,.7);
-  z-index: 0;
-  content:""
+
+#lightbox[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
 }
-body.lightbox_visible #lightbox,
-body.lightbox_visible #lightbox::before {
-  opacity:1;
-  pointer-events:all
+
+@starting-style {
+    #lightbox[open] {
+        opacity: 0;
+    }
 }
-#lightbox .img {
-  position:relative;
-  top:50%;
-  left:50%;
-  -ms-transform:translateX(-50%)translateY(-50%);
-  -webkit-transform:translate(-50%,-50%);
-  transform:translate(-50%,-50%);
-  max-width:100%;
-  max-height:100%
+
+#lightbox::backdrop {
+    background: none;
 }
-#lightbox .img img {
-  opacity:0;
-  pointer-events:none;
-  width:auto
+
+/* at most 1200px */
+#lightbox img {
+    width: auto;
+    height: auto;
+    max-width: min(100%, 1200px);
+    max-height: min(100%, 1200px);
 }
-@media screen and (min-width:1200px) {
-  #lightbox .img {
-    max-width:1200px
-  }
+
+#lightbox iframe {
+    width: min(100%, 1200px);
+    max-height: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    background: #000;
 }
-@media screen and (min-height:1200px) {
-  #lightbox .img {
-    max-height:1200px
-  }
-}
-#lightbox span {
-  display:block;
-  position:fixed;
-  bottom:13px;
-  height:1.5em;
-  line-height:1.4em;
-  width:100%;
-  text-align:center;
-  color:#fff;
-  text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000
-}
-#lightbox span {
-  display:none
-}
-#lightbox .videoWrapperContainer {
-  position:relative;
-  top:50%;
-  left:50%;
-  -ms-transform:translateX(-50%)translateY(-50%);
-  -webkit-transform:translate(-50%,-50%);
-  transform:translate(-50%,-50%);
-  width:1200px;
-  max-width:100%;
-  max-height:100%
-}
-#lightbox .videoWrapperContainer .videoWrapper {
-  height:0;
-  line-height:0;
-  margin:0;
-  padding:0;
-  position:relative;
-  padding-bottom:56.333%;
-  background:#000
-}
-#lightbox .videoWrapper iframe {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  border:0;
-  display:block
-}
+
 #lightbox #prev,
 #lightbox #next {
-  height:50px;
-  line-height:36px;
-  display:none;
-  margin-top:-25px;
-  position:fixed;
-  top:50%;
-  padding:0 15px;
-  cursor:pointer;
-  text-decoration:none;
-  z-index:99;
-  color:#fff;
-  font-size:60px
+    position: fixed;
+    top: 50%;
+    height: 50px;
+    margin-top: -25px;
+    padding: 0 15px;
+    font-size: 60px;
+    line-height: 36px;
 }
-#lightbox.gallery #prev,
-#lightbox.gallery #next {
-  display:block
-}
+
 #lightbox #prev {
-  left:0
+    left: 0;
 }
+
 #lightbox #next {
-  right:0
+    right: 0;
 }
+
+/* a white cross at the top right */
 #lightbox #close {
-  height:50px;
-  width:50px;
-  position:fixed;
-  cursor:pointer;
-  text-decoration:none;
-  z-index:99;
-  right:0;
-  top:0;
-  background:0 0 !important
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
 }
-#lightbox #close:after,
-#lightbox #close:before {
-  position:absolute;
-  margin-top:22px;
-  margin-left:14px;
-  content:"";
-  height:2px;
-  background:#fff;
-  width:23px;
-  -webkit-transform-origin:50% 50%;
-  -moz-transform-origin:50% 50%;
-  -o-transform-origin:50% 50%;
-  transform-origin:50% 50%;
-  -webkit-transform:rotate(-45deg);
-  -moz-transform:rotate(-45deg);
-  -ms-transform:rotate(-45deg);
-  -o-transform:rotate(-45deg)
+
+#lightbox #close::before,
+#lightbox #close::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 14px;
+    width: 23px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(-45deg);
 }
-#lightbox #close:after {
-  -webkit-transform:rotate(45deg);
-  -moz-transform:rotate(45deg);
-  -ms-transform:rotate(45deg);
-  -o-transform:rotate(45deg)
-}
-#lightbox,
-#lightbox * {
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none
+
+#lightbox #close::after {
+    transform: rotate(45deg);
 }
